@@ -14,6 +14,8 @@ const ICONS = {
     'fraunhofer': '<svg viewBox="0 0 200 60" fill="currentColor"><path d="M27.8 7.3h10v6.4h-10v5.8h8.8v6.4h-8.8v10h-7.6v-28.6zM46.8 19.4c0-2.3 1.2-3.3 4.1-3.3h0.7v6.6h-0.7c-2.7 0-4.1-0.9-4.1-3.3zM46.8 32.1h6.6v3.8h-6.6v-3.8zM66.4 25.1c0 2.4-1.2 3.3-4.1 3.3h-0.7v-6.6h0.7c2.9 0 4.1 1.1 4.1 3.3zM66.4 12.3h-6.6v-3.8h6.6v3.8zM96.7 32.2c0 2.4-1.4 3.7-4.4 3.7h-9.9v-13h9.6c3.1 0 4.7 1.2 4.7 3.6v5.7zM90.3 26.5h-2v3.6h2c0.8 0 1.2-0.3 1.2-1.7v-0.1c0-1.5-0.4-1.8-1.2-1.8zM113.8 32.2c0 2.4-1.4 3.7-4.4 3.7h-9.9v-13h9.6c3.1 0 4.7 1.2 4.7 3.6v5.7zM107.4 26.5h-2v3.6h2c0.8 0 1.2-0.3 1.2-1.7v-0.1c0-1.5-0.4-1.8-1.2-1.8zM130.9 32.2c0 2.4-1.4 3.7-4.4 3.7h-9.9v-13h9.6c3.1 0 4.7 1.2 4.7 3.6v5.7zM124.5 26.5h-2v3.6h2c0.8 0 1.2-0.3 1.2-1.7v-0.1c0-1.5-0.4-1.8-1.2-1.8zM148 32.2c0 2.4-1.4 3.7-4.4 3.7h-9.9v-13h9.6c3.1 0 4.7 1.2 4.7 3.6v5.7zM141.6 26.5h-2v3.6h2c0.8 0 1.2-0.3 1.2-1.7v-0.1c0-1.5-0.4-1.8-1.2-1.8zM153.2 25.1c0 2.4-1.2 3.3-4.1 3.3h-0.7v-6.6h0.7c2.9 0 4.1 1.1 4.1 3.3zM153.2 12.3h-6.6v-3.8h6.6v3.8zM167.3 35.9h-6.6v-28.6h6.6v28.6z"/></svg>', // Simplified Fraunhofer wordmark
     'bundesdruckerei': '<svg viewBox="0 0 283.46 283.46" fill="currentColor"><path d="M141.73,0C63.44,0,0,63.44,0,141.73s63.44,141.73,141.73,141.73s141.73-63.44,141.73-141.73S220.02,0,141.73,0z M193.36,204.09H90.1V79.37h103.26V204.09z"/></svg>', // Placeholder based on generic shape if exact path too complex, or need full path logic. 
     'cmu': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>',
+    'email': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,8l-8,5L4,8V6l8,5l8-5V8z"/></svg>',
+    'clock': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2z M12,20c-4.42,0-8-3.58-8-8 s3.58-8,8-8s8,3.58,8,8S16.42,20,12,20z M12.5,7H11v6l5.25,3.15l0.75-1.23l-4.5-2.67V7z"/></svg>',
 
     // Social & Professional
     'github': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>',
@@ -351,18 +353,42 @@ class InstitutDiagram {
         const modalGroups = this.modal.querySelector('.modal-groups');
         const modalBody = this.modal.querySelector('.modal-body');
 
-        const agNames = [];
-        if (person.gruppen?.length > 0) {
-            person.gruppen.forEach(gid => {
-                const gruppe = this.data.gruppen.find(g => g.id === gid);
-                if (gruppe) {
-                    agNames.push(gruppe.type === 'ag' ? `AG ${gruppe.name}` : gruppe.name);
-                }
-            });
+        modalTitle.textContent = `${person.titel} ${person.name}`;
+
+        // Build subtitle with clickable links (keeping text styling)
+        modalSubtitle.innerHTML = '';
+        if (person.rolle) {
+            modalSubtitle.appendChild(document.createTextNode(person.rolle));
         }
 
-        modalTitle.textContent = `${person.titel} ${person.name}`;
-        modalSubtitle.textContent = person.rolle ? `${person.rolle}${agNames.length > 0 ? ', ' + agNames.join(', ') : ''}` : '';
+        if (person.gruppen?.length > 0) {
+            const groupsParams = person.gruppen
+                .map(gid => {
+                    const g = this.data.gruppen.find(grp => grp.id === gid);
+                    return g ? { id: gid, name: g.type === 'ag' ? `AG ${g.name}` : g.name } : null;
+                })
+                .filter(g => g);
+
+            if (groupsParams.length > 0) {
+                if (person.rolle) modalSubtitle.appendChild(document.createTextNode(', '));
+
+                groupsParams.forEach((g, index) => {
+                    const link = document.createElement('a');
+                    link.textContent = g.name;
+                    link.style.cursor = 'pointer';
+
+                    link.onclick = (e) => {
+                        e.stopPropagation();
+                        this.showGroupDetail(g.id);
+                    };
+                    modalSubtitle.appendChild(link);
+
+                    if (index < groupsParams.length - 1) {
+                        modalSubtitle.appendChild(document.createTextNode(', '));
+                    }
+                });
+            }
+        }
 
         // Avatar
         if (person.profilbild) {
@@ -383,19 +409,20 @@ class InstitutDiagram {
         let html = '';
 
         // Contact
+        // Contact
         if (person.kontakt) {
             html += '<h4>Kontakt</h4>';
             if (person.kontakt.email) {
-                html += `<p>📧 <a href="mailto:${person.kontakt.email}">${person.kontakt.email}</a></p>`;
+                html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex;">${ICONS.email}</span> <a href="mailto:${person.kontakt.email}">${person.kontakt.email}</a></p>`;
             }
             if (person.kontakt.telefon) {
-                html += `<p>📞 ${person.kontakt.telefon}</p>`;
+                html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex;">${ICONS.phone}</span> ${person.kontakt.telefon}</p>`;
             }
             if (person.kontakt.sprechstunde) {
                 if (person.kontakt.sprechstunde.startsWith('http')) {
-                    html += `<p>🕐 <a href="${person.kontakt.sprechstunde}" target="_blank">Sprechstunde buchen</a></p>`;
+                    html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex;">${ICONS.clock}</span> <a href="${person.kontakt.sprechstunde}" target="_blank">Sprechstunde buchen</a></p>`;
                 } else {
-                    html += `<p>🕐 ${person.kontakt.sprechstunde}</p>`;
+                    html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex;">${ICONS.clock}</span> ${person.kontakt.sprechstunde}</p>`;
                 }
             }
         }

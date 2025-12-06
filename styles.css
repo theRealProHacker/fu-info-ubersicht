@@ -358,8 +358,7 @@ ul {
 }
 
 .member-list .professor:hover {
-    text-decoration: underline;
-    color: inherit;
+    color: #cbd5e1b5;
 }
 
 /* =============================================
@@ -488,6 +487,10 @@ ul {
     gap: var(--spacing-sm);
 }
 
+.modal-subtitle a:hover {
+    color: #c3dcfb;
+}
+
 .modal-groups {
     display: flex;
     gap: var(--spacing-sm);
@@ -541,8 +544,8 @@ ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        "profs sekretariat"
-        "wimis wimis";
+        "profs wimis"
+        "sekretariat wimis";
     gap: var(--spacing-lg);
 }
 
@@ -552,12 +555,14 @@ ul {
 
 .ag-modal-grid .sekretariat {
     grid-area: sekretariat;
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-md);
 }
 
 .ag-modal-grid .wimis {
     grid-area: wimis;
-    border-top: 1px solid var(--border-color);
-    padding-top: var(--spacing-md);
+    border-left: 1px solid var(--border-color);
+    padding-left: var(--spacing-lg);
 }
 
 .member-card {
