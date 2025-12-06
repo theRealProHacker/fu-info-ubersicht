@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FU Berlin - Institut für Informatik</title>
+    <meta name="description" content="Interaktives Diagramm des Instituts für Informatik der Freien Universität Berlin">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Institut für Informatik</h1>
+        <p class="subtitle">Freie Universität Berlin</p>
+    </header>
+    <main class="diagram-container">
+        <!-- SVG Connection Layer (for future use) -->
+        <svg class="connections-layer" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMid meet">
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+                </marker>
+            </defs>
+            <g id="connection-lines"></g>
+        </svg>
+
+        <!-- Einfaches Grid - wird dynamisch nach Anzahl Professoren sortiert -->
+        <section class="simple-grid" id="ag-grid"></section>
+    </main>
+
+    <!-- Modal für Detailansicht -->
+    <div id="detail-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-header-content">
+                    <img class="modal-avatar" src="" alt="" style="display: none;">
+                    <div class="modal-avatar-placeholder" style="display: none;"></div>
+                    <div class="modal-header-text">
+                        <h2 class="modal-title"></h2>
+                        <p class="modal-subtitle"></p>
+                        <div class="modal-groups"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Daten: <a href="https://www.mi.fu-berlin.de/inf/index.html" target="_blank">FU Berlin Institut für
+                Informatik</a></p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
