@@ -27,7 +27,7 @@ PROFILE_PICS = {
     'goehring-daniel': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-daniel-goehring.jpg',
     'jahn-katharina': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-katharina-jahn.jpg',
     'kozma-laszlo': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-laszlo-kozma.png',
-    'landgraf-tim': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-tim-landgraf.jpg',
+    'landgraf-tim': 'https://www.mi.fu-berlin.de/inf/groups/ag-ki/_images/Tim_Landgraf_2021.jpg',
     'margraf-marian': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-marian-margraf.jpg',
     'mueller-birn-claudia': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-claudia-mueller-birn.jpg',
     'mulzer-wolfgang': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-wolfgang-mulzer.jpg',

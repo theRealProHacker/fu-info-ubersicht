@@ -1084,11 +1084,30 @@
             "rolle": "Professor",
             "kontakt": {
                 "email": "tim.landgraf@fu-berlin.de",
-                "telefon": "+49 30 838 75114"
+                "telefon": "+49 30 838 75114",
+                "ort": "Arnimallee 7, 14195 Berlin",
+                "raum": "111"
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/Tim_Landgraf.html",
-                "persoenlich": "https://bioroboticslab.github.io/website/"
+                "persoenlich": "https://bioroboticslab.github.io/website/",
+                "google-scholar": "https://scholar.google.de/citations?user=ChX0opIAAAAJ&hl=de",
+                "github": "https://github.com/bioroboticslab"
+            },
+            "vita": {
+                "positionen": [
+                    "Professor für Artificial & Collective Intelligence an der FU Berlin",
+                    "Leiter der Biorobotics Lab AG"
+                ]
+            },
+            "forschung": {
+                "interessen": [
+                    "Collective Intelligence",
+                    "Biorobotics",
+                    "Biomimetic Robots",
+                    "Computer Vision",
+                    "Machine Learning"
+                ]
             },
             "lehre": {
                 "kurse": [
@@ -1134,10 +1153,51 @@
             "rolle": "Professor",
             "kontakt": {
                 "email": "marian.margraf@fu-berlin.de",
-                "telefon": "+49 30 838 58977"
+                "telefon": "+49 30 838 58977",
+                "ort": "Takustr. 9, 14195 Berlin",
+                "raum": "154"
             },
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-idm/members/1_Professor_inn_en/Marian-Margraf/index.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-idm/members/1_Professor_inn_en/Marian-Margraf/index.html",
+                "dblp": "https://dblp.org/pid/15/3417.html"
+            },
+            "vita": {
+                "positionen": [
+                    "Seit 10/2021: Professor für Informationssicherheit an der FU Berlin",
+                    "Abteilungsleiter 'Secure Systems Engineering' am Fraunhofer AISEC"
+                ]
+            },
+            "forschung": {
+                "interessen": [
+                    "Usable Privacy and Security",
+                    "Post-Quantum Cryptography",
+                    "Electronic Identities",
+                    "Secure Systems Engineering"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Quantenalgorithmen und Kryptoanalyse",
+                        "semester": "Regelmäßig"
+                    },
+                    {
+                        "name": "Kryptoanalyse asymmetrischer Verfahren",
+                        "semester": "Regelmäßig"
+                    },
+                    {
+                        "name": "Sicherheitsprotolle und Infrastrukturen",
+                        "semester": "Regelmäßig"
+                    },
+                    {
+                        "name": "Usable Privacy and Security",
+                        "semester": "Regelmäßig"
+                    },
+                    {
+                        "name": "Seminar Maschinelles Lernen im Kontext der IT-Sicherheit",
+                        "semester": "Regelmäßig"
+                    }
+                ]
             },
             "profilbild": "research/images/margraf-marian.jpg"
         },

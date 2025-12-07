@@ -247,8 +247,8 @@ class InstitutDiagram {
         // Compact Subtitle with Website
         let subtitleHtml = gruppe['name-en'] || '';
         if (gruppe.website) {
-            const icon = this.getIcon('website', gruppe.website);
-            subtitleHtml += ` <span style="opacity:0.5">|</span> <a href="${gruppe.website}" target="_blank" style="display:inline-flex;align-items:center;gap:4px;">${icon} Website</a>`;
+            // Removed icon, just text link
+            subtitleHtml += ` <span style="opacity:0.5">|</span> <a href="${gruppe.website}" target="_blank" style="display:inline-flex;align-items:center;gap:4px;">Website</a>`;
         }
         modalSubtitle.innerHTML = subtitleHtml;
 
@@ -413,16 +413,16 @@ class InstitutDiagram {
         if (person.kontakt) {
             html += '<h4>Kontakt</h4>';
             if (person.kontakt.email) {
-                html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex;">${ICONS.email}</span> <a href="mailto:${person.kontakt.email}">${person.kontakt.email}</a></p>`;
+                html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex; width: 1.1em; height: 1.1em;">${ICONS.email}</span> <a href="mailto:${person.kontakt.email}">${person.kontakt.email}</a></p>`;
             }
             if (person.kontakt.telefon) {
-                html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex;">${ICONS.phone}</span> ${person.kontakt.telefon}</p>`;
+                html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex; width: 1.1em; height: 1.1em;">${ICONS.phone}</span> ${person.kontakt.telefon}</p>`;
             }
             if (person.kontakt.sprechstunde) {
                 if (person.kontakt.sprechstunde.startsWith('http')) {
-                    html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex;">${ICONS.clock}</span> <a href="${person.kontakt.sprechstunde}" target="_blank">Sprechstunde buchen</a></p>`;
+                    html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex; width: 1.1em; height: 1.1em;">${ICONS.clock}</span> <a href="${person.kontakt.sprechstunde}" target="_blank">Sprechstunde buchen</a></p>`;
                 } else {
-                    html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex;">${ICONS.clock}</span> ${person.kontakt.sprechstunde}</p>`;
+                    html += `<p><span class="icon" style="vertical-align: middle; margin-right: 4px; display: inline-flex; width: 1.1em; height: 1.1em;">${ICONS.clock}</span> ${person.kontakt.sprechstunde}</p>`;
                 }
             }
         }

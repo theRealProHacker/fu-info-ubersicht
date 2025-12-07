@@ -555,14 +555,12 @@ ul {
 
 .ag-modal-grid .sekretariat {
     grid-area: sekretariat;
-    border-top: 1px solid var(--border-color);
-    padding-top: var(--spacing-md);
+    /* Removed border and padding as requested */
 }
 
 .ag-modal-grid .wimis {
     grid-area: wimis;
-    border-left: 1px solid var(--border-color);
-    padding-left: var(--spacing-lg);
+    /* Removed border and padding as requested */
 }
 
 .member-card {
