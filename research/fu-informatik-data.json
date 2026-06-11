@@ -336,7 +336,7 @@
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/members/linnert.html",
-                "website": "http://www.mi.fu-berlin.de/w/Main/BarryLinnert"
+                "persoenlich": "http://www.mi.fu-berlin.de/w/Main/BarryLinnert"
             }
         },
         {
@@ -349,10 +349,13 @@
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "kontakt": {
                 "email": "linus.ververs@fu-berlin.de",
-                "telefon": "+49 30 838 56715"
+                "telefon": "+49 30 838 56715",
+                "sprechstunde": "Montags bis Donnerstags 8:30 - 17:00 Uhr; Termine nach Vereinbarung per E-Mail"
             },
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/members/ververs.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/members/ververs.html",
+                "linkedin": "https://www.linkedin.com/in/linus-ververs-267350164/",
+                "dblp": "https://dblp.org/pid/290/5424.html"
             },
             "forschung": {
                 "interessen": [
@@ -360,7 +363,8 @@
                     "High Performance Computing",
                     "Operating Systems",
                     "Parallel Simulations"
-                ]
+                ],
+                "publikationen": "https://dblp.org/pid/290/5424.html"
             },
             "lehre": {
                 "kurse": [
@@ -373,7 +377,13 @@
                         "semester": "Regelmäßig"
                     }
                 ]
-            }
+            },
+            "vita": {
+                "positionen": [
+                    "2022-2026: Wissenschaftlicher Mitarbeiter, AG Software Engineering, Freie Universität Berlin"
+                ]
+            },
+            "profilbild": "research/images/ververs-linus.jpg"
         },
         {
             "id": "roth-volker",
@@ -426,11 +436,17 @@
             "seit": 2012,
             "kontakt": {
                 "telefon": "+49 30 838 75256",
-                "sprechstunde": "https://mycampus.imp.fu-berlin.de/portal/site/~clmb/tool/5f12820e-db09-4ab7-9a1d-26df6dd9c0a3/signupMeetings"
+                "sprechstunde": "https://mycampus.imp.fu-berlin.de/portal/site/~clmb/tool/5f12820e-db09-4ab7-9a1d-26df6dd9c0a3/signupMeetings",
+                "email": "clmb@inf.fu-berlin.de"
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/professor/mueller-birn.html",
-                "persoenlich": "http://www.clmb.de"
+                "persoenlich": "http://www.clmb.de",
+                "github": "https://github.com/clmb",
+                "orcid": "https://orcid.org/0000-0002-5143-1770",
+                "google-scholar": "https://scholar.google.com/citations?user=XK2xSfgAAAAJ&hl=en",
+                "dblp": "https://dblp.org/pid/05/1222.html",
+                "mastodon": "https://hci.social/@clmb"
             },
             "vita": {
                 "positionen": [
@@ -476,13 +492,38 @@
                     "Open Science",
                     "Open Source Software"
                 ],
-                "cluster": "Cluster of Excellence Matters of Activity (MoA)"
+                "cluster": "Cluster of Excellence Matters of Activity (MoA)",
+                "publikationen": "https://scholar.google.com/citations?user=XK2xSfgAAAAJ&hl=en"
             },
             "sonstiges": {
                 "head_examination_committee": true,
                 "program_master_cs": true
             },
-            "profilbild": "research/images/mueller-birn-claudia.jpg"
+            "profilbild": "research/images/mueller-birn-claudia.jpg",
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Research Seminar: Human-Centered Computing",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Doing Research in Computer Science",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Human-Computer Interaction",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Human-Centered Data Science",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Computer Science Perspectives on Human-Computer Interaction",
+                        "semester": "SoSe 2026"
+                    }
+                ]
+            }
         },
         {
             "id": "deter-sylvia",
@@ -541,8 +582,53 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/leimstaedtner.html"
-            }
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/leimstaedtner.html",
+                "google-scholar": "https://scholar.google.de/citations?user=xBQAZXkAAAAJ&hl=en",
+                "dblp": "https://dblp.org/pid/325/5237.html",
+                "orcid": "https://orcid.org/0000-0002-1445-3153"
+            },
+            "kontakt": {
+                "email": "david.leimstaedtner@fu-berlin.de",
+                "telefon": "+49 30 838 55679"
+            },
+            "forschung": {
+                "interessen": [
+                    "HCI",
+                    "Decision-Making",
+                    "Participatory Design",
+                    "Digital Health"
+                ],
+                "publikationen": "https://dblp.org/pid/325/5237.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2022: Wissenschaftlicher Mitarbeiter, Freie Universität Berlin, AG Human-Centered Computing",
+                    "2021: M.Sc. in Communication Science (mit Auszeichnung), University of Amsterdam",
+                    "2017-2021: User-Experience-Berater, Digitalisierungsprojekte (E-Government)",
+                    "2017: B.A. in Communication in Social and Economic Contexts, Universität der Künste Berlin"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Research Seminar: Human-Centered Computing",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Human-Computer Interaction",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Human-Centered Data Science",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Doing Research in Computer Science",
+                        "semester": "SoSe 2026"
+                    }
+                ]
+            },
+            "profilbild": "research/images/leimstaedtner-david.jpg"
         },
         {
             "id": "linke-diane",
@@ -842,7 +928,8 @@
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/members/wunder.html"
-            }
+            },
+            "profilbild": "research/images/wunder-gerhard.jpg"
         },
         {
             "id": "schoettker-soehl-susanne",
@@ -1363,9 +1450,57 @@
             ],
             "rolle": "Professorin",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-bds/staff/jahn.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-bds/staff/jahn.html",
+                "orcid": "https://orcid.org/0000-0002-6983-4615",
+                "dblp": "https://dblp.org/pid/06/3142.html"
             },
-            "profilbild": "research/images/jahn-katharina.jpg"
+            "profilbild": "research/images/jahn-katharina.jpg",
+            "kontakt": {
+                "email": "katharina.jahn@fu-berlin.de",
+                "telefon": "+49 30 838 60648"
+            },
+            "forschung": {
+                "interessen": [
+                    "single-cell data analysis",
+                    "statistical and machine learning methods for omics data",
+                    "intra-tumor heterogeneity",
+                    "clonal tumor evolution",
+                    "phylogenetic inference",
+                    "cancer biology"
+                ],
+                "publikationen": "https://dblp.org/pid/06/3142.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit Februar 2022: Professorin für Data Science for Health Informatics in Life Sciences, Institut für Informatik, Freie Universität Berlin",
+                    "Postdoc, Computational Biology Group (CBG), ETH Zürich / SIB Swiss Institute of Bioinformatics, Basel",
+                    "Researcher, Center for Biotechnology (CeBiTec), Bielefeld University"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Journal Club: Biomedical Data Science",
+                        "semester": "WiSe 23/24"
+                    },
+                    {
+                        "name": "Projektseminar Data Science in the Life Sciences",
+                        "semester": "SoSe 24"
+                    },
+                    {
+                        "name": "Introduction to Focus Areas",
+                        "semester": "WiSe 24/25"
+                    },
+                    {
+                        "name": "Journal Club: Biomedical Data Science",
+                        "semester": "WiSe 24/25"
+                    },
+                    {
+                        "name": "Projektseminar Data Science in the Life Sciences",
+                        "semester": "SoSe 25"
+                    }
+                ]
+            }
         },
         {
             "id": "esponda-margarita",
@@ -1444,8 +1579,37 @@
             ],
             "rolle": "Professor",
             "links": {
-                "fu-berlin": "http://www.sicherheit-forschung.de/ueber_uns/mitarbeitende/gerhold/index.html"
-            }
+                "fu-berlin": "http://www.sicherheit-forschung.de/ueber_uns/mitarbeitende/gerhold/index.html",
+                "linkedin": "https://www.linkedin.com/in/lars-gerhold-15092218a/",
+                "orcid": "https://orcid.org/0000-0001-8461-1201",
+                "google-scholar": "https://scholar.google.com/citations?user=W6OX8mcAAAAJ",
+                "dblp": "https://dblp.uni-trier.de/pers/hd/g/Gerhold:Lars"
+            },
+            "kontakt": {
+                "email": "lars.gerhold@fu-berlin.de",
+                "telefon": "+49 30 838 51693"
+            },
+            "forschung": {
+                "interessen": [
+                    "Sicherheitskritische soziotechnische Systeme",
+                    "Digitalisierung und Technikfolgenabschätzung",
+                    "Sicherheits- und Risikoforschung",
+                    "Stress und Coping",
+                    "Zukunftsforschung",
+                    "Wissenstransfer"
+                ],
+                "publikationen": "http://www.sicherheit-forschung.de/ueber_uns/mitarbeitende/gerhold/index.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit Oktober 2022: Universitätsprofessor für Psychologie soziotechnischer Systeme, TU Braunschweig",
+                    "2015-2022: Universitätsprofessor für Interdisziplinäre Sicherheitsforschung, FU Berlin",
+                    "2009-2015: Wissenschaftlicher Koordinator, Forschungsforum Öffentliche Sicherheit, Institut für Informatik, FU Berlin",
+                    "2005-2009: Wissenschaftlicher Mitarbeiter, Institut Futur, FU Berlin",
+                    "2008: Promotion (Umgang mit makrosozialer Unsicherheit), Universität Kassel"
+                ]
+            },
+            "profilbild": "research/images/gerhold-lars.jpg"
         },
         {
             "id": "schwarz-heiko",

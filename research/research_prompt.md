@@ -32,8 +32,12 @@ which a validating orchestrator merges into the dataset.
    web page (or in a search-result snippet for link discovery). If you cannot
    find a field, list it under `not_found`. A sparse, honest answer is
    correct; a complete, guessed answer is a failure.
-2. **Every field needs a source URL** — the page where you read the fact.
-   Array fields get ONE source URL for the whole array.
+2. **Every field needs a source URL** — and the cited page must ACTUALLY
+   CONTAIN the fact. Do not cite a page you merely visited. For profile
+   links, cite the page where you found the link (e.g. the person's own
+   homepage); citing the profile URL itself is acceptable ONLY when the
+   profile's own content proves the identity (e.g. it states the FU Berlin
+   affiliation). Array fields get ONE source URL for the whole array.
 3. **Identity corroboration for social/profile links** (github, linkedin,
    orcid, google-scholar, dblp, mastodon, persoenlich, researchgate):
    only return the link if the page or its search snippet shows an
@@ -41,10 +45,16 @@ which a validating orchestrator merges into the dataset.
    signal (profile photo match stated on page, link FROM the person's own
    FU/personal page, matching research topics AND location). A bare
    name-slug match is NOT enough — common names surface other people's
-   profiles. When in doubt → `not_found`.
+   profiles. An EMPTY or near-empty profile (no bio, no repos/posts) that
+   only matches by name is NOT corroborated. When in doubt → `not_found`.
 4. **Plain text only.** No HTML in any value. Never include the characters
    `<`, `>`, `"` or backtick in any value.
 5. German or English values are both fine; prefer the language of the source.
+6. **Transcribe, don't paraphrase.** For `forschung.interessen` and
+   `vita.positionen`, copy the source's own wording (shortened is fine,
+   reworded is not) and NEVER add items the source doesn't state. Preserve
+   umlauts and diacritics exactly (für, Müller, Zürich — never fur, Muller).
+   Transcribe degree names and subjects letter-for-letter.
 {{EXTRA_RULES}}
 
 ## Field conventions (canonical schema)

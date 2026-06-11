@@ -286,13 +286,13 @@ def build_prompt(entry, missing, mode):
     extra = ''
     if mode == 'group':
         extra = (
-            "6. **Group rule:** research ONLY the group's own website "
+            "7. **Group rule:** research ONLY the group's own website "
             f"({entry.get('website', '(see entry)')}). The source URL for "
             "`beschreibung` must be a page on that same site."
         )
     elif entry.get('rolle') in RESTRICTED_ROLES:
         extra = (
-            "6. **Restricted subject:** this person is non-research staff. "
+            "7. **Restricted subject:** this person is non-research staff. "
             "Use ONLY official fu-berlin.de pages as sources; do not search "
             "for or report social media or private information."
         )
@@ -603,6 +603,9 @@ def main():
     parser.add_argument('--yes', action='store_true',
                         help='skip the large-queue confirmation prompt')
     args = parser.parse_args()
+
+    # Progress lines must appear live even when stdout is piped/redirected.
+    sys.stdout.reconfigure(line_buffering=True)
 
     mode = 'group' if args.groups else 'person'
     check_auth_env()
