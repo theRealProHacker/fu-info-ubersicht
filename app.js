@@ -16,6 +16,7 @@ const ICONS = {
     'cmu': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>',
     'email': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,8l-8,5L4,8V6l8,5l8-5V8z"/></svg>',
     'clock': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2z M12,20c-4.42,0-8-3.58-8-8 s3.58-8,8-8s8,3.58,8,8S16.42,20,12,20z M12.5,7H11v6l5.25,3.15l0.75-1.23l-4.5-2.67V7z"/></svg>',
+    'phone': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62,10.79c1.44,2.83,3.76,5.14,6.59,6.59l2.2-2.2c0.27-0.27,0.67-0.36,1.02-0.24c1.12,0.37,2.33,0.57,3.57,0.57 c0.55,0,1,0.45,1,1V20c0,0.55-0.45,1-1,1c-9.39,0-17-7.61-17-17c0-0.55,0.45-1,1-1h3.5c0.55,0,1,0.45,1,1c0,1.25,0.2,2.45,0.57,3.57 c0.11,0.35,0.03,0.74-0.25,1.02L6.62,10.79z"/></svg>',
 
     // Social & Professional
     'github': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>',
@@ -38,17 +39,6 @@ const ICONS = {
     'persoenlich': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>',
     'mpi': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>',
     'default': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>'
-};
-
-// Profile picture URLs
-const PROFILE_PICS = {
-    'mueller-birn-claudia': 'https://www.clmb.de/images/clmb-sq.png',
-    'prechelt-lutz': 'https://www.mi.fu-berlin.de/en/inf/groups/ag-se/members/_bilder/prechelt.jpg',
-    'roth-volker': 'http://www.volkerroth.com/volkerroth-200x200.jpg',
-    'reinert-knut': 'https://www.mi.fu-berlin.de/en/inf/groups/abi/members/Professors/_bilder/reinert.jpg',
-    'wolter-katinka': 'https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/_bilder/wolter.jpg',
-    'landgraf-tim': 'https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/_bilder/landgraf.jpg',
-    'schiller-jochen': 'https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/_bilder/schiller.jpg'
 };
 
 // Display labels for links
@@ -258,6 +248,10 @@ class InstitutDiagram {
         let html = '';
 
         // Website - REMOVED (Moved to Header)
+
+        if (gruppe.beschreibung) {
+            html += `<p class="ag-beschreibung">${gruppe.beschreibung}</p>`;
+        }
 
         // Member grid
         html += '<div class="ag-modal-grid">';

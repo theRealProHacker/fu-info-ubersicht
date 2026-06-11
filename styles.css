@@ -539,6 +539,11 @@ ul {
     margin-bottom: var(--spacing-sm);
 }
 
+.modal-body .ag-beschreibung {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
 /* AG Modal Grid Layout */
 .ag-modal-grid {
     display: grid;

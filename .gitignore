@@ -1,2 +1,6 @@
 /extract_urls_local.py
 /faculty_page.html
+# research runner (machine-local state + raw agent logs)
+research/.fill_state.json
+research/.fill_logs/
+research/*.json.tmp

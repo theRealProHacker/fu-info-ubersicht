@@ -83,7 +83,72 @@ Das Institut für Informatik ist Teil des Fachbereichs Mathematik und Informatik
 - **Anzahl Arbeitsgruppen:** 21
 - **Aktive Professoren:** 25+
 - **Wissenschaftliche Mitarbeiter:** 150+
-- **Externe Partner:** 3 (Fraunhofer HHI, Fraunhofer AISEC, Bundesdruckerei)
+- **Externe Partner:** 4 (Fraunhofer HHI, Fraunhofer AISEC, Bundesdruckerei, MPI für molekulare Genetik)
+---
+## Daten pflegen: der Research-Runner
+
+Fehlende Personen- und Gruppendaten füllt `research/fill_missing.py` —
+ein Loop, der pro Eintrag einen headless Claude-Agenten recherchieren lässt.
+Agenten geben nur JSON zurück und können den Datensatz nie direkt ändern;
+nur validierte Fakten (jeder mit Quell-URL) werden gemergt, und nur in
+leere Felder (fill-only — vorhandene Werte werden nie überschrieben).
+
+**Voraussetzungen:** Claude Code CLI, eingeloggt mit dem Abo
+(Schnelltest: `claude -p "hi"`); Python 3 (stdlib; `requests` nur für
+`download_images.py`). Der Runner bricht ab, wenn `ANTHROPIC_API_KEY`
+o. Ä. gesetzt ist — er soll nie API-Tokens abrechnen.
+
+**Reihenfolge:**
+
+```bash
+python3 research/fill_missing.py --dry-run   # Queue ansehen (ändert nichts)
+git commit -am "checkpoint before research"  # Pflicht: Runner prüft das
+python3 research/fill_missing.py --limit 5   # Pilot
+# → Stichprobe: jeden gemergten Fakt gegen seine Quelle prüfen, dann committen
+python3 research/fill_missing.py             # voller Personen-Lauf (Stunden!)
+python3 research/fill_missing.py --groups    # AG-Beschreibungen
+```
+
+| Flag | Wirkung |
+|---|---|
+| `--dry-run` | Queue mit Begründung pro Feld anzeigen, nichts ändern |
+| `--limit N` | höchstens N Einträge (Pilot-Mechanismus) |
+| `--ids a,b` | nur diese IDs (IDs via `--dry-run` herausfinden) |
+| `--retry-not-found` | als „nicht gefunden" markierte Felder erneut suchen — sonst werden sie für immer übersprungen. Das ist der Semester-Refresh. |
+| `--groups` | Gruppen-Pass (statt Personen-Pass) |
+| `--yes` | Rückfrage bei großer Queue überspringen |
+
+**Laufzeit & Kosten:** 2-5 min pro Person, Stunden insgesamt. Läuft auf dem
+Abo-Login (keine Token-Kosten). Bei erschöpftem Nutzungsfenster bricht der
+Runner sauber ab; einfach später denselben Befehl erneut ausführen —
+fertige Einträge werden übersprungen (Strg-C ist jederzeit ok).
+
+**Dateien:** `research/fu-informatik-data.json` (Datensatz),
+`research/provenance.jsonl` (Quelle jedes gemergten Fakts, committen),
+`research/profile_pics.json` (Foto-URLs, von `download_images.py` gelesen,
+committen), `research/.fill_skip.json` (Deny-Liste, committen),
+`research/.fill_state.json` (Resume-Zustand, gitignored — **maschinenlokal**:
+auf einem neuen Rechner wird Nicht-Gemergtes erneut recherchiert),
+`research/.fill_logs/` (Roh-Output fehlgeschlagener Agenten, gitignored).
+
+**Daten entfernen (Takedown):** Wert(e) aus dem Datensatz löschen und die
+Person/Felder in `research/.fill_skip.json` eintragen, damit der Merge sie
+nie wieder einfügt — dann beides committen:
+
+```json
+{
+    "people": {
+        "beispiel-person": true,
+        "andere-person": ["links.linkedin", "kontakt.telefon"]
+    },
+    "groups": {}
+}
+```
+
+**Richtlinie:** Für Sekretariat/Projektassistenz recherchiert der Runner
+absichtlich nur Kontakt + Foto und nur von fu-berlin.de-Seiten — die
+spärlichen Einträge sind kein Fehler.
+
 ---
 ## Quellen
 - FU Berlin Institut für Informatik: https://www.mi.fu-berlin.de/inf/index.html

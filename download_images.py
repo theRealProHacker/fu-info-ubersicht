@@ -21,37 +21,14 @@ HEADERS = {
     'Referer': 'https://www.mi.fu-berlin.de/',
 }
 
-# Known profile picture URLs (verified via local HTML analysis of faculty page)
-PROFILE_PICS = {
-    # Active Professors
-    'goehring-daniel': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-daniel-goehring.jpg',
-    'jahn-katharina': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-katharina-jahn.jpg',
-    'kozma-laszlo': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-laszlo-kozma.png',
-    'landgraf-tim': 'https://www.mi.fu-berlin.de/inf/groups/ag-ki/_images/Tim_Landgraf_2021.jpg',
-    'margraf-marian': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-marian-margraf.jpg',
-    'mueller-birn-claudia': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-claudia-mueller-birn.jpg',
-    'mulzer-wolfgang': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-wolfgang-mulzer.jpg',
-    'paschke-adrian': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-adrian-paschke.jpg',
-    'prechelt-lutz': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-lutz-prechelt.jpg',
-    'reinert-knut': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-knut-reinert.jpg',
-    'romeike-ralf': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-ralf-romeike.jpg',
-    'rote-guenter': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-guenter-rote.jpg',
-    'roth-volker': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-volker-roth.jpg',
-    'schiller-jochen': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-jochen-schiller.jpg',
-    'schwarz-heiko': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-heiko-schwarz.jpg',
-    'voisard-agnes': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-agnes-voisard.jpg',
-    'wolter-katinka': 'https://www.mi.fu-berlin.de/inf/_faculty/profs/photo-katinka-wolter.jpg',
+# Profile picture URLs live in research/profile_pics.json (shared with
+# research/fill_missing.py, which appends newly found URLs there).
+PROFILE_PICS_PATH = Path(__file__).parent / 'research' / 'profile_pics.json'
 
-    # Associate/Honorary
-    'baccelli-emmanuel': 'https://www.mi.fu-berlin.de/inf/_faculty/lecturers/photo-emmanuel-baccelli.jpg',
-    'benzmueller-christoph': 'https://www.mi.fu-berlin.de/inf/_faculty/lecturers/photo-christoph-benzmueller.jpg',
-    'eichler-joern': 'https://www.mi.fu-berlin.de/inf/_faculty/lecturers/Eichler-klein.jpg',
-    'wunder-gerhard': 'https://www.mi.fu-berlin.de/inf/_faculty/lecturers/photo-gerhard-wunder.jpg',
 
-    # Emeriti
-    'alt-helmut': 'https://www.mi.fu-berlin.de/inf/_faculty/emeritus/photo-alt.jpg',
-    'rojas-raul': 'https://www.mi.fu-berlin.de/inf/_faculty/emeritus/photo-raul-rojas.jpg',
-}
+def load_profile_pics() -> dict:
+    with open(PROFILE_PICS_PATH, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
 
 def download_image(url: str, save_path: Path) -> bool:
@@ -101,24 +78,26 @@ def main():
     script_dir = Path(__file__).parent
     images_dir = script_dir / 'research' / 'images'
     json_path = script_dir / 'research' / 'fu-informatik-data.json'
-    
+
     images_dir.mkdir(parents=True, exist_ok=True)
-    
+
     print("=" * 60)
     print("FU Informatik - Profilbilder Download")
     print("=" * 60)
-    
+
     # Load JSON data
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
+
+    profile_pics = load_profile_pics()
+
     downloaded = 0
     failed = 0
     skipped = 0
-    
-    print(f"\nChecking {len(PROFILE_PICS)} known profile pictures...\n")
-    
-    for person_id, url in PROFILE_PICS.items():
+
+    print(f"\nChecking {len(profile_pics)} known profile pictures...\n")
+
+    for person_id, url in profile_pics.items():
         print(f"[{person_id}]")
         
         # Check if person exists in data
@@ -150,17 +129,24 @@ def main():
     print(f"Images saved to: {images_dir}")
     print("=" * 60)
     
-    # Update JSON with local image paths
-    if downloaded > 0:
-        print("\nUpdating JSON with local image paths...")
-        for person in data['personen']:
-            if person['id'] in PROFILE_PICS:
-                ext = get_extension(PROFILE_PICS[person['id']])
+    # Update JSON with local image paths. Stamp profilbild only for images
+    # that actually exist on disk — a failed download must never produce a
+    # broken path, and a file left by an earlier run still gets stamped.
+    print("\nUpdating JSON with local image paths...")
+    stamped = 0
+    for person in data['personen']:
+        if person['id'] in profile_pics:
+            ext = get_extension(profile_pics[person['id']])
+            image_path = images_dir / f"{person['id']}{ext}"
+            if image_path.exists():
                 person['profilbild'] = f"research/images/{person['id']}{ext}"
-        
-        with open(json_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
-        print("✓ JSON updated with profilbild paths")
+                stamped += 1
+
+    tmp_path = json_path.with_suffix('.json.tmp')
+    with open(tmp_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+    os.replace(tmp_path, json_path)
+    print(f"✓ JSON updated: {stamped} profilbild paths set")
 
 
 if __name__ == '__main__':
