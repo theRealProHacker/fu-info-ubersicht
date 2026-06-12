@@ -247,7 +247,8 @@
             "ort": "Takustr. 9",
             "kontakt": {
                 "email": "prechelt@inf.fu-berlin.de",
-                "sprechstunde": "https://www.inf.fu-berlin.de/w/SE/SprechstundeLutzPrechelt"
+                "sprechstunde": "https://www.inf.fu-berlin.de/w/SE/SprechstundeLutzPrechelt",
+                "telefon": "+49 30 838-75115"
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/members/prechelt.html",
@@ -257,10 +258,83 @@
                 "xing": "https://www.xing.com/profile/Lutz_Prechelt",
                 "mastodon": "https://hachyderm.io/@prechelt",
                 "x": "https://twitter.com/prechelt",
-                "bibliographie": "https://page.mi.fu-berlin.de/~prechelt/Biblio/"
+                "bibliographie": "https://page.mi.fu-berlin.de/~prechelt/Biblio/",
+                "orcid": "https://orcid.org/0000-0001-5592-3521",
+                "google-scholar": "https://scholar.google.com/citations?user=ZY2MP7QAAAAJ",
+                "dblp": "https://dblp.org/pid/54/3155"
             },
             "lehre": {
-                "uebersicht": "https://www.mi.fu-berlin.de/w/SE/TeachingHome"
+                "uebersicht": "https://www.mi.fu-berlin.de/w/SE/TeachingHome",
+                "kurse": [
+                    {
+                        "name": "Arbeits- und Lebensmethodik",
+                        "semester": "WS 2026/2027"
+                    },
+                    {
+                        "name": "Auswirkungen der Informatik",
+                        "semester": "WS 2026/2027"
+                    },
+                    {
+                        "name": "Seminar Beiträge zum Software Engineering",
+                        "semester": "WS 2026/2027"
+                    },
+                    {
+                        "name": "Betriebssysteme",
+                        "semester": "WS 2026/2027"
+                    },
+                    {
+                        "name": "Nichtsequentielle, parallele und verteilte Programmierung",
+                        "semester": "WS 2026/2027"
+                    },
+                    {
+                        "name": "Programmierpraktikum",
+                        "semester": "WS 2026/2027"
+                    },
+                    {
+                        "name": "Projektmanagement in agilen Umgebungen Teil 1 (WS)",
+                        "semester": "WS 2026/2027"
+                    },
+                    {
+                        "name": "Softwareprojekt: Das AMOS-Projekt",
+                        "semester": "WS 2026/2027"
+                    },
+                    {
+                        "name": "Softwareprozesse",
+                        "semester": "WS 2026/2027"
+                    },
+                    {
+                        "name": "Seminar Agile Methoden und technische Praktiken",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Seminar Beiträge zum Software Engineering",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Cluster Computing",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Empirische Methoden im Software Engineering",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Programmierpraktikum",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Projektmanagement in agilen Umgebungen Teil 2 (SoSe)",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Softwareprojekt: Das AMOS-Projekt",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Softwaretechnik",
+                        "semester": "SS 2026"
+                    }
+                ]
             },
             "vita": {
                 "geburtsjahr": 1965,
@@ -311,7 +385,8 @@
                         "name": "JPlag",
                         "beschreibung": "Plagiarism detection"
                     }
-                ]
+                ],
+                "publikationen": "https://page.mi.fu-berlin.de/~prechelt/Biblio/"
             },
             "sonstiges": {
                 "gi-botschafter": true,
@@ -336,7 +411,60 @@
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/members/linnert.html",
-                "persoenlich": "http://www.mi.fu-berlin.de/w/Main/BarryLinnert"
+                "persoenlich": "http://www.mi.fu-berlin.de/w/Main/BarryLinnert",
+                "dblp": "https://dblp.org/pid/64/4778.html",
+                "orcid": "https://orcid.org/0000-0002-4277-3568",
+                "linkedin": "https://www.linkedin.com/in/barry-linnert-4979b8a1/"
+            },
+            "forschung": {
+                "interessen": [
+                    "Resource management in cluster and grid environments",
+                    "High Performance Computing (HPC)",
+                    "Operating systems",
+                    "Parallel and distributed simulations"
+                ],
+                "publikationen": "https://dblp.org/pid/64/4778.html"
+            },
+            "vita": {
+                "positionen": [
+                    "2024: Dissertation (Dr.-Ing.), Technische Universität Berlin"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Cluster Computing",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Betriebs- und Kommunikationssysteme",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Nebenläufige, parallele und verteilte Programmierung",
+                        "semester": "WS 2025/26"
+                    },
+                    {
+                        "name": "Betriebssysteme",
+                        "semester": "WS 2025/26"
+                    },
+                    {
+                        "name": "Cluster Computing",
+                        "semester": "SoSe 2025"
+                    },
+                    {
+                        "name": "High Performance and Cloud Computing",
+                        "semester": "SoSe 2025"
+                    },
+                    {
+                        "name": "Nebenläufige, parallele und verteilte Programmierung",
+                        "semester": "WS 2024/25"
+                    },
+                    {
+                        "name": "Betriebssysteme",
+                        "semester": "WS 2024/25"
+                    }
+                ]
             }
         },
         {
@@ -396,12 +524,14 @@
             "seit": 2009,
             "kontakt": {
                 "telefon": "+49 30 838 75281",
-                "sprechstunde": "Dienstags 17-18 Uhr via Webex"
+                "sprechstunde": "Dienstags 17-18 Uhr via Webex",
+                "email": "volker.roth@fu-berlin.de"
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/volkerroth.html",
                 "persoenlich": "http://www.volkerroth.com/",
-                "google-scholar": "https://scholar.google.com/citations?user=hbLmvo0AAAAJ"
+                "google-scholar": "https://scholar.google.com/citations?user=hbLmvo0AAAAJ",
+                "dblp": "https://dblp.org/pid/23/1185-2"
             },
             "vita": {
                 "promotion": {
@@ -421,7 +551,8 @@
                     "Privacy and Security in Information Systems",
                     "Psychological acceptability of security mechanisms",
                     "Security mechanism design"
-                ]
+                ],
+                "publikationen": "https://dblp.org/pid/23/1185-2"
             },
             "profilbild": "research/images/roth-volker.jpg"
         },
@@ -535,6 +666,10 @@
             "rolle": "Sekretariat",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/secretary/deter.html"
+            },
+            "kontakt": {
+                "email": "sylvia.deter@fu-berlin.de",
+                "telefon": "+49 30 838 60331"
             }
         },
         {
@@ -547,6 +682,40 @@
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/heiser.html"
+            },
+            "kontakt": {
+                "email": "malte.heiser@fu-berlin.de",
+                "telefon": "+49 30 838 67899"
+            },
+            "forschung": {
+                "interessen": [
+                    "Human-Centered Computing",
+                    "intersection of technology and medicine",
+                    "medical applications of computer science"
+                ]
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2024: Wissenschaftlicher Mitarbeiter, AG HCC, FU Berlin",
+                    "M.Sc. Computer Science (Informatik), RWTH Aachen University",
+                    "B.Sc. Computer Science (Informatik), RWTH Aachen University"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Human-Computer Interaction",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Human-Centered Data Science",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Research Seminar in Human-Centered Computing",
+                        "semester": "SoSe 2026"
+                    }
+                ]
             }
         },
         {
@@ -558,7 +727,43 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/klein.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/klein.html",
+                "google-scholar": "https://scholar.google.com/citations?user=rVwJOF0AAAAJ&hl=de"
+            },
+            "kontakt": {
+                "email": "jacobe.klein@fu-berlin.de",
+                "telefon": "+49 30 838 63543"
+            },
+            "forschung": {
+                "interessen": [
+                    "privacy concerns in implementing LLMs in healthcare",
+                    "human-AI collaboration",
+                    "LLMs",
+                    "AI",
+                    "emergency department",
+                    "health"
+                ],
+                "publikationen": "https://scholar.google.com/citations?user=rVwJOF0AAAAJ&hl=de"
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Research Seminar: Human-Centered Computing",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Human-Computer Interaction (Lecture with Exercise)",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Human-Centered Data Science (Lecture with Exercise)",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Doing Research in Computer Science (Lecture)",
+                        "semester": "SS 2026"
+                    }
+                ]
             }
         },
         {
@@ -570,7 +775,32 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/kuruc.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/kuruc.html",
+                "github": "https://github.com/fabriz-io",
+                "orcid": "https://orcid.org/0000-0002-3685-1005"
+            },
+            "kontakt": {
+                "email": "fabrizio.kuruc@fu-berlin.de"
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Research Seminar: Human-Centered Computing",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Human-Computer Interaction (Lecture with Exercise)",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Human-Centered Data Science (Lecture with Exercise)",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Doing Research in Computer Science (Lecture)",
+                        "semester": "SS 2026"
+                    }
+                ]
             }
         },
         {
@@ -639,7 +869,28 @@
             ],
             "rolle": "Wissenschaftliche Mitarbeiterin",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/linke.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/linke.html",
+                "orcid": "https://orcid.org/0009-0000-3917-0937",
+                "dblp": "https://dblp.org/pid/325/4057.html"
+            },
+            "kontakt": {
+                "email": "diane.linke@fu-berlin.de",
+                "telefon": "+49 30 838 69907"
+            },
+            "forschung": {
+                "interessen": [
+                    "Conversational reflective informatics",
+                    "Participatory design methodologies",
+                    "Data science ethics education",
+                    "Conversational user interfaces (CUI) design",
+                    "Reflection and learning in technology contexts"
+                ],
+                "publikationen": "https://dblp.org/pid/325/4057.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2020: Wissenschaftliche Mitarbeiterin at HCC Group, Freie Universität Berlin"
+                ]
             }
         },
         {
@@ -651,7 +902,22 @@
             ],
             "rolle": "Wissenschaftliche Mitarbeiterin",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/schaefer.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/schaefer.html",
+                "google-scholar": "https://scholar.google.com/citations?user=4LTpp_gAAAAJ&hl=en"
+            },
+            "kontakt": {
+                "email": "ulrike.schaefer@fu-berlin.de",
+                "telefon": "+49 30 838 63366"
+            },
+            "forschung": {
+                "interessen": [
+                    "Human-AI collaboration",
+                    "Explainable Artificial Intelligence (XAI)",
+                    "Uncertainty representations in human-AI collaboration",
+                    "Human-Computer Interaction",
+                    "Human-centered data science"
+                ],
+                "publikationen": "https://scholar.google.com/citations?user=4LTpp_gAAAAJ&hl=en"
             }
         },
         {
@@ -663,7 +929,57 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/soerries.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/soerries.html",
+                "persoenlich": "https://petersoerries.com/",
+                "orcid": "https://orcid.org/0000-0003-0493-2895",
+                "google-scholar": "https://scholar.google.com/citations?user=fbl2nlUAAAAJ&hl=de",
+                "dblp": "https://dblp.org/pid/289/1660.html"
+            },
+            "kontakt": {
+                "email": "peter.soerries@fu-berlin.de",
+                "telefon": "+49 30 838 71118"
+            },
+            "forschung": {
+                "interessen": [
+                    "design research",
+                    "interaction design",
+                    "value-centered design",
+                    "participatory design",
+                    "data donation",
+                    "human-AI collaboration"
+                ],
+                "publikationen": "https://dblp.org/pid/289/1660.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2020: Interaction Designer & Design Researcher at Human-Centered Computing Research Group, Freie Universität Berlin",
+                    "2023-2025: Interaction Designer & Design Researcher at Cluster of Excellence Matters of Activity, Humboldt-Universität zu Berlin",
+                    "seit 2018: Freelance Designer",
+                    "2021-2025: PhD in Design Studies at Burg Giebichenstein University of Art & Design Halle",
+                    "2018-2019: M.A. Product & Interaction Design at Weißensee School of Art & Design Berlin",
+                    "2014-2018: B.A. Product & Interaction Design at Weißensee School of Art & Design Berlin",
+                    "2012-2014: Technical Assistant for Product Design at Marcel-Breuer-Schule Berlin"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Research Seminar: Human-Centered Computing",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Human-Computer Interaction",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Human-Centered Data Science",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Doing Research in Computer Science",
+                        "semester": "SoSe 2026"
+                    }
+                ]
             }
         },
         {
@@ -679,13 +995,18 @@
             ],
             "kontakt": {
                 "telefon": "+49 30 838 75222",
-                "sprechstunde": "https://www.mi.fu-berlin.de/en/inf/groups/abi/teaching/office-hours/index.html"
+                "sprechstunde": "https://www.mi.fu-berlin.de/en/inf/groups/abi/teaching/office-hours/index.html",
+                "email": "knut.reinert@fu-berlin.de"
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/abi/members/Professors/reinert.html",
                 "persoenlich": "http://www.reinert-lab.de",
                 "mpi": "https://www.molgen.mpg.de/4595802/reinert-lab",
-                "publikationen": "http://publications.imp.fu-berlin.de/view/people/Reinert=3AKnut=3A=3A.html"
+                "publikationen": "http://publications.imp.fu-berlin.de/view/people/Reinert=3AKnut=3A=3A.html",
+                "github": "https://github.com/kreinert",
+                "orcid": "https://orcid.org/0000-0003-3078-8129",
+                "google-scholar": "https://scholar.google.com/citations?user=XwG4wAcAAAAJ&hl=en",
+                "dblp": "https://dblp.org/pid/10/884"
             },
             "forschung": {
                 "interessen": [
@@ -693,12 +1014,22 @@
                     "Sequence analysis",
                     "Proteomics",
                     "Omics data"
-                ]
+                ],
+                "publikationen": "https://scholar.google.com/citations?user=XwG4wAcAAAAJ&hl=en"
             },
             "sonstiges": {
                 "max_planck_fellow": true
             },
-            "profilbild": "research/images/reinert-knut.jpg"
+            "profilbild": "research/images/reinert-knut.jpg",
+            "vita": {
+                "positionen": [
+                    "seit 2014: Max Planck Fellow at Max-Planck-Institut für Molekulare Genetik, Berlin",
+                    "seit 2002: Professor for Algorithmic Bioinformatics at Freie Universität Berlin",
+                    "1999-2002: Computer scientist, Informatics Research Group at Celera Genomics, Rockville, USA",
+                    "1999: Dr. Ing. (Dissertation), Max-Planck-Institut für Informatik Saarbrücken, graduated with honors",
+                    "1994: Diploma in Computer Science, Max-Planck-Institut für Informatik Saarbrücken and Universität des Saarlandes"
+                ]
+            }
         },
         {
             "id": "rote-guenter",
@@ -713,17 +1044,53 @@
                 "email": "rote@inf.fu-berlin.de",
                 "telefon_buero": "+49-30-838 75150",
                 "telefon_privat": "+49-30-33852245",
-                "sprechstunde": "http://page.mi.fu-berlin.de/rote/Sprechstunde.html"
+                "sprechstunde": "http://page.mi.fu-berlin.de/rote/Sprechstunde.html",
+                "telefon": "+49 30 838 75150"
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Rote_Guenter.html",
                 "persoenlich": "http://page.mi.fu-berlin.de/rote/",
-                "publikationen": "http://page.mi.fu-berlin.de/rote/about_me/publications.html"
+                "publikationen": "http://page.mi.fu-berlin.de/rote/about_me/publications.html",
+                "orcid": "https://orcid.org/0000-0002-0351-5945",
+                "dblp": "https://dblp.org/pid/r/GunterRote.html"
             },
             "lehre": {
-                "uebersicht": "http://page.mi.fu-berlin.de/rote/Lere/"
+                "uebersicht": "http://page.mi.fu-berlin.de/rote/Lere/",
+                "kurse": [
+                    {
+                        "name": "Grundlagen der theoretischen Informatik",
+                        "semester": "SS 2021"
+                    },
+                    {
+                        "name": "ALP3",
+                        "semester": "WS 2020/21"
+                    },
+                    {
+                        "name": "Computergrafik",
+                        "semester": "SS 2020"
+                    },
+                    {
+                        "name": "Vertiefung Theoretische Informatik",
+                        "semester": "SS 2025"
+                    }
+                ]
             },
-            "profilbild": "research/images/rote-guenter.jpg"
+            "profilbild": "research/images/rote-guenter.jpg",
+            "forschung": {
+                "interessen": [
+                    "Kombinatorische Optimierung",
+                    "Algorithmische Geometrie",
+                    "Maschinengestütztes Beweisen und Verifizieren in der Mathematik und Informatik"
+                ],
+                "publikationen": "http://page.mi.fu-berlin.de/rote/about_me/publications.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 1. April 1999: Professor, Freie Universität Berlin",
+                    "1988: Promotion (Dr. techn.), Technische Universität Graz",
+                    "1979–1988: Studium Technische Mathematik (Studienzweig Informations- und Datenverarbeitung), Technische Universität Graz"
+                ]
+            }
         },
         {
             "id": "schiller-jochen",
@@ -735,15 +1102,34 @@
             "rolle": "Professor",
             "kontakt": {
                 "email": "jochen.schiller@fu-berlin.de",
-                "webex": "https://fu-berlin.webex.com/meet/jochen.schiller"
+                "webex": "https://fu-berlin.webex.com/meet/jochen.schiller",
+                "telefon": "+49 30 838 75213"
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/schiller.html",
                 "researchgate": "http://www.researchgate.net/profile/Jochen_Schiller",
-                "orcid": "http://orcid.org/0000-0003-3893-4522"
+                "orcid": "http://orcid.org/0000-0003-3893-4522",
+                "persoenlich": "http://www.jochenschiller.de",
+                "linkedin": "https://de.linkedin.com/in/jochen-schiller-7761b7277",
+                "google-scholar": "https://scholar.google.com/citations?user=bmbitrMAAAAJ",
+                "dblp": "https://dblp.uni-trier.de/pid/s/JochenHSchiller.html"
             },
             "lehre": {
-                "material": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/teaching/resources/Course-Material.html"
+                "material": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/teaching/resources/Course-Material.html",
+                "kurse": [
+                    {
+                        "name": "Mobilkommunikation",
+                        "semester": "SoSe 2025"
+                    },
+                    {
+                        "name": "Telematik",
+                        "semester": "WiSe 24/25"
+                    },
+                    {
+                        "name": "Forschungsseminar: Research Meeting Technische Informatik",
+                        "semester": "WiSe 24/25"
+                    }
+                ]
             },
             "sonstiges": {
                 "positionen": [
@@ -753,7 +1139,31 @@
                     "Mitglied Zukunftsforum Öffentliche Sicherheit"
                 ]
             },
-            "profilbild": "research/images/schiller-jochen.jpg"
+            "profilbild": "research/images/schiller-jochen.jpg",
+            "forschung": {
+                "interessen": [
+                    "Computer networks",
+                    "Operating systems",
+                    "System security",
+                    "Mobile communication",
+                    "Wireless communication"
+                ],
+                "publikationen": "https://dblp.uni-trier.de/pid/s/JochenHSchiller.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2022: Chief Information Officer (CIO), Freie Universität Berlin",
+                    "seit 2022: Geschäftsführer, TURMsolutions GmbH",
+                    "2017–2023: Vorstandsmitglied, Einstein Center Digital Future",
+                    "2012: Gründer Innovationszentrum Öffentliche Sicherheit, Fraunhofer FOKUS",
+                    "2009: Gründer Forschungsforum Öffentliche Sicherheit, Freie Universität Berlin",
+                    "2007–2010: Vizepräsident, Freie Universität Berlin",
+                    "seit April 2001: Professor für Technische Informatik, Freie Universität Berlin",
+                    "April 2003–März 2007: Dekan, Fachbereich Mathematik und Informatik, Freie Universität Berlin",
+                    "2002–2003: Stellvertretender Geschäftsführender Direktor, Institut für Informatik, Freie Universität Berlin",
+                    "1996: Promotion, Universität Karlsruhe (TH)"
+                ]
+            }
         },
         {
             "id": "bahe-stefanie",
@@ -765,6 +1175,10 @@
             "rolle": "Projektassistentin",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/bahe.html"
+            },
+            "kontakt": {
+                "email": "bahe@inf.fu-berlin.de",
+                "telefon": "+49 30 838 75212"
             }
         },
         {
@@ -776,9 +1190,116 @@
             ],
             "rolle": "Professor",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/baccelli.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/baccelli.html",
+                "persoenlich": "https://emmanuelbaccelli.com/",
+                "github": "https://github.com/emmanuelsearch",
+                "linkedin": "https://www.linkedin.com/in/emmanuel-baccelli/",
+                "orcid": "https://orcid.org/0000-0001-6239-9983",
+                "google-scholar": "https://scholar.google.com/citations?user=L4uE45oAAAAJ",
+                "dblp": "https://dblp.org/pid/07/2121.html"
             },
-            "profilbild": "research/images/baccelli-emmanuel.jpg"
+            "profilbild": "research/images/baccelli-emmanuel.jpg",
+            "kontakt": {
+                "email": "Emmanuel.Baccelli@fu-berlin.de",
+                "telefon": "+49 30 838 72184",
+                "sprechstunde": "Wednesdays 11 am-12 pm by appointment (register via email)"
+            },
+            "forschung": {
+                "interessen": [
+                    "Distributed Algorithms",
+                    "Computer Networks",
+                    "Internet of Things",
+                    "Open Source Software Development",
+                    "Wireless Networks",
+                    "Internet Architecture",
+                    "Network Protocol Design & Analysis",
+                    "Cybersecurity",
+                    "TinyML",
+                    "Standardisation"
+                ],
+                "publikationen": "https://scholar.google.com/citations?user=L4uE45oAAAAJ"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2019: ECDF-Professor for Open and Secure IoT Ecosystem at Freie Universitat Berlin and Inria",
+                    "seit 2007: Scientific researcher at INRIA",
+                    "2013-2014: Guest Professor at Freie Universitat Berlin (DAAD Grant)",
+                    "2003-2005: Research Engineer at Hitachi Europe and Hitachi Research Lab, Tokyo",
+                    "2001-2002: Software Engineer at Metro-Optix, Santa Clara, CA"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "WS 2025/26"
+                    },
+                    {
+                        "name": "Deep Edge Computing & Security for Low-Power Connected Embedded Systems (Seminar TI2)",
+                        "semester": "SS 2025"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "SS 2025"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "WS 2024/25"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "WS 2023/24"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "SS 2023"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "WS 2021/22"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "WS 2020/21"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "SS 2020"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "WS 2019/20"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "SS 2019"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "WS 2018/19"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "SS 2018"
+                    },
+                    {
+                        "name": "Internet of Things & Security (Seminar Technische Informatik)",
+                        "semester": "WS 2015/16"
+                    },
+                    {
+                        "name": "Theory and Hands-on Experiences of Internet Communication",
+                        "semester": "WS 2015/16"
+                    },
+                    {
+                        "name": "Softwareprojekt Telematik: Programming the Internet of Things with RIOT",
+                        "semester": "SS 2014"
+                    }
+                ]
+            }
         },
         {
             "id": "groth-larissa",
@@ -789,7 +1310,29 @@
             ],
             "rolle": "Wissenschaftliche Mitarbeiterin",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/groth.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/groth.html",
+                "dblp": "https://dblp.org/pid/344/7204"
+            },
+            "kontakt": {
+                "email": "larissa.groth@fu-berlin.de",
+                "telefon": "+49 30 838 65081"
+            },
+            "forschung": {
+                "interessen": [
+                    "IoT Security",
+                    "Vulnerability Management",
+                    "Vulnerability Assessment",
+                    "Trusted Execution Environment",
+                    "Hardware Root of Trust",
+                    "Constrained IoT Devices"
+                ],
+                "publikationen": "https://dblp.org/pid/344/7204"
+            },
+            "vita": {
+                "positionen": [
+                    "Wissenschaftliche Mitarbeiterin, Freie Universität Berlin, Institut für Informatik, AG Tech",
+                    "2023: Dissertation (Dr.), Freie Universität Berlin"
+                ]
             }
         },
         {
@@ -813,7 +1356,37 @@
             ],
             "rolle": "Wissenschaftliche Mitarbeiterin",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/lindner.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/lindner.html",
+                "linkedin": "https://de.linkedin.com/in/ann-kathrin-lindner-53a7971b9"
+            },
+            "kontakt": {
+                "email": "ann-kathrin.lindner@fu-berlin.de",
+                "telefon": "+49 30 838 629 14"
+            },
+            "forschung": {
+                "interessen": [
+                    "Öffentliche Sicherheit",
+                    "Technologieinnovationen im Bevölkerungsschutz",
+                    "Wissenstransfer zwischen Wissenschaft, Politik und Praxis",
+                    "Kritische Infrastrukturen",
+                    "Katastrophenkommunikation"
+                ]
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2022: Leiterin des Zukunftslabors Sicherheit, Forschungsforum Öffentliche Sicherheit / Freie Universität Berlin",
+                    "aktuell: Doktorandin (Informatik), Freie Universität Berlin",
+                    "M.A. Europäische Literaturen, Humboldt-Universität zu Berlin und Sorbonne IV, Paris",
+                    "B.A. Informatik, Deutscher Philologie und Publizistik- und Kommunikationswissenschaft, Freie Universität Berlin"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "SWP: Szenario-Management im Future Security Lab",
+                        "semester": "SS 2024"
+                    }
+                ]
             }
         },
         {
@@ -825,7 +1398,30 @@
             ],
             "rolle": "Wissenschaftliche Mitarbeiterin",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/rossmann.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/rossmann.html",
+                "linkedin": "https://www.linkedin.com/in/sophia-rossmann-720530174/",
+                "google-scholar": "https://scholar.google.com/citations?user=YYbAbbkAAAAJ&hl=de"
+            },
+            "kontakt": {
+                "email": "sophia.rossmann@fu-berlin.de",
+                "telefon": "+49 30 838 69217"
+            },
+            "forschung": {
+                "interessen": [
+                    "Feminist Science and Technology Studies",
+                    "Critical Data Studies",
+                    "Civil security",
+                    "Knowledge production and transfer in population and disaster protection",
+                    "Science-policy interface and future-making politics",
+                    "Biopolitics and subjectification theories"
+                ],
+                "publikationen": "https://scholar.google.com/citations?user=YYbAbbkAAAAJ&hl=de"
+            },
+            "vita": {
+                "positionen": [
+                    "2018–2023: Research Associate, Technical University of Munich",
+                    "seit 2023: Wissenschaftliche Mitarbeiterin (BeLIFE-Projekt), FU Berlin"
+                ]
             }
         },
         {
@@ -837,7 +1433,36 @@
             ],
             "rolle": "Wissenschaftliche Mitarbeiterin",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/Terfurth.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/Terfurth.html",
+                "orcid": "https://orcid.org/0000-0001-6143-4222",
+                "google-scholar": "https://scholar.google.com/citations?user=UDBhypIAAAAJ&hl=de"
+            },
+            "kontakt": {
+                "email": "leonie.terfurth@fu-berlin.de"
+            },
+            "forschung": {
+                "interessen": [
+                    "Extended Reality (XR) in sicherheitsrelevanten soziotechnischen Systemen",
+                    "Mensch-Roboter-Interaktion und Wahrnehmung",
+                    "Haptische Interaktion in virtuellen Umgebungen",
+                    "Menschliches Verhalten in virtuellen Umgebungen",
+                    "Implizite Maße der Geisteswahrnehmung",
+                    "Neuroergonomik und EEG in VR"
+                ],
+                "publikationen": "https://scholar.google.com/citations?user=UDBhypIAAAAJ&hl=de"
+            },
+            "vita": {
+                "positionen": [
+                    "seit Februar 2024: Wissenschaftliche Mitarbeiterin, Technische Universität Braunschweig (Abteilung Psychologie soziotechnischer Systeme)"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Telematics",
+                        "semester": "SS 2026"
+                    }
+                ]
             }
         },
         {
@@ -850,6 +1475,67 @@
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/wawerek.html"
+            },
+            "kontakt": {
+                "email": "m.wawerek@fu-berlin.de"
+            },
+            "forschung": {
+                "interessen": [
+                    "Data Analysis (DA)",
+                    "Machine Learning (ML)",
+                    "Fairness in ML / Bias Mitigation",
+                    "Natural Language Processing (with a Focus on Hatespeech Detection)",
+                    "Internet of Things (IoT), Smart Homes",
+                    "Critical Infrastructure (CRITIS)"
+                ],
+                "publikationen": "https://aclanthology.org/people/marius-wawerek/unverified/"
+            },
+            "vita": {
+                "positionen": [
+                    "Wissenschaftlicher Mitarbeiter at AG Computer Systems and Telematics, Freie Universität Berlin",
+                    "2024: M.Sc. Informatik at Freie Universität Berlin",
+                    "2021: B.Sc. Informatik/Computational Science at Universität Potsdam"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Telematik",
+                        "semester": "2025"
+                    },
+                    {
+                        "name": "Seminar Smart Homes und die Welt der IoT",
+                        "semester": "2025"
+                    },
+                    {
+                        "name": "Mikroprozessor Praktikum",
+                        "semester": "2025"
+                    },
+                    {
+                        "name": "ProInformatik II: Konzepte der Programmierung",
+                        "semester": "2025"
+                    },
+                    {
+                        "name": "Softwareprojekt: Smart Home Demo Lab",
+                        "semester": "2025"
+                    },
+                    {
+                        "name": "Softwareprojekt: Future Security Lab",
+                        "semester": "2025"
+                    },
+                    {
+                        "name": "Telematik",
+                        "semester": "2024"
+                    },
+                    {
+                        "name": "Architektur Eingebetteter Systeme",
+                        "semester": "2024"
+                    },
+                    {
+                        "name": "Softwareprojekt: Szenario Management",
+                        "semester": "2024"
+                    }
+                ]
             }
         },
         {
@@ -862,6 +1548,10 @@
             "rolle": "Sekretariat",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/sekr/knoll.html"
+            },
+            "kontakt": {
+                "email": "knoll@inf.fu-berlin.de",
+                "telefon": "+49 30 838 75103"
             }
         },
         {
@@ -874,6 +1564,10 @@
             "rolle": "Sekretariat",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/sekr/orth.html"
+            },
+            "kontakt": {
+                "email": "tanja.orth@fu-berlin.de",
+                "telefon": "+49 30 838 75100"
             }
         },
         {
@@ -885,7 +1579,33 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Berendsohn_Benjamin.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Berendsohn_Benjamin.html",
+                "persoenlich": "https://page.mi.fu-berlin.de/beab/",
+                "orcid": "https://orcid.org/0000-0002-3430-5262",
+                "google-scholar": "https://scholar.google.com/citations?user=32eeaz8AAAAJ&hl=en",
+                "dblp": "https://dblp.org/pid/247/0884.html"
+            },
+            "kontakt": {
+                "email": "benjamin.berendsohn@fu-berlin.de",
+                "telefon": "+49 30 838 75159"
+            },
+            "forschung": {
+                "interessen": [
+                    "Data structures and graph algorithms",
+                    "Combinatorics of permutations",
+                    "Permutation patterns and pattern avoidance",
+                    "Optimal binary search trees and search trees on graphs",
+                    "Sorting algorithms and antimatroids",
+                    "Fixed-parameter tractability"
+                ],
+                "publikationen": "https://dblp.org/pid/247/0884.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2024: Postdoctoral Researcher at Max Planck Institute for Informatics, Saarbrücken",
+                    "2024: Dissertation (Search trees on graphs), Freie Universität Berlin",
+                    "2019: M.Sc. (Thesis: Complexity of Permutation Pattern Matching), Freie Universität Berlin"
+                ]
             }
         },
         {
@@ -897,7 +1617,67 @@
             ],
             "rolle": "Wissenschaftliche Mitarbeiterin",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Klost_Katharina.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Klost_Katharina.html",
+                "orcid": "https://orcid.org/0000-0002-9884-3297",
+                "dblp": "https://dblp.org/pid/211/8025.html"
+            },
+            "kontakt": {
+                "email": "kathklost@inf.fu-berlin.de",
+                "telefon": "+49 30 838 75103"
+            },
+            "forschung": {
+                "interessen": [
+                    "Geometric Graphs",
+                    "Disk Graphs",
+                    "Dynamic Connectivity",
+                    "Computational Geometry",
+                    "Algorithms",
+                    "Transmission Graphs"
+                ],
+                "publikationen": "https://dblp.org/pid/211/8025.html"
+            },
+            "vita": {
+                "positionen": [
+                    "Wissenschaftliche Mitarbeiterin, FU Berlin Institut für Informatik, AG Theoretische Informatik",
+                    "Leitung der ProInformatik, Freie Universität Berlin",
+                    "2021: Promotion (Dr. rer. nat.), Freie Universität Berlin — Dissertation: Geometric Graphs: Reachability, Long Trees and Short Cycles"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "ProInformatik I: Diskrete Strukturen in der Informatik",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "ProInformatik II: Konzepte der Programmierung",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "ProInformatik IV: Rechnerarchitektur",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "ProInformatik IVb: Betriebs- und Kommunikationssysteme",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Funktionale Programmierung",
+                        "semester": "SoSe 2025"
+                    },
+                    {
+                        "name": "Diskrete Strukturen für Informatik",
+                        "semester": "WiSe 2024/25"
+                    },
+                    {
+                        "name": "Grundlagen der theoretischen Informatik",
+                        "semester": "SoSe 2024"
+                    },
+                    {
+                        "name": "Übung zu Funktionale Programmierung",
+                        "semester": "WiSe 2023/24"
+                    }
+                ]
             }
         },
         {
@@ -909,7 +1689,29 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Willert_Max.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Willert_Max.html",
+                "persoenlich": "http://page.mi.fu-berlin.de/willerma/",
+                "orcid": "https://orcid.org/0009-0004-0248-3592",
+                "dblp": "https://dblp.org/pid/156/0197.html"
+            },
+            "kontakt": {
+                "email": "willerma@inf.fu-berlin.de",
+                "telefon": "+49 30 838 61664"
+            },
+            "forschung": {
+                "interessen": [
+                    "Routing",
+                    "Stabbing",
+                    "Guarding",
+                    "Computational Geometry"
+                ],
+                "publikationen": "https://dblp.org/pid/156/0197.html"
+            },
+            "vita": {
+                "positionen": [
+                    "2021: Dissertation (Routing and Stabbing), Freie Universität Berlin",
+                    "2016: Master of Science (Routing Schemes for Disk Graphs and Polygons), Freie Universität Berlin"
+                ]
             }
         },
         {
@@ -924,12 +1726,58 @@
             "kontakt": {
                 "email": "g.wunder@fu-berlin.de",
                 "telefon": "+49 30 838 61931",
-                "webex": "https://fu-berlin.webex.com/webappng/sites/fu-berlin/dashboard/pmr/gerhard.wunder"
+                "webex": "https://fu-berlin.webex.com/webappng/sites/fu-berlin/dashboard/pmr/gerhard.wunder",
+                "sprechstunde": "Montag 14-15 Uhr, Donnerstag 14-15 Uhr"
             },
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/members/wunder.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/members/wunder.html",
+                "google-scholar": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=de",
+                "dblp": "https://dblp.uni-trier.de/pid/63/5261.html",
+                "linkedin": "https://www.linkedin.com/in/gerhard-wunder/",
+                "orcid": "https://orcid.org/0009-0001-0850-8816"
             },
-            "profilbild": "research/images/wunder-gerhard.jpg"
+            "profilbild": "research/images/wunder-gerhard.jpg",
+            "forschung": {
+                "interessen": [
+                    "AI und Cybersecurity",
+                    "Maschinelles Lernen und Erklärbarkeit",
+                    "Datenschutz und synthetische Daten",
+                    "Federated Learning mit Blockchains",
+                    "IoT-Sicherheitsarchitekturen",
+                    "Quantenkryptoanalyse und resiliente Netzwerke"
+                ],
+                "publikationen": "https://dblp.uni-trier.de/pid/63/5261.html"
+            },
+            "vita": {
+                "positionen": [
+                    "2021-heute: Professor für Cybersecurity and AI (Stiftungsprofessur Bundesdruckerei GmbH) an der Freien Universität Berlin",
+                    "2015-2021: Heisenberg-Fellow (DFG) und Leiter der Heisenberg Communications and Information Theory Group an der Freien Universität Berlin",
+                    "2007-2015: Privatdozent (Habilitation) an der TU Berlin",
+                    "2003-2015: Gruppenleiter am Fraunhofer Heinrich-Hertz-Institut, Berlin",
+                    "2003: Dr.-Ing. (summa cum laude), TU Berlin",
+                    "1999: Dipl.-Ing. Elektrotechnik (mit Auszeichnung), TU Berlin"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Cybersecurity and AI I: Datenschutz, Biometrie, Zertifizierung",
+                        "semester": "WiSe 2024/25"
+                    },
+                    {
+                        "name": "Cybersecurity and AI II: Erklärbarkeit",
+                        "semester": "SoSe 2025"
+                    },
+                    {
+                        "name": "Cybersecurity and AI III",
+                        "semester": "WiSe 2023/24"
+                    },
+                    {
+                        "name": "Cybersecurity and AI IV: Angriffe",
+                        "semester": "SoSe 2024"
+                    }
+                ]
+            }
         },
         {
             "id": "schoettker-soehl-susanne",
@@ -941,6 +1789,10 @@
             "rolle": "Sekretariat",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Secretary/schoettker-soehl_susanne.html"
+            },
+            "kontakt": {
+                "email": "s.schoettker-soehl@fu-berlin.de",
+                "telefon": "+49 30 838 75102"
             }
         },
         {
@@ -952,7 +1804,30 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Scientific-Staff/Davidson.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Scientific-Staff/Davidson.html",
+                "persoenlich": "https://jacobdavidson.com/",
+                "github": "https://github.com/jacobdavidson",
+                "google-scholar": "https://scholar.google.com/citations?user=p8kWlxsAAAAJ&hl=en"
+            },
+            "kontakt": {
+                "email": "jacob.davidson@fu-berlin.de",
+                "telefon": "+49 30 838 75118"
+            },
+            "forschung": {
+                "interessen": [
+                    "Collective motion and decision-making",
+                    "Individual behavioral variation in social groups",
+                    "Foraging behavior and evidence accumulation",
+                    "Effects of environmental factors on animal behavior",
+                    "Computational modeling of animal groups"
+                ],
+                "publikationen": "https://jacobdavidson.com/publications-and-cv/"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2020: Wissenschaftlicher Mitarbeiter, Institut für Informatik, Freie Universität Berlin",
+                    "seit 2020: Guest Scientist, Department of Collective Behavior, Max Planck Institute for Animal Behavior, Konstanz"
+                ]
             }
         },
         {
@@ -964,7 +1839,32 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Scientific-Staff/Popp.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Scientific-Staff/Popp.html",
+                "persoenlich": "https://stefanmpopp.github.io/",
+                "github": "https://github.com/StefanMPopp",
+                "linkedin": "https://www.linkedin.com/in/stefan-popp-747049286",
+                "orcid": "https://orcid.org/0000-0002-2396-8511",
+                "google-scholar": "https://scholar.google.com/citations?user=GtDobj8AAAAJ&hl=en"
+            },
+            "kontakt": {
+                "email": "stefan.popp@fu-berlin.de",
+                "telefon": "+49 30 838 75102"
+            },
+            "forschung": {
+                "interessen": [
+                    "Ant search behavior",
+                    "Collective behavior",
+                    "Animal movement patterns",
+                    "Foraging efficiency",
+                    "Biomechanics"
+                ],
+                "publikationen": "https://scholar.google.com/citations?user=GtDobj8AAAAJ&hl=en"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2023: Wissenschaftlicher Mitarbeiter, Freie Universität Berlin, Dahlem Center for Machine Learning and Robotics",
+                    "2023: Dissertation (PhD), Ecology and Evolutionary Biology, University of Arizona"
+                ]
             }
         },
         {
@@ -976,7 +1876,26 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/shang.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/shang.html",
+                "google-scholar": "https://scholar.google.ch/citations?user=bPtby7UAAAAJ&hl=en",
+                "dblp": "https://dblp.org/pid/146/4881.html",
+                "orcid": "https://orcid.org/0000-0001-7749-3390"
+            },
+            "kontakt": {
+                "email": "zhihao.shang@fu-berlin.de"
+            },
+            "forschung": {
+                "interessen": [
+                    "Software-Defined Networking (SDN)",
+                    "Performance evaluation",
+                    "Deep learning"
+                ],
+                "publikationen": "https://scholar.google.ch/citations?user=bPtby7UAAAAJ&hl=en"
+            },
+            "vita": {
+                "positionen": [
+                    "2020: Dissertation (Performance Evaluation of the Control Plane in OpenFlow Networks), Freie Universität Berlin"
+                ]
             }
         },
         {
@@ -988,7 +1907,29 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/HanWu.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/HanWu.html",
+                "persoenlich": "https://hanwu.ac.cn/",
+                "linkedin": "https://www.linkedin.com/in/han-wu-bham",
+                "google-scholar": "https://scholar.google.com/citations?user=V3rj4hQAAAAJ",
+                "dblp": "https://dblp.org/pid/13/1864-1"
+            },
+            "kontakt": {
+                "email": "han.wu@fu-berlin.de"
+            },
+            "forschung": {
+                "interessen": [
+                    "performance of streaming message systems"
+                ],
+                "publikationen": "https://scholar.google.com/citations?user=V3rj4hQAAAAJ"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2024: Lecturer, University of Southampton",
+                    "2023-2024: Research Fellow, University of Birmingham",
+                    "2021-2023: Research Associate, Newcastle University",
+                    "2020: PhD (Computer Science), Free University of Berlin",
+                    "2016-2020: PhD student, AG-DDS, Free University of Berlin"
+                ]
             }
         },
         {
@@ -1000,7 +1941,27 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/guang.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/guang.html",
+                "dblp": "https://dblp.org/pid/140/1723.html",
+                "orcid": "https://orcid.org/0000-0003-3514-0815"
+            },
+            "kontakt": {
+                "email": "guang.peng@fu-berlin.de"
+            },
+            "forschung": {
+                "interessen": [
+                    "Edge-Cloud Computation Offloading",
+                    "Multi-objective Optimization",
+                    "Evolutionary Algorithms",
+                    "IoT Computing",
+                    "Deep Neural Network Offloading"
+                ],
+                "publikationen": "https://dblp.org/pid/140/1723.html"
+            },
+            "vita": {
+                "positionen": [
+                    "2017-2021: Wissenschaftlicher Mitarbeiter (PhD student), Freie Universität Berlin, AG-DDS"
+                ]
             }
         },
         {
@@ -1012,7 +1973,25 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/ma_xuyang.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/ma_xuyang.html",
+                "google-scholar": "https://scholar.google.de/citations?user=3SHkwz0AAAAJ&hl=en"
+            },
+            "kontakt": {
+                "email": "xuyangm7@gmail.com"
+            },
+            "forschung": {
+                "interessen": [
+                    "Blockchain",
+                    "auctions",
+                    "Cloud computing",
+                    "Distributed systems"
+                ],
+                "publikationen": "https://scholar.google.de/citations?user=3SHkwz0AAAAJ&hl=en"
+            },
+            "vita": {
+                "positionen": [
+                    "2020–2022: Visiting PhD student at Freie Universität Berlin, AG Dependable Distributed Systems"
+                ]
             }
         },
         {
@@ -1025,6 +2004,10 @@
             "rolle": "Sekretariat",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/GesineMilde"
+            },
+            "kontakt": {
+                "email": "Gesine.Milde@fu-berlin.de",
+                "telefon": "+49 30 838 75 243"
             }
         },
         {
@@ -1036,7 +2019,118 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/FranzZieris"
+                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/FranzZieris",
+                "persoenlich": "https://www.zieris.net",
+                "github": "https://github.com/fzieris",
+                "linkedin": "https://de.linkedin.com/pub/franz-zieris/a0/477/a93/en",
+                "orcid": "https://orcid.org/0000-0001-7482-6022",
+                "google-scholar": "https://scholar.google.com/citations?user=omBQyo0AAAAJ",
+                "dblp": "https://dblp.org/pid/129/8229.html",
+                "mastodon": "https://mastodon.social/@franzzieris"
+            },
+            "kontakt": {
+                "email": "zieris@inf.fu-berlin.de"
+            },
+            "forschung": {
+                "interessen": [
+                    "Pair Programming",
+                    "Distributed Pair Programming",
+                    "Agile Development Processes",
+                    "Qualitative Research Methods in Software Engineering",
+                    "Knowledge Transfer in Software Development"
+                ],
+                "publikationen": "https://dblp.org/pid/129/8229.html"
+            },
+            "vita": {
+                "positionen": [
+                    "2023-heute: Associate Senior Lecturer, Department of Software Engineering, Blekinge Institute of Technology (BTH), Karlskrona, Sweden",
+                    "2020: Promotion (PhD) in Computer Science, Freie Universitat Berlin",
+                    "bis 2023: adjunct (external, not employed) member of the Software Engineering research group, Freie Universitat Berlin"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Softwaretechnik",
+                        "semester": "Sommersemester 2018"
+                    },
+                    {
+                        "name": "Empirische Bewertung in der Informatik",
+                        "semester": "Sommersemester 2018"
+                    },
+                    {
+                        "name": "Softwareprozesse",
+                        "semester": "Wintersemester 2017/18"
+                    },
+                    {
+                        "name": "Auswirkungen der Informatik",
+                        "semester": "Wintersemester 2017/18"
+                    },
+                    {
+                        "name": "Webentwicklung (HTW Berlin)",
+                        "semester": "Wintersemester 2017/18"
+                    },
+                    {
+                        "name": "Softwaretechnik",
+                        "semester": "Sommersemester 2017"
+                    },
+                    {
+                        "name": "Empirische Bewertung in der Informatik",
+                        "semester": "Sommersemester 2017"
+                    },
+                    {
+                        "name": "Proseminar: Methoden und Praktiken der Agilen Softwareentwicklung",
+                        "semester": "Wintersemester 2016/17"
+                    },
+                    {
+                        "name": "Auswirkungen der Informatik",
+                        "semester": "Wintersemester 2016/17"
+                    },
+                    {
+                        "name": "Softwaretechnik",
+                        "semester": "Sommersemester 2016"
+                    },
+                    {
+                        "name": "Projektseminar: Agile Softwareentwicklung in einem Open-Source-Projekt",
+                        "semester": "Sommersemester 2016"
+                    },
+                    {
+                        "name": "Auswirkungen der Informatik",
+                        "semester": "Wintersemester 2015/16"
+                    },
+                    {
+                        "name": "Softwareprozesse",
+                        "semester": "Wintersemester 2015/16"
+                    },
+                    {
+                        "name": "Beitrage zum Software Engineering",
+                        "semester": "Sommersemester 2015"
+                    },
+                    {
+                        "name": "Empirische Bewertung in der Informatik",
+                        "semester": "Sommersemester 2015"
+                    },
+                    {
+                        "name": "Softwaretechnik",
+                        "semester": "Sommersemester 2015"
+                    },
+                    {
+                        "name": "Auswirkungen der Informatik",
+                        "semester": "Wintersemester 2014/15"
+                    },
+                    {
+                        "name": "Beitrage zum Software Engineering",
+                        "semester": "Sommersemester 2014"
+                    },
+                    {
+                        "name": "Empirische Bewertung in der Informatik",
+                        "semester": "Sommersemester 2014"
+                    },
+                    {
+                        "name": "Softwaretechnik",
+                        "semester": "Sommersemester 2014"
+                    }
+                ]
             }
         },
         {
@@ -1048,7 +2142,29 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/SebastianLohmeier"
+                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/SebastianLohmeier",
+                "persoenlich": "http://monochromata.de/lop",
+                "dblp": "https://dblp.uni-trier.de/pers/hd/l/Lohmeier:Sebastian",
+                "mastodon": "https://mastodon.business/@monochromata"
+            },
+            "kontakt": {
+                "email": "sl@monochromata.de"
+            },
+            "forschung": {
+                "interessen": [
+                    "programming and program comprehension",
+                    "perspectivation of Java source code using anaphors",
+                    "cognitive linguistics applied to programming",
+                    "cognitive modeling",
+                    "eye tracking"
+                ]
+            },
+            "vita": {
+                "positionen": [
+                    "seit April 2017: Dissertation (Perspectivation of Java Source Code using Anaphors), Freie Universität Berlin (betreut von Lutz Prechelt)",
+                    "2015: Master's thesis on indirect anaphors in programming",
+                    "2011: Bachelor's thesis on statically resolved indirect anaphora"
+                ]
             }
         },
         {
@@ -1061,6 +2177,22 @@
             "rolle": "Wissenschaftliche Mitarbeiterin",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/FahmidaIsrat"
+            },
+            "kontakt": {
+                "email": "fahmida.israt@fu-berlin.de"
+            },
+            "forschung": {
+                "interessen": [
+                    "low-code development",
+                    "automated testing",
+                    "test-driven development (TDD)",
+                    "behavior-driven development (BDD)"
+                ]
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2025: External Research Associate, Software Engineering research group, Institut für Informatik, Freie Universität Berlin"
+                ]
             }
         },
         {
@@ -1073,6 +2205,10 @@
             "rolle": "Sekretariat",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/hengst.html"
+            },
+            "kontakt": {
+                "email": "anna.hengst@fu-berlin.de",
+                "telefon": "+49 30 838 60526"
             }
         },
         {
@@ -1085,6 +2221,14 @@
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/esmaeili.html"
+            },
+            "kontakt": {
+                "email": "mani.esmaeili@fu-berlin.de"
+            },
+            "vita": {
+                "positionen": [
+                    "2010: Diplomarbeit (Dipl.-Ing.), Technische Universität Wien, Institut für Gestaltungs- und Wirkungsforschung"
+                ]
             }
         },
         {
@@ -1096,7 +2240,36 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/gueldenring.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/gueldenring.html",
+                "google-scholar": "https://scholar.google.de/citations?user=2RvFsWoAAAAJ&hl=en",
+                "dblp": "https://dblp.org/pid/84/8930.html"
+            },
+            "kontakt": {
+                "email": "benjamin.gueldenring@fu-berlin.de",
+                "telefon": "+49 30 838 64550"
+            },
+            "forschung": {
+                "interessen": [
+                    "Computer Security",
+                    "Authentication",
+                    "Privacy Enhancing Technologies",
+                    "Usable Security",
+                    "Certificate Authority",
+                    "Multi-touch Interface Security"
+                ],
+                "publikationen": "https://dblp.org/pid/84/8930.html"
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Privacy in the Electronic Society",
+                        "semester": "SoSe 2018"
+                    },
+                    {
+                        "name": "Übung zu Kryptographie und Sicherheit in Verteilten Systemen",
+                        "semester": "WS 2015/16"
+                    }
+                ]
             }
         },
         {
@@ -1108,7 +2281,30 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/Klick.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/Klick.html",
+                "persoenlich": "http://alphastrike.io/",
+                "linkedin": "https://www.linkedin.com/in/johannes-klick-739251192/",
+                "google-scholar": "https://scholar.google.com/citations?user=5Wmta_sAAAAJ",
+                "dblp": "https://dblp.org/pid/172/6514.html"
+            },
+            "kontakt": {
+                "email": "johannes.klick@fu-berlin.de"
+            },
+            "forschung": {
+                "interessen": [
+                    "Efficient Internet scanning strategies",
+                    "OSINT (Open Source Intelligence)",
+                    "Cyber situational awareness",
+                    "Industrial Control Systems security",
+                    "Cyber-physical systems security"
+                ],
+                "publikationen": "https://dblp.org/pid/172/6514.html"
+            },
+            "vita": {
+                "positionen": [
+                    "Doktorand, AG Sichere Identität, Institut für Informatik, Freie Universität Berlin",
+                    "Co-CEO und Chief Technology Officer, Alpha Strike Labs GmbH, Berlin (gegründet Oktober 2017)"
+                ]
             }
         },
         {
@@ -1120,7 +2316,30 @@
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/kovacs.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/kovacs.html",
+                "persoenlich": "https://robertkovax.com/",
+                "github": "https://github.com/robertkovax",
+                "linkedin": "https://www.linkedin.com/in/robertkovax/",
+                "orcid": "https://orcid.org/0000-0002-9427-2861",
+                "google-scholar": "https://scholar.google.de/citations?hl=de&user=_fbToAsAAAAJ",
+                "dblp": "https://dblp.org/pid/161/3377.html"
+            },
+            "kontakt": {
+                "email": "robert.kovacs@fu-berlin.de"
+            },
+            "forschung": {
+                "interessen": [
+                    "human-computer interaction",
+                    "robotics",
+                    "personal fabrication",
+                    "interactive systems"
+                ],
+                "publikationen": "https://scholar.google.de/citations?hl=de&user=_fbToAsAAAAJ"
+            },
+            "vita": {
+                "positionen": [
+                    "2022: Dissertation (Dr.-Ing.), Human-Scale Personal Fabrication, Hasso Plattner Institute / Universität Potsdam"
+                ]
             }
         },
         {
@@ -1140,7 +2359,10 @@
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/wolter.html",
                 "persoenlich": "http://page.mi.fu-berlin.de/katinkaw/",
                 "google-scholar": "https://scholar.google.de/citations?user=JqtocLYAAAAJ",
-                "cv-pdf": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/projects/Dependable_Systems/cv_Wolter.pdf"
+                "cv-pdf": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/projects/Dependable_Systems/cv_Wolter.pdf",
+                "linkedin": "https://www.linkedin.com/in/katinka-wolter-60045731/",
+                "orcid": "https://orcid.org/0000-0002-8630-0869",
+                "dblp": "https://dblp.org/pid/10/5050.html"
             },
             "forschung": {
                 "interessen": [
@@ -1150,7 +2372,8 @@
                     "Machine learning for distributed systems",
                     "Phase-Type distributions",
                     "Hybrid discrete-event simulation"
-                ]
+                ],
+                "publikationen": "https://dblp.org/pid/10/5050.html"
             },
             "sonstiges": {
                 "erdos_number": 3,
@@ -1158,7 +2381,34 @@
                 "mitglied_pruefungsausschuss": true,
                 "mitglied_fachbereichsrat": true
             },
-            "profilbild": "research/images/wolter-katinka.jpg"
+            "profilbild": "research/images/wolter-katinka.jpg",
+            "vita": {
+                "positionen": [
+                    "seit Oktober 2012: Professor at Freie Universität Berlin, Department of Mathematics and Computer Science",
+                    "01/2017-04/2017: Visiting Professor at Imperial College London (Center for Cryptocurrency Research)",
+                    "02/2012-09/2012: Lecturer at Newcastle University",
+                    "11/2010-04/2011: Visiting Professor at Cochin University, Kerala, India",
+                    "09/2009-02/2011: Senior research associate at FU Berlin",
+                    "07/2009-08/2009: Senior research associate at Newcastle University",
+                    "04/2002-06/2009: Assistant professor at Humboldt-University Berlin",
+                    "01/2008: Habilitation in Computer Science, Humboldt-University Berlin",
+                    "05/2000-08/2000: Visiting researcher at Hewlett-Packard Laboratories, Palo Alto",
+                    "08/1999: PhD in Computer Science, TU Berlin",
+                    "10/1991-08/1995: Diploma in Computer Science with Statistics, TU Berlin"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Forschungsseminar: Zuverlässige Systeme",
+                        "semester": "SoSe 24"
+                    },
+                    {
+                        "name": "Seminar: Markov Chains II",
+                        "semester": "WS 2023/24"
+                    }
+                ]
+            }
         },
         {
             "id": "landgraf-tim",
@@ -1178,7 +2428,10 @@
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/Tim_Landgraf.html",
                 "persoenlich": "https://bioroboticslab.github.io/website/",
                 "google-scholar": "https://scholar.google.de/citations?user=ChX0opIAAAAJ&hl=de",
-                "github": "https://github.com/bioroboticslab"
+                "github": "https://github.com/bioroboticslab",
+                "linkedin": "https://www.linkedin.com/in/tim-landgraf-6655056/",
+                "orcid": "https://orcid.org/0000-0003-4951-5235",
+                "dblp": "https://dblp.org/pid/04/10008.html"
             },
             "vita": {
                 "positionen": [
@@ -1193,7 +2446,8 @@
                     "Biomimetic Robots",
                     "Computer Vision",
                     "Machine Learning"
-                ]
+                ],
+                "publikationen": "https://bioroboticslab.github.io/website/publications.html"
             },
             "lehre": {
                 "kurse": [
@@ -1259,7 +2513,8 @@
                     "Post-Quantum Cryptography",
                     "Electronic Identities",
                     "Secure Systems Engineering"
-                ]
+                ],
+                "publikationen": "https://dblp.org/pid/14/4256.html"
             },
             "lehre": {
                 "kurse": [
@@ -1301,9 +2556,37 @@
                 "sprechstunde": "Mittwochs 12-13 Uhr (nur nach Absprache)"
             },
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/team/prof/romeike/index.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/team/prof/romeike/index.html",
+                "dblp": "https://dblp.org/pid/02/4919.html",
+                "google-scholar": "https://scholar.google.com/citations?user=Jg7O2scAAAAJ&hl=de",
+                "orcid": "https://orcid.org/0000-0002-2941-4288"
             },
-            "profilbild": "research/images/romeike-ralf.jpg"
+            "profilbild": "research/images/romeike-ralf.jpg",
+            "forschung": {
+                "interessen": [
+                    "Computing Education Research",
+                    "Kreativität im Informatikunterricht",
+                    "KI-Bildung",
+                    "Data Literacy",
+                    "Agile Methoden in der Informatikdidaktik"
+                ],
+                "publikationen": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/pub/romeike/index.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2018: Professor (Didaktik der Informatik), Freie Universität Berlin",
+                    "2013–2018: Professor für Didaktik der Informatik, Friedrich-Alexander-Universität Erlangen-Nürnberg",
+                    "2008: Dissertation (Dr. rer. nat.), Universität Potsdam (Kreativität im Informatikunterricht)"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "digi4all – Kompetenzen für das Unterrichten in einer digitalisierten Welt",
+                        "semester": "WS 2025/26"
+                    }
+                ]
+            }
         },
         {
             "id": "waehlisch-matthias",
@@ -1342,19 +2625,6 @@
             }
         },
         {
-            "id": "wunder-gerhard",
-            "titel": "PD Dr.-Ing. habil.",
-            "name": "Gerhard Wunder",
-            "gruppen": [
-                "ag-comm"
-            ],
-            "rolle": "Gruppenleiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/team-members/wunder.html"
-            },
-            "profilbild": "research/images/wunder-gerhard.jpg"
-        },
-        {
             "id": "paschke-adrian",
             "titel": "Prof. Dr. rer. nat.",
             "name": "Adrian Paschke",
@@ -1364,9 +2634,42 @@
             ],
             "rolle": "Professor",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-csw/Members/members/paschke.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-csw/Members/members/paschke.html",
+                "github": "https://github.com/apaschke",
+                "orcid": "https://orcid.org/0000-0003-3156-9040",
+                "google-scholar": "https://scholar.google.de/citations?user=D_ZARycAAAAJ&hl=en",
+                "dblp": "https://dblp.org/pid/24/2942.html"
             },
-            "profilbild": "research/images/paschke-adrian.jpg"
+            "profilbild": "research/images/paschke-adrian.jpg",
+            "kontakt": {
+                "email": "paschke@inf.fu-berlin.de",
+                "telefon": "+49 30 3463 7228",
+                "sprechstunde": "bitte Termin per eMail vereinbaren"
+            },
+            "forschung": {
+                "interessen": [
+                    "Semantic AI",
+                    "Machine Learning",
+                    "Knowledge Representation",
+                    "Edge Intelligence",
+                    "Industrial IoT",
+                    "Quantum-supported AI"
+                ],
+                "publikationen": "https://dblp.org/pid/24/2942.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2019: ECDF Professor für Semantic Data Intelligence at Freie Universität Berlin and Fraunhofer FOKUS",
+                    "seit 2015: Director of Data Analytics Center (DANA) at Fraunhofer FOKUS",
+                    "seit 2008: Professor and Head of Corporate Semantic Web Group (AG-CSW) at Freie Universität Berlin",
+                    "2012–2014: Associate Professor at Poznan University of Economics, Poland",
+                    "2008: Post-doctoral researcher at Biotec Innovation Centre, Dresden",
+                    "2007: Postdoctoral fellow at National Research Council (NRC), Canada",
+                    "2007: Doctorate in Information Systems, Technical University of Munich",
+                    "2003–2007: Research associate at Technical University of Munich",
+                    "2002: Master in Business Informatics, Friedrich-Alexander-University Erlangen/Nuremberg"
+                ]
+            }
         },
         {
             "id": "goehring-daniel",
@@ -1377,9 +2680,98 @@
             ],
             "rolle": "Professor",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/Daniel_G__hring1.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/Daniel_G__hring1.html",
+                "persoenlich": "https://page.mi.fu-berlin.de/drgoehring/",
+                "linkedin": "https://de.linkedin.com/in/daniel-goehring-39921058",
+                "orcid": "https://orcid.org/0000-0001-7819-7163",
+                "google-scholar": "https://scholar.google.com/citations?user=-yZse64AAAAJ&hl=en",
+                "dblp": "https://dblp.org/pid/97/3289.html"
             },
-            "profilbild": "research/images/goehring-daniel.jpg"
+            "profilbild": "research/images/goehring-daniel.jpg",
+            "kontakt": {
+                "email": "daniel.goehring@fu-berlin.de",
+                "telefon": "+49 30 838 75128",
+                "sprechstunde": "nach Vereinbarung"
+            },
+            "forschung": {
+                "interessen": [
+                    "Machine Learning",
+                    "Robotics",
+                    "Autonomous Vehicles",
+                    "Computer Vision",
+                    "Mobile Robots"
+                ],
+                "publikationen": "https://page.mi.fu-berlin.de/drgoehring/publications.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2015: Juniorprofessor, Mobile Robotics and Autonomous Vehicles at Freie Universität Berlin",
+                    "2022: Habilitation in Informatik at Freie Universität Berlin",
+                    "2014–2015: Postdoctoral researcher and project leader for self-driving cars at Freie Universität Berlin",
+                    "2012–2014: Postdoctoral researcher at International Computer Science Institute, Berkeley, California",
+                    "2010–2011: Postdoctoral researcher at AutoNOMOS-Labs, Freie Universität Berlin",
+                    "2009–2010: Researcher, Transport Research division at German Aerospace Center (DLR), Berlin",
+                    "2009: Dissertation (Dr. rer. nat.) at Humboldt-Universität zu Berlin",
+                    "2005–2009: Researcher in Artificial Intelligence group at Humboldt-Universität zu Berlin",
+                    "1999–2004: Diplom in Informatik at Humboldt-Universität zu Berlin"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Image Processing (Bildverarbeitung)",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Advanced Robotics",
+                        "semester": "WiSe 2025/26"
+                    },
+                    {
+                        "name": "Introduction to Robotics",
+                        "semester": "SoSe 2025"
+                    },
+                    {
+                        "name": "Image Processing (Bildverarbeitung)",
+                        "semester": "SoSe 2024"
+                    },
+                    {
+                        "name": "Self-Driving Cars (Seminar)",
+                        "semester": "SoSe 2024"
+                    },
+                    {
+                        "name": "Advanced Robotics",
+                        "semester": "WiSe 2023/24"
+                    },
+                    {
+                        "name": "Self-Driving Cars (Seminar)",
+                        "semester": "WiSe 2023/24"
+                    },
+                    {
+                        "name": "Introduction to Robotics",
+                        "semester": "SoSe 2023"
+                    },
+                    {
+                        "name": "Self-Driving Cars (Seminar)",
+                        "semester": "SoSe 2023"
+                    },
+                    {
+                        "name": "Introduction to Robotics",
+                        "semester": "WiSe 2022/23"
+                    },
+                    {
+                        "name": "Self-Driving Cars (Seminar)",
+                        "semester": "WiSe 2022/23"
+                    },
+                    {
+                        "name": "Image Processing (Bildverarbeitung)",
+                        "semester": "SoSe 2022"
+                    },
+                    {
+                        "name": "Self-Driving Cars (Seminar)",
+                        "semester": "SoSe 2022"
+                    }
+                ]
+            }
         },
         {
             "id": "benzmueller-christoph",
