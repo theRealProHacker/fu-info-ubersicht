@@ -471,8 +471,13 @@ def validate_field(path, value, source, entry, mode):
         err = clean_string(value)
         if err:
             return err
+        # Same host, or same institution: FU group "websites" are often
+        # stubs whose real homepage lives on another fu-berlin.de host.
         site_host = host_of(entry.get('website', ''))
-        if site_host and host_of(source) != site_host:
+        src_host = host_of(source)
+        same_institution = (site_host.endswith('fu-berlin.de')
+                            and src_host.endswith('fu-berlin.de'))
+        if site_host and src_host != site_host and not same_institution:
             return f'source host must match group website ({site_host})'
         return None
     return clean_string(value)

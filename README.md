@@ -159,4 +159,4 @@ Validierung) — zählt als normale Sitzungsnutzung statt Agent-SDK-Credits.
 - Arbeitsgruppen-Übersicht: https://www.mi.fu-berlin.de/inf/research/groups/index.html
 - Forschungsforum Öffentliche Sicherheit: http://www.sicherheit-forschung.de/
 ---
-*Letzte Aktualisierung: 2025-12-05*
+*Letzte Aktualisierung: 2026-06-12*

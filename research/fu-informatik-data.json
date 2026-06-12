@@ -178,7 +178,8 @@
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-si/index.html",
             "verbindungen": [
                 "bundesdruckerei"
-            ]
+            ],
+            "beschreibung": "The Secure Identity Research Group ('AG Sichere Identität') was established as the 'Bundesdruckerei Stiftungsprofessur für Sichere Identität' in 2009 and is led by Prof. Dr.-Ing. Volker Roth. The AG Sichere Identität reseaches and devises information and communication systems meant to protect the privacy and security of individuals against unchecked governmental and commercial exploitation."
         },
         {
             "id": "ag-sse",
