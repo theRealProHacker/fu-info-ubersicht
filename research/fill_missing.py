@@ -67,8 +67,22 @@ FORBIDDEN_AUTH_VARS = [
 ]
 
 # Values must never carry markup — they end up in app.js innerHTML.
+# The single quote (') is deliberately allowed: app.js interpolates researched
+# values ONLY into double-quoted attributes and text content. Keep it that way.
 FORBIDDEN_CHARS = re.compile(r'[<>"`]')
-URL_RE = re.compile(r'^https?://[A-Za-z0-9._~:/?#@!$&()*+,;=%\[\]-]+$')
+URL_RE = re.compile(r'\Ahttps?://[A-Za-z0-9._~:/?#@!$&()*+,;=%\[\]-]+\Z')
+MAX_VALUE_LEN = 1200
+
+# Profile-link fields may only point at their expected host — a prompt-injected
+# agent must not be able to place an arbitrary URL on the public site.
+LINK_HOST_ALLOWLIST = {
+    'links.github': ('github.com',),
+    'links.linkedin': ('linkedin.com',),
+    'links.orcid': ('orcid.org',),
+    'links.google-scholar': ('scholar.google.com', 'scholar.google.de'),
+    'links.dblp': ('dblp.org', 'dblp.uni-trier.de'),
+    'links.fu-berlin': ('fu-berlin.de',),
+}
 EMAIL_RE = re.compile(r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$')
 PHONE_RE = re.compile(r'^\+?[0-9][0-9 ()/–.-]{5,}$')
 
@@ -114,7 +128,8 @@ def check_auth_env():
 
 def check_git_clean():
     res = subprocess.run(
-        ['git', 'status', '--short', '--', str(DATASET_PATH)],
+        ['git', 'status', '--short', '--',
+         str(DATASET_PATH), str(PROFILE_PICS_PATH), str(PROVENANCE_PATH)],
         cwd=REPO_ROOT, capture_output=True, text=True)
     if res.returncode == 0 and res.stdout.strip():
         sys.exit(
@@ -344,11 +359,17 @@ def run_agent_once(prompt):
     except subprocess.TimeoutExpired:
         return None, {'error_class': 'timeout', 'raw': f'timeout after {AGENT_TIMEOUT_S}s',
                       'duration_ms': int((time.monotonic() - started) * 1000), 'num_turns': 0}
+    except FileNotFoundError:
+        sys.exit("ABORT: 'claude' CLI not found on PATH.\n"
+                 "Fix: install Claude Code and log in with the subscription "
+                 "(smoke test: claude -p \"hi\").")
     raw = (proc.stdout or '') + ('\n--- stderr ---\n' + proc.stderr if proc.stderr else '')
     meta = {'duration_ms': int((time.monotonic() - started) * 1000),
             'num_turns': 0, 'raw': raw, 'error_class': None}
     if proc.returncode != 0:
-        meta['error_class'] = classify_error(raw)
+        # Classify from stderr only — stdout may echo fetched web content
+        # that legitimately contains words like "quota" or "429".
+        meta['error_class'] = classify_error(proc.stderr or proc.stdout)
         return None, meta
     try:
         envelope = json.loads(proc.stdout)
@@ -358,8 +379,11 @@ def run_agent_once(prompt):
     meta['duration_ms'] = envelope.get('duration_ms', meta['duration_ms'])
     meta['num_turns'] = envelope.get('num_turns', 0)
     if envelope.get('is_error'):
-        meta['error_class'] = classify_error(
-            str(envelope.get('result', '')) + str(envelope.get('subtype', '')))
+        if envelope.get('api_error_status') in (429, 529):
+            meta['error_class'] = 'rate_limit'
+        else:
+            meta['error_class'] = classify_error(
+                str(envelope.get('result', '')) + str(envelope.get('subtype', '')))
         return None, meta
     result_text = envelope.get('result', '')
     if not result_text or not str(result_text).strip():
@@ -400,6 +424,8 @@ def clean_string(value):
         return 'not a string'
     if not value.strip():
         return 'empty'
+    if len(value) > MAX_VALUE_LEN:
+        return f'value too long (>{MAX_VALUE_LEN} chars)'
     if FORBIDDEN_CHARS.search(value):
         return 'forbidden characters (<, >, \", `)'
     return None
@@ -423,6 +449,12 @@ def host_of(url):
         return ''
 
 
+def host_matches(host, domain):
+    """True for the domain itself or its subdomains — never for lookalikes
+    like evilfu-berlin.de, which a plain endswith() would accept."""
+    return host == domain or host.endswith('.' + domain)
+
+
 def validate_field(path, value, source, entry, mode):
     """Returns an error string or None if (value, source) is acceptable."""
     err = check_url(source)
@@ -430,9 +462,17 @@ def validate_field(path, value, source, entry, mode):
         return f'bad source URL: {err}'
 
     fu_only = mode == 'person' and entry.get('rolle') in RESTRICTED_ROLES
-    if fu_only and not host_of(source).endswith('fu-berlin.de'):
+    if fu_only and not host_matches(host_of(source), 'fu-berlin.de'):
         return 'restricted subject: source must be a fu-berlin.de page'
 
+    if path in LINK_HOST_ALLOWLIST:
+        err = check_url(value)
+        if err:
+            return err
+        if not any(host_matches(host_of(value), d)
+                   for d in LINK_HOST_ALLOWLIST[path]):
+            return f'host not allowed for {path}'
+        return None
     if path in URL_FIELDS:
         # kontakt.sprechstunde may be a free-text time instead of a URL
         if path == 'kontakt.sprechstunde' and not str(value).startswith('http'):
@@ -475,8 +515,8 @@ def validate_field(path, value, source, entry, mode):
         # stubs whose real homepage lives on another fu-berlin.de host.
         site_host = host_of(entry.get('website', ''))
         src_host = host_of(source)
-        same_institution = (site_host.endswith('fu-berlin.de')
-                            and src_host.endswith('fu-berlin.de'))
+        same_institution = (host_matches(site_host, 'fu-berlin.de')
+                            and host_matches(src_host, 'fu-berlin.de'))
         if site_host and src_host != site_host and not same_institution:
             return f'source host must match group website ({site_host})'
         return None
@@ -523,7 +563,12 @@ def merge(entry, accepted, profile_pics):
     merged, conflicts = {}, []
     for path, item in accepted.items():
         if path == 'profilbild':
-            if entry['id'] in profile_pics:
+            # Fill-only applies here too: a manually set profilbild or an
+            # image already on disk must never be overwritten via the
+            # profile_pics route.
+            if entry['id'] in profile_pics \
+                    or not is_empty(get_value(entry, 'profilbild')) \
+                    or image_on_disk(entry['id']):
                 conflicts.append(path)
             else:
                 profile_pics[entry['id']] = item['value']

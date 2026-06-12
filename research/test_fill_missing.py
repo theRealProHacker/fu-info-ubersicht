@@ -12,6 +12,7 @@ import os
 import sys
 import tempfile
 import unittest
+import unittest.mock
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -312,6 +313,104 @@ class MergeTests(unittest.TestCase):
         queue, _ = fm.select(data, empty_state(), empty_skip(), {},
                              make_args(ids='leer-lena'))
         self.assertNotIn('links.github', queue[0][1])
+
+
+class ReviewRegressionTests(unittest.TestCase):
+    """Regression tests for pre-push review findings (2026-06-12)."""
+
+    def person(self):
+        return {'id': 'leer-lena', 'name': 'Lena Leer', 'rolle': 'Professorin'}
+
+    def test_auth_guard_aborts_on_each_var(self):
+        for var in fm.FORBIDDEN_AUTH_VARS:
+            with unittest.mock.patch.dict(os.environ, {var: 'x'}):
+                with self.assertRaises(SystemExit):
+                    fm.check_auth_env()
+
+    def test_auth_guard_passes_when_clean(self):
+        clean = {k: v for k, v in os.environ.items()
+                 if k not in fm.FORBIDDEN_AUTH_VARS}
+        with unittest.mock.patch.dict(os.environ, clean, clear=True):
+            fm.check_auth_env()   # must not raise
+
+    def test_restricted_source_rejects_lookalike_domain(self):
+        sek = {'id': 'sek-sabine', 'rolle': 'Sekretariat'}
+        _, rejected, _ = fm.validate(
+            {'fields': {'kontakt': {'email': 's@inf.fu-berlin.de'}},
+             'sources': {'kontakt.email': 'https://evilfu-berlin.de/fake'},
+             'not_found': []}, sek, 'person')
+        self.assertIn('fu-berlin.de', rejected[0]['reason'])
+
+    def test_beschreibung_rejects_lookalike_institution(self):
+        group = {'id': 'ag-test', 'type': 'ag',
+                 'website': 'https://www.mi.fu-berlin.de/ag-test'}
+        _, rejected, _ = fm.validate(
+            {'fields': {'beschreibung': 'Die AG forscht.'},
+             'sources': {'beschreibung': 'https://notfu-berlin.de/x'},
+             'not_found': []}, group, 'group')
+        self.assertEqual(len(rejected), 1)
+
+    def test_link_host_allowlist(self):
+        accepted, rejected, _ = fm.validate(
+            {'fields': {'links': {
+                'github': 'https://evil.example/phish',
+                'dblp': 'https://dblp.org/pid/x.html'}},
+             'sources': {'links.github': 'https://example.org',
+                         'links.dblp': 'https://dblp.org/pid/x.html'},
+             'not_found': []}, self.person(), 'person')
+        self.assertIn('links.dblp', accepted)
+        self.assertIn('host not allowed', rejected[0]['reason'])
+
+    def test_value_length_cap(self):
+        _, rejected, _ = fm.validate(
+            {'fields': {'forschung': {'interessen': ['x' * 2000]}},
+             'sources': {'forschung.interessen': 'https://example.org'},
+             'not_found': []}, self.person(), 'person')
+        self.assertIn('too long', rejected[0]['reason'])
+
+    def test_url_rejects_trailing_newline(self):
+        self.assertIsNotNone(fm.check_url('https://example.org/x\n'))
+
+    def test_profilbild_conflict_when_dataset_value_set(self):
+        entry = {'id': 'leer-lena', 'profilbild': 'research/images/manual.jpg'}
+        pics = {}
+        merged, conflicts = fm.merge(entry, {'profilbild': {
+            'value': 'https://example.org/new.jpg',
+            'source': 'https://example.org'}}, pics)
+        self.assertEqual(conflicts, ['profilbild'])
+        self.assertEqual(pics, {})
+
+    def test_profilbild_conflict_when_image_on_disk(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            orig = fm.IMAGES_DIR
+            fm.IMAGES_DIR = Path(tmp)
+            try:
+                (fm.IMAGES_DIR / 'leer-lena.jpg').write_bytes(b'x')
+                merged, conflicts = fm.merge(
+                    {'id': 'leer-lena'}, {'profilbild': {
+                        'value': 'https://example.org/new.jpg',
+                        'source': 'https://example.org'}}, {})
+                self.assertEqual(conflicts, ['profilbild'])
+            finally:
+                fm.IMAGES_DIR = orig
+
+    def test_validate_rejects_malformed_findings_object(self):
+        accepted, rejected, _ = fm.validate(
+            {'fields': 'junk', 'sources': {}}, self.person(), 'person')
+        self.assertEqual(accepted, {})
+        self.assertEqual(rejected[0]['reason'], 'malformed findings object')
+
+    def test_sprechstunde_freetext_accepted_html_rejected(self):
+        accepted, rejected, _ = fm.validate(
+            {'fields': {'kontakt': {'sprechstunde': 'Di 10-12 Uhr'}},
+             'sources': {'kontakt.sprechstunde': 'https://fu-berlin.de/x'},
+             'not_found': []}, self.person(), 'person')
+        self.assertIn('kontakt.sprechstunde', accepted)
+        _, rejected, _ = fm.validate(
+            {'fields': {'kontakt': {'sprechstunde': '<b>Di</b>'}},
+             'sources': {'kontakt.sprechstunde': 'https://fu-berlin.de/x'},
+             'not_found': []}, self.person(), 'person')
+        self.assertEqual(len(rejected), 1)
 
 
 class HelperTests(unittest.TestCase):
