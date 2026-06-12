@@ -28,13 +28,15 @@ this path draws plain session usage instead of Agent-SDK credits.
    findings = json.loads('''<SUBAGENT_JSON_HERE>''')
    data = fm.load_json(fm.DATASET_PATH, None)
    fm.migrate_website_key(data)
-   entry = next(p for p in data['personen'] if p['id'] == '<ENTRY_ID>')
+   mode = '<person|group>'
+   bucket = data['gruppen'] if mode == 'group' else data['personen']
+   entry = next(e for e in bucket if e['id'] == '<ENTRY_ID>')
    profile_pics = fm.load_json(fm.PROFILE_PICS_PATH, {})
-   accepted, rejected, not_found = fm.validate(findings, entry, '<person|group>')
+   accepted, rejected, not_found = fm.validate(findings, entry, mode)
    merged, conflicts = fm.merge(entry, accepted, profile_pics)
    fm.atomic_write_json(fm.DATASET_PATH, data)
    fm.atomic_write_json(fm.PROFILE_PICS_PATH, profile_pics)
-   records = [{'ts': fm.now_iso(), 'id': entry['id'], 'mode': '<person|group>',
+   records = [{'ts': fm.now_iso(), 'id': entry['id'], 'mode': mode,
                'action': 'merged', 'field': p, 'value': i['value'],
                'source': i['source']} for p, i in merged.items()]
    fm.append_provenance(records)

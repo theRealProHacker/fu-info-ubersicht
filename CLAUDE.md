@@ -6,10 +6,13 @@ CSS), single data source: `research/fu-informatik-data.json`.
 
 - Person/group data lives ONLY in `research/fu-informatik-data.json`. Never
   invent facts; every researched fact needs a source URL.
-- Profile images: add URL to `PROFILE_PICS` in `download_images.py`, run it,
-  it downloads to `research/images/` and updates the JSON.
-- Research protocol for filling missing person data:
-  `.agent/workflows/deep_research_person.md`.
+- Profile images: add the URL to `research/profile_pics.json`, then run
+  `python3 download_images.py` — it downloads to `research/images/` and
+  updates the JSON.
+- Filling missing person/group data: `research/fill_missing.py` (see README
+  "Daten pflegen") or the `/fill-missing` command. Never edit the dataset
+  from agent research directly — everything goes through its `validate()`.
+  The legacy `.agent/workflows/deep_research_person.md` is superseded.
 
 ## Skill routing
 
