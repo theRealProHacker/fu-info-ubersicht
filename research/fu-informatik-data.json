@@ -465,7 +465,8 @@
                         "semester": "WS 2024/25"
                     }
                 ]
-            }
+            },
+            "profilbild": "research/images/linnert-barry.jpg"
         },
         {
             "id": "ververs-linus",
@@ -670,7 +671,8 @@
             "kontakt": {
                 "email": "sylvia.deter@fu-berlin.de",
                 "telefon": "+49 30 838 60331"
-            }
+            },
+            "profilbild": "research/images/deter-sylvia.jpg"
         },
         {
             "id": "heiser-malte",
@@ -764,7 +766,8 @@
                         "semester": "SS 2026"
                     }
                 ]
-            }
+            },
+            "profilbild": "research/images/klein-jacobe.jpg"
         },
         {
             "id": "kuruc-fabrizio",
@@ -801,7 +804,8 @@
                         "semester": "SS 2026"
                     }
                 ]
-            }
+            },
+            "profilbild": "research/images/kuruc-fabrizio.jpg"
         },
         {
             "id": "leimstaedtner-david",
@@ -918,7 +922,8 @@
                     "Human-centered data science"
                 ],
                 "publikationen": "https://scholar.google.com/citations?user=4LTpp_gAAAAJ&hl=en"
-            }
+            },
+            "profilbild": "research/images/schaefer-ulrike.jpg"
         },
         {
             "id": "soerries-peter",
@@ -980,7 +985,8 @@
                         "semester": "SoSe 2026"
                     }
                 ]
-            }
+            },
+            "profilbild": "research/images/soerries-peter.jpg"
         },
         {
             "id": "reinert-knut",
@@ -1179,7 +1185,8 @@
             "kontakt": {
                 "email": "bahe@inf.fu-berlin.de",
                 "telefon": "+49 30 838 75212"
-            }
+            },
+            "profilbild": "research/images/bahe-stefanie.jpg"
         },
         {
             "id": "baccelli-emmanuel",
@@ -1387,7 +1394,8 @@
                         "semester": "SS 2024"
                     }
                 ]
-            }
+            },
+            "profilbild": "research/images/lindner-ann-kathrin.png"
         },
         {
             "id": "rossmann-sophia",
@@ -1422,7 +1430,8 @@
                     "2018–2023: Research Associate, Technical University of Munich",
                     "seit 2023: Wissenschaftliche Mitarbeiterin (BeLIFE-Projekt), FU Berlin"
                 ]
-            }
+            },
+            "profilbild": "research/images/rossmann-sophia.jpg"
         },
         {
             "id": "terfurth-leonie",
@@ -1552,7 +1561,8 @@
             "kontakt": {
                 "email": "knoll@inf.fu-berlin.de",
                 "telefon": "+49 30 838 75103"
-            }
+            },
+            "profilbild": "research/images/knoll-tamara.gif"
         },
         {
             "id": "orth-tanja",
@@ -1678,7 +1688,8 @@
                         "semester": "WiSe 2023/24"
                     }
                 ]
-            }
+            },
+            "profilbild": "research/images/klost-katharina.jpg"
         },
         {
             "id": "willert-max",
@@ -1712,7 +1723,8 @@
                     "2021: Dissertation (Routing and Stabbing), Freie Universität Berlin",
                     "2016: Master of Science (Routing Schemes for Disk Graphs and Polygons), Freie Universität Berlin"
                 ]
-            }
+            },
+            "profilbild": "research/images/willert-max.jpg"
         },
         {
             "id": "wunder-gerhard",
@@ -1793,7 +1805,8 @@
             "kontakt": {
                 "email": "s.schoettker-soehl@fu-berlin.de",
                 "telefon": "+49 30 838 75102"
-            }
+            },
+            "profilbild": "research/images/schoettker-soehl-susanne.jpg"
         },
         {
             "id": "davidson-jacob",
@@ -1828,7 +1841,8 @@
                     "seit 2020: Wissenschaftlicher Mitarbeiter, Institut für Informatik, Freie Universität Berlin",
                     "seit 2020: Guest Scientist, Department of Collective Behavior, Max Planck Institute for Animal Behavior, Konstanz"
                 ]
-            }
+            },
+            "profilbild": "research/images/davidson-jacob.jpg"
         },
         {
             "id": "popp-stefan",
@@ -1865,7 +1879,8 @@
                     "seit 2023: Wissenschaftlicher Mitarbeiter, Freie Universität Berlin, Dahlem Center for Machine Learning and Robotics",
                     "2023: Dissertation (PhD), Ecology and Evolutionary Biology, University of Arizona"
                 ]
-            }
+            },
+            "profilbild": "research/images/popp-stefan.jpg"
         },
         {
             "id": "shang-zhihao",
@@ -1896,7 +1911,8 @@
                 "positionen": [
                     "2020: Dissertation (Performance Evaluation of the Control Plane in OpenFlow Networks), Freie Universität Berlin"
                 ]
-            }
+            },
+            "profilbild": "research/images/shang-zhihao.png"
         },
         {
             "id": "wu-han",
@@ -1930,7 +1946,8 @@
                     "2020: PhD (Computer Science), Free University of Berlin",
                     "2016-2020: PhD student, AG-DDS, Free University of Berlin"
                 ]
-            }
+            },
+            "profilbild": "research/images/wu-han.png"
         },
         {
             "id": "peng-guang",
@@ -1962,7 +1979,8 @@
                 "positionen": [
                     "2017-2021: Wissenschaftlicher Mitarbeiter (PhD student), Freie Universität Berlin, AG-DDS"
                 ]
-            }
+            },
+            "profilbild": "research/images/peng-guang.jpg"
         },
         {
             "id": "ma-xuyang",
@@ -1992,7 +2010,8 @@
                 "positionen": [
                     "2020–2022: Visiting PhD student at Freie Universität Berlin, AG Dependable Distributed Systems"
                 ]
-            }
+            },
+            "profilbild": "research/images/ma-xuyang.png"
         },
         {
             "id": "milde-gesine",
@@ -2008,7 +2027,8 @@
             "kontakt": {
                 "email": "Gesine.Milde@fu-berlin.de",
                 "telefon": "+49 30 838 75 243"
-            }
+            },
+            "profilbild": "research/images/milde-gesine.jpg"
         },
         {
             "id": "zieris-franz",
@@ -2131,7 +2151,8 @@
                         "semester": "Sommersemester 2014"
                     }
                 ]
-            }
+            },
+            "profilbild": "research/images/zieris-franz.jpg"
         },
         {
             "id": "lohmeier-sebastian",
@@ -2165,7 +2186,8 @@
                     "2015: Master's thesis on indirect anaphors in programming",
                     "2011: Bachelor's thesis on statically resolved indirect anaphora"
                 ]
-            }
+            },
+            "profilbild": "research/images/lohmeier-sebastian.jpg"
         },
         {
             "id": "israt-fahmida",
@@ -2340,7 +2362,8 @@
                 "positionen": [
                     "2022: Dissertation (Dr.-Ing.), Human-Scale Personal Fabrication, Hasso Plattner Institute / Universität Potsdam"
                 ]
-            }
+            },
+            "profilbild": "research/images/kovacs-robert.jpg"
         },
         {
             "id": "wolter-katinka",
@@ -2604,12 +2627,18 @@
             },
             "kontakt": {
                 "email": "m.waehlisch@fu-berlin.de",
-                "telefon": "+49 30 838 50072"
+                "telefon": "+49 30 838 50072",
+                "sprechstunde": "Stop by, or write an email to make an appointment."
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ilab/members/waehlisch.html",
                 "tu-dresden": "https://tu-dresden.de/ing/informatik/sya/netd/about/mw",
-                "publikationen": "https://www.mi.fu-berlin.de/en/inf/groups/ilab/publications/index.html"
+                "publikationen": "https://www.mi.fu-berlin.de/en/inf/groups/ilab/publications/index.html",
+                "github": "https://github.com/waehlisch",
+                "linkedin": "https://de.linkedin.com/in/matthiaswaehlisch",
+                "orcid": "https://orcid.org/0000-0002-3825-2807",
+                "google-scholar": "https://scholar.google.com/citations?user=EjmivsUAAAAJ&hl=en",
+                "dblp": "https://dblp.org/pid/91/5978.html"
             },
             "forschung": {
                 "interessen": [
@@ -2621,8 +2650,10 @@
                     "P2P",
                     "Internet of Things",
                     "Information-centric Networking"
-                ]
-            }
+                ],
+                "publikationen": "https://dblp.org/pid/91/5978.html"
+            },
+            "profilbild": "research/images/waehlisch-matthias.jpeg"
         },
         {
             "id": "paschke-adrian",
@@ -2782,9 +2813,70 @@
             ],
             "rolle": "Professor",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/Benzm__ller.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/Benzm__ller.html",
+                "persoenlich": "http://page.mi.fu-berlin.de/cbenzmueller/",
+                "github": "https://github.com/cbenzmueller",
+                "linkedin": "https://www.linkedin.com/in/christoph-benzm%C3%BCller-b76a03/",
+                "orcid": "https://orcid.org/0000-0002-3392-3093",
+                "google-scholar": "https://scholar.google.com/citations?user=zD0vtfwAAAAJ",
+                "dblp": "https://dblp.org/pid/b/CBenzmueller"
             },
-            "profilbild": "research/images/benzmueller-christoph.jpg"
+            "profilbild": "research/images/benzmueller-christoph.jpg",
+            "kontakt": {
+                "email": "c.benzmueller@fu-berlin.de",
+                "telefon": "+49 30 838 52485"
+            },
+            "forschung": {
+                "interessen": [
+                    "Automated Theorem Proving",
+                    "Higher-Order Logic",
+                    "Non-Classical Logics",
+                    "Machine Ethics & Law",
+                    "Computational Metaphysics",
+                    "Knowledge Representation and Reasoning"
+                ],
+                "publikationen": "http://page.mi.fu-berlin.de/cbenzmueller/publications.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2022: Full Professor (Chair for AI Systems Engineering) at Otto-Friedrich-Universität Bamberg",
+                    "seit 2021: apl. Professor at Freie Universität Berlin, Institut für Informatik",
+                    "2012-2021: DFG Heisenberg Fellow at Freie Universität Berlin",
+                    "2008-2009: Full Professor at International University in Germany, Bruchsal",
+                    "2006: Habilitation at Saarland University",
+                    "2001-2008: Akademischer Rat (Lecturer) at Saarland University",
+                    "1999: PhD (Dr. rer. nat.) at Saarland University",
+                    "1989-1995: Diploma, Computer Science at Saarland University"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Künstliche Intelligenz (VL/Ü)",
+                        "semester": "SoSe 2018"
+                    },
+                    {
+                        "name": "Universal Logical Reasoning (VL/Ü)",
+                        "semester": "WiSe 2018/2019"
+                    },
+                    {
+                        "name": "Seminar: Selected Works of Kurt Gödel",
+                        "semester": "WiSe 2018/2019"
+                    },
+                    {
+                        "name": "Software Project: Logic Software",
+                        "semester": "WiSe 2018/2019"
+                    },
+                    {
+                        "name": "Project Seminar: AI-supported maintenance of international school database",
+                        "semester": "WiSe 2017/2018"
+                    },
+                    {
+                        "name": "Seminar/Proseminar: Intelligent Teaching/Learning Systems",
+                        "semester": "WiSe 2017/2018"
+                    }
+                ]
+            }
         },
         {
             "id": "rojas-raul",
@@ -2800,9 +2892,35 @@
                 "bemerkung": "Gründer des FU-Robotik-Teams, autonome Fahrzeuge MIG/AutoNOMOS"
             },
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/rojas_raul.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/rojas_raul.html",
+                "persoenlich": "https://dcmlr.inf.fu-berlin.de/rojas/",
+                "orcid": "https://orcid.org/0000-0003-1596-7030",
+                "dblp": "https://dblp.org/pid/r/RaulRojas.html"
             },
-            "profilbild": "research/images/rojas-raul.jpg"
+            "profilbild": "research/images/rojas-raul.jpg",
+            "kontakt": {
+                "email": "raul.rojas@fu-berlin.de",
+                "telefon": "+49 30 838 75102",
+                "sprechstunde": "n.V. / office hours by appointment"
+            },
+            "forschung": {
+                "interessen": [
+                    "Artificial Intelligence",
+                    "Robotics",
+                    "Autonomous Cars",
+                    "Number Theory"
+                ],
+                "publikationen": "https://dcmlr.inf.fu-berlin.de/rojas/publications/"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2015: Fred D. Gibson Jr. Endowed Professor in Science, University of Nevada, Reno",
+                    "1997–2020: Professor of Artificial Intelligence, Freie Universität Berlin",
+                    "1994–1997: Professor of Artificial Intelligence, Martin-Luther-Universität Halle-Wittenberg",
+                    "1994: Habilitation in Computer Science, Freie Universität Berlin",
+                    "1988: Dissertation (Economics), Freie Universität Berlin"
+                ]
+            }
         },
         {
             "id": "voisard-agnes",
@@ -2813,9 +2931,25 @@
             ],
             "rolle": "Professorin",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-db/members/Professors/voisard_agnes.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-db/members/Professors/voisard_agnes.html",
+                "persoenlich": "http://page.mi.fu-berlin.de/voisard/",
+                "dblp": "https://dblp.org/pid/v/AVoisard.html"
             },
-            "profilbild": "research/images/voisard-agnes.jpg"
+            "profilbild": "research/images/voisard-agnes.jpg",
+            "kontakt": {
+                "email": "agnes.voisard@fu-berlin.de",
+                "telefon": "+49 30 838 75 100",
+                "sprechstunde": "Wednesdays 1:30–2:00 pm (except the first Wednesday of the month: 4:00–4:30 pm); advance registration with secretary Tanja Orth required"
+            },
+            "forschung": {
+                "interessen": [
+                    "Datenbanken",
+                    "Informationssysteme",
+                    "Lokationsbasierte Dienste",
+                    "Mobile Anwendungen"
+                ],
+                "publikationen": "https://dblp.org/pid/v/AVoisard.html"
+            }
         },
         {
             "id": "baum-katharina",
@@ -2827,11 +2961,63 @@
             "rolle": "Professorin",
             "kontakt": {
                 "email": "katharina.baum@fu-berlin.de",
-                "telefon": "+49 30 838 55850"
+                "telefon": "+49 30 838 55850",
+                "sprechstunde": "https://www.mi.fu-berlin.de/w/DILIS/OfficeHours"
             },
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dilis/Members/Professors/Prof_-Dr_-Katharina-Baum.html"
-            }
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dilis/Members/Professors/Prof_-Dr_-Katharina-Baum.html",
+                "persoenlich": "https://www.mi.fu-berlin.de/w/DILIS/KatharinaBaum",
+                "linkedin": "https://www.linkedin.com/in/katharina-baum/",
+                "orcid": "https://orcid.org/0000-0001-7256-0566",
+                "google-scholar": "https://scholar.google.com/citations?user=VRDJXPQAAAAJ",
+                "dblp": "https://dblp.org/pid/215/4515.html"
+            },
+            "forschung": {
+                "interessen": [
+                    "Networks for analyzing entity interactions",
+                    "Network-based analysis with mathematical modeling and machine learning",
+                    "Drug response prediction",
+                    "Multi-omics data integration"
+                ],
+                "publikationen": "https://dblp.org/pid/215/4515.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit 2023: Assistant Professor at Free University Berlin",
+                    "seit 2023: Adjunct Assistant Professor at Mount Sinai (NYC)",
+                    "2021-2023: Group Leader at Hasso Plattner Institute",
+                    "2020-2021: PostDoc at Hasso Plattner Institute",
+                    "2017-2019: PostDoc at Luxembourg Institute of Health",
+                    "2014-2020: PostDoc at Max Delbrück Center",
+                    "2009-2014: PhD Theoretical Biophysics",
+                    "2003-2009: Mathematics Diploma studies"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Research Seminar on Networks, dynamical models and ML for data integration in the life sciences",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Seminar on Current trends for leveraging electronic health records in research",
+                        "semester": "SS 2026"
+                    },
+                    {
+                        "name": "Database Systems",
+                        "semester": "WS 2025/26"
+                    },
+                    {
+                        "name": "Software project on Machine Learning for data from the life sciences",
+                        "semester": "WS 2025/26"
+                    },
+                    {
+                        "name": "Research Seminar on networks, dynamical models and ML",
+                        "semester": "WS 2025/26"
+                    }
+                ]
+            },
+            "profilbild": "research/images/baum-katharina.jpg"
         },
         {
             "id": "jahn-katharina",
@@ -2903,7 +3089,41 @@
             ],
             "rolle": "Professorin",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-pr/members/Professoren/Margarita_Esponda.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-pr/members/Professoren/Margarita_Esponda.html",
+                "persoenlich": "https://www.esponda.de",
+                "dblp": "https://dblp.uni-trier.de/pid/80/5733.html"
+            },
+            "kontakt": {
+                "email": "esponda@inf.fu-berlin.de",
+                "telefon": "+49 30 838 75142",
+                "sprechstunde": "https://kvv.imp.fu-berlin.de/x/i2jBoQ"
+            },
+            "forschung": {
+                "interessen": [
+                    "Algorithm Animation",
+                    "Algorithmic Visualization",
+                    "E-Learning",
+                    "Computer Science Education",
+                    "Interactive Learning Technologies"
+                ],
+                "publikationen": "https://dblp.uni-trier.de/pid/80/5733.html"
+            },
+            "vita": {
+                "positionen": [
+                    "2004: Dissertation (Dr. rer. nat.), Freie Universität Berlin"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Algorithmen und Programmieren I (ALP I)",
+                        "semester": "WS 2012/13"
+                    },
+                    {
+                        "name": "Algorithmen und Programmieren II (ALP II)",
+                        "semester": "SS 2012"
+                    }
+                ]
             }
         },
         {
@@ -2915,9 +3135,44 @@
             ],
             "rolle": "Professor",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-sse/members/Prof/Joern-Eichler/index.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-sse/members/Prof/Joern-Eichler/index.html",
+                "google-scholar": "https://scholar.google.com/citations?user=s5ZvnPIAAAAJ&hl=de",
+                "dblp": "https://dblp.org/pid/56/9056.html",
+                "orcid": "https://orcid.org/0000-0002-0822-2981"
             },
-            "profilbild": "research/images/eichler-joern.jpg"
+            "profilbild": "research/images/eichler-joern.jpg",
+            "kontakt": {
+                "email": "joern.eichler@fu-berlin.de",
+                "telefon": "+49 30 838 63097"
+            },
+            "forschung": {
+                "interessen": [
+                    "IT-Sicherheit",
+                    "Secure Systems Engineering",
+                    "Secure Development Lifecycle",
+                    "Risikobeurteilungen",
+                    "Schutzkonzepte",
+                    "Sicherheitstests"
+                ],
+                "publikationen": "https://scholar.google.com/citations?user=s5ZvnPIAAAAJ&hl=de"
+            },
+            "vita": {
+                "positionen": [
+                    "2015: Dissertation (Dr. rer. nat.) — Model-based Security Engineering of Electronic Business Processes, Technische Universität München"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Secure Software Engineering",
+                        "semester": "WiSe 2024/25"
+                    },
+                    {
+                        "name": "Übung zu Secure Software Engineering",
+                        "semester": "WiSe 2024/25"
+                    }
+                ]
+            }
         },
         {
             "id": "alt-helmut",
@@ -2932,9 +3187,30 @@
                 "bemerkung": "Emeritierter Professor der Theoretischen Informatik"
             },
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Alt_Helmut.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Alt_Helmut.html",
+                "google-scholar": "https://scholar.google.com/citations?user=FYVWsAsAAAAJ",
+                "dblp": "https://dblp.org/pid/a/HelmutAlt.html"
             },
-            "profilbild": "research/images/alt-helmut.jpg"
+            "profilbild": "research/images/alt-helmut.jpg",
+            "kontakt": {
+                "email": "alt@inf.fu-berlin.de",
+                "telefon": "+49 30 838 75160"
+            },
+            "forschung": {
+                "interessen": [
+                    "Algorithms",
+                    "computational geometry",
+                    "graph algorithms",
+                    "Fréchet distance"
+                ],
+                "publikationen": "https://dblp.org/pid/a/HelmutAlt.html"
+            },
+            "vita": {
+                "positionen": [
+                    "1976: Promotion (Dr. rer. nat.), Universität des Saarlandes, Saarbrücken (Betreuer: Kurt Mehlhorn; Dissertation: algorithms for parsing context-free languages)",
+                    "Professor der Informatik, Freie Universität Berlin"
+                ]
+            }
         },
         {
             "id": "kozma-laszlo",
@@ -2945,9 +3221,32 @@
             ],
             "rolle": "Professor",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Kozma_Laszlo.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Kozma_Laszlo.html",
+                "persoenlich": "https://lkozma.net",
+                "dblp": "https://dblp.org/pid/85/2288-2.html",
+                "google-scholar": "https://scholar.google.de/citations?user=9E0oO9YAAAAJ&hl=en",
+                "orcid": "https://orcid.org/0000-0002-3253-2373"
             },
-            "profilbild": "research/images/kozma-laszlo.png"
+            "profilbild": "research/images/kozma-laszlo.png",
+            "kontakt": {
+                "email": "lkozma@inf.fu-berlin.de",
+                "telefon": "+49 30 838 66213"
+            },
+            "forschung": {
+                "interessen": [
+                    "efficient data structures and algorithms",
+                    "algorithmic adaptivity",
+                    "algorithmic questions involving combinatorial and geometric structures"
+                ],
+                "publikationen": "https://dblp.org/pid/85/2288-2.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit Oktober 2025: Chair of Algorithmics, TU Dresden",
+                    "2018-2025: Juniorprofessor, Freie Universität Berlin",
+                    "2016: PhD, Saarland University"
+                ]
+            }
         },
         {
             "id": "mulzer-wolfgang",
@@ -2958,9 +3257,50 @@
             ],
             "rolle": "Professor",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Mulzer_Wolfgang.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Mulzer_Wolfgang.html",
+                "persoenlich": "http://page.mi.fu-berlin.de/mulzer/",
+                "dblp": "https://dblp.org/pid/m/WolfgangMulzer.html",
+                "orcid": "https://orcid.org/0000-0002-1948-5840"
             },
-            "profilbild": "research/images/mulzer-wolfgang.jpg"
+            "profilbild": "research/images/mulzer-wolfgang.jpg",
+            "kontakt": {
+                "email": "mulzer@inf.fu-berlin.de",
+                "telefon": "+49 30 838 75165",
+                "sprechstunde": "Dienstag, 14–15 Uhr"
+            },
+            "forschung": {
+                "interessen": [
+                    "Theoretische Informatik",
+                    "Algorithmen",
+                    "Datenstrukturen",
+                    "Komplexitätstheorie"
+                ],
+                "publikationen": "https://dblp.org/pid/m/WolfgangMulzer.html"
+            },
+            "vita": {
+                "positionen": [
+                    "seit Oktober 2016: Professor at Freie Universität Berlin",
+                    "November 2010–September 2016: Assistant Professor at Freie Universität Berlin",
+                    "Oktober 2010: Visiting Professor at Freie Universität Berlin",
+                    "Mai 2010: PhD (Department of Computer Science, Princeton University, advisor: Bernard Chazelle)"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Multiplicative Weights - A Popular Algorithmic Technique with Countless Applications",
+                        "semester": "SoSe 25"
+                    },
+                    {
+                        "name": "Übung zu Konzepte der Programmierung",
+                        "semester": "WiSe 24/25"
+                    },
+                    {
+                        "name": "Algorithmen und Datenstrukturen",
+                        "semester": "SoSe 24"
+                    }
+                ]
+            }
         },
         {
             "id": "gerhold-lars",
@@ -3015,9 +3355,48 @@
                 "fraunhofer-hhi"
             ],
             "links": {
-                "fu-berlin": "https://www.hhi.fraunhofer.de/abteilungen/vca/forschungsgruppen/videokodierungstechnologien/team.html"
+                "fu-berlin": "https://www.hhi.fraunhofer.de/abteilungen/vca/forschungsgruppen/videokodierungstechnologien/team.html",
+                "persoenlich": "http://iphome.hhi.de/schwarz/",
+                "google-scholar": "https://scholar.google.com/citations?user=41YpebQAAAAJ",
+                "dblp": "https://dblp.org/pid/91/3474.html"
             },
-            "profilbild": "research/images/schwarz-heiko.jpg"
+            "profilbild": "research/images/schwarz-heiko.jpg",
+            "kontakt": {
+                "email": "heiko.schwarz@hhi.fraunhofer.de",
+                "telefon": "+49 30 31002-226"
+            },
+            "forschung": {
+                "interessen": [
+                    "Video coding standards (H.264/MPEG-4 AVC, HEVC)",
+                    "3D video coding and multiview coding",
+                    "Scalable video coding",
+                    "Rate-distortion optimization for encoder control",
+                    "Statistical coding and modeling",
+                    "Wavelet-based image and video coding"
+                ],
+                "publikationen": "http://iphome.hhi.de/schwarz/pubs.htm"
+            },
+            "vita": {
+                "positionen": [
+                    "seit Oktober 2017: Professor, Freie Universität Berlin",
+                    "seit 2010: Head of Image & Video Coding Group, Fraunhofer Heinrich Hertz Institute, Berlin",
+                    "seit 1999: Researcher, Fraunhofer Heinrich Hertz Institute, Berlin",
+                    "2000: Dr.-Ing., Universität Rostock",
+                    "1996: Dipl.-Ing. (Electrical Engineering), Universität Rostock"
+                ]
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Bild- und Videocodierung",
+                        "semester": "SoSe 2026"
+                    },
+                    {
+                        "name": "Datenkompression",
+                        "semester": "WiSe 2025/26"
+                    }
+                ]
+            }
         }
     ],
     "verbindungen": [
