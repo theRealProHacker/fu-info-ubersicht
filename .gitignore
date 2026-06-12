@@ -4,3 +4,4 @@
 research/.fill_state.json
 research/.fill_logs/
 research/*.json.tmp
+.gstack/
