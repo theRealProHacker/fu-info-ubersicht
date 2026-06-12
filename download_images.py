@@ -6,7 +6,6 @@ Saves images to research/images/ folder.
 
 import json
 import os
-import re
 import time
 from pathlib import Path
 from urllib.parse import urlparse
