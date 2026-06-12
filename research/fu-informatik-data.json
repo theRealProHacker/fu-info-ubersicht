@@ -19,7 +19,8 @@
             "name": "Algorithmische Bioinformatik",
             "name-en": "Algorithmic Bioinformatics",
             "abkuerzung": "ABI",
-            "website": "https://www.mi.fu-berlin.de/en/inf/groups/abi/index.html"
+            "website": "https://www.mi.fu-berlin.de/en/inf/groups/abi/index.html",
+            "beschreibung": "The Algorithmic Bioinformatics group of Prof. Dr. Ing. Knut Reinert focuses on the development of novel algorithms and data structures for problems in the analysis of biomedical mass data. In particular, the group is interested in developing mathematical models for analyzing large genomic sequences, especially in the context of next generation sequencing (NGS), and data derived from mass spectrometry experiments, for example for detecting differential expression of proteins between normal and diseased samples. Apart from modeling problems and devising efficient algorithms to solve the problems, the group focuses on developing free, integrated implementations of these algorithms and data structures in maintainable software libraries such as OpenMS and SeqAn."
         },
         {
             "id": "ag-bds",
@@ -27,7 +28,8 @@
             "name": "Biomedizinische Datenwissenschaft",
             "name-en": "Biomedical Data Science",
             "abkuerzung": "BDS",
-            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-bds/index.html"
+            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-bds/index.html",
+            "beschreibung": "The Biomedical Data Science group develops computational and statistical methods for the analysis, integration and interpretation of biomedical omics data, in particular single-cell data. These techniques are primarily applied in the field of cancer research; the main focus is the study of intra-tumor heterogeneity, particularly the clonal evolution of tumors and the detection of mutational patterns at subclone level. Through this work, the group intends to obtain a more comprehensive understanding of cancer biology, leading to improved diagnostic, prognostic, and therapeutic strategies for cancer patients."
         },
         {
             "id": "ag-tech",
@@ -35,7 +37,8 @@
             "name": "Rechnersysteme und Telematik",
             "name-en": "Computer Systems & Telematics",
             "abkuerzung": "Tech",
-            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/index.html"
+            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/index.html",
+            "beschreibung": "Die Arbeitsgruppe Rechnersysteme und Telematik (AG Tech) der Freien Universität Berlin forscht zu mobilen und drahtlosen Kommunikationssystemen, Kommunikationsarchitekturen und Betriebssystemen für eingebettete Geräte sowie zu Qualitätsaspekten in Kommunikationssystemen. Weitere Schwerpunkte bilden kritische Infrastrukturen (CRITIS) und das Internet of Things (IoT). Die Gruppe entwickelt unter anderem das Open-Source-Betriebssystem RIOT für IoT-Geräte sowie Ariel OS, ein in Rust geschriebenes Betriebssystem für sichere, speichergeschützte Anwendungen auf 32-Bit-Mikrocontrollern."
         },
         {
             "id": "ag-csw",
@@ -51,7 +54,8 @@
             "name": "Dahlem Center für Maschinelles Lernen und Robotik",
             "name-en": "Dahlem Center for Machine Learning and Robotics",
             "abkuerzung": "DCMLR",
-            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/index.html"
+            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/index.html",
+            "beschreibung": "Artificial Intelligence and Machine Learning have become more and more important. We are on the threshold to novel applications in industry and services, just as the recent success of AI projects has shown (Google's AlphaGo, IBM's Watson, autonomous cars). Four research groups at Freie Universität Berlin have now started the 'Dahlem Center for Machine Learning and Robotics' in order to explore machine learning algorithms and applications of intelligent systems."
         },
         {
             "id": "ag-db",
@@ -59,7 +63,8 @@
             "name": "Datenbanken und Informationssysteme",
             "name-en": "Databases and Information Systems",
             "abkuerzung": "DB",
-            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-db/index.html"
+            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-db/index.html",
+            "beschreibung": "The Databases and Information Systems Group (AG-DB) at Freie Universität Berlin pursues application-oriented and basic research issues in the domains of modeling and algorithm design for data management. The two main application areas are information retrieval and spatial databases, with a growing focus on location-based services (e.g., navigation systems on smart phones). Further research addresses event-based systems and event-driven architectures, complemented by close cooperation with Fraunhofer FOKUS."
         },
         {
             "id": "ag-dilis",
@@ -67,7 +72,8 @@
             "name": "Datenintegration in den Lebenswissenschaften",
             "name-en": "Data Integration in the Life Sciences",
             "abkuerzung": "DILIS",
-            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-dilis/index.html"
+            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-dilis/index.html",
+            "beschreibung": "Für viele Probleme in den Lebenswissenschaften wurden verschiedene Arten von Daten generiert, die unterschiedliche Perspektiven liefern. Jede Datenebene hat ihre eigenen Einschränkungen, Fehler und Verzerrungen, weshalb ihre integrative Analyse der Schlüssel für robuste Schlussfolgerungen ist, um komplexe Phänomene zu verstehen. Die Anwendungen kommen hauptsächlich aus dem biomedizinischen Bereich, wie z. B. die Vorhersage von Medikamentenwirkungen, mit Fokus auf die Integration verschiedener Arten von biomolekularen 'Multi-Omics'-Daten."
         },
         {
             "id": "ag-dds",
@@ -75,7 +81,8 @@
             "name": "Zuverlässige Verteilte Systeme",
             "name-en": "Dependable Distributed Systems",
             "abkuerzung": "DDS",
-            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/index.html"
+            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/index.html",
+            "beschreibung": "Die Arbeitsgruppe Zuverlässige Verteilte Systeme unter der Leitung von Prof. Dr. Katinka Wolter befasst sich mit der Messung, Modellierung und Bewertung zuverlässiger verteilter Systeme. Die Forschung umfasst Anwendungen in Cloud Computing, Datenströmen, Blockchain-Technologien und Kryptowährungen. Als Methoden kommen Messtechniken, diskrete Ereignissimulation und stochastische Modellierung zum Einsatz."
         },
         {
             "id": "ag-ddi",
@@ -83,7 +90,8 @@
             "name": "Didaktik der Informatik",
             "name-en": "Computer Science Education",
             "abkuerzung": "DDI",
-            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/index.html"
+            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/index.html",
+            "beschreibung": "Die Professur für Didaktik der Informatik an der Freien Universität Berlin unter der Leitung von Prof. Dr. Ralf Romeike ist eine der forschungsstärksten und praxiswirksamsten Forschungsgruppen im Bereich der informatischen Bildung in Deutschland. Sie erforscht, wie Themen wie Digitalisierung, Big Data, Künstliche Intelligenz und Quanteninformatik so vermittelt werden können, dass Kinder und Jugendliche zur kreativen Mitgestaltung der Digitalen Gesellschaft befähigt werden. Daneben übernimmt die Gruppe die Ausbildung zukünftiger Informatiklehrkräfte im Rahmen des Lehramtsstudiums an der Freien Universität Berlin."
         },
         {
             "id": "ag-comm",
@@ -94,7 +102,8 @@
             "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/index.html",
             "verbindungen": [
                 "bundesdruckerei"
-            ]
+            ],
+            "beschreibung": "The Cybersecurity and AI Group at Freie Universität Berlin, Department of Mathematics and Computer Science, is directed by Gerhard Wunder and supported by Bundesdruckerei GmbH (former Heisenberg Communications and Information Theory Group). Main working areas are AI, deep learning and fundamental information theory for security, privacy and identity with application in IoT, 6G, block chains, post-quantum codes, deep fake detection, data base compression and many more."
         },
         {
             "id": "ag-hcc",
@@ -102,7 +111,8 @@
             "name": "Mensch-Zentrierte Informatik",
             "name-en": "Human-Centered Computing",
             "abkuerzung": "HCC",
-            "website": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/index.html"
+            "website": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/index.html",
+            "beschreibung": "In today's world, artificial intelligence (AI) is designed to lead us to addictive behavior, erode our capabilities, and widen inequalities. At the HCC, we do the opposite: we design intelligent systems that ensure meaningful interactions and augment human abilities to preserve what makes us human. To fulfill this vision, our interdisciplinary team conducts empirical research by actively engaging with people's values and needs, realizing a human-centered approach to AI design in healthcare."
         },
         {
             "id": "ag-idm",
@@ -113,7 +123,8 @@
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-idm/index.html",
             "verbindungen": [
                 "fraunhofer-aisec"
-            ]
+            ],
+            "beschreibung": "Die Arbeitsgruppe Informationssicherheit an der Freien Universität Berlin beschäftigt sich mit dem Entwurf, der Erstellung und Bewertung benutzbarer und sicherer Software und IT-Systeme. Die Forschungsschwerpunkte umfassen Kryptoanalyse (asymmetrisch, symmetrisch und quantenbasiert), angewandte Kryptographie mit Fokus auf quantencomputerresistente Verfahren sowie Usable Privacy and Security, Privacy Preserving Machine Learning, Secure Systems Engineering und IT-Sicherheitsmanagement."
         },
         {
             "id": "ag-intdis",
@@ -122,7 +133,8 @@
             "name-en": "Interdisciplinary Security Research",
             "abkuerzung": "IntDis",
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-intdis/index.html",
-            "website2": "http://www.sicherheit-forschung.de/"
+            "website2": "http://www.sicherheit-forschung.de/",
+            "beschreibung": "Sicherheit als Forschungsfeld kann aufgrund seiner Komplexität nicht allein aus einer einzelnen disziplinären Perspektive heraus betrachtet werden. Daher bezieht Sicherheitsforschung heute in der Regel sowohl Forscher verschiedener Disziplinen, als auch Endanwender und Unternehmen mit ein. Interdisziplinäre Sicherheitsforschung bedeutet damit, die eigenen fachlichen Grenzen in der Bearbeitung sicherheitsrelevanter Problemstellungen in konkreten Forschungsprojekten zu überwinden."
         },
         {
             "id": "ag-ilab",
@@ -132,7 +144,8 @@
             "abkuerzung": "iLab",
             "website": "https://www.mi.fu-berlin.de/en/inf/groups/ilab/index.html",
             "status": "professor-gewechselt",
-            "status-details": "Prof. Wählisch wechselte 2024 zur TU Dresden"
+            "status-details": "Prof. Wählisch wechselte 2024 zur TU Dresden",
+            "beschreibung": "Die Arbeitsgruppe Internet-Technologien (iLab) forscht an effizienter, zuverlässiger und sicherer Internet-Kommunikation durch Entwurf und Evaluierung von Netzwerkprotokollen, Architekturen und Internet-Messverfahren. Aktuelle Schwerpunkte sind Internet-Sicherheit, Internet-Messungen, informationszentrische Netze sowie das Internet of Things. Das übergeordnete Ziel der Gruppe ist es, verteilte und vernetzte Systeme voranzubringen, die das Leben der Menschen positiv beeinflussen."
         },
         {
             "id": "ag-kiml",
@@ -142,7 +155,8 @@
             "abkuerzung": "KIML",
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-KIML/index.html",
             "status": "unbesetzt",
-            "status-details": "Prof. Dr. Eirini Ntoutsi und Prof. Dr. Grégoire Montavon ausgeschieden"
+            "status-details": "Prof. Dr. Eirini Ntoutsi und Prof. Dr. Grégoire Montavon ausgeschieden",
+            "beschreibung": "Our research lies in the areas of Artificial Intelligence (AI) and Machine Learning (ML). Our goal is to design intelligent algorithms that learn from data continuously following the cumulative nature of human learning, while ensuring that what has been learned is not only correct but also delivers positive social impact in accordance with ethical and legal requirements. The group concentrates on Continuous Learning, Responsible AI (fairness and explainability), and Creative AI."
         },
         {
             "id": "ag-pr",
@@ -152,7 +166,8 @@
             "abkuerzung": "PR",
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-pr/index.html",
             "status": "aktiv",
-            "bemerkung": "Prof. Esponda-Argüero leitet die Gruppe"
+            "bemerkung": "Prof. Esponda-Argüero leitet die Gruppe",
+            "beschreibung": "Die Arbeitsgruppe Programmiersprachen am Institut für Informatik der Freien Universität Berlin beschäftigt sich mit folgenden Themen: Theorie der Programmierung, Formale Semantik von Programmiersprachen, Implementierung funktionaler Programmiersprachen und Modellgetriebene Softwareentwicklung. Ein weiterer Schwerpunkt sind Innovative Lehrkonzepte in der Informatik."
         },
         {
             "id": "ag-si",
@@ -174,7 +189,8 @@
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-sse/index.html",
             "verbindungen": [
                 "bundesdruckerei"
-            ]
+            ],
+            "beschreibung": "Die Arbeitsgruppe Secure Systems Engineering an der Freien Universität Berlin beschäftigt sich mit dem Schutz softwarebasierter Systeme gegen Angriffe. Die Forschungsschwerpunkte umfassen modellbasierte Verfahren für die Beurteilung von Angriffsrisiken, Methoden für Entwurf und Bewertung von Schutzkonzepten sowie die Auswahl und Parametrisierung von Verifikations- und Validierungsverfahren für Sicherheitseigenschaften. Darüber hinaus wird die Optimierung der Entwurfs- und Konstruktionsprozesse zur Angriffssicherheit im Lebenszyklus softwarebasierter Systeme erforscht."
         },
         {
             "id": "ag-se",
@@ -182,7 +198,8 @@
             "name": "Softwaretechnik",
             "name-en": "Software Engineering",
             "abkuerzung": "SE",
-            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/index.html"
+            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/index.html",
+            "beschreibung": "We are concerned with reducing the gap between the State of the Art and the average State of the Practice in all areas of software engineering. In teaching that means we strive for realistic and practically applicable perspective, manner, and content. In research we are interested in understanding fundamental questions of practical importance; our approach is primarily empirical and experience-based, rather than constructive and theory-based."
         },
         {
             "id": "ag-ti",
@@ -190,7 +207,8 @@
             "name": "Theoretische Informatik",
             "name-en": "Theoretical Computer Science",
             "abkuerzung": "TI",
-            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/index.html"
+            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/index.html",
+            "beschreibung": "Die Arbeitsgruppe Theoretische Informatik besteht mit Dozenten, Doktoranden, wissenschaftlichen Gästen und Forschungstutoren aus etwa 20 Mitgliedern. Hauptarbeitsgebiet sind Algorithmen, insbesondere die algorithmische Geometrie, worin wiederum als Spezialthema die Analyse und der Vergleich von Mustern und Formen mit geometrischen Methoden bearbeitet wird. Daneben werden in Projekten mit Industriepartnern theoretische Algorithmen in der Praxis erprobt, vor allem in medizinischen Anwendungen wie der Proteinmustererkennung und der computergestützten Analyse von Röntgen- und CT-Bildern für die chirurgische Navigation."
         },
         {
             "id": "ag-vct",
@@ -201,7 +219,8 @@
             "website": "https://www.hhi.fraunhofer.de/abteilungen/vca/forschungsgruppen/videokodierungstechnologien.html",
             "verbindungen": [
                 "fraunhofer-hhi"
-            ]
+            ],
+            "beschreibung": "Das Hauptgebiet der Gruppe ist die Erforschung und Entwicklung neuer Video-Kompressionsverfahren, welche in zukünftige Kodierstandards eingehen und so weltweit benutzt werden sollen. Die Forschung umfasst die vielfältigen Bereiche moderner Videokodierung, welche von der Quantisierung und Quellkodierung über Bildprädiktionsverfahren bis zur perzeptuellen Encoder-Steuerung reichen."
         },
         {
             "id": "fraunhofer-hhi",
@@ -1093,8 +1112,7 @@
             "vita": {
                 "positionen": [
                     "seit 1. April 1999: Professor, Freie Universität Berlin",
-                    "1988: Promotion (Dr. techn.), Technische Universität Graz",
-                    "1979–1988: Studium Technische Mathematik (Studienzweig Informations- und Datenverarbeitung), Technische Universität Graz"
+                    "1988: Promotion (Dr. techn.), Technische Universität Graz"
                 ]
             }
         },
@@ -2914,7 +2932,7 @@
             },
             "vita": {
                 "positionen": [
-                    "seit 2015: Fred D. Gibson Jr. Endowed Professor in Science, University of Nevada, Reno",
+                    "Fred D. Gibson Jr. Endowed Professor in Science, University of Nevada, Reno",
                     "1997–2020: Professor of Artificial Intelligence, Freie Universität Berlin",
                     "1994–1997: Professor of Artificial Intelligence, Martin-Luther-Universität Halle-Wittenberg",
                     "1994: Habilitation in Computer Science, Freie Universität Berlin",

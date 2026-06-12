@@ -149,6 +149,10 @@ nie wieder einfügt — dann beides committen:
 absichtlich nur Kontakt + Foto und nur von fu-berlin.de-Seiten — die
 spärlichen Einträge sind kein Fehler.
 
+**In-Session-Alternative:** In einer Claude-Code-Sitzung füllt
+`/fill-missing` dieselben Lücken über Subagenten (gleicher Prompt, gleiche
+Validierung) — zählt als normale Sitzungsnutzung statt Agent-SDK-Credits.
+
 ---
 ## Quellen
 - FU Berlin Institut für Informatik: https://www.mi.fu-berlin.de/inf/index.html
