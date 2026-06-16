@@ -163,6 +163,8 @@ ul {
     max-width: 1080px;
     margin: 0 auto;
     padding: var(--spacing-lg);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .connections-layer {
@@ -194,8 +196,10 @@ ul {
    ============================================= */
 .simple-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: var(--spacing-md);
+    align-items: start;
+    grid-auto-rows: auto;
 }
 
 /* =============================================
@@ -212,6 +216,8 @@ ul {
     position: relative;
     z-index: 5;
     overflow: hidden;
+    min-width: 240px;
+    height: 100%;
 }
 
 .card::before {
@@ -248,6 +254,7 @@ ul {
     border-left-color: var(--text-muted);
 }
 
+/* 
 .card.inactive::after {
     content: 'Vakant';
     position: absolute;
@@ -261,6 +268,7 @@ ul {
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
+*/
 
 .card.inactive:hover {
     opacity: 0.8;
@@ -279,7 +287,7 @@ ul {
 }
 
 .card-header {
-    padding: var(--spacing-md);
+    padding: 0.75rem;
     border-bottom: 1px solid var(--border-color);
     display: flex;
     flex-wrap: wrap;
@@ -325,7 +333,8 @@ ul {
 }
 
 .card-content {
-    padding: var(--spacing-md);
+    padding: 0.75rem;
+    padding-top: 0.5rem;
     font-size: var(--font-size-sm);
 }
 

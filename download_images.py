@@ -51,6 +51,9 @@ PROFILE_PICS = {
     # Emeriti
     'alt-helmut': 'https://www.mi.fu-berlin.de/inf/_faculty/emeritus/photo-alt.jpg',
     'rojas-raul': 'https://www.mi.fu-berlin.de/inf/_faculty/emeritus/photo-raul-rojas.jpg',
+
+    # Secretarial Staff
+    'schoettker-soehl-susanne': 'https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Secretary/bild_Susanne_neu/Susanne_neu_258.jpg?width=350',
 }
 
 

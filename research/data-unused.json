@@ -1,0 +1,232 @@
+{
+    "personen": [
+        {
+            "id": "honcharenko-maryna",
+            "titel": "",
+            "name": "Maryna Honcharenko",
+            "gruppen": [
+                "ag-tech"
+            ],
+            "rolle": "Wissenschaftliche Mitarbeiterin",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/Honcharenko.html"
+            }
+        },
+        {
+            "id": "lindner-ann-kathrin",
+            "titel": "M.A.",
+            "name": "Ann-Kathrin Lindner",
+            "gruppen": [
+                "ag-tech"
+            ],
+            "rolle": "Wissenschaftliche Mitarbeiterin",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/lindner.html"
+            }
+        },
+        {
+            "id": "rossmann-sophia",
+            "titel": "Dr.",
+            "name": "Sophia Rossmann",
+            "gruppen": [
+                "ag-tech"
+            ],
+            "rolle": "Wissenschaftliche Mitarbeiterin",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/rossmann.html"
+            }
+        },
+        {
+            "id": "terfurth-leonie",
+            "titel": "",
+            "name": "Leonie Terfurth",
+            "gruppen": [
+                "ag-tech"
+            ],
+            "rolle": "Wissenschaftliche Mitarbeiterin",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/Terfurth.html"
+            }
+        },
+        {
+            "id": "zieris-franz",
+            "titel": "",
+            "name": "Franz Zieris",
+            "gruppen": [
+                "ag-se"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/FranzZieris"
+            }
+        },
+        {
+            "id": "lohmeier-sebastian",
+            "titel": "",
+            "name": "Sebastian Lohmeier",
+            "gruppen": [
+                "ag-se"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/SebastianLohmeier"
+            }
+        },
+        {
+            "id": "israt-fahmida",
+            "titel": "",
+            "name": "Fahmida Israt",
+            "gruppen": [
+                "ag-se"
+            ],
+            "rolle": "Wissenschaftliche Mitarbeiterin",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/FahmidaIsrat"
+            }
+        },
+        {
+            "id": "davidson-jacob",
+            "titel": "Dr.",
+            "name": "Jacob Davidson",
+            "gruppen": [
+                "ag-ki"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Scientific-Staff/Davidson.html"
+            }
+        },
+        {
+            "id": "popp-stefan",
+            "titel": "Dr.",
+            "name": "Stefan Popp",
+            "gruppen": [
+                "ag-ki"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Scientific-Staff/Popp.html"
+            }
+        },
+        {
+            "id": "esmaeili-mani",
+            "titel": "Dipl.-Ing.",
+            "name": "Mani Esmaeili",
+            "gruppen": [
+                "ag-si"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/esmaeili.html"
+            }
+        },
+        {
+            "id": "gueldenring-benjamin",
+            "titel": "Dipl.-Inf.",
+            "name": "Benjamin Güldenring",
+            "gruppen": [
+                "ag-si"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/gueldenring.html"
+            }
+        },
+        {
+            "id": "klick-johannes",
+            "titel": "M.Sc.",
+            "name": "Johannes Klick",
+            "gruppen": [
+                "ag-si"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/Klick.html"
+            }
+        },
+        {
+            "id": "kovacs-robert",
+            "titel": "Dr.",
+            "name": "Robert Kovacs",
+            "gruppen": [
+                "ag-si"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/kovacs.html"
+            }
+        },
+        {
+            "id": "klein-jacobe",
+            "titel": "",
+            "name": "Jacobe Klein",
+            "gruppen": [
+                "ag-hcc"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/klein.html"
+            }
+        },
+        {
+            "id": "kuruc-fabrizio",
+            "titel": "",
+            "name": "Fabrizio Kuruc",
+            "gruppen": [
+                "ag-hcc"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/kuruc.html"
+            }
+        },
+        {
+            "id": "leimstaedtner-david",
+            "titel": "",
+            "name": "David Leimstädtner",
+            "gruppen": [
+                "ag-hcc"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/leimstaedtner.html"
+            }
+        },
+        {
+            "id": "linke-diane",
+            "titel": "",
+            "name": "Diane Linke",
+            "gruppen": [
+                "ag-hcc"
+            ],
+            "rolle": "Wissenschaftliche Mitarbeiterin",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/linke.html"
+            }
+        },
+        {
+            "id": "soerries-peter",
+            "titel": "Dr.",
+            "name": "Peter Sörries",
+            "gruppen": [
+                "ag-hcc"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/soerries.html"
+            }
+        },
+        {
+            "id": "schaefer-ulrike",
+            "titel": "",
+            "name": "Ulrike Schäfer",
+            "gruppen": [
+                "ag-hcc"
+            ],
+            "rolle": "Wissenschaftliche Mitarbeiterin",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/schaefer.html"
+            }
+        }
+    ]
+}

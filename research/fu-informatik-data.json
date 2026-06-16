@@ -19,7 +19,8 @@
             "name": "Algorithmische Bioinformatik",
             "name-en": "Algorithmic Bioinformatics",
             "abkuerzung": "ABI",
-            "website": "https://www.mi.fu-berlin.de/en/inf/groups/abi/index.html"
+            "website": "https://www.mi.fu-berlin.de/en/inf/groups/abi/index.html",
+            "theses": "https://wikis.fu-berlin.de/display/abi/BSc+and+MSc+Topics"
         },
         {
             "id": "ag-bds",
@@ -27,23 +28,30 @@
             "name": "Biomedizinische Datenwissenschaft",
             "name-en": "Biomedical Data Science",
             "abkuerzung": "BDS",
-            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-bds/index.html"
-        },
+            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-bds/index.html",
+            "verbindungen": [
+                "mpi-molgen"
+            ]},
         {
             "id": "ag-tech",
             "type": "ag",
             "name": "Rechnersysteme und Telematik",
             "name-en": "Computer Systems & Telematics",
             "abkuerzung": "Tech",
-            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/index.html"
+            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/index.html",
+            "theses": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/theses/index.html"
         },
         {
             "id": "ag-csw",
             "type": "ag",
-            "name": "Corporate Semantic Web",
+            "name": "Semantische Datenintelligenz",
             "name-en": "Corporate Semantic Web",
             "abkuerzung": "CSW",
-            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-csw/index.html"
+            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-csw/index.html",
+            "verbindungen": [
+                "fraunhofer-fokus",
+                "ecdf"
+            ]
         },
         {
             "id": "ag-ki",
@@ -83,7 +91,8 @@
             "name": "Didaktik der Informatik",
             "name-en": "Computer Science Education",
             "abkuerzung": "DDI",
-            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/index.html"
+            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/index.html",
+            "website2": "https://computingeducation.de/"
         },
         {
             "id": "ag-comm",
@@ -122,7 +131,9 @@
             "name-en": "Interdisciplinary Security Research",
             "abkuerzung": "IntDis",
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-intdis/index.html",
-            "website2": "http://www.sicherheit-forschung.de/"
+            "website2": "http://www.sicherheit-forschung.de/",
+            "status": "professor-gewechselt",
+            "status-details": "Prof. Dr. Lars Gerhold wechselte 2022 zur TU Braunschweig"
         },
         {
             "id": "ag-ilab",
@@ -151,7 +162,7 @@
             "name-en": "Programming Languages",
             "abkuerzung": "PR",
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-pr/index.html",
-            "status": "aktiv",
+            "status": "professor-gewechselt",
             "bemerkung": "Prof. Esponda-Argüero leitet die Gruppe"
         },
         {
@@ -160,7 +171,7 @@
             "name": "Sichere Identität",
             "name-en": "Secure Identity",
             "abkuerzung": "SI",
-            "website": "https://www.mi.fu-berlin.de/inf/groups/ag-si/index.html",
+            "website": "https://www.inf.fu-berlin.de/groups/ag-si/",
             "verbindungen": [
                 "bundesdruckerei"
             ]
@@ -182,7 +193,8 @@
             "name": "Softwaretechnik",
             "name-en": "Software Engineering",
             "abkuerzung": "SE",
-            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/index.html"
+            "website": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/index.html",
+            "theses": "https://www.mi.fu-berlin.de/w/SE/ThesesHome"
         },
         {
             "id": "ag-ti",
@@ -244,24 +256,58 @@
                 "ag-se"
             ],
             "rolle": "Professor",
-            "ort": "Takustr. 9",
+            "seit": 2003,
             "kontakt": {
                 "email": "prechelt@inf.fu-berlin.de",
+                "telefon": "+49-30 838-75115",
                 "sprechstunde": "https://www.inf.fu-berlin.de/w/SE/SprechstundeLutzPrechelt"
             },
+            "ort-kurz": "T9/014",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/members/prechelt.html",
                 "persoenlich": "https://www.mi.fu-berlin.de/w/Main/LutzPrechelt",
                 "github": "https://github.com/prechelt",
-                "linkedin": "https://www.linkedin.com/in/lutz-prechelt-06472",
+                "so": "https://stackoverflow.com/users/2810305/lutz-prechelt",
+                "linkedin": "https://www.linkedin.com/in/lutz-prechelt-064721/",
                 "xing": "https://www.xing.com/profile/Lutz_Prechelt",
                 "mastodon": "https://hachyderm.io/@prechelt",
-                "x": "https://twitter.com/prechelt",
-                "orcid": "http://orcid.org",
+                "x": "https://x.com/prechelt",
+                "orcid": "https://orcid.org/0000-0001-5592-3521",
                 "bibliographie": "https://page.mi.fu-berlin.de/~prechelt/Biblio/"
             },
             "lehre": {
-                "uebersicht": "https://www.mi.fu-berlin.de/w/SE/TeachingHome"
+                "uebersicht": "https://www.mi.fu-berlin.de/w/SE/TeachingHome",
+                "kurse": [
+                    {
+                        "name": "Softwaretechnik (SWT)",
+                        "semester": "SS",
+                        "seit": 2003
+                    },
+                    {
+                        "name": "Auswirkungen der Informatik (AdI)",
+                        "semester": "WS",
+                        "seit": 2004
+                    },
+                    {
+                        "name": "Kurs Arbeits- und Lebensmethodik",
+                        "semester": "WS",
+                        "seit": 2004
+                    },
+                    {
+                        "name": "Seminar Beiträge zum Software Engineering",
+                        "semester": "jedes Semester",
+                        "seit": 2004
+                    },
+                    {
+                        "name": "Empirische Methoden im Software Engineering",
+                        "semester": "SS"
+                    },
+                    {
+                        "name": "Programmierpraktikum",
+                        "semester": "WS",
+                        "seit": 2025
+                    }
+                ]
             },
             "vita": {
                 "geburtsjahr": 1965,
@@ -269,21 +315,18 @@
                 "diplom": {
                     "jahr": 1990,
                     "universitaet": "Universität Karlsruhe",
-                    "thema": "Parsing German sentences"
+                    "thema": "Ein Fallschablonenzerteiler für Deutsch"
                 },
                 "promotion": {
                     "jahr": 1995,
                     "universitaet": "Institut für Programmstrukturen und Datenorganisation, Karlsruhe",
-                    "thema": "Constructive neural network learning algorithms"
+                    "thema": "Konstruktive Neuronale Lernverfahren auf Parallelrechnern"
                 },
                 "habilitation": {
                     "jahr": 2000,
-                    "thema": "Empirical methodology in software engineering"
-                },
-                "positionen": [
-                    "Visiting researcher bei Cordys",
-                    "Visiting researcher bei Crealogix"
-                ]
+                    "thema": "Empirical methodology in software engineering",
+                    "universitaet": "Universität Karlsruhe"
+                }
             },
             "forschung": {
                 "interessen": [
@@ -314,6 +357,9 @@
                     }
                 ]
             },
+            "positionen":[
+                "Geschäftsführender Direktor des Institutes der Informatik"
+            ],
             "sonstiges": {
                 "gi-botschafter": true,
                 "gi-botschafter-url": "https://gi.de/netzwerk/hochschulen/botschafterinnen"
@@ -328,7 +374,7 @@
                 "ag-se"
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
-            "ort": "Takustraße 9, Raum 008",
+            "seit": 2015,
             "ort-kurz": "T9/008",
             "kontakt": {
                 "email": "linnert@inf.fu-berlin.de",
@@ -338,7 +384,27 @@
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/members/linnert.html",
                 "website": "http://www.mi.fu-berlin.de/w/Main/BarryLinnert"
-            }
+            },
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "Betriebssysteme (OS)",
+                        "semester": "WS",
+                        "seit": 2015
+                    },
+                    {
+                        "name": "VL/Ü Cluster Computing",
+                        "semester": "SS",
+                        "seit": 2017
+                    },
+                    {
+                        "name": "AlP III",
+                        "semester": "WS",
+                        "seit": 2015
+                    }
+                ]
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/wiki/pub/SE/PeopleHome/Barry_Linnert.jpg"
         },
         {
             "id": "ververs-linus",
@@ -374,7 +440,27 @@
                         "semester": "Regelmäßig"
                     }
                 ]
-            }
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/wiki/pub/SE/PeopleHome/linus_ververs.jpg"
+        },
+
+        {
+            "id": "milde-gesine",
+            "titel": "",
+            "name": "Gesine Milde",
+            "gruppen": [
+                "ag-se"
+            ],
+            "rolle": "Sekretariat",
+            "kontakt": {
+                "email": "milde@inf.fu-berlin.de",
+                "telefon": "+49 30 838 75243"
+            },
+            "ort-kurz": "T9/013",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/GesineMilde"
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/wiki/pub/Main/GesineMilde/GM_200x200.jpg"
         },
         {
             "id": "roth-volker",
@@ -386,9 +472,11 @@
             "rolle": "Professor",
             "seit": 2009,
             "kontakt": {
+                "email": "volker.roth@fu-berlin.de",
                 "telefon": "+49 30 838 75281",
                 "sprechstunde": "Dienstags 17-18 Uhr via Webex"
             },
+            "ort-kurz": "S1/3.08",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/volkerroth.html",
                 "persoenlich": "http://www.volkerroth.com/",
@@ -417,6 +505,22 @@
             "profilbild": "research/images/roth-volker.jpg"
         },
         {
+            "id": "hengst-anna-maria",
+            "titel": "M.A.",
+            "name": "Anna Maria Hengst",
+            "gruppen": [
+                "ag-si"
+            ],
+            "rolle": "Sekretariat",
+            "kontakt": {
+                "email": "anna.hengst@fu-berlin.de",
+                "telefon": "+49-30-838-60526"
+            },
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/hengst.html"
+            }
+        },
+        {
             "id": "mueller-birn-claudia",
             "titel": "Prof. Dr.",
             "name": "Claudia Müller-Birn",
@@ -426,6 +530,7 @@
             "rolle": "Professorin",
             "seit": 2012,
             "kontakt": {
+                "email": "clmb@inf.fu-berlin.de",
                 "telefon": "+49 30 838 75256",
                 "sprechstunde": "https://mycampus.imp.fu-berlin.de/portal/site/~clmb/tool/5f12820e-db09-4ab7-9a1d-26df6dd9c0a3/signupMeetings"
             },
@@ -495,7 +600,8 @@
             "rolle": "Sekretariat",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/secretary/deter.html"
-            }
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/bilder/bilder_neu/Deter2.jpg?width=700"
         },
         {
             "id": "heiser-malte",
@@ -507,79 +613,8 @@
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/heiser.html"
-            }
-        },
-        {
-            "id": "klein-jacobe",
-            "titel": "",
-            "name": "Jacobe Klein",
-            "gruppen": [
-                "ag-hcc"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/klein.html"
-            }
-        },
-        {
-            "id": "kuruc-fabrizio",
-            "titel": "",
-            "name": "Fabrizio Kuruc",
-            "gruppen": [
-                "ag-hcc"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/kuruc.html"
-            }
-        },
-        {
-            "id": "leimstaedtner-david",
-            "titel": "",
-            "name": "David Leimstädtner",
-            "gruppen": [
-                "ag-hcc"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/leimstaedtner.html"
-            }
-        },
-        {
-            "id": "linke-diane",
-            "titel": "",
-            "name": "Diane Linke",
-            "gruppen": [
-                "ag-hcc"
-            ],
-            "rolle": "Wissenschaftliche Mitarbeiterin",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/linke.html"
-            }
-        },
-        {
-            "id": "schaefer-ulrike",
-            "titel": "",
-            "name": "Ulrike Schäfer",
-            "gruppen": [
-                "ag-hcc"
-            ],
-            "rolle": "Wissenschaftliche Mitarbeiterin",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/schaefer.html"
-            }
-        },
-        {
-            "id": "soerries-peter",
-            "titel": "Dr.",
-            "name": "Peter Sörries",
-            "gruppen": [
-                "ag-hcc"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/soerries.html"
-            }
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/bilder/bilder_neu/Heiser2.jpg?width=350"
         },
         {
             "id": "reinert-knut",
@@ -589,9 +624,6 @@
                 "ag-abi"
             ],
             "rolle": "Professor",
-            "verbindungen": [
-                "mpi-molgen"
-            ],
             "kontakt": {
                 "telefon": "+49 30 838 75222",
                 "sprechstunde": "https://www.mi.fu-berlin.de/en/inf/groups/abi/teaching/office-hours/index.html"
@@ -610,35 +642,32 @@
                     "Omics data"
                 ]
             },
+            "verbindungen": [
+                "mpi-molgen"
+            ],
             "sonstiges": {
                 "max_planck_fellow": true
             },
             "profilbild": "research/images/reinert-knut.jpg"
         },
         {
-            "id": "rote-guenter",
-            "titel": "Prof. Dr.",
-            "name": "Günter Rote",
+            "id": "kasseckert-anja",
+            "titel": "M.A.",
+            "name": "Anja Kasseckert",
             "gruppen": [
-                "ag-ti"
+                "ag-abi",
+                "ag-bds"
             ],
-            "rolle": "Professor",
-            "ort": "Takustraße 9",
-            "kontakt": {
-                "email": "rote@inf.fu-berlin.de",
-                "telefon_buero": "+49-30-838 75150",
-                "telefon_privat": "+49-30-33852245",
-                "sprechstunde": "http://page.mi.fu-berlin.de/rote/Sprechstunde.html"
-            },
+            "rolle": "Sekretariat",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Rote_Guenter.html",
-                "persoenlich": "http://page.mi.fu-berlin.de/rote/",
-                "publikationen": "http://page.mi.fu-berlin.de/rote/about_me/publications.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/abi/members/Secretary/kasseckert.html",
+                "persoenlich": "http://www.kasseckert.wordpress.com/"
             },
-            "lehre": {
-                "uebersicht": "http://page.mi.fu-berlin.de/rote/Lere/"
+            "kontakt": {
+                "email": "anja.kasseckert@fu-berlin.de"
             },
-            "profilbild": "research/images/rote-guenter.jpg"
+            "ort-kurz": "T9/013",
+            "profilbild": "https://www.mi.fu-berlin.de/en/inf/groups/abi/members/Secretary/kasseckert_pic_2011.png?width=350"
         },
         {
             "id": "schiller-jochen",
@@ -658,16 +687,28 @@
                 "orcid": "http://orcid.org/0000-0003-3893-4522"
             },
             "lehre": {
-                "material": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/teaching/resources/Course-Material.html"
-            },
-            "sonstiges": {
-                "positionen": [
-                    "Leitung AG Technische Informatik",
-                    "Vorstand Einstein Center Digital Future",
-                    "Beirat Kompetenzzentrum Kritische Infrastrukturen",
-                    "Mitglied Zukunftsforum Öffentliche Sicherheit"
+                "material": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/teaching/resources/Course-Material.html",
+                "kurse": [
+                    {
+                        "name": "Rechnerarchitektur (RA)",
+                        "semester": "WS",
+                        "bis": 2021
+                    },
+                    {
+                        "name": "Betriebs- und Kommunikationssysteme (BKS)",
+                        "semester": "SS",
+                        "bis": 2021
+                    },
+                    {
+                        "name": "Telematik",
+                        "semester": "Sommersemester"
+                    }
                 ]
             },
+            "positionen": [
+                "CIO der FU Berlin",
+                "Vorstand Einstein Center Digital Future"
+            ],
             "profilbild": "research/images/schiller-jochen.jpg"
         },
         {
@@ -675,12 +716,17 @@
             "titel": "M.A.",
             "name": "Stefanie Bahe",
             "gruppen": [
-                "ag-tech"
+                "ag-tech",
+                "ag-idm"
             ],
             "rolle": "Projektassistentin",
+            "kontakt": {
+                "email": "steffanie.bahe@fu-berlin.de"
+            },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/bahe.html"
-            }
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/baheKlein.jpg?width=175"
         },
         {
             "id": "baccelli-emmanuel",
@@ -690,9 +736,22 @@
                 "ag-tech"
             ],
             "rolle": "Professor",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/baccelli.html"
+            "status": "außerplanmäßig",
+            "kontakt": {
+                "email": "emmanuel.baccelli@fu-berlin.de",
+                "telefon": "+49-30-838 72184",
+                "sprechstunde": "Mi 11-12 nach Vereinbarung"
             },
+            "ort-kurz": "T9/148",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/baccelli.html",
+                "persoenlich": "https://www.emmanuelbaccelli.com/",
+                "cv": "https://www.emmanuelbaccelli.com/EB-CV.pdf"
+            },
+            "verbindungen": [
+                "inria",
+                "ecdf"
+            ],
             "profilbild": "research/images/baccelli-emmanuel.jpg"
         },
         {
@@ -703,57 +762,30 @@
                 "ag-tech"
             ],
             "rolle": "Wissenschaftliche Mitarbeiterin",
+            "kontakt": {
+                "email": "larissa.groth@fu-berlin.de"
+            },
+            "ort-kurz": "T9/157",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/groth.html"
-            }
-        },
-        {
-            "id": "honcharenko-maryna",
-            "titel": "",
-            "name": "Maryna Honcharenko",
-            "gruppen": [
-                "ag-tech"
-            ],
-            "rolle": "Wissenschaftliche Mitarbeiterin",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/Honcharenko.html"
-            }
-        },
-        {
-            "id": "lindner-ann-kathrin",
-            "titel": "M.A.",
-            "name": "Ann-Kathrin Lindner",
-            "gruppen": [
-                "ag-tech"
-            ],
-            "rolle": "Wissenschaftliche Mitarbeiterin",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/lindner.html"
-            }
-        },
-        {
-            "id": "rossmann-sophia",
-            "titel": "Dr.",
-            "name": "Sophia Rossmann",
-            "gruppen": [
-                "ag-tech"
-            ],
-            "rolle": "Wissenschaftliche Mitarbeiterin",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/rossmann.html"
-            }
-        },
-        {
-            "id": "terfurth-leonie",
-            "titel": "",
-            "name": "Leonie Terfurth",
-            "gruppen": [
-                "ag-tech"
-            ],
-            "rolle": "Wissenschaftliche Mitarbeiterin",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/Terfurth.html"
-            }
+            },
+            "kurse": [
+                {
+                    "name": "Rechnerarchitektur (RA)",
+                    "semester": "WS",
+                    "seit": 2023
+                },
+                {
+                    "name": "Betriebs- und Kommunikationssysteme (BKS)",
+                    "semester": "SS",
+                    "seit": 2024
+                },
+                {
+                    "name": "Mikroprozessor-Praktikum (MPP)",
+                    "semester": "WS",
+                    "seit": 2025
+                }
+            ]
         },
         {
             "id": "wawerek-marius",
@@ -765,6 +797,111 @@
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/wawerek.html"
+            },
+            "kurse": [
+                {
+                    "name": "Mikroprozessor-Praktikum (MPP)",
+                    "semester": "WS",
+                    "seit": 2025
+                }
+            ]
+        },
+        {
+            "id": "alt-helmut",
+            "titel": "Prof. a.D. Dr.",
+            "name": "Helmut Alt",
+            "gruppen": [
+                "ag-ti"
+            ],
+            "rolle": "Professor",
+            "status": "emeritiert-aktiv",
+            "status-details": {
+                "bemerkung": "Emeritierter Professor der Theoretischen Informatik"
+            },
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Alt_Helmut.html"
+            },
+            "profilbild": "research/images/alt-helmut.jpg"
+        },
+        {
+            "id": "kozma-laszlo",
+            "titel": "Prof. Dr.",
+            "name": "László Kozma",
+            "gruppen": [
+                "ag-ti"
+            ],
+            "rolle": "Juniorprofessor",
+            "seit": 2018,
+            "bis": 2025,
+            "status": "gewechselt",
+            "status-details": {
+                "seit": 2025,
+                "neuer-arbeitgeber": "TU Dresden",
+                "neue-position": "Professor für Algorithmen"
+            },
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Kozma_Laszlo.html",
+                "persoenlich": "https://www.lkozma.net/"
+            },
+            "profilbild": "research/images/kozma-laszlo.png"
+        },
+        {
+            "id": "mulzer-wolfgang",
+            "titel": "Prof. Dr.",
+            "name": "Wolfgang Mulzer",
+            "gruppen": [
+                "ag-ti"
+            ],
+            "rolle": "Professor",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Mulzer_Wolfgang.html"
+            },
+            "profilbild": "research/images/mulzer-wolfgang.jpg"
+        },
+        {
+            "id": "rote-guenter",
+            "titel": "Prof. Dr.",
+            "name": "Günter Rote",
+            "gruppen": [
+                "ag-ti"
+            ],
+            "rolle": "Professor",
+            "seit": 1999,
+            "status": "emeritiert-aktiv",
+            "kontakt": {
+                "email": "rote@inf.fu-berlin.de",
+                "telefon_buero": "+49-30-838 75150",
+                "telefon_privat": "+49-30-33852245",
+                "sprechstunde": "http://page.mi.fu-berlin.de/rote/Sprechstunde.html"
+            },
+            "ort-kurz": "T9/110",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Rote_Guenter.html",
+                "persoenlich": "http://page.mi.fu-berlin.de/rote/",
+                "publikationen": "http://page.mi.fu-berlin.de/rote/about_me/publications.html"
+            },
+            "lehre": {
+                "uebersicht": "http://page.mi.fu-berlin.de/rote/Lere/"
+            },
+            "profilbild": "research/images/rote-guenter.jpg",
+            "vita": {
+                "geburtsjahr": 1960,
+                "geburtsort": "Klagenfurt, Österreich",
+                "diplom": {
+                    "jahr": 1985,
+                    "universitaet": "TU Graz",
+                    "thema": "A systolic array algorithm for the algebraic path problem"
+                },
+                "promotion": {
+                    "jahr": 1988,
+                    "universitaet": "TU Graz",
+                    "thema": "Two solvable cases of the traveling salesman problem"
+                },
+                "habilitation": {
+                    "jahr": 1992,
+                    "universitaet": "TU Graz",
+                    "thema": "Algorithmische Geometrie"
+                }
             }
         },
         {
@@ -775,32 +912,34 @@
                 "ag-ti"
             ],
             "rolle": "Sekretariat",
+            "kontakt": {
+                "email": "knoll@inf.fu-berlin.de",
+                "telefon": "+49 30 838 75103"
+            },
+            "ort-kurz": "T9/111",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/sekr/knoll.html"
-            }
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/sekr/knoll.html",
+                "website": "https://page.mi.fu-berlin.de/tknoll/"
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/bilder/Knoll_Tamara.gif?width=700"
         },
         {
             "id": "orth-tanja",
             "titel": "",
             "name": "Tanja Orth",
             "gruppen": [
-                "ag-ti"
+                "ag-ti",
+                "ag-db",
+                "ag-dilis"
             ],
             "rolle": "Sekretariat",
+            "kontakt": {
+                "email": "tanja.orth@fu-berlin.de",
+                "telefon": "+49 30 838 75100"
+            },
+            "ort-kurz": "T9/168",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/sekr/orth.html"
-            }
-        },
-        {
-            "id": "berendsohn-benjamin",
-            "titel": "M.Sc.",
-            "name": "Benjamin Aram Berendsohn",
-            "gruppen": [
-                "ag-ti"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Berendsohn_Benjamin.html"
             }
         },
         {
@@ -811,9 +950,19 @@
                 "ag-ti"
             ],
             "rolle": "Wissenschaftliche Mitarbeiterin",
+            "status": "forschungssemester",
+            "status-details": {
+                "semester": "WS25"
+            },
+            "kontakt": {
+                "email": "kathklost@inf.fu-berlin.de",
+                "telefon": "+49 30 838 475103"
+            },
+            "ort-kurz": "T9/113",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Klost_Katharina.html"
-            }
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/bilder/Klost_Katharina.jpg?width=350"
         },
         {
             "id": "willert-max",
@@ -823,9 +972,59 @@
                 "ag-ti"
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
+            "kontakt": {
+                "email": "willerma@inf.fu-berlin.de",
+                "telefon": "+49 30 838 61664"
+            },
+            "ort-kurz": "T9/113",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Willert_Max.html"
-            }
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Willert_Max.html",
+                "persoenlich": "https://page.mi.fu-berlin.de/willerma/"
+            },
+            "positionen": [
+                "Vorsitzender der Tutorenauswahlkommission"
+            ],
+            "profilbild": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/bilder/Willert_Max.jpg?width=175"
+        },
+        {
+            "id": "knorr-kristin",
+            "titel": "Dipl. Biochem. M.Sc.",
+            "name": "Kristin Knorr",
+            "gruppen": [
+                "ag-ti"
+            ],
+            "rolle": "Wissenschaftliche Mitarbeiterin",
+            "kontakt": {
+                "email": "knorrkri@inf.fu-berlin.de",
+                "telefon": "+49 30 838 51106"
+            },
+            "ort-kurz": "T9/122",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Knorr_Kristin.html"
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/bilder/Knorr_Kristin.jpg?width=350"
+        },
+        {
+            "id": "elashmawi-mahmoud",
+            "titel": "M.Sc.",
+            "name": "Mahmoud Elashmawi",
+            "gruppen": [
+                "ag-ti"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Elashmawi_Mahmoud.html"
+            },
+            "ort-kurz": "T9/117",
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "VL/Ü Grundlagen der Theoretischen Informatik (GTI)",
+                        "semester": "WS"
+                    }
+                ]
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/bilder/Elashmawi_Mahmoud.png?width=350"
         },
         {
             "id": "wunder-gerhard",
@@ -843,198 +1042,56 @@
             },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/members/wunder.html"
-            }
+            },
+            "profilbild": "research/images/wunder-gerhard.jpg"
         },
         {
             "id": "schoettker-soehl-susanne",
             "titel": "",
             "name": "Susanne Schöttker-Söhl",
             "gruppen": [
-                "ag-ki"
+                "ag-ki",
+                "ag-csw"
             ],
             "rolle": "Sekretariat",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Secretary/schoettker-soehl_susanne.html"
-            }
+            },
+            "kontakt": {
+                "email": "s.schoettker-soehl@fu-berlin.de",
+                "telefon": "+49 30 838 75102"
+            },
+            "ort-kurz": "A7/022",
+            "profilbild": "research/images/schoettker-soehl-susanne.jpg"
         },
         {
-            "id": "davidson-jacob",
-            "titel": "Dr.",
-            "name": "Jacob Davidson",
-            "gruppen": [
-                "ag-ki"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Scientific-Staff/Davidson.html"
-            }
-        },
-        {
-            "id": "popp-stefan",
-            "titel": "Dr.",
-            "name": "Stefan Popp",
-            "gruppen": [
-                "ag-ki"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Scientific-Staff/Popp.html"
-            }
-        },
-        {
-            "id": "shang-zhihao",
-            "titel": "",
-            "name": "Zhihao Shang",
-            "gruppen": [
-                "ag-dds"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/shang.html"
-            }
-        },
-        {
-            "id": "wu-han",
-            "titel": "",
-            "name": "Han Wu",
-            "gruppen": [
-                "ag-dds"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/HanWu.html"
-            }
-        },
-        {
-            "id": "peng-guang",
-            "titel": "",
-            "name": "Guang Peng",
-            "gruppen": [
-                "ag-dds"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/guang.html"
-            }
-        },
-        {
-            "id": "ma-xuyang",
-            "titel": "",
-            "name": "Xuyang Ma",
-            "gruppen": [
-                "ag-dds"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/ma_xuyang.html"
-            }
-        },
-        {
-            "id": "milde-gesine",
-            "titel": "",
-            "name": "Gesine Milde",
-            "gruppen": [
-                "ag-se"
-            ],
-            "rolle": "Sekretariat",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/GesineMilde"
-            }
-        },
-        {
-            "id": "zieris-franz",
-            "titel": "",
-            "name": "Franz Zieris",
-            "gruppen": [
-                "ag-se"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/FranzZieris"
-            }
-        },
-        {
-            "id": "lohmeier-sebastian",
-            "titel": "",
-            "name": "Sebastian Lohmeier",
-            "gruppen": [
-                "ag-se"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/SebastianLohmeier"
-            }
-        },
-        {
-            "id": "israt-fahmida",
-            "titel": "",
-            "name": "Fahmida Israt",
-            "gruppen": [
-                "ag-se"
-            ],
-            "rolle": "Wissenschaftliche Mitarbeiterin",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/w/Main/FahmidaIsrat"
-            }
-        },
-        {
-            "id": "hengst-anna-maria",
-            "titel": "M.A.",
-            "name": "Anna Maria Hengst",
-            "gruppen": [
-                "ag-si"
-            ],
-            "rolle": "Sekretariat",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/hengst.html"
-            }
-        },
-        {
-            "id": "esmaeili-mani",
-            "titel": "Dipl.-Ing.",
-            "name": "Mani Esmaeili",
-            "gruppen": [
-                "ag-si"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/esmaeili.html"
-            }
-        },
-        {
-            "id": "gueldenring-benjamin",
-            "titel": "Dipl.-Inf.",
-            "name": "Benjamin Güldenring",
-            "gruppen": [
-                "ag-si"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/gueldenring.html"
-            }
-        },
-        {
-            "id": "klick-johannes",
+            "id": "heurich-manuel",
             "titel": "M.Sc.",
-            "name": "Johannes Klick",
+            "name": "Manuel Heurich",
             "gruppen": [
-                "ag-si"
+                "ag-ki"
             ],
             "rolle": "Wissenschaftlicher Mitarbeiter",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/Klick.html"
-            }
-        },
-        {
-            "id": "kovacs-robert",
-            "titel": "Dr.",
-            "name": "Robert Kovacs",
-            "gruppen": [
-                "ag-si"
-            ],
-            "rolle": "Wissenschaftlicher Mitarbeiter",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/kovacs.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Scientific-Staff/Heurich.html"
+            },
+            "kontakt": {
+                "email": "manuel.heurich@fu-berlin.de",
+                "telefon": "+49 30 838 75111"
+            },
+            "ort-kurz": "A7/009",
+            "profilbild": "https://www.mi.fu-berlin.de/en/inf/groups/ag-KIML/Ressourcen/bild_manuel_heurich/manuel_heurich_930.jpg?width=175",
+            "lehre": {
+                "kurse": [
+                    {
+                        "name": "VL/Ü Computer Vision",
+                        "semester": "WS"
+                    },
+                    {
+                        "name": "VL/Ü Mustererkennung",
+                        "semester": "WS"
+                    }
+                ]
             }
         },
         {
@@ -1050,6 +1107,7 @@
                 "telefon": "+49 30 838 75146",
                 "sprechstunde": "http://www.mi.fu-berlin.de/users/katinkaw/cgi-bin/personal_page.cgi"
             },
+            "ort-kurz": "T9/155",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/wolter.html",
                 "persoenlich": "http://page.mi.fu-berlin.de/katinkaw/",
@@ -1072,7 +1130,44 @@
                 "mitglied_pruefungsausschuss": true,
                 "mitglied_fachbereichsrat": true
             },
-            "profilbild": "research/images/wolter-katinka.jpg"
+            "profilbild": "research/images/wolter-katinka.jpg",
+            "vita": {
+                "geburtsort": "Nürtingen, Deutschland",
+                "diplom": {
+                    "jahr": 1995,
+                    "universitaet": "TU Berlin",
+                    "thema": "Nichtlineare Regressionsmodelle bei kategorial-ordinaler Zielvariable."
+                },
+                "promotion": {
+                    "jahr": 1999,
+                    "universitaet": "TU Berlin",
+                    "thema": "Performance and Dependability Modelling with Second order Fluid Stochastic Petri nets."
+                },
+                "habilitation":{
+                    "jahr": 2008,
+                    "universitaet":"TU Berlin",
+                    "thema": "Stochastic Models for Restart, Rejuvenation and Checkpointing"
+                }
+            }
+        },
+        {
+            "id": "purat-justus",
+            "titel": "M.Sc.",
+            "name": "Justus Purat",
+            "gruppen": [
+                "ag-dds"
+            ],
+            "rolle": "Wissenschaftlicher Mitarbeiter",
+            "kontakt": {
+                "email": "j.purat@fu-berlin.de",
+                "telefon": "+49 30 838 61154",
+                "webex": "https://fu-berlin.webex.com/meet/justus.purat"
+            },
+            "ort-kurz": "T9/163",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/purat_justus.html"
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/purat-pic.png?width=700"
         },
         {
             "id": "landgraf-tim",
@@ -1084,10 +1179,9 @@
             "rolle": "Professor",
             "kontakt": {
                 "email": "tim.landgraf@fu-berlin.de",
-                "telefon": "+49 30 838 75114",
-                "ort": "Arnimallee 7, 14195 Berlin",
-                "raum": "111"
+                "telefon": "+49 30 838 75114"
             },
+            "ort-kurz": "A7/111",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/Tim_Landgraf.html",
                 "persoenlich": "https://bioroboticslab.github.io/website/",
@@ -1214,10 +1308,46 @@
                 "telefon": "+49 30 838 65994",
                 "sprechstunde": "Mittwochs 12-13 Uhr (nur nach Absprache)"
             },
+            "ort-kurz": "K24/019",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/team/prof/romeike/index.html"
             },
             "profilbild": "research/images/romeike-ralf.jpg"
+        },
+        {
+            "id": "wegner-kate",
+            "titel": "",
+            "name": "Kate Wegner",
+            "gruppen": [
+                "ag-ddi"
+            ],
+            "rolle": "Sekretariat",
+            "kontakt": {
+                "email": "kate.wegner@inf.fu-berlin.de",
+                "telefon": "+49 30 838 58727"
+            },
+            "ort-kurz": "K24/010",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/team/sec/Kate-Wegner.html"
+            }
+        },
+        {
+            "id": "olari-viktoriya",
+            "titel": "",
+            "name": "Viktoriya Olari",
+            "gruppen": [
+                "ag-ddi"
+            ],
+            "rolle": "Wissenschaftliche Mitarbeiterin",
+            "kontakt": {
+                "email": "viktoriya.olari@fu-berlin.de",
+                "telefon": "+49 30 838 60712"
+            },
+            "ort-kurz": "K24/009",
+            "links": {
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/team/wimi/olari/index.html"
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/inf/groups/ag-ddi/team/wimi/olari/ViktoriyaOlari_Foto-Sep2021.png?width=350"
         },
         {
             "id": "waehlisch-matthias",
@@ -1273,14 +1403,50 @@
             "titel": "Prof. Dr. rer. nat.",
             "name": "Adrian Paschke",
             "gruppen": [
-                "ag-csw",
-                "ag-ki"
+                "ag-csw"
             ],
             "rolle": "Professor",
+            "seit": 2008,
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-csw/Members/members/paschke.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-csw/Members/members/paschke.html",
+                "linkedin": "https://www.linkedin.com/in/adrianpaschke/",
+                "google-scholar": "https://scholar.google.com/citations?user=D_ZARycAAAAJ"
             },
-            "profilbild": "research/images/paschke-adrian.jpg"
+            "kontakt": {
+                "email": "paschke@inf.fu-berlin.de"
+            },
+            "lehre": {
+                "uebersicht": "https://www.mi.fu-berlin.de/inf/groups/ag-csw/Teaching/index.html",
+                "kurse": [
+                    {
+                        "name": "Semantic Web Technologies",
+                        "semester": "WS",
+                        "seit": 2005
+                    },
+                    {
+                        "name": "Knowledge Graphs and Ontologies",
+                        "semester": "SS",
+                        "seit": 2020
+                    },
+                    {
+                        "name": "Seminar Semantic Web",
+                        "semester": "WS",
+                        "seit": 2005
+                    },
+                    {
+                        "name": "SWP Semantic Technologies",
+                        "semester": "WS",
+                        "seit": 2021
+                    }
+                ]
+            },
+            "profilbild": "research/images/paschke-adrian.jpg",
+            "vita": {
+                "promotion": {
+                    "jahr": 2006,
+                    "universitaet": "TUM"
+                }
+            }
         },
         {
             "id": "goehring-daniel",
@@ -1303,6 +1469,12 @@
                 "ag-ki"
             ],
             "rolle": "Professor",
+            "status": "außerplanmäßig",
+            "status-details": {
+                "bemerkung": "Außerplanmäßiger Professor für Künstliche Intelligenz",
+                "seit": 2022,
+                "neuer-arbeitgeber": "Uni Bamberg"
+            },
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/Benzm__ller.html"
             },
@@ -1334,8 +1506,14 @@
                 "ag-db"
             ],
             "rolle": "Professorin",
+            "kontakt": {
+                "email": "agnes.voisard@fu-berlin.de",
+                "telefon": "+49 30 838 75 100"
+            },
+            "ort-kurz": "T9/169",
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-db/members/Professors/voisard_agnes.html"
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-db/members/Professors/voisard_agnes.html",
+                "website": "http://page.mi.fu-berlin.de/voisard/"
             },
             "profilbild": "research/images/voisard-agnes.jpg"
         },
@@ -1352,8 +1530,12 @@
                 "telefon": "+49 30 838 55850"
             },
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dilis/Members/Professors/Prof_-Dr_-Katharina-Baum.html"
-            }
+                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-dilis/Members/Professors/Prof_-Dr_-Katharina-Baum.html",
+                "website": "https://www.mi.fu-berlin.de/w/DILIS/KatharinaBaum",
+                "google-scholar": "https://scholar.google.com/citations?user=VRDJXPQAAAAJ",
+                "linkedin": "https://www.linkedin.com/in/katharina-baum/"
+            },
+            "profilbild": "https://www.mi.fu-berlin.de/inf/groups/ag-dilis/Members/Bilder/DSC_0023-be_rot_hochkant-01.jpg?width=700"
         },
         {
             "id": "jahn-katharina",
@@ -1363,6 +1545,11 @@
                 "ag-bds"
             ],
             "rolle": "Professorin",
+            "kontakt": {
+                "email": "katharina.jahn@fu-berlin.de",
+                "telefon": "+49 30 838 60648"
+            },
+            "ort-kurz": "T9/018",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-bds/staff/jahn.html"
             },
@@ -1388,53 +1575,30 @@
                 "ag-sse"
             ],
             "rolle": "Professor",
+            "kontakt": {
+                "email": "joern.eichler@fu-berlin.de",
+                "telefon": "+49 30 838 63097"
+            },
+            "ort-kurz": "T9/K61",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-sse/members/Prof/Joern-Eichler/index.html"
             },
+            "lehre": {
+                "uebersicht": "https://www.mi.fu-berlin.de/inf/groups/ag-sse/Lehre/index.html",
+                "kurse": [
+                    {
+                        "name": "Secure Software Engineering",
+                        "semester": "WS",
+                        "seit": 2021
+                    },
+                    {
+                        "name": "Seminar: Secure Software Engineering",
+                        "semester": "SS",
+                        "seit": 2021
+                    }
+                ]
+            },
             "profilbild": "research/images/eichler-joern.jpg"
-        },
-        {
-            "id": "alt-helmut",
-            "titel": "Prof. a.D. Dr.",
-            "name": "Helmut Alt",
-            "gruppen": [
-                "ag-ti"
-            ],
-            "rolle": "Professor",
-            "status": "emeritiert",
-            "status-details": {
-                "bemerkung": "Emeritierter Professor der Theoretischen Informatik"
-            },
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Alt_Helmut.html"
-            },
-            "profilbild": "research/images/alt-helmut.jpg"
-        },
-        {
-            "id": "kozma-laszlo",
-            "titel": "Prof. Dr.",
-            "name": "László Kozma",
-            "gruppen": [
-                "ag-ti"
-            ],
-            "rolle": "Professor",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Kozma_Laszlo.html"
-            },
-            "profilbild": "research/images/kozma-laszlo.png"
-        },
-        {
-            "id": "mulzer-wolfgang",
-            "titel": "Prof. Dr.",
-            "name": "Wolfgang Mulzer",
-            "gruppen": [
-                "ag-ti"
-            ],
-            "rolle": "Professor",
-            "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Mulzer_Wolfgang.html"
-            },
-            "profilbild": "research/images/mulzer-wolfgang.jpg"
         },
         {
             "id": "gerhold-lars",
@@ -1444,8 +1608,26 @@
                 "ag-intdis"
             ],
             "rolle": "Professor",
+            "status": "gewechselt",
+            "status-details": {
+                "seit": 2022,
+                "neuer-arbeitgeber": "TU Braunschweig",
+                "neue-position": "Professor für Psychologie soziotechnischer Systeme"
+            },
+            "kontakt": {
+                "email": "lars.gerhold@tu-braunschweig.de"
+            },
             "links": {
                 "fu-berlin": "http://www.sicherheit-forschung.de/ueber_uns/mitarbeitende/gerhold/index.html"
+            },
+            "forschung": {
+                "interessen": [
+                    "Sicherheitskritische soziotechnische Systeme, Digitalisierung und Technikfolgenabschätzung (Technische Risiken, Soziotechnische Systeme, Mensch-Technik-Interaktion, Vertrauen, Akzeptanz)",
+                    "Sicherheits- und Risikoforschung (Risikowahrnehmung, Risikogesellschaft, Systemische Risiken, Sicherheitskultur, gesellschaftlicher Wandel)",
+                    "Stress und Coping (Transaktionale Stresstheorie, Vorsorge und Schutzverhalten, Resilienz, Handlungsregulation)",
+                    "Zukunftsforschung (Szenarienentwicklung, Strategische Vorausschau, Methoden der Zukunftsforschung, Standards und Gütekriterien)",
+                    "Wissenstransfer (Agenda-Setting, Diffusionstheorie, Multiple-Streams-Ansatz, Reallabore)"
+                ]
             }
         },
         {
@@ -1465,37 +1647,7 @@
             "profilbild": "research/images/schwarz-heiko.jpg"
         }
     ],
-    "verbindungen": [
-        {
-            "von": "ag-idm",
-            "zu": "fraunhofer-aisec",
-            "typ": "kooperation"
-        },
-        {
-            "von": "ag-vct",
-            "zu": "fraunhofer-hhi",
-            "typ": "kooperation"
-        },
-        {
-            "von": "ag-si",
-            "zu": "bundesdruckerei",
-            "typ": "kooperation"
-        },
-        {
-            "von": "ag-sse",
-            "zu": "bundesdruckerei",
-            "typ": "kooperation"
-        },
-        {
-            "von": "ag-abi",
-            "zu": "mpi-molgen",
-            "typ": "kooperation"
-        }
-    ],
     "metadaten": {
-        "erstellungsdatum": "2025-12-05",
-        "aktualisiert": "2025-12-06T00:45:00",
-        "version": "3.0",
         "quellen": [
             "https://www.mi.fu-berlin.de/inf/index.html",
             "https://www.mi.fu-berlin.de/inf/research/groups/index.html",
@@ -1506,15 +1658,6 @@
             "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/index.html",
             "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/index.html",
             "https://www.mi.fu-berlin.de/inf/groups/ag-si/members/index.html"
-        ],
-        "statistik": {
-            "arbeitsgruppen": 21,
-            "externe_partner": 4,
-            "personen_gesamt": 66,
-            "professoren": 28,
-            "sekretariate": 8,
-            "wimis": 30
-        },
-        "bemerkung": "Version 3.0: Erweitert um WiMis und Sekretariate für HCC, Tech, TI, KI, DDS, SE, SI"
+        ]
     }
 }
