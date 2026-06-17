@@ -1761,7 +1761,7 @@
                 "sprechstunde": "Montag 14-15 Uhr, Donnerstag 14-15 Uhr"
             },
             "links": {
-                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/members/wunder.html",
+                "fu-berlin": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/team-members/wunder.html",
                 "google-scholar": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=de",
                 "dblp": "https://dblp.uni-trier.de/pid/63/5261.html",
                 "linkedin": "https://www.linkedin.com/in/gerhard-wunder/",
@@ -3238,7 +3238,7 @@
             "gruppen": [
                 "ag-ti"
             ],
-            "rolle": "Professor",
+            "rolle": "Juniorprofessor",
             "links": {
                 "fu-berlin": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Kozma_Laszlo.html",
                 "persoenlich": "https://lkozma.net",
@@ -3337,7 +3337,7 @@
                 "dblp": "https://dblp.uni-trier.de/pers/hd/g/Gerhold:Lars"
             },
             "kontakt": {
-                "email": "lars.gerhold@fu-berlin.de",
+                "email": "lars.gerhold@tu-braunschweig.de",
                 "telefon": "+49 30 838 51693"
             },
             "forschung": {
