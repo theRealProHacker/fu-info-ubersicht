@@ -128,7 +128,7 @@ Array of objects, reverse-chronological (current position first):
 | Key | Req? | Notes |
 |---|---|---|
 | `position` | ✅ | Role title, transcribed verbatim. |
-| `institution` | ✅ | Employer / institution. |
+| `institution` | ✅ | Employer / institution — **never blank**. For a freelance / self-employed role use `"freiberuflich"`; if truly unknown, omit the whole item. |
 | `zeitraum` | — | `"seit YYYY"`, `"YYYY–YYYY"`, `"YYYY–heute"`, or a single `"YYYY"` — **if stated**. "Postdoc at Stanford" with no dates is valid; never invent dates. |
 | `ort` | — | City, if stated. Omit if unknown. |
 | `quelle` | ✅ | Source URL that contains *this* entry. |
@@ -203,7 +203,7 @@ holds the URL to the *full* list.
 |---|---|---|
 | `titel` | ✅ | Paper title, transcribed verbatim (preserve diacritics). |
 | `jahr` | — | Year of publication, **if stated**. |
-| `venue` | — | Conference/journal, if stated. |
+| `venue` | — | Conference/journal name, if stated — **WITHOUT the year** (the year lives in `jahr`): `"CCGrid"`, not `"CCGrid 2014"`. |
 | `url` | — | DOI or canonical paper URL, if available. |
 | `quelle` | ✅ | Page that lists this paper (self-sourcing — see §6). |
 

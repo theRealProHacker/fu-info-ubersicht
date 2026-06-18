@@ -121,7 +121,7 @@ Structured "self-sourcing" arrays — each item carries its OWN source as
   most 8** (prefer the author's own "Selected Publications", else most-cited or
   most-recent). Each item:
   `{"titel": "<paper title, verbatim>", "jahr": "<year, if stated>",
-    "venue": "<conference/journal, if stated>", "url": "<DOI/paper URL, if stated>",
+    "venue": "<conference/journal name WITHOUT the year>", "url": "<DOI/paper URL, if stated>",
     "quelle": "<source URL listing this paper>"}`
 
 **Required vs optional per item:** required are `grad`+`institution`
@@ -130,6 +130,16 @@ Structured "self-sourcing" arrays — each item carries its OWN source as
 (`jahr` / `zeitraum` / `ort` / `venue` / `url`) is OPTIONAL — include it ONLY if
 the source states it; NEVER invent a year. An entry like "Postdoc at Stanford"
 with no dates is valid and useful.
+
+**Never emit an empty string for a required field.** If a `werdegang` role is
+freelance / self-employed with no employer, set `institution` to
+`"freiberuflich"` — do NOT leave it blank. If you genuinely cannot determine a
+required field for an item, OMIT that whole item rather than sending an empty
+value.
+
+**`venue` carries no year.** The year belongs in `jahr` only — write
+`"venue": "CCGrid"` or `"NeurIPS"`, never `"CCGrid 2014"`. Do not repeat the year
+inside the venue.
 
 Structured metrics object — sourced via the `sources` map:
 

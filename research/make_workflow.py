@@ -43,6 +43,8 @@ RULES = "\n".join([
     '  forschung.veroeffentlichungen (selected papers, NEWEST first, MAX 8): items {titel, quelle} + optional jahr, venue, url.',
     '  Required per item: grad+institution (ausbildung), position+institution (werdegang), titel (veroeffentlichungen), plus quelle always.',
     '  jahr / zeitraum are OPTIONAL -- never invent a year; "Postdoc at Stanford" with no date is valid and useful.',
+    '  NEVER leave a required field as an empty string. A freelance/self-employed werdegang role: set institution to "freiberuflich" (do NOT leave it blank). If a required field is truly unknowable, OMIT the whole item.',
+    '  venue carries NO year -- the year goes in jahr only: write venue "CCGrid" or "NeurIPS", never "CCGrid 2014".',
     'Structured metrics object (sourced via the "sources" map at key "forschung.scholar"):',
     '  forschung.scholar = {zitationen, h_index, i10_index, stand} -- integer metrics + stand "YYYY-MM" (required if any metric present).',
     '  The Scholar profile URL goes in links.google-scholar, NOT inside scholar.',
