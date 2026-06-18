@@ -659,7 +659,7 @@
                 ]
             },
             "profilbild": "research/images/linnert-barry.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:16:53+00:00"
         },
         {
             "id": "ververs-linus",
@@ -1378,7 +1378,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:16:53+00:00"
         },
         {
             "id": "leimstaedtner-david",
@@ -4413,7 +4413,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:16:53+00:00"
         },
         {
             "id": "shang-zhihao",
@@ -5836,6 +5836,29 @@
                         "ort": "Palo Alto, USA",
                         "quelle": "http://page.mi.fu-berlin.de/katinkaw/"
                     }
+                ],
+                "ausbildung": [
+                    {
+                        "grad": "Diplom Informatik mit Statistik",
+                        "institution": "Technische Universität Berlin",
+                        "jahr": "1995",
+                        "ort": "Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/wolter.html"
+                    },
+                    {
+                        "grad": "Promotion (PhD) Informatik",
+                        "institution": "Technische Universität Berlin",
+                        "jahr": "1999",
+                        "ort": "Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/wolter.html"
+                    },
+                    {
+                        "grad": "Habilitation Informatik",
+                        "institution": "Humboldt-Universität zu Berlin",
+                        "jahr": "2008",
+                        "ort": "Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/wolter.html"
+                    }
                 ]
             },
             "lehre": {
@@ -5850,7 +5873,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:16:53+00:00"
         },
         {
             "id": "landgraf-tim",
@@ -7450,7 +7473,57 @@
                     "Lokationsbasierte Dienste",
                     "Mobile Anwendungen"
                 ],
-                "publikationen": "https://dblp.org/pid/v/AVoisard.html"
+                "publikationen": "https://dblp.org/pid/v/AVoisard.html",
+                "veroeffentlichungen": [
+                    {
+                        "titel": "Strategic Anticipation in Crisis Management Through the Lens of Societal Values - The SANCTUM Project",
+                        "jahr": "2022",
+                        "venue": "CRITIS 2022",
+                        "quelle": "https://dblp.org/pid/v/AVoisard.html"
+                    },
+                    {
+                        "titel": "How to turn the Fast-Track into a Fast-Track: Process integration for evaluation of the quality of Digital Health Applications (DiGAs)",
+                        "jahr": "2022",
+                        "venue": "HICSS 2022",
+                        "quelle": "https://dblp.org/pid/v/AVoisard.html"
+                    },
+                    {
+                        "titel": "Designing AINA - Intercultural Human-Centered Design of an AI-based Application for Supporting the Diagnosis of Female Genital Schistosomiasis",
+                        "jahr": "2022",
+                        "venue": "ICHI 2022",
+                        "quelle": "https://dblp.org/pid/v/AVoisard.html"
+                    },
+                    {
+                        "titel": "HaLowNet - A WiFi HaLow network-based information system for the provision of multi-sided applications for medical emergency scenarios",
+                        "jahr": "2022",
+                        "venue": "ICHI 2022",
+                        "quelle": "https://dblp.org/pid/v/AVoisard.html"
+                    },
+                    {
+                        "titel": "SurgeRate - An approach to the evaluation of the performance of veterinary surgeons",
+                        "jahr": "2022",
+                        "venue": "ICHI 2022",
+                        "quelle": "https://dblp.org/pid/v/AVoisard.html"
+                    },
+                    {
+                        "titel": "mHealthAtlas - An expert-based multi-sided platform for the evaluation of mHealth applications",
+                        "jahr": "2021",
+                        "venue": "ICHI 2021",
+                        "quelle": "https://dblp.org/pid/v/AVoisard.html"
+                    },
+                    {
+                        "titel": "PRECOSE - An Approach for Preserving Color Semantics in the Conversion of Colors to Grayscale in the Context of Medical Scoring Boards",
+                        "jahr": "2020",
+                        "venue": "HealthCom 2020",
+                        "quelle": "https://dblp.org/pid/v/AVoisard.html"
+                    },
+                    {
+                        "titel": "mHealthAtlas - An Approach for the Multidisciplinary Evaluation of mHealth Applications",
+                        "jahr": "2020",
+                        "venue": "HealthCom 2020",
+                        "quelle": "https://dblp.org/pid/v/AVoisard.html"
+                    }
+                ]
             },
             "vita": {
                 "werdegang": [
@@ -7545,6 +7618,43 @@
                         "ort": "Rocquencourt, France",
                         "quelle": "http://page.mi.fu-berlin.de/voisard/AgnesVoisard-ShortCV-May25_EN_Homepage_v0.pdf"
                     }
+                ],
+                "ausbildung": [
+                    {
+                        "grad": "Diplôme d'Etudes Universitaires Générales (DEUG A)",
+                        "institution": "University of Paris XI at Orsay, France",
+                        "jahr": "1985",
+                        "ort": "Orsay, France",
+                        "quelle": "http://page.mi.fu-berlin.de/voisard/AgnesVoisard-ShortCV-May25_EN_Homepage_v0.pdf"
+                    },
+                    {
+                        "grad": "Maîtrise d'Informatique",
+                        "institution": "University of Paris XI at Orsay, France",
+                        "jahr": "1987",
+                        "ort": "Orsay, France",
+                        "quelle": "http://page.mi.fu-berlin.de/voisard/AgnesVoisard-ShortCV-May25_EN_Homepage_v0.pdf"
+                    },
+                    {
+                        "grad": "Diplôme d'Enseignement Approfondi d'Informatique (Master), Major: Artificial Intelligence",
+                        "institution": "University of Paris XI at Orsay and INRIA, France",
+                        "jahr": "1988",
+                        "ort": "Orsay, France",
+                        "quelle": "http://page.mi.fu-berlin.de/voisard/AgnesVoisard-ShortCV-May25_EN_Homepage_v0.pdf"
+                    },
+                    {
+                        "grad": "Doctorat d'Informatique (PhD in Computer Science)",
+                        "institution": "University of Paris XI at Orsay and Institut National de Recherche en Informatique et en Automatique (INRIA), France",
+                        "jahr": "1992",
+                        "ort": "Orsay / Rocquencourt, France",
+                        "quelle": "http://page.mi.fu-berlin.de/voisard/AgnesVoisard-ShortCV-May25_EN_Homepage_v0.pdf"
+                    },
+                    {
+                        "grad": "Habilitation in Computer Science",
+                        "institution": "Freie Universität Berlin, Department of Mathematics and Computer Science",
+                        "jahr": "1999",
+                        "ort": "Berlin, Deutschland",
+                        "quelle": "http://page.mi.fu-berlin.de/voisard/AgnesVoisard-ShortCV-May25_EN_Homepage_v0.pdf"
+                    }
                 ]
             },
             "lehre": {
@@ -7575,7 +7685,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:16:53+00:00"
         },
         {
             "id": "baum-katharina",
