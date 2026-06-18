@@ -362,6 +362,65 @@ ul {
 }
 
 /* =============================================
+   Entity links (?id=... deep links)
+   Real <a> anchors that look like the original text/cards.
+   ============================================= */
+.entity-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.member-list .professor .entity-link {
+    display: block;
+    flex: 1;
+}
+
+a.member-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =============================================
+   Ehemalige Mitglieder (former members)
+   ============================================= */
+.ehemalige-heading {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
+
+.ehemalige-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.ehemalige-grid .member-card.ehemalig {
+    flex: 1;
+    min-width: 220px;
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+}
+
+.ehemalige-grid .member-card.ehemalig:hover {
+    opacity: 1;
+}
+
+.ehemalig-badge {
+    display: inline-block;
+    margin-bottom: var(--spacing-sm);
+    padding: 2px 8px;
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    background: rgba(100, 116, 139, 0.2);
+    border-radius: var(--radius-sm);
+}
+
+/* =============================================
    Modal
    ============================================= */
 .modal {

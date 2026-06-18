@@ -66,6 +66,8 @@ class InstitutDiagram {
     constructor() {
         this.data = null;
         this.modal = document.getElementById('detail-modal');
+        // Currently open entity id (person or group), mirrored in the ?id= URL.
+        this._currentId = null;
         this.init();
     }
 
@@ -74,9 +76,65 @@ class InstitutDiagram {
             await this.loadData();
             this.renderGroups();
             this.setupEventListeners();
+            this.handleInitialRoute();
             this.drawConnections();
         } catch (error) {
             console.error('Error initializing diagram:', error);
+        }
+    }
+
+    // =============================================
+    //  Deep-linking — shareable ?id=<id> URLs
+    // =============================================
+
+    // People ids (e.g. "rote-guenter") and group ids (e.g. "ag-ti") share one
+    // namespace with no collisions, so a single resolver covers both.
+    resolveEntity(id) {
+        if (!id) return null;
+        // Dissolved groups stay gone (no modal, no ?id). Departed people remain
+        // viewable: they're surfaced as "Ehemalige Mitglieder" in their group
+        // and their researched profile is still worth opening.
+        const group = this.data.gruppen.find(g => g.id === id);
+        if (group && group.sichtbar !== false) return { kind: 'group', entity: group };
+        const person = this.data.personen.find(p => p.id === id);
+        if (person) return { kind: 'person', entity: person };
+        return null;
+    }
+
+    linkFor(id) {
+        return `?id=${encodeURIComponent(id)}`;
+    }
+
+    renderById(id) {
+        const resolved = this.resolveEntity(id);
+        if (!resolved) return false;
+        if (resolved.kind === 'group') this.showGroupDetail(id);
+        else this.showPersonDetail(id);
+        return true;
+    }
+
+    // Open an entity, pushing a history entry so the URL is copyable and the
+    // browser back button steps back through / closes the modal.
+    navigateTo(id) {
+        if (!this.resolveEntity(id)) return;
+        if (id !== this._currentId) {
+            history.pushState({ id }, '', this.linkFor(id));
+        }
+        this._currentId = id;
+        this.renderById(id);
+    }
+
+    // First load: open whatever ?id= points at, without adding a history entry.
+    handleInitialRoute() {
+        const id = new URLSearchParams(window.location.search).get('id');
+        if (!id) return;
+        if (this.resolveEntity(id)) {
+            this._currentId = id;
+            history.replaceState({ id }, '', this.linkFor(id));
+            this.renderById(id);
+        } else {
+            // Unknown id — strip it so the chart renders normally.
+            history.replaceState({}, '', window.location.pathname);
         }
     }
 
@@ -111,14 +169,16 @@ class InstitutDiagram {
         const gridContainer = document.getElementById('ag-grid');
         if (!gridContainer) return;
 
-        // Filter only AG groups (not extern)
-        const ags = this.data.gruppen.filter(g => g.type === 'ag');
+        // Filter only AG groups (not extern), and drop groups that no longer
+        // exist at the institute (sichtbar: false).
+        const ags = this.data.gruppen.filter(g => g.type === 'ag' && g.sichtbar !== false);
 
-        // Calculate professor count for each AG
+        // Calculate professor count for each AG (departed professors hidden)
         const agsWithCount = ags.map(gruppe => {
             const professors = this.data.personen.filter(p =>
                 p.gruppen?.includes(gruppe.id) &&
-                p.rolle?.toLowerCase().includes('professor')
+                p.rolle?.toLowerCase().includes('professor') &&
+                p.sichtbar !== false
             );
             return { gruppe, professorCount: professors.length, professors };
         });
@@ -142,7 +202,7 @@ class InstitutDiagram {
             const card = document.createElement('div');
             card.id = gruppe.id;
             card.className = 'card ag-card';
-            card.dataset.groupId = gruppe.id;
+            card.dataset.id = gruppe.id;
 
             // Mark inactive/vacant AGs
             if (gruppe.status === 'unbesetzt' || gruppe.status === 'professor-gewechselt') {
@@ -151,7 +211,7 @@ class InstitutDiagram {
 
             card.innerHTML = `
                 <div class="card-header">
-                    <h3 class="card-title" title="${gruppe['name-en'] || gruppe.name}">${gruppe.type === 'ag' ? 'AG ' : ''}${gruppe.name}</h3>
+                    <h3 class="card-title"><a class="entity-link" href="${this.linkFor(gruppe.id)}" data-id="${gruppe.id}" title="${gruppe['name-en'] || gruppe.name}">${gruppe.type === 'ag' ? 'AG ' : ''}${gruppe.name}</a></h3>
                     ${gruppe.abkuerzung ? `<span class="card-abbr">${gruppe.abkuerzung}</span>` : ''}
                 </div>
                 <div class="card-content">
@@ -159,9 +219,7 @@ class InstitutDiagram {
                         ${professors.map(prof => {
                 const simpleTitle = prof.titel && prof.titel.includes('Prof') ? 'Prof.' : prof.titel;
                 return `
-                            <li class="professor" data-person-id="${prof.id}">
-                                ${simpleTitle} ${prof.name}
-                            </li>
+                            <li class="professor"><a class="entity-link" href="${this.linkFor(prof.id)}" data-id="${prof.id}">${simpleTitle} ${prof.name}</a></li>
                             `;
             }).join('')}
                     </ul>
@@ -173,23 +231,18 @@ class InstitutDiagram {
     }
 
     setupEventListeners() {
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                const groupId = card.dataset.groupId;
-                if (groupId) {
-                    this.showGroupDetail(groupId);
-                }
-            });
-        });
-
-        document.querySelectorAll('.member-list li').forEach(li => {
-            li.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const personId = li.dataset.personId;
-                if (personId) {
-                    this.showPersonDetail(personId);
-                }
-            });
+        // Delegated click handling: any element carrying data-id (a group card,
+        // a member row, or an in-modal entity link) opens that entity and
+        // updates the ?id= URL. Real <a href="?id=..."> markup keeps the links
+        // copyable / middle-clickable; we intercept the plain left-click.
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('[data-id]');
+            if (!link) return;
+            // Let users open links in a new tab natively.
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+            e.preventDefault();
+            e.stopPropagation();
+            this.navigateTo(link.dataset.id);
         });
 
         this.modal.querySelector('.modal-close').addEventListener('click', () => {
@@ -205,13 +258,37 @@ class InstitutDiagram {
                 this.closeModal();
             }
         });
+
+        // Back / forward buttons sync the modal to the URL.
+        window.addEventListener('popstate', (e) => {
+            const id = (e.state && e.state.id) ||
+                new URLSearchParams(window.location.search).get('id');
+            if (id && this.resolveEntity(id)) {
+                this._currentId = id;
+                this.renderById(id);
+            } else {
+                this._currentId = null;
+                this.modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        });
     }
 
     showGroupDetail(groupId) {
         const gruppe = this.data.gruppen.find(g => g.id === groupId);
         if (!gruppe) return;
 
-        const members = this.data.personen.filter(p => p.gruppen?.includes(groupId));
+        const members = this.data.personen.filter(p => p.gruppen?.includes(groupId) && p.sichtbar !== false);
+
+        // Departed people who belonged to this group (shown in a separate
+        // "Ehemalige Mitglieder" section at the bottom). Professors first.
+        const formerMembers = this.data.personen
+            .filter(p => p.gruppen?.includes(groupId) && p.sichtbar === false)
+            .sort((a, b) => {
+                const ap = a.rolle?.toLowerCase().includes('professor') ? 0 : 1;
+                const bp = b.rolle?.toLowerCase().includes('professor') ? 0 : 1;
+                return ap - bp || a.name.localeCompare(b.name);
+            });
 
         // Categorize members
         const professors = members.filter(m => m.rolle?.toLowerCase().includes('professor'));
@@ -261,13 +338,13 @@ class InstitutDiagram {
         professors.forEach(prof => {
             const pic = prof.profilbild;
             html += `
-                <div class="member-card" data-person-id="${prof.id}">
+                <a class="member-card entity-link" href="${this.linkFor(prof.id)}" data-id="${prof.id}">
                     ${pic ? `<img class="member-avatar" src="${pic}" alt="${prof.name}">` : `<div class="member-avatar placeholder">${prof.name.charAt(0)}</div>`}
                     <div class="member-info">
                         <div class="member-name">${prof.titel} ${prof.name}</div>
                         <div class="member-role">${prof.rolle || 'Professor'}</div>
                     </div>
-                </div>
+                </a>
             `;
         });
         html += '</div>';
@@ -278,13 +355,13 @@ class InstitutDiagram {
             sekretariat.forEach(sek => {
                 const pic = sek.profilbild;
                 html += `
-                    <div class="member-card" data-person-id="${sek.id}">
+                    <a class="member-card entity-link" href="${this.linkFor(sek.id)}" data-id="${sek.id}">
                          ${pic ? `<img class="member-avatar" src="${pic}" alt="${sek.name}">` : `<div class="member-avatar placeholder">${sek.name.charAt(0)}</div>`}
                         <div class="member-info">
                             <div class="member-name">${sek.titel || ''} ${sek.name}</div>
                             <div class="member-role">${sek.rolle || 'Sekretariat'}</div>
                         </div>
-                    </div>
+                    </a>
                 `;
             });
         } else {
@@ -298,13 +375,13 @@ class InstitutDiagram {
             wimis.forEach(wimi => {
                 const pic = wimi.profilbild;
                 html += `
-                    <div class="member-card" data-person-id="${wimi.id}" style="flex: 1; min-width: 220px;">
+                    <a class="member-card entity-link" href="${this.linkFor(wimi.id)}" data-id="${wimi.id}" style="flex: 1; min-width: 220px;">
                         ${pic ? `<img class="member-avatar" src="${pic}" alt="${wimi.name}">` : `<div class="member-avatar placeholder">${wimi.name.charAt(0)}</div>`}
                         <div class="member-info">
                             <div class="member-name">${wimi.titel || ''} ${wimi.name}</div>
                             <div class="member-role">${wimi.rolle || 'WiMi'}</div>
                         </div>
-                    </div>
+                    </a>
                 `;
             });
             html += '</div></div>';
@@ -324,15 +401,27 @@ class InstitutDiagram {
             html += '</div>';
         }
 
-        modalBody.innerHTML = html;
-
-        modalBody.querySelectorAll('[data-person-id]').forEach(el => {
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-                this.showPersonDetail(el.dataset.personId);
+        // Ehemalige Mitglieder (former members) — departed people, clickable
+        // through to their (still researched) profile.
+        if (formerMembers.length > 0) {
+            html += '<h4 class="ehemalige-heading">Ehemalige Mitglieder</h4>';
+            html += '<div class="ehemalige-grid">';
+            formerMembers.forEach(fm => {
+                const pic = fm.profilbild;
+                html += `
+                    <a class="member-card entity-link ehemalig" href="${this.linkFor(fm.id)}" data-id="${fm.id}">
+                        ${pic ? `<img class="member-avatar" src="${pic}" alt="${fm.name}">` : `<div class="member-avatar placeholder">${fm.name.charAt(0)}</div>`}
+                        <div class="member-info">
+                            <div class="member-name">${fm.titel || ''} ${fm.name}</div>
+                            <div class="member-role">${fm.rolle || ''}</div>
+                        </div>
+                    </a>
+                `;
             });
-        });
+            html += '</div>';
+        }
 
+        modalBody.innerHTML = html;
         this.openModal();
     }
 
@@ -359,7 +448,7 @@ class InstitutDiagram {
             const groupsParams = person.gruppen
                 .map(gid => {
                     const g = this.data.gruppen.find(grp => grp.id === gid);
-                    return g ? { id: gid, name: g.type === 'ag' ? `AG ${g.name}` : g.name } : null;
+                    return g && g.sichtbar !== false ? { id: gid, name: g.type === 'ag' ? `AG ${g.name}` : g.name } : null;
                 })
                 .filter(g => g);
 
@@ -369,12 +458,11 @@ class InstitutDiagram {
                 groupsParams.forEach((g, index) => {
                     const link = document.createElement('a');
                     link.textContent = g.name;
+                    link.className = 'entity-link';
+                    link.href = this.linkFor(g.id);
+                    link.dataset.id = g.id;
                     link.style.cursor = 'pointer';
-
-                    link.onclick = (e) => {
-                        e.stopPropagation();
-                        this.showGroupDetail(g.id);
-                    };
+                    // Click handled by the global delegated listener.
                     modalSubtitle.appendChild(link);
 
                     if (index < groupsParams.length - 1) {
@@ -401,6 +489,11 @@ class InstitutDiagram {
         modalGroups.innerHTML = '';
 
         let html = '';
+
+        // Departed person — context badge so it's clear they're no longer active.
+        if (person.sichtbar === false) {
+            html += '<p class="ehemalig-badge">Ehemaliges Mitglied</p>';
+        }
 
         // Contact
         // Contact
@@ -535,6 +628,12 @@ class InstitutDiagram {
     closeModal() {
         this.modal.classList.add('hidden');
         document.body.style.overflow = '';
+        // Drop ?id= from the URL so a refresh/share of a closed view shows the
+        // chart. replaceState keeps the history stack clean (no empty entries).
+        if (this._currentId !== null) {
+            this._currentId = null;
+            history.replaceState({}, '', window.location.pathname);
+        }
     }
 
     drawConnections() {

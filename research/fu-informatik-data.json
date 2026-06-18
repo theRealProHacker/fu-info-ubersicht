@@ -135,7 +135,9 @@
             "abkuerzung": "IntDis",
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-intdis/index.html",
             "website2": "http://www.sicherheit-forschung.de/",
-            "beschreibung": "Sicherheit als Forschungsfeld kann aufgrund seiner Komplexität nicht allein aus einer einzelnen disziplinären Perspektive heraus betrachtet werden. Daher bezieht Sicherheitsforschung heute in der Regel sowohl Forscher verschiedener Disziplinen, als auch Endanwender und Unternehmen mit ein. Interdisziplinäre Sicherheitsforschung bedeutet damit, die eigenen fachlichen Grenzen in der Bearbeitung sicherheitsrelevanter Problemstellungen in konkreten Forschungsprojekten zu überwinden."
+            "beschreibung": "Sicherheit als Forschungsfeld kann aufgrund seiner Komplexität nicht allein aus einer einzelnen disziplinären Perspektive heraus betrachtet werden. Daher bezieht Sicherheitsforschung heute in der Regel sowohl Forscher verschiedener Disziplinen, als auch Endanwender und Unternehmen mit ein. Interdisziplinäre Sicherheitsforschung bedeutet damit, die eigenen fachlichen Grenzen in der Bearbeitung sicherheitsrelevanter Problemstellungen in konkreten Forschungsprojekten zu überwinden.",
+            "sichtbar": false,
+            "status": "aufgeloest"
         },
         {
             "id": "ag-ilab",
@@ -146,7 +148,8 @@
             "website": "https://www.mi.fu-berlin.de/en/inf/groups/ilab/index.html",
             "status": "professor-gewechselt",
             "status-details": "Prof. Wählisch wechselte 2024 zur TU Dresden",
-            "beschreibung": "Die Arbeitsgruppe Internet-Technologien (iLab) forscht an effizienter, zuverlässiger und sicherer Internet-Kommunikation durch Entwurf und Evaluierung von Netzwerkprotokollen, Architekturen und Internet-Messverfahren. Aktuelle Schwerpunkte sind Internet-Sicherheit, Internet-Messungen, informationszentrische Netze sowie das Internet of Things. Das übergeordnete Ziel der Gruppe ist es, verteilte und vernetzte Systeme voranzubringen, die das Leben der Menschen positiv beeinflussen."
+            "beschreibung": "Die Arbeitsgruppe Internet-Technologien (iLab) forscht an effizienter, zuverlässiger und sicherer Internet-Kommunikation durch Entwurf und Evaluierung von Netzwerkprotokollen, Architekturen und Internet-Messverfahren. Aktuelle Schwerpunkte sind Internet-Sicherheit, Internet-Messungen, informationszentrische Netze sowie das Internet of Things. Das übergeordnete Ziel der Gruppe ist es, verteilte und vernetzte Systeme voranzubringen, die das Leben der Menschen positiv beeinflussen.",
+            "sichtbar": false
         },
         {
             "id": "ag-kiml",
@@ -155,9 +158,10 @@
             "name-en": "Artificial Intelligence and Machine Learning",
             "abkuerzung": "KIML",
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-KIML/index.html",
-            "status": "unbesetzt",
+            "status": "aufgeloest",
             "status-details": "Prof. Dr. Eirini Ntoutsi und Prof. Dr. Grégoire Montavon ausgeschieden",
-            "beschreibung": "Our research lies in the areas of Artificial Intelligence (AI) and Machine Learning (ML). Our goal is to design intelligent algorithms that learn from data continuously following the cumulative nature of human learning, while ensuring that what has been learned is not only correct but also delivers positive social impact in accordance with ethical and legal requirements. The group concentrates on Continuous Learning, Responsible AI (fairness and explainability), and Creative AI."
+            "beschreibung": "Our research lies in the areas of Artificial Intelligence (AI) and Machine Learning (ML). Our goal is to design intelligent algorithms that learn from data continuously following the cumulative nature of human learning, while ensuring that what has been learned is not only correct but also delivers positive social impact in accordance with ethical and legal requirements. The group concentrates on Continuous Learning, Responsible AI (fairness and explainability), and Creative AI.",
+            "sichtbar": false
         },
         {
             "id": "ag-pr",
@@ -166,9 +170,10 @@
             "name-en": "Programming Languages",
             "abkuerzung": "PR",
             "website": "https://www.mi.fu-berlin.de/inf/groups/ag-pr/index.html",
-            "status": "aktiv",
+            "status": "aufgeloest",
             "bemerkung": "Prof. Esponda-Argüero leitet die Gruppe",
-            "beschreibung": "Die Arbeitsgruppe Programmiersprachen am Institut für Informatik der Freien Universität Berlin beschäftigt sich mit folgenden Themen: Theorie der Programmierung, Formale Semantik von Programmiersprachen, Implementierung funktionaler Programmiersprachen und Modellgetriebene Softwareentwicklung. Ein weiterer Schwerpunkt sind Innovative Lehrkonzepte in der Informatik."
+            "beschreibung": "Die Arbeitsgruppe Programmiersprachen am Institut für Informatik der Freien Universität Berlin beschäftigt sich mit folgenden Themen: Theorie der Programmierung, Formale Semantik von Programmiersprachen, Implementierung funktionaler Programmiersprachen und Modellgetriebene Softwareentwicklung. Ein weiterer Schwerpunkt sind Innovative Lehrkonzepte in der Informatik.",
+            "sichtbar": false
         },
         {
             "id": "ag-si",
@@ -4576,7 +4581,9 @@
                 ]
             },
             "profilbild": "research/images/shang-zhihao.png",
-            "last_updated": "2026-06-18T08:57:38+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00",
+            "sichtbar": false,
+            "status": "ehemalig"
         },
         {
             "id": "wu-han",
@@ -4714,7 +4721,9 @@
                 ]
             },
             "profilbild": "research/images/wu-han.png",
-            "last_updated": "2026-06-18T08:57:38+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00",
+            "sichtbar": false,
+            "status": "ehemalig"
         },
         {
             "id": "peng-guang",
@@ -4815,7 +4824,9 @@
                 ]
             },
             "profilbild": "research/images/peng-guang.jpg",
-            "last_updated": "2026-06-18T08:57:38+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00",
+            "sichtbar": false,
+            "status": "ehemalig"
         },
         {
             "id": "ma-xuyang",
@@ -4926,7 +4937,9 @@
                 ]
             },
             "profilbild": "research/images/ma-xuyang.png",
-            "last_updated": "2026-06-18T08:57:38+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00",
+            "sichtbar": false,
+            "status": "ehemalig"
         },
         {
             "id": "milde-gesine",
@@ -6559,7 +6572,8 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:11:07+00:00",
+            "sichtbar": false
         },
         {
             "id": "paschke-adrian",
@@ -7437,7 +7451,8 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:57:38+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00",
+            "sichtbar": false
         },
         {
             "id": "voisard-agnes",
@@ -8205,7 +8220,9 @@
                 ]
             },
             "last_updated": "2026-06-18T08:57:38+00:00",
-            "profilbild": "research/images/esponda-margarita.jpg"
+            "profilbild": "research/images/esponda-margarita.jpg",
+            "sichtbar": false,
+            "status": "ehemalig"
         },
         {
             "id": "eichler-joern",
@@ -9335,7 +9352,9 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:57:38+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00",
+            "sichtbar": false,
+            "status": "ausgeschieden"
         },
         {
             "id": "schwarz-heiko",
@@ -9506,7 +9525,7 @@
     ],
     "metadaten": {
         "erstellungsdatum": "2025-12-05",
-        "aktualisiert": "2025-12-06T00:45:00",
+        "aktualisiert": "2026-06-18T12:45:01+00:00",
         "version": "3.0",
         "quellen": [
             "https://www.mi.fu-berlin.de/inf/index.html",
@@ -9527,6 +9546,6 @@
             "sekretariate": 8,
             "wimis": 30
         },
-        "bemerkung": "Version 3.0: Erweitert um WiMis und Sekretariate für HCC, Tech, TI, KI, DDS, SE, SI"
+        "bemerkung": "Sichtbarkeit aktualisiert 2026-06-18: 8 ausgeschiedene Personen und 4 aufgeloeste/verschobene Gruppen ausgeblendet (sichtbar:false), per Live-Abgleich mit den FU-Seiten."
     }
 }
