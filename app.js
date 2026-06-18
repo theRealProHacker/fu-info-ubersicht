@@ -439,15 +439,59 @@ class InstitutDiagram {
             html += '</p>';
         }
 
-        // Vita with icons
-        if (person.vita?.positionen?.length > 0) {
+        // Selected publications
+        if (person.forschung?.veroeffentlichungen?.length > 0) {
+            html += '<h4>Veröffentlichungen</h4><ul style="color: var(--text-secondary); font-size: 0.875rem;">';
+            person.forschung.veroeffentlichungen.forEach(p => {
+                const titel = p.url ? `<a href="${p.url}" target="_blank">${p.titel}</a>` : p.titel;
+                const meta = [p.venue, p.jahr].filter(Boolean).join(', ');
+                html += `<li style="margin: 4px 0;">📄 ${titel}${meta ? ` — ${meta}` : ''}</li>`;
+            });
+            html += '</ul>';
+        }
+
+        // Google Scholar citation metrics
+        const scholar = person.forschung?.scholar;
+        if (scholar && (scholar.zitationen != null || scholar.h_index != null || scholar.i10_index != null)) {
+            const bits = [];
+            if (scholar.h_index != null) bits.push(`h-index ${scholar.h_index}`);
+            if (scholar.zitationen != null) bits.push(`${scholar.zitationen} Zitationen`);
+            if (scholar.i10_index != null) bits.push(`i10 ${scholar.i10_index}`);
+            let line = bits.join(' · ');
+            if (scholar.stand) line += ` (Stand ${scholar.stand})`;
+            html += `<h4>Google Scholar</h4><p style="color: var(--text-secondary); font-size: 0.875rem;">${line}</p>`;
+        }
+
+        // CV: structured Ausbildung (oldest first) + Werdegang (newest first),
+        // falling back to the legacy flat vita.positionen strings.
+        const instIcon = (text) => {
+            const t = (text || '').toLowerCase();
+            if (t.includes('tu ') || t.includes('technische universität')) return this.getIcon('tu-berlin');
+            if (t.includes('cmu') || t.includes('carnegie')) return this.getIcon('cmu');
+            if (t.includes('kit') || t.includes('karlsruhe')) return this.getIcon('kit');
+            return this.getIcon('fu-berlin');
+        };
+        if (person.vita?.ausbildung?.length > 0) {
+            html += '<h4>Ausbildung</h4><ul class="vita-list">';
+            person.vita.ausbildung.forEach(e => {
+                const where = [e.institution, e.ort].filter(Boolean).join(', ');
+                const jahr = e.jahr ? ` (${e.jahr})` : '';
+                html += `<li>${instIcon(e.institution)} ${e.grad} — ${where}${jahr}</li>`;
+            });
+            html += '</ul>';
+        }
+        if (person.vita?.werdegang?.length > 0) {
+            html += '<h4>Werdegang</h4><ul class="vita-list">';
+            person.vita.werdegang.forEach(e => {
+                const where = [e.institution, e.ort].filter(Boolean).join(', ');
+                const zeit = e.zeitraum ? ` (${e.zeitraum})` : '';
+                html += `<li>${instIcon(e.institution)} ${e.position} — ${where}${zeit}</li>`;
+            });
+            html += '</ul>';
+        } else if (person.vita?.positionen?.length > 0) {
             html += '<h4>Werdegang</h4><ul class="vita-list">';
             person.vita.positionen.forEach(pos => {
-                let icon = this.getIcon('fu-berlin');
-                if (pos.toLowerCase().includes('tu ')) icon = this.getIcon('tu-berlin');
-                if (pos.toLowerCase().includes('cmu') || pos.toLowerCase().includes('carnegie')) icon = this.getIcon('cmu');
-                if (pos.toLowerCase().includes('kit') || pos.toLowerCase().includes('karlsruhe')) icon = this.getIcon('kit');
-                html += `<li>${icon} ${pos}</li>`;
+                html += `<li>${instIcon(pos)} ${pos}</li>`;
             });
             html += '</ul>';
         }
@@ -471,6 +515,12 @@ class InstitutDiagram {
                 html += `<li style="color: var(--text-muted);">... und ${person.lehre.kurse.length - 5} weitere</li>`;
             }
             html += '</ul>';
+        }
+
+        // Last researched
+        if (person.last_updated) {
+            const date = String(person.last_updated).slice(0, 10);
+            html += `<p style="color: var(--text-muted); font-size: 0.75rem; margin-top: 16px;">Zuletzt aktualisiert: ${date}</p>`;
         }
 
         modalBody.innerHTML = html;

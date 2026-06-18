@@ -40,9 +40,18 @@ def full_person():
                   'google-scholar': 'https://scholar.google.com/v',
                   'dblp': 'https://dblp.org/pid/v',
                   'mastodon': 'https://mastodon.social/@v'},
-        'forschung': {'interessen': ['HCI'],
-                      'publikationen': 'https://dblp.org/pid/v.html'},
-        'vita': {'positionen': ['seit 2020: Professorin, FU Berlin']},
+        'forschung': {
+            'interessen': ['HCI'],
+            'publikationen': 'https://dblp.org/pid/v.html',
+            'veroeffentlichungen': [{'titel': 'A Paper', 'jahr': '2021',
+                                     'quelle': 'https://example.org/p'}],
+            'scholar': {'h_index': 10, 'stand': '2026-06'}},
+        'vita': {
+            'ausbildung': [{'grad': 'Dr. rer. nat.', 'institution': 'FU Berlin',
+                            'jahr': '2015', 'quelle': 'https://fu-berlin.de/v'}],
+            'werdegang': [{'position': 'Professorin', 'institution': 'FU Berlin',
+                           'zeitraum': 'seit 2020',
+                           'quelle': 'https://fu-berlin.de/v'}]},
         'lehre': {'kurse': [{'name': 'ALP 1', 'semester': 'WS 2025/26'}]},
         'profilbild': 'research/images/voll-vera.jpg',
     }
@@ -133,14 +142,14 @@ class SelectTests(unittest.TestCase):
 
     def test_rejected_cap_skipped_until_retry_flag(self):
         state = empty_state()
-        fm.set_field_state(state, 'person', 'leer-lena', 'vita.positionen',
+        fm.set_field_state(state, 'person', 'leer-lena', 'vita.werdegang',
                            'rejected', attempts=3)
         queue, _ = fm.select(make_data(), state, empty_skip(), {},
                              make_args(ids='leer-lena'))
-        self.assertNotIn('vita.positionen', queue[0][1])
+        self.assertNotIn('vita.werdegang', queue[0][1])
         queue, _ = fm.select(make_data(), state, empty_skip(), {},
                              make_args(ids='leer-lena', retry_not_found=True))
-        self.assertIn('vita.positionen', queue[0][1])
+        self.assertIn('vita.werdegang', queue[0][1])
 
     def test_restricted_role_gets_restricted_fields(self):
         queue, _ = fm.select(make_data(), empty_state(), empty_skip(), {},
@@ -197,13 +206,16 @@ class ValidateTests(unittest.TestCase):
         self.assertIn('lehre.kurse', accepted)
 
     def test_rejects_html_chars_but_accepts_apostrophe(self):
+        # vita.werdegang is self-sourcing (quelle inline, no sources entry).
         accepted, rejected, _ = fm.validate(self.findings(
-            {'vita': {'positionen': ["2010: PhD, King's College London"]},
+            {'vita': {'werdegang': [{'position': "Lecturer, King's College",
+                                     'institution': "King's College London",
+                                     'zeitraum': '2010-2012',
+                                     'quelle': 'https://example.org/cv'}]},
              'forschung': {'interessen': ['<script>alert(1)</script>']}},
-            {'vita.positionen': 'https://example.org/cv',
-             'forschung.interessen': 'https://example.org/r'}),
+            {'forschung.interessen': 'https://example.org/r'}),
             self.person(), 'person')
-        self.assertIn('vita.positionen', accepted)
+        self.assertIn('vita.werdegang', accepted)
         self.assertEqual(rejected[0]['path'], 'forschung.interessen')
 
     def test_rejects_missing_source(self):
@@ -469,6 +481,138 @@ class ChaosTests(unittest.TestCase):
                 proc.join()
                 # After every kill the file must still be valid JSON.
                 json.loads(path.read_text(encoding='utf-8'))
+
+
+class StructuredFieldTests(unittest.TestCase):
+    """RESEARCH_SPEC.md §2 / §3.1 / §3.2: object-array CV fields
+    (ausbildung/werdegang/veroeffentlichungen) and the scholar metrics object."""
+
+    def person(self):
+        return {'id': 'leer-lena', 'name': 'Lena Leer', 'rolle': 'Professorin'}
+
+    def findings(self, fields, sources=None):
+        return {'fields': fields, 'sources': sources or {}, 'not_found': []}
+
+    def test_ausbildung_self_sourced_accepted(self):
+        accepted, rejected, _ = fm.validate(self.findings(
+            {'vita': {'ausbildung': [
+                {'grad': 'B.Sc. Informatik', 'institution': 'TU München',
+                 'jahr': '2005', 'quelle': 'https://example.org/cv'},
+                {'grad': 'Dr. rer. nat.', 'institution': 'ETH Zürich',
+                 'ort': 'Zürich', 'jahr': '2011',
+                 'quelle': 'https://example.org/cv'}]}}),
+            self.person(), 'person')
+        self.assertEqual(rejected, [])
+        self.assertIn('vita.ausbildung', accepted)
+        self.assertIsNone(accepted['vita.ausbildung']['source'])
+
+    def test_obj_array_missing_required_key_rejected(self):
+        _, rejected, _ = fm.validate(self.findings(
+            {'vita': {'werdegang': [
+                {'position': 'Postdoc', 'institution': 'MIT',
+                 'quelle': 'https://example.org/cv'}]}}),   # no zeitraum
+            self.person(), 'person')
+        self.assertEqual(rejected[0]['path'], 'vita.werdegang')
+        self.assertIn('zeitraum', rejected[0]['reason'])
+
+    def test_obj_array_requires_quelle(self):
+        _, rejected, _ = fm.validate(self.findings(
+            {'vita': {'ausbildung': [
+                {'grad': 'B.Sc.', 'institution': 'X', 'jahr': '2005'}]}}),
+            self.person(), 'person')
+        self.assertIn('quelle', rejected[0]['reason'])
+
+    def test_obj_array_quelle_must_be_url(self):
+        _, rejected, _ = fm.validate(self.findings(
+            {'vita': {'ausbildung': [
+                {'grad': 'B.Sc.', 'institution': 'X', 'jahr': '2005',
+                 'quelle': 'not-a-url'}]}}),
+            self.person(), 'person')
+        self.assertIn('quelle', rejected[0]['reason'])
+
+    def test_obj_array_rejects_html_in_item(self):
+        _, rejected, _ = fm.validate(self.findings(
+            {'vita': {'werdegang': [
+                {'position': '<b>Prof</b>', 'institution': 'FU',
+                 'zeitraum': 'seit 2020',
+                 'quelle': 'https://example.org/cv'}]}}),
+            self.person(), 'person')
+        self.assertEqual(len(rejected), 1)
+
+    def test_obj_array_unexpected_key_rejected(self):
+        _, rejected, _ = fm.validate(self.findings(
+            {'vita': {'werdegang': [
+                {'position': 'Prof', 'institution': 'FU', 'zeitraum': 'seit 2020',
+                 'gehalt': '100k', 'quelle': 'https://example.org/cv'}]}}),
+            self.person(), 'person')
+        self.assertIn('unexpected', rejected[0]['reason'])
+
+    def test_veroeffentlichungen_truncated_to_cap(self):
+        papers = [{'titel': f'Paper {n}', 'jahr': '2020',
+                   'quelle': 'https://example.org/p'} for n in range(12)]
+        accepted, rejected, _ = fm.validate(self.findings(
+            {'forschung': {'veroeffentlichungen': papers}}),
+            self.person(), 'person')
+        self.assertEqual(rejected, [])
+        self.assertEqual(
+            len(accepted['forschung.veroeffentlichungen']['value']), 8)
+
+    def test_veroeffentlichungen_optional_url_validated(self):
+        _, rejected, _ = fm.validate(self.findings(
+            {'forschung': {'veroeffentlichungen': [
+                {'titel': 'P', 'jahr': '2020', 'url': 'javascript:evil',
+                 'quelle': 'https://example.org/p'}]}}),
+            self.person(), 'person')
+        self.assertIn('url', rejected[0]['reason'])
+
+    def test_scholar_object_stays_intact_and_accepted(self):
+        accepted, rejected, _ = fm.validate(self.findings(
+            {'forschung': {'scholar': {'zitationen': 4200, 'h_index': 31,
+                                       'i10_index': 64, 'stand': '2026-06'}}},
+            {'forschung.scholar':
+                'https://scholar.google.com/citations?user=x'}),
+            self.person(), 'person')
+        self.assertEqual(rejected, [])
+        self.assertIn('forschung.scholar', accepted)
+        self.assertNotIn('forschung.scholar.zitationen', accepted)
+
+    def test_scholar_requires_source(self):
+        _, rejected, _ = fm.validate(self.findings(
+            {'forschung': {'scholar': {'h_index': 5, 'stand': '2026-06'}}}),
+            self.person(), 'person')
+        self.assertEqual(rejected[0]['reason'], 'no source URL')
+
+    def test_scholar_requires_stand_with_metrics(self):
+        _, rejected, _ = fm.validate(self.findings(
+            {'forschung': {'scholar': {'h_index': 5}}},
+            {'forschung.scholar': 'https://scholar.google.com/x'}),
+            self.person(), 'person')
+        self.assertIn('stand', rejected[0]['reason'])
+
+    def test_scholar_rejects_non_integer_metric(self):
+        _, rejected, _ = fm.validate(self.findings(
+            {'forschung': {'scholar': {'h_index': 'lots', 'stand': '2026-06'}}},
+            {'forschung.scholar': 'https://scholar.google.com/x'}),
+            self.person(), 'person')
+        self.assertIn('integer', rejected[0]['reason'])
+
+    def test_scholar_rejects_no_metrics(self):
+        _, rejected, _ = fm.validate(self.findings(
+            {'forschung': {'scholar': {'stand': '2026-06'}}},
+            {'forschung.scholar': 'https://scholar.google.com/x'}),
+            self.person(), 'person')
+        self.assertIn('no metrics', rejected[0]['reason'])
+
+    def test_structured_cv_merges_into_entry(self):
+        entry = {'id': 'leer-lena', 'rolle': 'Professorin'}
+        accepted, _, _ = fm.validate(self.findings(
+            {'vita': {'ausbildung': [
+                {'grad': 'Dr.', 'institution': 'FU', 'jahr': '2015',
+                 'quelle': 'https://example.org/cv'}]}}),
+            entry, 'person')
+        merged, _ = fm.merge(entry, accepted, {})
+        self.assertIn('vita.ausbildung', merged)
+        self.assertEqual(entry['vita']['ausbildung'][0]['grad'], 'Dr.')
 
 
 if __name__ == '__main__':

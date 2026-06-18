@@ -18,6 +18,7 @@ Quickstart:
 """
 
 import argparse
+import concurrent.futures as cf
 import difflib
 import json
 import os
@@ -45,7 +46,8 @@ PERSON_FIELDS = [
     'links.fu-berlin', 'links.persoenlich', 'links.github', 'links.linkedin',
     'links.orcid', 'links.google-scholar', 'links.dblp', 'links.mastodon',
     'forschung.interessen', 'forschung.publikationen',
-    'vita.positionen', 'lehre.kurse', 'profilbild',
+    'forschung.veroeffentlichungen', 'forschung.scholar',
+    'vita.ausbildung', 'vita.werdegang', 'lehre.kurse', 'profilbild',
 ]
 # Non-research staff: FU-official sources only, contact + photo only.
 RESTRICTED_ROLES = {'Sekretariat', 'Projektassistentin'}
@@ -59,7 +61,43 @@ URL_FIELDS = {
     'links.orcid', 'links.google-scholar', 'links.dblp', 'links.mastodon',
     'forschung.publikationen', 'profilbild', 'kontakt.sprechstunde',
 }
-LIST_OF_STR_FIELDS = {'forschung.interessen', 'vita.positionen'}
+LIST_OF_STR_FIELDS = {'forschung.interessen'}
+
+# Structured "object array" fields (RESEARCH_SPEC.md §2, §3.1): each item is a
+# dict that carries its OWN source inline as `quelle` (self-sourcing), so these
+# paths need NO entry in the findings `sources` map. `quelle` (and `url`, where
+# listed) are validated as URLs; every other key as plain text. `cap` bounds the
+# array (extra items are truncated, newest-first); MAX_ARRAY_ITEMS is the hard
+# abuse ceiling that rejects outright.
+OBJ_ARRAY_FIELDS = {
+    'vita.ausbildung': {
+        'required_text': ('grad', 'institution', 'jahr'),
+        'optional_text': ('ort',), 'optional_url': (), 'cap': None,
+    },
+    'vita.werdegang': {
+        'required_text': ('position', 'institution', 'zeitraum'),
+        'optional_text': ('ort',), 'optional_url': (), 'cap': None,
+    },
+    'forschung.veroeffentlichungen': {
+        'required_text': ('titel', 'jahr'),
+        'optional_text': ('venue',), 'optional_url': ('url',), 'cap': 8,
+    },
+}
+MAX_ARRAY_ITEMS = 40
+
+# Google Scholar metrics object (RESEARCH_SPEC.md §3.2): sourced via the
+# `sources` map (the Scholar profile URL); integer metrics + a mandatory
+# `stand` (YYYY-MM) timestamp because the numbers drift over time.
+SCHOLAR_FIELD = 'forschung.scholar'
+SCHOLAR_METRICS = ('zitationen', 'h_index', 'i10_index')
+
+# Object fields flatten() must keep intact instead of descending into. Object
+# ARRAYS are lists, so flatten() already leaves them whole; only the scholar
+# DICT needs to be pinned here.
+LEAF_OBJECT_FIELDS = {SCHOLAR_FIELD}
+
+# Per-entry "last researched" stamp written into the dataset on every touch.
+LAST_UPDATED_KEY = 'last_updated'
 
 FORBIDDEN_AUTH_VARS = [
     'ANTHROPIC_API_KEY', 'ANTHROPIC_AUTH_TOKEN',
@@ -85,6 +123,7 @@ LINK_HOST_ALLOWLIST = {
 }
 EMAIL_RE = re.compile(r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$')
 PHONE_RE = re.compile(r'^\+?[0-9][0-9 ()/–.-]{5,}$')
+STAND_RE = re.compile(r'^\d{4}-(0[1-9]|1[0-2])$')   # scholar.stand: YYYY-MM
 
 AGENT_TIMEOUT_S = 600
 MAX_TURNS = 30
@@ -407,11 +446,12 @@ def run_agent(prompt):
 # -------------------------------------------------------------- validate ---
 
 def flatten(fields, prefix=''):
-    # Recursion stops at lists, so lehre.kurse items stay intact.
+    # Recursion stops at lists (so lehre.kurse / vita.ausbildung items stay
+    # intact) and at LEAF_OBJECT_FIELDS (so forschung.scholar stays one object).
     flat = {}
     for key, value in fields.items():
         path = f'{prefix}{key}'
-        if isinstance(value, dict):
+        if isinstance(value, dict) and path not in LEAF_OBJECT_FIELDS:
             flat.update(flatten(value, f'{path}.'))
         else:
             flat[path] = value
@@ -523,6 +563,67 @@ def validate_field(path, value, source, entry, mode):
     return clean_string(value)
 
 
+def validate_obj_array(path, value, entry, mode):
+    """Validate a self-sourcing object-array field (ausbildung / werdegang /
+    veroeffentlichungen). Each item carries its own `quelle`. Truncates to the
+    field's `cap` (newest-first) and rejects outright past MAX_ARRAY_ITEMS.
+    Returns an error string or None."""
+    spec = OBJ_ARRAY_FIELDS[path]
+    if not isinstance(value, list) or not value:
+        return 'must be a non-empty array of objects'
+    if len(value) > MAX_ARRAY_ITEMS:
+        return f'too many items (>{MAX_ARRAY_ITEMS})'
+    cap = spec['cap']
+    if cap is not None and len(value) > cap:
+        del value[cap:]   # keep the first `cap` items (the array is newest-first)
+
+    req_text = spec['required_text']
+    url_keys = set(spec['optional_url']) | {'quelle'}
+    allowed_keys = set(req_text) | set(spec['optional_text']) | url_keys
+    required_keys = set(req_text) | {'quelle'}
+    fu_only = mode == 'person' and entry.get('rolle') in RESTRICTED_ROLES
+    for item in value:
+        if not isinstance(item, dict):
+            return 'each item must be an object'
+        keys = set(item)
+        missing = required_keys - keys
+        if missing:
+            return f'item missing keys: {", ".join(sorted(missing))}'
+        extra = keys - allowed_keys
+        if extra:
+            return f'item has unexpected keys: {", ".join(sorted(extra))}'
+        for key in keys:
+            err = check_url(item[key]) if key in url_keys else clean_string(item[key])
+            if err:
+                return f'{key}: {err}'
+        if fu_only and not host_matches(host_of(item['quelle']), 'fu-berlin.de'):
+            return 'restricted subject: each quelle must be a fu-berlin.de page'
+    return None
+
+
+def validate_scholar(value, source, entry, mode):
+    """Validate the forschung.scholar metrics object. Returns an error or None."""
+    err = check_url(source)
+    if err:
+        return f'bad source URL: {err}'
+    if not isinstance(value, dict) or not value:
+        return 'must be a non-empty object'
+    extra = set(value) - (set(SCHOLAR_METRICS) | {'stand'})
+    if extra:
+        return f'unexpected keys: {", ".join(sorted(extra))}'
+    for key in SCHOLAR_METRICS:
+        if key in value:
+            num = value[key]
+            if isinstance(num, bool) or not isinstance(num, int) or num < 0:
+                return f'{key} must be a non-negative integer'
+    if not any(key in value for key in SCHOLAR_METRICS):
+        return 'scholar object has no metrics'
+    stand = value.get('stand')
+    if not isinstance(stand, str) or not STAND_RE.match(stand):
+        return 'stand must be present and formatted YYYY-MM'
+    return None
+
+
 def validate(findings, entry, mode):
     """Quarantine check. Returns (accepted, rejected, not_found_paths)."""
     allowed = set(target_fields_for(entry, mode))
@@ -540,11 +641,23 @@ def validate(findings, entry, mode):
         if is_empty(value):
             rejected.append({'path': path, 'reason': 'empty value'})
             continue
+        if path in OBJ_ARRAY_FIELDS:
+            # Self-sourcing: the source lives in each item's `quelle`, so no
+            # entry in the `sources` map is required.
+            err = validate_obj_array(path, value, entry, mode)
+            if err:
+                rejected.append({'path': path, 'reason': err})
+                continue
+            accepted[path] = {'value': value, 'source': None}
+            continue
         source = sources.get(path)
         if not source:
             rejected.append({'path': path, 'reason': 'no source URL'})
             continue
-        err = validate_field(path, value, source, entry, mode)
+        if path == SCHOLAR_FIELD:
+            err = validate_scholar(value, source, entry, mode)
+        else:
+            err = validate_field(path, value, source, entry, mode)
         if err:
             rejected.append({'path': path, 'reason': err})
             continue
@@ -614,9 +727,11 @@ def print_dry_run(report, queue):
 
 def confirm_or_exit(queue, args):
     n_fields = sum(len(m) for _, m in queue)
-    est_low, est_high = 2 * len(queue), 5 * len(queue)
+    workers = max(1, getattr(args, 'concurrency', 1) or 1)
+    est_low = 2 * len(queue) // workers
+    est_high = 5 * len(queue) // workers
     print(f'Queued: {len(queue)} entries ({n_fields} missing fields), '
-          f'estimated {est_low}-{est_high} min sequential.')
+          f'~{workers}x parallel, estimated {est_low}-{est_high} min.')
     print('Ctrl-C anytime; progress is saved per entry.')
     if len(queue) > 10 and not args.yes:
         if sys.stdin.isatty():
@@ -652,6 +767,10 @@ def main():
                         help='run the group-description pass INSTEAD of the person pass')
     parser.add_argument('--yes', action='store_true',
                         help='skip the large-queue confirmation prompt')
+    parser.add_argument('--concurrency', type=int, default=1, metavar='N',
+                        help='research up to N entries in parallel via separate '
+                             'claude -p subprocesses (default 1; merges to the '
+                             'dataset stay serialized in the main thread)')
     args = parser.parse_args()
 
     # Progress lines must appear live even when stdout is piped/redirected.
@@ -687,108 +806,139 @@ def main():
     totals = {'filled': 0, 'not_found': 0, 'rejected': 0, 'conflicts': 0,
               'failed': 0, 'duration_ms': 0, 'num_turns': 0}
     rejection_reasons = {}
-    rate_limit_streak = 0
     new_pics = 0
+    processed = 0
+    rate_limit_hits = 0
+    aborted = None                       # None | 'interrupt' | 'rate_limit'
     run_start = time.monotonic()
+    workers = max(1, args.concurrency)
 
-    try:
-        for i, (entry, missing) in enumerate(queue, 1):
-            findings, meta = run_agent(build_prompt(entry, missing, mode))
-            totals['duration_ms'] += meta.get('duration_ms', 0)
-            totals['num_turns'] += meta.get('num_turns', 0)
+    # Research runs in parallel (one claude -p subprocess per worker thread),
+    # but every mutation below runs serially in the main thread as each future
+    # completes — so the dataset / state / provenance have a single writer and
+    # the atomic-write invariants are preserved unchanged.
 
-            if findings is None:
-                totals['failed'] += 1
-                log_path = log_raw_output(entry['id'], meta.get('raw'))
-                bucket = state_bucket(state, mode)
-                bucket.setdefault(entry['id'], {'fields': {}})
-                bucket[entry['id']].update(
-                    {'status': 'failed', 'last_run': now_iso()})
-                atomic_write_json(STATE_PATH, state)
-                append_provenance([{
-                    'ts': now_iso(), 'id': entry['id'], 'mode': mode,
-                    'action': 'failed', 'reason': meta['error_class'],
-                    'log': str(log_path.relative_to(REPO_ROOT))}])
-                print(f"[{i}/{len(queue)}] {entry['id']} ... FAILED "
-                      f"({meta['error_class']}) — raw output: {log_path}")
-                if meta['error_class'] == 'rate_limit':
-                    rate_limit_streak += 1
-                    if rate_limit_streak >= 2:
-                        done = i - totals['failed']
-                        sys.exit(
-                            '\nABORT: 2 consecutive rate-limit failures — the '
-                            'Claude usage window looks exhausted.\n'
-                            f'{done}/{len(queue)} entries completed; progress is '
-                            'saved.\nFix: wait for the window to reset, then '
-                            're-run the exact same command — finished entries '
-                            'are skipped automatically.')
-                else:
-                    rate_limit_streak = 0
-                continue
-            rate_limit_streak = 0
+    def record_failure(entry, meta, prefix):
+        totals['failed'] += 1
+        log_path = log_raw_output(entry['id'], meta.get('raw'))
+        bucket = state_bucket(state, mode)
+        bucket.setdefault(entry['id'], {'fields': {}})
+        bucket[entry['id']].update({'status': 'failed', 'last_run': now_iso()})
+        atomic_write_json(STATE_PATH, state)
+        append_provenance([{
+            'ts': now_iso(), 'id': entry['id'], 'mode': mode,
+            'action': 'failed', 'reason': meta['error_class'],
+            'log': str(log_path.relative_to(REPO_ROOT))}])
+        print(f"{prefix} {entry['id']} ... FAILED "
+              f"({meta['error_class']}) — raw output: {log_path}")
 
-            accepted, rejected, not_found = validate(findings, entry, mode)
-            merged, conflicts = merge(entry, accepted, profile_pics)
-            new_pics += 1 if 'profilbild' in merged else 0
+    def record_success(entry, meta, findings, prefix):
+        nonlocal new_pics
+        accepted, rejected, not_found = validate(findings, entry, mode)
+        merged, conflicts = merge(entry, accepted, profile_pics)
+        new_pics += 1 if 'profilbild' in merged else 0
 
-            # Write order matters: dataset first, state last. A crash in
-            # between can only cause a harmless fill-only re-research, never
-            # a state that claims a merge that didn't happen.
-            atomic_write_json(DATASET_PATH, data)
-            atomic_write_json(PROFILE_PICS_PATH, profile_pics)
+        # Stamp when this entry was last researched (overwrite, not fill-only).
+        set_value(entry, LAST_UPDATED_KEY, now_iso())
+        # Write order matters: dataset first, state last. A crash in between
+        # can only cause a harmless fill-only re-research, never a state that
+        # claims a merge that didn't happen.
+        atomic_write_json(DATASET_PATH, data)
+        atomic_write_json(PROFILE_PICS_PATH, profile_pics)
 
-            records = []
-            for path, item in merged.items():
+        records = []
+        for path, item in merged.items():
+            if path in OBJ_ARRAY_FIELDS:
+                # Self-sourcing arrays: one provenance row per item, keyed by
+                # the item's own inline `quelle`.
+                for idx, element in enumerate(item['value']):
+                    records.append({'ts': now_iso(), 'id': entry['id'],
+                                    'mode': mode, 'action': 'merged',
+                                    'field': f'{path}[{idx}]', 'value': element,
+                                    'source': element.get('quelle')})
+            else:
                 records.append({'ts': now_iso(), 'id': entry['id'],
                                 'mode': mode, 'action': 'merged', 'field': path,
                                 'value': item['value'], 'source': item['source']})
-                set_field_state(state, mode, entry['id'], path, 'filled')
-            for rej in rejected:
-                records.append({'ts': now_iso(), 'id': entry['id'],
-                                'mode': mode, 'action': 'rejected',
-                                'field': rej['path'], 'reason': rej['reason']})
-                rejection_reasons[rej['reason']] = \
-                    rejection_reasons.get(rej['reason'], 0) + 1
-                prev = field_state(state, mode, entry['id'], rej['path'])
-                attempts = prev.get('attempts', 0) + 1
-                status = 'not_found' if attempts >= 3 else 'rejected'
-                set_field_state(state, mode, entry['id'], rej['path'],
-                                status, attempts=attempts)
-            for path in conflicts:
-                records.append({'ts': now_iso(), 'id': entry['id'],
-                                'mode': mode, 'action': 'conflict',
-                                'field': path})
-            for path in not_found:
-                records.append({'ts': now_iso(), 'id': entry['id'],
-                                'mode': mode, 'action': 'not_found',
-                                'field': path})
-                set_field_state(state, mode, entry['id'], path, 'not_found')
+            set_field_state(state, mode, entry['id'], path, 'filled')
+        for rej in rejected:
+            records.append({'ts': now_iso(), 'id': entry['id'],
+                            'mode': mode, 'action': 'rejected',
+                            'field': rej['path'], 'reason': rej['reason']})
+            rejection_reasons[rej['reason']] = \
+                rejection_reasons.get(rej['reason'], 0) + 1
+            prev = field_state(state, mode, entry['id'], rej['path'])
+            attempts = prev.get('attempts', 0) + 1
+            status = 'not_found' if attempts >= 3 else 'rejected'
+            set_field_state(state, mode, entry['id'], rej['path'],
+                            status, attempts=attempts)
+        for path in conflicts:
+            records.append({'ts': now_iso(), 'id': entry['id'],
+                            'mode': mode, 'action': 'conflict', 'field': path})
+        for path in not_found:
+            records.append({'ts': now_iso(), 'id': entry['id'],
+                            'mode': mode, 'action': 'not_found', 'field': path})
+            set_field_state(state, mode, entry['id'], path, 'not_found')
 
-            bucket = state_bucket(state, mode)
-            bucket.setdefault(entry['id'], {'fields': {}})
-            bucket[entry['id']].update({
-                'status': 'done' if not rejected and not not_found else 'partial',
-                'last_run': now_iso()})
-            atomic_write_json(STATE_PATH, state)
-            append_provenance(records)
+        bucket = state_bucket(state, mode)
+        bucket.setdefault(entry['id'], {'fields': {}})
+        bucket[entry['id']].update({
+            'status': 'done' if not rejected and not not_found else 'partial',
+            'last_run': now_iso()})
+        atomic_write_json(STATE_PATH, state)
+        append_provenance(records)
 
-            totals['filled'] += len(merged)
-            totals['not_found'] += len(not_found)
-            totals['rejected'] += len(rejected)
-            totals['conflicts'] += len(conflicts)
-            top_reason = rejected[0]['reason'] if rejected else ''
-            elapsed = int(time.monotonic() - run_start)
-            print(f"[{i}/{len(queue)}] {entry['id']} ... "
-                  f"{len(merged)} filled, {len(not_found)} not_found, "
-                  f"{len(rejected)} rejected"
-                  + (f' ({top_reason})' if top_reason else '')
-                  + f" — {meta.get('duration_ms', 0) // 1000}s, "
-                    f"total {elapsed // 60}m{elapsed % 60:02d}s")
+        totals['filled'] += len(merged)
+        totals['not_found'] += len(not_found)
+        totals['rejected'] += len(rejected)
+        totals['conflicts'] += len(conflicts)
+        top_reason = rejected[0]['reason'] if rejected else ''
+        elapsed = int(time.monotonic() - run_start)
+        print(f"{prefix} {entry['id']} ... "
+              f"{len(merged)} filled, {len(not_found)} not_found, "
+              f"{len(rejected)} rejected"
+              + (f' ({top_reason})' if top_reason else '')
+              + f" — {meta.get('duration_ms', 0) // 1000}s, "
+                f"total {elapsed // 60}m{elapsed % 60:02d}s")
+
+    pool = cf.ThreadPoolExecutor(max_workers=workers)
+    futures = {pool.submit(run_agent, build_prompt(entry, missing, mode)): entry
+               for entry, missing in queue}
+    try:
+        for future in cf.as_completed(futures):
+            entry = futures[future]
+            findings, meta = future.result()
+            processed += 1
+            totals['duration_ms'] += meta.get('duration_ms', 0)
+            totals['num_turns'] += meta.get('num_turns', 0)
+            prefix = f'[{processed}/{len(queue)}]'
+            if findings is None:
+                record_failure(entry, meta, prefix)
+                if meta['error_class'] == 'rate_limit':
+                    rate_limit_hits += 1
+                    if rate_limit_hits >= 3:
+                        aborted = 'rate_limit'
+                        break
+                continue
+            record_success(entry, meta, findings, prefix)
     except KeyboardInterrupt:
+        aborted = 'interrupt'
+    finally:
+        for future in futures:
+            future.cancel()
+        pool.shutdown(wait=False, cancel_futures=True)
+
+    if aborted == 'interrupt':
         done = sum(1 for e, _ in queue
                    if state_bucket(state, mode).get(e['id'], {}).get('last_run'))
         print(f'\nInterrupted. Progress saved ({done} entries recorded). '
               'Re-run the same command to resume.')
+        return
+    if aborted == 'rate_limit':
+        print('\nABORT: 3 rate-limit failures — the Claude usage window looks '
+              'exhausted.\nProgress is saved; pending entries were cancelled.\n'
+              'Fix: wait for the window to reset, then re-run the exact same '
+              'command — finished entries are skipped automatically.')
         return
 
     if new_pics:
