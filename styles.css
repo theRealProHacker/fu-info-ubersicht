@@ -362,6 +362,26 @@ ul {
 }
 
 /* =============================================
+   Entity links (?id=... deep links)
+   Real <a> anchors that look like the original text/cards.
+   ============================================= */
+.entity-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.member-list .professor .entity-link {
+    display: block;
+    flex: 1;
+}
+
+a.member-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =============================================
    Modal
    ============================================= */
 .modal {
