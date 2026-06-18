@@ -34,8 +34,11 @@ def load_findings_files(dir_path):
     items = []
     for fp in sorted(dir_path.glob('*.json')):
         try:
-            obj = json.loads(fp.read_text(encoding='utf-8'))
-        except (json.JSONDecodeError, OSError) as exc:
+            # raw_decode tolerates trailing junk after the JSON object (an agent
+            # occasionally appends a stray brace or note).
+            obj, _ = json.JSONDecoder().raw_decode(
+                fp.read_text(encoding='utf-8').lstrip())
+        except (json.JSONDecodeError, OSError, ValueError) as exc:
             print(f'  SKIP {fp.name}: unreadable ({exc})')
             continue
         if isinstance(obj, dict) and 'findings' in obj:

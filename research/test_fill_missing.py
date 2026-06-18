@@ -516,6 +516,16 @@ class StructuredFieldTests(unittest.TestCase):
         self.assertEqual(rejected[0]['path'], 'vita.werdegang')
         self.assertIn('institution', rejected[0]['reason'])
 
+    def test_obj_array_coerces_numeric_year(self):
+        accepted, rejected, _ = fm.validate(self.findings(
+            {'vita': {'ausbildung': [
+                {'grad': 'Dr.', 'institution': 'FU', 'jahr': 2011,
+                 'quelle': 'https://example.org/cv'}]}}),
+            self.person(), 'person')
+        self.assertEqual(rejected, [])
+        self.assertEqual(
+            accepted['vita.ausbildung']['value'][0]['jahr'], '2011')
+
     def test_obj_array_accepts_item_without_year(self):
         # "did a postdoc at Palo Alto" — a year is not required.
         accepted, rejected, _ = fm.validate(self.findings(

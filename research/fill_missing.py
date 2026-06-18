@@ -593,7 +593,13 @@ def validate_obj_array(path, value, entry, mode):
         if extra:
             return f'item has unexpected keys: {", ".join(sorted(extra))}'
         for key in keys:
-            err = check_url(item[key]) if key in url_keys else clean_string(item[key])
+            if key in url_keys:
+                err = check_url(item[key])
+            else:
+                # Agents routinely emit jahr as a number; coerce to string.
+                if isinstance(item[key], (int, float)) and not isinstance(item[key], bool):
+                    item[key] = str(item[key])
+                err = clean_string(item[key])
             if err:
                 return f'{key}: {err}'
         if fu_only and not host_matches(host_of(item['quelle']), 'fu-berlin.de'):
