@@ -4,5 +4,7 @@
 research/.fill_state.json
 research/.fill_logs/
 research/*.json.tmp
+# in-session sub-agent transport (findings drop dir)
+research/.session_findings/
 .gstack/
 __pycache__/

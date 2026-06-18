@@ -507,13 +507,27 @@ class StructuredFieldTests(unittest.TestCase):
         self.assertIsNone(accepted['vita.ausbildung']['source'])
 
     def test_obj_array_missing_required_key_rejected(self):
+        # institution stays required; jahr/zeitraum do NOT.
         _, rejected, _ = fm.validate(self.findings(
             {'vita': {'werdegang': [
-                {'position': 'Postdoc', 'institution': 'MIT',
-                 'quelle': 'https://example.org/cv'}]}}),   # no zeitraum
+                {'position': 'Postdoc', 'zeitraum': '2011-2013',
+                 'quelle': 'https://example.org/cv'}]}}),   # no institution
             self.person(), 'person')
         self.assertEqual(rejected[0]['path'], 'vita.werdegang')
-        self.assertIn('zeitraum', rejected[0]['reason'])
+        self.assertIn('institution', rejected[0]['reason'])
+
+    def test_obj_array_accepts_item_without_year(self):
+        # "did a postdoc at Palo Alto" — a year is not required.
+        accepted, rejected, _ = fm.validate(self.findings(
+            {'vita': {
+                'werdegang': [{'position': 'Postdoc', 'institution': 'Palo Alto',
+                               'quelle': 'https://example.org/cv'}],
+                'ausbildung': [{'grad': 'B.Sc.', 'institution': 'TU Berlin',
+                                'quelle': 'https://example.org/cv'}]}}),
+            self.person(), 'person')
+        self.assertEqual(rejected, [])
+        self.assertIn('vita.werdegang', accepted)
+        self.assertIn('vita.ausbildung', accepted)
 
     def test_obj_array_requires_quelle(self):
         _, rejected, _ = fm.validate(self.findings(

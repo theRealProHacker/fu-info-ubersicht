@@ -110,19 +110,26 @@ Structured "self-sourcing" arrays — each item carries its OWN source as
 
 - `vita.ausbildung` — education, **OLDEST first**. Each item:
   `{"grad": "<degree + subject, verbatim>", "institution": "<awarding institution>",
-    "jahr": "<year, string>", "ort": "<city, optional>", "quelle": "<source URL>"}`
+    "jahr": "<year, if stated>", "ort": "<city, if stated>", "quelle": "<source URL>"}`
 - `vita.werdegang` — career, **NEWEST first**. Each item:
   `{"position": "<role, verbatim>", "institution": "<employer>",
-    "zeitraum": "<seit YYYY | YYYY–YYYY | YYYY–heute | YYYY>",
-    "ort": "<city, optional>", "quelle": "<source URL>"}`.
+    "zeitraum": "<seit YYYY | YYYY–YYYY | YYYY–heute | YYYY, if stated>",
+    "ort": "<city, if stated>", "quelle": "<source URL>"}`.
   Put postdocs, research/industry roles, prior and current positions here.
   Concurrent honorary functions / board seats / committees do NOT belong here.
 - `forschung.veroeffentlichungen` — selected publications, **NEWEST first, at
   most 8** (prefer the author's own "Selected Publications", else most-cited or
   most-recent). Each item:
-  `{"titel": "<paper title, verbatim>", "jahr": "<year>",
-    "venue": "<conference/journal, optional>", "url": "<DOI/paper URL, optional>",
+  `{"titel": "<paper title, verbatim>", "jahr": "<year, if stated>",
+    "venue": "<conference/journal, if stated>", "url": "<DOI/paper URL, if stated>",
     "quelle": "<source URL listing this paper>"}`
+
+**Required vs optional per item:** required are `grad`+`institution`
+(ausbildung), `position`+`institution` (werdegang), `titel`
+(veroeffentlichungen), and always `quelle`. Everything else
+(`jahr` / `zeitraum` / `ort` / `venue` / `url`) is OPTIONAL — include it ONLY if
+the source states it; NEVER invent a year. An entry like "Postdoc at Stanford"
+with no dates is valid and useful.
 
 Structured metrics object — sourced via the `sources` map:
 

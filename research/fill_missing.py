@@ -71,16 +71,16 @@ LIST_OF_STR_FIELDS = {'forschung.interessen'}
 # abuse ceiling that rejects outright.
 OBJ_ARRAY_FIELDS = {
     'vita.ausbildung': {
-        'required_text': ('grad', 'institution', 'jahr'),
-        'optional_text': ('ort',), 'optional_url': (), 'cap': None,
+        'required_text': ('grad', 'institution'),
+        'optional_text': ('jahr', 'ort'), 'optional_url': (), 'cap': None,
     },
     'vita.werdegang': {
-        'required_text': ('position', 'institution', 'zeitraum'),
-        'optional_text': ('ort',), 'optional_url': (), 'cap': None,
+        'required_text': ('position', 'institution'),
+        'optional_text': ('zeitraum', 'ort'), 'optional_url': (), 'cap': None,
     },
     'forschung.veroeffentlichungen': {
-        'required_text': ('titel', 'jahr'),
-        'optional_text': ('venue',), 'optional_url': ('url',), 'cap': 8,
+        'required_text': ('titel',),
+        'optional_text': ('jahr', 'venue'), 'optional_url': ('url',), 'cap': 8,
     },
 }
 MAX_ARRAY_ITEMS = 40

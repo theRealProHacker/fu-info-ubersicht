@@ -103,7 +103,7 @@ Array of objects, chronologically ascending (earliest degree first):
 |---|---|---|
 | `grad` | ✅ | Degree + subject, transcribed verbatim. e.g. `"B.Sc. Informatik"`, `"Diplom-Informatiker"`, `"Dr. rer. nat."`, `"Habilitation"`. |
 | `institution` | ✅ | Awarding institution as named on the source. |
-| `jahr` | ✅ | Year awarded (string). A study-period range is allowed: `"2003–2008"`. |
+| `jahr` | — | Year awarded (string), **if stated**. A study-period range is allowed: `"2003–2008"`. Never invent it. |
 | `ort` | — | City, if stated. Omit if unknown — never guess. |
 | `quelle` | ✅ | Source URL that contains *this* entry (CV items are self-sourcing — see §6). |
 
@@ -129,7 +129,7 @@ Array of objects, reverse-chronological (current position first):
 |---|---|---|
 | `position` | ✅ | Role title, transcribed verbatim. |
 | `institution` | ✅ | Employer / institution. |
-| `zeitraum` | ✅ | `"seit YYYY"`, `"YYYY–YYYY"`, `"YYYY–heute"`, or a single `"YYYY"`. |
+| `zeitraum` | — | `"seit YYYY"`, `"YYYY–YYYY"`, `"YYYY–heute"`, or a single `"YYYY"` — **if stated**. "Postdoc at Stanford" with no dates is valid; never invent dates. |
 | `ort` | — | City, if stated. Omit if unknown. |
 | `quelle` | ✅ | Source URL that contains *this* entry. |
 
@@ -202,7 +202,7 @@ holds the URL to the *full* list.
 | Key | Req? | Notes |
 |---|---|---|
 | `titel` | ✅ | Paper title, transcribed verbatim (preserve diacritics). |
-| `jahr` | ✅ | Year of publication. |
+| `jahr` | — | Year of publication, **if stated**. |
 | `venue` | — | Conference/journal, if stated. |
 | `url` | — | DOI or canonical paper URL, if available. |
 | `quelle` | ✅ | Page that lists this paper (self-sourcing — see §6). |
