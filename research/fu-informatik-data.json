@@ -374,10 +374,6 @@
                     "jahr": 2000,
                     "thema": "Empirical methodology in software engineering"
                 },
-                "positionen": [
-                    "Visiting researcher bei Cordys",
-                    "Visiting researcher bei Crealogix"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom-Informatiker",
@@ -421,6 +417,16 @@
                         "zeitraum": "1990–2000",
                         "ort": "Karlsruhe",
                         "quelle": "https://www.mi.fu-berlin.de/w/Main/LutzPrechelt"
+                    },
+                    {
+                        "position": "Visiting researcher",
+                        "institution": "Cordys",
+                        "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/members/prechelt.html"
+                    },
+                    {
+                        "position": "Visiting researcher",
+                        "institution": "Crealogix",
+                        "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/ag-se/members/prechelt.html"
                     }
                 ]
             },
@@ -519,7 +525,7 @@
                 "gi-botschafter-url": "https://gi.de/netzwerk/hochschulen/botschafterinnen"
             },
             "profilbild": "research/images/prechelt-lutz.jpg",
-            "last_updated": "2026-06-18T03:13:04+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "linnert-barry",
@@ -750,19 +756,17 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "2022-2026: Wissenschaftlicher Mitarbeiter, AG Software Engineering, Freie Universität Berlin"
-                ],
                 "werdegang": [
                     {
                         "position": "Wissenschaftlicher Mitarbeiter (Doktorand), Forschungsthema: Entscheidungsfindung in der Paar-Programmierung",
                         "institution": "Freie Universität Berlin, AG Software Engineering",
                         "quelle": "https://www.mi.fu-berlin.de/w/Main/LinusVervers"
                     }
-                ]
+                ],
+                "ausbildung": []
             },
             "profilbild": "research/images/ververs-linus.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "roth-volker",
@@ -789,13 +793,6 @@
                     "universitaet": "Technische Hochschule Darmstadt",
                     "abschluss": "Dr.-Ing. und Dipl.-Inform."
                 },
-                "positionen": [
-                    "Senior researcher bei FXPAL Palo Alto",
-                    "Visiting professor at Peter Kiewit Institute, University of Nebraska Omaha",
-                    "CTO bei OGM Laboratories Omaha",
-                    "Senior researcher und Deputy department head bei Fraunhofer Gesellschaft",
-                    "Postdoc bei ICSI Berkeley"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Dipl.-Inform.",
@@ -939,7 +936,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T03:43:26+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "mueller-birn-claudia",
@@ -966,13 +963,6 @@
                 "linkedin": "https://www.linkedin.com/in/claudia-m%C3%BCller-birn-50443a359/"
             },
             "vita": {
-                "positionen": [
-                    "seit 2019: Associate Professor (tenured) Human-Centered Computing, FU Berlin",
-                    "2012: Assistant Professor Human-Centered Computing, FU Berlin",
-                    "2010: Post-doctoral Researcher, Carnegie Mellon University (US)",
-                    "2008: Dissertation (Dr. rer. nat.) in Business Informatics, University of Potsdam",
-                    "2004: Diploma (Dipl.-Ing.) in Industrial Engineering, TU Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom-Ingenieur (Dipl.-Ing.) Wirtschaftsingenieurwesen",
@@ -1134,7 +1124,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "deter-sylvia",
@@ -1178,11 +1168,6 @@
                 "publikationen": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/heiser.html"
             },
             "vita": {
-                "positionen": [
-                    "seit 2024: Wissenschaftlicher Mitarbeiter, AG HCC, FU Berlin",
-                    "M.Sc. Computer Science (Informatik), RWTH Aachen University",
-                    "B.Sc. Computer Science (Informatik), RWTH Aachen University"
-                ],
                 "ausbildung": [
                     {
                         "grad": "B.Sc. Informatik",
@@ -1221,7 +1206,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00",
+            "last_updated": "2026-06-18T08:57:38+00:00",
             "profilbild": "research/images/heiser-malte.jpg"
         },
         {
@@ -1497,12 +1482,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit 2022: Wissenschaftlicher Mitarbeiter, Freie Universität Berlin, AG Human-Centered Computing",
-                    "2021: M.Sc. in Communication Science (mit Auszeichnung), University of Amsterdam",
-                    "2017-2021: User-Experience-Berater, Digitalisierungsprojekte (E-Government)",
-                    "2017: B.A. in Communication in Social and Economic Contexts, Universität der Künste Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "B.A. in Communication in Social and Economic Contexts (GWK)",
@@ -1529,6 +1508,12 @@
                         "position": "User-Experience Consultant, Digitalisierungsprojekte im E-Government-Kontext",
                         "institution": "nicht angegeben",
                         "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/leimstaedtner.html"
+                    },
+                    {
+                        "position": "User-Experience-Berater",
+                        "institution": "Digitalisierungsprojekte (E-Government)",
+                        "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/leimstaedtner.html",
+                        "zeitraum": "2017-2021"
                     }
                 ]
             },
@@ -1553,7 +1538,7 @@
                 ]
             },
             "profilbild": "research/images/leimstaedtner-david.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "linke-diane",
@@ -1607,9 +1592,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit 2020: Wissenschaftliche Mitarbeiterin at HCC Group, Freie Universität Berlin"
-                ],
                 "werdegang": [
                     {
                         "position": "Wissenschaftliche Mitarbeiterin (Affiliated Researcher, finalizing doctoral dissertation)",
@@ -1618,7 +1600,8 @@
                         "ort": "Berlin",
                         "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/affiliated_researchers/linke.html"
                     }
-                ]
+                ],
+                "ausbildung": []
             },
             "lehre": {
                 "kurse": [
@@ -1640,7 +1623,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00",
+            "last_updated": "2026-06-18T08:57:38+00:00",
             "profilbild": "research/images/linke-diane.jpg"
         },
         {
@@ -1841,15 +1824,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit 2020: Interaction Designer & Design Researcher at Human-Centered Computing Research Group, Freie Universität Berlin",
-                    "2023-2025: Interaction Designer & Design Researcher at Cluster of Excellence Matters of Activity, Humboldt-Universität zu Berlin",
-                    "seit 2018: Freelance Designer",
-                    "2021-2025: PhD in Design Studies at Burg Giebichenstein University of Art & Design Halle",
-                    "2018-2019: M.A. Product & Interaction Design at Weißensee School of Art & Design Berlin",
-                    "2014-2018: B.A. Product & Interaction Design at Weißensee School of Art & Design Berlin",
-                    "2012-2014: Technical Assistant for Product Design at Marcel-Breuer-Schule Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Technischer Assistent für Produktgestaltung",
@@ -1912,6 +1886,12 @@
                         "institution": "Selbstständig",
                         "zeitraum": "seit 2018",
                         "quelle": "https://petersoerries.com/"
+                    },
+                    {
+                        "position": "Technical Assistant for Product Design",
+                        "institution": "Marcel-Breuer-Schule Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/soerries.html",
+                        "zeitraum": "2012-2014"
                     }
                 ]
             },
@@ -1936,7 +1916,7 @@
                 ]
             },
             "profilbild": "research/images/soerries-peter.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "reinert-knut",
@@ -2035,13 +2015,6 @@
             },
             "profilbild": "research/images/reinert-knut.jpg",
             "vita": {
-                "positionen": [
-                    "seit 2014: Max Planck Fellow at Max-Planck-Institut für Molekulare Genetik, Berlin",
-                    "seit 2002: Professor for Algorithmic Bioinformatics at Freie Universität Berlin",
-                    "1999-2002: Computer scientist, Informatics Research Group at Celera Genomics, Rockville, USA",
-                    "1999: Dr. Ing. (Dissertation), Max-Planck-Institut für Informatik Saarbrücken, graduated with honors",
-                    "1994: Diploma in Computer Science, Max-Planck-Institut für Informatik Saarbrücken and Universität des Saarlandes"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diploma in Computer Science",
@@ -2118,7 +2091,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T03:14:09+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "rote-guenter",
@@ -2225,18 +2198,7 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit 1. April 1999: Professor, Freie Universität Berlin",
-                    "1988: Promotion (Dr. techn.), Technische Universität Graz"
-                ],
                 "ausbildung": [
-                    {
-                        "grad": "Diplom, Technische Mathematik",
-                        "institution": "Technische Universität Graz",
-                        "jahr": "ca. 1984",
-                        "ort": "Graz",
-                        "quelle": "http://page.mi.fu-berlin.de/rote/about_me/Mei%20Lebm.html"
-                    },
                     {
                         "grad": "Dr. techn.",
                         "institution": "Technische Universität Graz",
@@ -2248,6 +2210,13 @@
                         "grad": "Habilitation",
                         "institution": "Technische Universität Graz",
                         "jahr": "1992",
+                        "ort": "Graz",
+                        "quelle": "http://page.mi.fu-berlin.de/rote/about_me/Mei%20Lebm.html"
+                    },
+                    {
+                        "grad": "Diplom, Technische Mathematik",
+                        "institution": "Technische Universität Graz",
+                        "jahr": "ca. 1984",
                         "ort": "Graz",
                         "quelle": "http://page.mi.fu-berlin.de/rote/about_me/Mei%20Lebm.html"
                     }
@@ -2297,7 +2266,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T03:18:38+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "schiller-jochen",
@@ -2415,18 +2384,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit 2022: Chief Information Officer (CIO), Freie Universität Berlin",
-                    "seit 2022: Geschäftsführer, TURMsolutions GmbH",
-                    "2017–2023: Vorstandsmitglied, Einstein Center Digital Future",
-                    "2012: Gründer Innovationszentrum Öffentliche Sicherheit, Fraunhofer FOKUS",
-                    "2009: Gründer Forschungsforum Öffentliche Sicherheit, Freie Universität Berlin",
-                    "2007–2010: Vizepräsident, Freie Universität Berlin",
-                    "seit April 2001: Professor für Technische Informatik, Freie Universität Berlin",
-                    "April 2003–März 2007: Dekan, Fachbereich Mathematik und Informatik, Freie Universität Berlin",
-                    "2002–2003: Stellvertretender Geschäftsführender Direktor, Institut für Informatik, Freie Universität Berlin",
-                    "1996: Promotion, Universität Karlsruhe (TH)"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom Informatik",
@@ -2506,10 +2463,34 @@
                         "zeitraum": "1996 - 1997",
                         "ort": "Uppsala, Schweden",
                         "quelle": "https://de.wikipedia.org/wiki/Jochen_Schiller"
+                    },
+                    {
+                        "position": "Geschäftsführer",
+                        "institution": "TURMsolutions GmbH",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/schiller.html",
+                        "zeitraum": "seit 2022"
+                    },
+                    {
+                        "position": "Vorstandsmitglied",
+                        "institution": "Einstein Center Digital Future",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/schiller.html",
+                        "zeitraum": "2017–2023"
+                    },
+                    {
+                        "position": "Gründer Innovationszentrum Öffentliche Sicherheit",
+                        "institution": "Fraunhofer FOKUS",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/schiller.html",
+                        "zeitraum": "2012"
+                    },
+                    {
+                        "position": "Gründer Forschungsforum Öffentliche Sicherheit",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/schiller.html",
+                        "zeitraum": "2009"
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "bahe-stefanie",
@@ -2623,13 +2604,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit 2019: ECDF-Professor for Open and Secure IoT Ecosystem at Freie Universitat Berlin and Inria",
-                    "seit 2007: Scientific researcher at INRIA",
-                    "2013-2014: Guest Professor at Freie Universitat Berlin (DAAD Grant)",
-                    "2003-2005: Research Engineer at Hitachi Europe and Hitachi Research Lab, Tokyo",
-                    "2001-2002: Software Engineer at Metro-Optix, Santa Clara, CA"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Ingenieur-Diplom (Master of Science, Télécommunications und Informatik)",
@@ -2687,6 +2661,12 @@
                         "zeitraum": "2001–2002",
                         "ort": "Santa Clara, CA, USA",
                         "quelle": "https://www.digital-future.berlin/en/about-us/professors/prof-dr-emmanuel-baccelli"
+                    },
+                    {
+                        "position": "Guest Professor",
+                        "institution": "Freie Universitat Berlin (DAAD Grant)",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/baccelli.html",
+                        "zeitraum": "2013-2014"
                     }
                 ]
             },
@@ -2762,7 +2742,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "groth-larissa",
@@ -2801,16 +2781,18 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "Wissenschaftliche Mitarbeiterin, Freie Universität Berlin, Institut für Informatik, AG Tech",
-                    "2023: Dissertation (Dr.), Freie Universität Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Dr. rer. nat. (Promotion)",
                         "institution": "Freie Universität Berlin, Institut für Informatik",
                         "jahr": "2023",
                         "quelle": "https://refubium.fu-berlin.de/handle/fub188/37741"
+                    },
+                    {
+                        "grad": "Dissertation (Dr.)",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/groth.html",
+                        "jahr": "2023"
                     }
                 ],
                 "werdegang": [
@@ -2854,7 +2836,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "honcharenko-maryna",
@@ -2905,12 +2887,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit 2022: Leiterin des Zukunftslabors Sicherheit, Forschungsforum Öffentliche Sicherheit / Freie Universität Berlin",
-                    "aktuell: Doktorandin (Informatik), Freie Universität Berlin",
-                    "M.A. Europäische Literaturen, Humboldt-Universität zu Berlin und Sorbonne IV, Paris",
-                    "B.A. Informatik, Deutscher Philologie und Publizistik- und Kommunikationswissenschaft, Freie Universität Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Bachelor (Informatik, Deutsche Philologie, Publizistik- und Kommunikationswissenschaft)",
@@ -2924,6 +2900,11 @@
                     },
                     {
                         "grad": "Promotion (Informatik, laufend)",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/lindner.html"
+                    },
+                    {
+                        "grad": "B.A. Informatik, Deutsche Philologie und Publizistik- und Kommunikationswissenschaft",
                         "institution": "Freie Universität Berlin",
                         "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/lindner.html"
                     }
@@ -2946,6 +2927,12 @@
                         "position": "Wissenschaftliche Mitarbeiterin, AG Interdisziplinäre Sicherheitsforschung und Forschungsforum Öffentliche Sicherheit",
                         "institution": "Freie Universität Berlin",
                         "quelle": "https://www.sicherheit-forschung.de/ueber_uns/mitarbeitende/lindner/index.html"
+                    },
+                    {
+                        "position": "Doktorandin (Informatik)",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/lindner.html",
+                        "zeitraum": "aktuell"
                     }
                 ]
             },
@@ -2958,7 +2945,7 @@
                 ]
             },
             "profilbild": "research/images/lindner-ann-kathrin.png",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "rossmann-sophia",
@@ -3048,10 +3035,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "2018–2023: Research Associate, Technical University of Munich",
-                    "seit 2023: Wissenschaftliche Mitarbeiterin (BeLIFE-Projekt), FU Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Bachelor of Arts (Kommunikationswissenschaft und Psychologie)",
@@ -3087,6 +3070,12 @@
                         "zeitraum": "2018–2023",
                         "ort": "München",
                         "quelle": "https://www.sicherheit-forschung.de/ueber_uns/mitarbeitende/rossmann/index.html"
+                    },
+                    {
+                        "position": "Research Associate",
+                        "institution": "Technical University of Munich",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-tech/staff/0Current/rossmann.html",
+                        "zeitraum": "2018–2023"
                     }
                 ]
             },
@@ -3103,7 +3092,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "terfurth-leonie",
@@ -3196,9 +3185,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit Februar 2024: Wissenschaftliche Mitarbeiterin, Technische Universität Braunschweig (Abteilung Psychologie soziotechnischer Systeme)"
-                ],
                 "ausbildung": [
                     {
                         "grad": "M.Sc. Human Factors",
@@ -3238,7 +3224,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "wawerek-marius",
@@ -3275,11 +3261,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "Wissenschaftlicher Mitarbeiter at AG Computer Systems and Telematics, Freie Universität Berlin",
-                    "2024: M.Sc. Informatik at Freie Universität Berlin",
-                    "2021: B.Sc. Informatik/Computational Science at Universität Potsdam"
-                ],
                 "ausbildung": [
                     {
                         "grad": "B.Sc. Informatik/Computational Science",
@@ -3345,7 +3326,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "knoll-tamara",
@@ -3476,11 +3457,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit 2024: Postdoctoral Researcher at Max Planck Institute for Informatics, Saarbrücken",
-                    "2024: Dissertation (Search trees on graphs), Freie Universität Berlin",
-                    "2019: M.Sc. (Thesis: Complexity of Permutation Pattern Matching), Freie Universität Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "M.Sc.",
@@ -3489,10 +3465,22 @@
                         "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/theses/master_finished/berendsohn_benjamin/index.html"
                     },
                     {
+                        "grad": "M.Sc. (Thesis: Complexity of Permutation Pattern Matching)",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Berendsohn_Benjamin.html",
+                        "jahr": "2019"
+                    },
+                    {
                         "grad": "Dr. rer. nat. (PhD)",
                         "institution": "Freie Universität Berlin",
                         "jahr": "2024",
                         "quelle": "https://page.mi.fu-berlin.de/beab/"
+                    },
+                    {
+                        "grad": "Dissertation (Search trees on graphs)",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Berendsohn_Benjamin.html",
+                        "jahr": "2024"
                     }
                 ],
                 "werdegang": [
@@ -3531,7 +3519,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00",
+            "last_updated": "2026-06-18T08:57:38+00:00",
             "profilbild": "research/images/berendsohn-benjamin.jpg"
         },
         {
@@ -3613,11 +3601,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "Wissenschaftliche Mitarbeiterin, FU Berlin Institut für Informatik, AG Theoretische Informatik",
-                    "Leitung der ProInformatik, Freie Universität Berlin",
-                    "2021: Promotion (Dr. rer. nat.), Freie Universität Berlin — Dissertation: Geometric Graphs: Reachability, Long Trees and Short Cycles"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Dr. rer. nat.",
@@ -3631,6 +3614,11 @@
                         "position": "Wissenschaftliche Mitarbeiterin",
                         "institution": "Freie Universität Berlin, Institut für Informatik, AG Theoretische Informatik",
                         "ort": "Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Klost_Katharina.html"
+                    },
+                    {
+                        "position": "Leitung der ProInformatik",
+                        "institution": "Freie Universität Berlin",
                         "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Klost_Katharina.html"
                     }
                 ]
@@ -3672,7 +3660,7 @@
                 ]
             },
             "profilbild": "research/images/klost-katharina.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "willert-max",
@@ -3752,10 +3740,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "2021: Dissertation (Routing and Stabbing), Freie Universität Berlin",
-                    "2016: Master of Science (Routing Schemes for Disk Graphs and Polygons), Freie Universität Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Bachelor of Science Informatik",
@@ -3774,6 +3758,12 @@
                         "institution": "Freie Universität Berlin",
                         "jahr": "2021",
                         "quelle": "http://page.mi.fu-berlin.de/willerma/"
+                    },
+                    {
+                        "grad": "Dissertation (Routing and Stabbing)",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/wimis/Willert_Max.html",
+                        "jahr": "2021"
                     }
                 ],
                 "werdegang": [
@@ -3978,7 +3968,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "wunder-gerhard",
@@ -4079,14 +4069,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "2021-heute: Professor für Cybersecurity and AI (Stiftungsprofessur Bundesdruckerei GmbH) an der Freien Universität Berlin",
-                    "2015-2021: Heisenberg-Fellow (DFG) und Leiter der Heisenberg Communications and Information Theory Group an der Freien Universität Berlin",
-                    "2007-2015: Privatdozent (Habilitation) an der TU Berlin",
-                    "2003-2015: Gruppenleiter am Fraunhofer Heinrich-Hertz-Institut, Berlin",
-                    "2003: Dr.-Ing. (summa cum laude), TU Berlin",
-                    "1999: Dipl.-Ing. Elektrotechnik (mit Auszeichnung), TU Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom-Ingenieur (Dipl.-Ing.) Elektrotechnik",
@@ -4182,7 +4164,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "schoettker-soehl-susanne",
@@ -4296,10 +4278,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit 2020: Wissenschaftlicher Mitarbeiter, Institut für Informatik, Freie Universität Berlin",
-                    "seit 2020: Guest Scientist, Department of Collective Behavior, Max Planck Institute for Animal Behavior, Konstanz"
-                ],
                 "werdegang": [
                     {
                         "position": "Wissenschaftlicher Mitarbeiter",
@@ -4312,11 +4290,18 @@
                         "institution": "Max Planck Institute of Animal Behavior, Department of Collective Behavior",
                         "ort": "Konstanz, Deutschland",
                         "quelle": "https://www.ab.mpg.de/person/103436/2736"
+                    },
+                    {
+                        "position": "Wissenschaftlicher Mitarbeiter",
+                        "institution": "Institut für Informatik, Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Scientific-Staff/Davidson.html",
+                        "zeitraum": "seit 2020"
                     }
-                ]
+                ],
+                "ausbildung": []
             },
             "profilbild": "research/images/davidson-jacob.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "popp-stefan",
@@ -4397,10 +4382,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit 2023: Wissenschaftlicher Mitarbeiter, Freie Universität Berlin, Dahlem Center for Machine Learning and Robotics",
-                    "2023: Dissertation (PhD), Ecology and Evolutionary Biology, University of Arizona"
-                ],
                 "werdegang": [
                     {
                         "position": "Wissenschaftliche/r Mitarbeiter/in (Postdoc)",
@@ -4466,7 +4447,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:26:40+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "shang-zhihao",
@@ -4553,9 +4534,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "2020: Dissertation (Performance Evaluation of the Control Plane in OpenFlow Networks), Freie Universität Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Bachelor of Science in Computer Science and Technology",
@@ -4574,6 +4552,12 @@
                         "institution": "Freie Universität Berlin",
                         "jahr": "2015-2019",
                         "quelle": "https://shangzhihao.github.io/about/"
+                    },
+                    {
+                        "grad": "Dissertation (Performance Evaluation of the Control Plane in OpenFlow Networks)",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/shang.html",
+                        "jahr": "2020"
                     }
                 ],
                 "werdegang": [
@@ -4592,7 +4576,7 @@
                 ]
             },
             "profilbild": "research/images/shang-zhihao.png",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "wu-han",
@@ -4676,13 +4660,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit 2024: Lecturer, University of Southampton",
-                    "2023-2024: Research Fellow, University of Birmingham",
-                    "2021-2023: Research Associate, Newcastle University",
-                    "2020: PhD (Computer Science), Free University of Berlin",
-                    "2016-2020: PhD student, AG-DDS, Free University of Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Bachelor of Science",
@@ -4695,6 +4672,12 @@
                         "institution": "Tongji University",
                         "jahr": "2016",
                         "quelle": "https://hanwu.ac.cn/"
+                    },
+                    {
+                        "grad": "PhD student",
+                        "institution": "AG-DDS, Free University of Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/HanWu.html",
+                        "jahr": "2016"
                     },
                     {
                         "grad": "PhD in Computer Science",
@@ -4731,7 +4714,7 @@
                 ]
             },
             "profilbild": "research/images/wu-han.png",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "peng-guang",
@@ -4813,9 +4796,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "2017-2021: Wissenschaftlicher Mitarbeiter (PhD student), Freie Universität Berlin, AG-DDS"
-                ],
                 "werdegang": [
                     {
                         "position": "PhD student",
@@ -4824,10 +4804,18 @@
                         "ort": "Berlin, Deutschland",
                         "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/former-members/peng-guang.html"
                     }
+                ],
+                "ausbildung": [
+                    {
+                        "grad": "Wissenschaftlicher Mitarbeiter (PhD student)",
+                        "institution": "Freie Universität Berlin, AG-DDS",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/guang.html",
+                        "jahr": "2017"
+                    }
                 ]
             },
             "profilbild": "research/images/peng-guang.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "ma-xuyang",
@@ -4914,10 +4902,13 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "2020–2022: Visiting PhD student at Freie Universität Berlin, AG Dependable Distributed Systems"
-                ],
                 "ausbildung": [
+                    {
+                        "grad": "Visiting PhD student",
+                        "institution": "Freie Universität Berlin, AG Dependable Distributed Systems",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-dds/staff/ma_xuyang.html",
+                        "jahr": "2020"
+                    },
                     {
                         "grad": "PhD",
                         "institution": "University of Electronic Science and Technology of China (UESTC)",
@@ -4935,7 +4926,7 @@
                 ]
             },
             "profilbild": "research/images/ma-xuyang.png",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "milde-gesine",
@@ -5042,11 +5033,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "2023-heute: Associate Senior Lecturer, Department of Software Engineering, Blekinge Institute of Technology (BTH), Karlskrona, Sweden",
-                    "2020: Promotion (PhD) in Computer Science, Freie Universitat Berlin",
-                    "bis 2023: adjunct (external, not employed) member of the Software Engineering research group, Freie Universitat Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Bachelor of Science",
@@ -5168,7 +5154,7 @@
                 ]
             },
             "profilbild": "research/images/zieris-franz.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "lohmeier-sebastian",
@@ -5258,11 +5244,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit April 2017: Dissertation (Perspectivation of Java Source Code using Anaphors), Freie Universität Berlin (betreut von Lutz Prechelt)",
-                    "2015: Master's thesis on indirect anaphors in programming",
-                    "2011: Bachelor's thesis on statically resolved indirect anaphora"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Bachelor-Thesis",
@@ -5281,6 +5262,12 @@
                         "institution": "Freie Universität Berlin",
                         "jahr": "2017",
                         "quelle": "http://monochromata.de/lop"
+                    },
+                    {
+                        "grad": "Dissertation (Perspectivation of Java Source Code using Anaphors)",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/w/Main/SebastianLohmeier",
+                        "jahr": "2017"
                     }
                 ],
                 "werdegang": [
@@ -5298,7 +5285,7 @@
                 ]
             },
             "profilbild": "research/images/lohmeier-sebastian.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "israt-fahmida",
@@ -5334,9 +5321,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit 2025: External Research Associate, Software Engineering research group, Institut für Informatik, Freie Universität Berlin"
-                ],
                 "werdegang": [
                     {
                         "position": "Research Associate (externe wissenschaftliche Mitarbeiterin)",
@@ -5351,9 +5335,10 @@
                         "ort": "Berlin, Deutschland",
                         "quelle": "https://de.linkedin.com/in/fahmida-israt-60a67985"
                     }
-                ]
+                ],
+                "ausbildung": []
             },
-            "last_updated": "2026-06-18T08:11:07+00:00",
+            "last_updated": "2026-06-18T08:57:38+00:00",
             "profilbild": "research/images/israt-fahmida.jpg"
         },
         {
@@ -5388,9 +5373,6 @@
                 "email": "mani.esmaeili@fu-berlin.de"
             },
             "vita": {
-                "positionen": [
-                    "2010: Diplomarbeit (Dipl.-Ing.), Technische Universität Wien, Institut für Gestaltungs- und Wirkungsforschung"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplomarbeit (Diplom-Ingenieur)",
@@ -5398,9 +5380,10 @@
                         "jahr": "2010",
                         "quelle": "https://repositum.tuwien.at/handle/20.500.12708/161402"
                     }
-                ]
+                ],
+                "werdegang": []
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "gueldenring-benjamin",
@@ -5585,10 +5568,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "Doktorand, AG Sichere Identität, Institut für Informatik, Freie Universität Berlin",
-                    "Co-CEO und Chief Technology Officer, Alpha Strike Labs GmbH, Berlin (gegründet Oktober 2017)"
-                ],
                 "ausbildung": [
                     {
                         "grad": "M.Sc. Informatik",
@@ -5612,7 +5591,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "kovacs-robert",
@@ -5700,9 +5679,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "2022: Dissertation (Dr.-Ing.), Human-Scale Personal Fabrication, Hasso Plattner Institute / Universität Potsdam"
-                ],
                 "ausbildung": [
                     {
                         "grad": "PhD (Promotion)",
@@ -5727,7 +5703,7 @@
                 ]
             },
             "profilbild": "research/images/kovacs-robert.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "wolter-katinka",
@@ -5826,19 +5802,6 @@
             },
             "profilbild": "research/images/wolter-katinka.jpg",
             "vita": {
-                "positionen": [
-                    "seit Oktober 2012: Professor at Freie Universität Berlin, Department of Mathematics and Computer Science",
-                    "01/2017-04/2017: Visiting Professor at Imperial College London (Center for Cryptocurrency Research)",
-                    "02/2012-09/2012: Lecturer at Newcastle University",
-                    "11/2010-04/2011: Visiting Professor at Cochin University, Kerala, India",
-                    "09/2009-02/2011: Senior research associate at FU Berlin",
-                    "07/2009-08/2009: Senior research associate at Newcastle University",
-                    "04/2002-06/2009: Assistant professor at Humboldt-University Berlin",
-                    "01/2008: Habilitation in Computer Science, Humboldt-University Berlin",
-                    "05/2000-08/2000: Visiting researcher at Hewlett-Packard Laboratories, Palo Alto",
-                    "08/1999: PhD in Computer Science, TU Berlin",
-                    "10/1991-08/1995: Diploma in Computer Science with Statistics, TU Berlin"
-                ],
                 "werdegang": [
                     {
                         "position": "Professorin",
@@ -5888,9 +5851,21 @@
                         "zeitraum": "Mai–August 2000",
                         "ort": "Palo Alto, USA",
                         "quelle": "http://page.mi.fu-berlin.de/katinkaw/"
+                    },
+                    {
+                        "position": "Professor",
+                        "institution": "Freie Universität Berlin, Department of Mathematics and Computer Science",
+                        "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/wolter.html",
+                        "zeitraum": "seit Oktober 2012"
                     }
                 ],
                 "ausbildung": [
+                    {
+                        "grad": "Diploma in Computer Science with Statistics",
+                        "institution": "TU Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/ag-dds/staff/wolter.html",
+                        "jahr": "1991"
+                    },
                     {
                         "grad": "Diplom Informatik mit Statistik",
                         "institution": "Technische Universität Berlin",
@@ -5926,7 +5901,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:26:40+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "landgraf-tim",
@@ -5952,10 +5927,6 @@
                 "dblp": "https://dblp.org/pid/04/10008.html"
             },
             "vita": {
-                "positionen": [
-                    "Professor für Artificial & Collective Intelligence an der FU Berlin",
-                    "Leiter der Biorobotics Lab AG"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Promotion (PhD)",
@@ -5981,6 +5952,11 @@
                         "position": "Postdoc (Fulbright Fellow), Studium der Honigbienen-Biologie bei Kirk Visscher",
                         "institution": "University of California, Riverside",
                         "quelle": "https://www.ted.com/talks/tim_landgraf_swarm_intelligence_from_bees_feeding_bees_to_cars_charging_cars"
+                    },
+                    {
+                        "position": "Professor für Artificial & Collective Intelligence",
+                        "institution": "FU Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/Tim_Landgraf.html"
                     }
                 ]
             },
@@ -6091,7 +6067,7 @@
                 ]
             },
             "profilbild": "research/images/landgraf-tim.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "margraf-marian",
@@ -6113,10 +6089,6 @@
                 "orcid": "https://orcid.org/0009-0005-8577-1318"
             },
             "vita": {
-                "positionen": [
-                    "Seit 10/2021: Professor für Informationssicherheit an der FU Berlin",
-                    "Abteilungsleiter 'Secure Systems Engineering' am Fraunhofer AISEC"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom Mathematik",
@@ -6258,7 +6230,7 @@
                 ]
             },
             "profilbild": "research/images/margraf-marian.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "romeike-ralf",
@@ -6347,11 +6319,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit 2018: Professor (Didaktik der Informatik), Freie Universität Berlin",
-                    "2013–2018: Professor für Didaktik der Informatik, Friedrich-Alexander-Universität Erlangen-Nürnberg",
-                    "2008: Dissertation (Dr. rer. nat.), Universität Potsdam (Kreativität im Informatikunterricht)"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Promotion (Dr.)",
@@ -6388,7 +6355,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "waehlisch-matthias",
@@ -6685,17 +6652,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit 2019: ECDF Professor für Semantic Data Intelligence at Freie Universität Berlin and Fraunhofer FOKUS",
-                    "seit 2015: Director of Data Analytics Center (DANA) at Fraunhofer FOKUS",
-                    "seit 2008: Professor and Head of Corporate Semantic Web Group (AG-CSW) at Freie Universität Berlin",
-                    "2012–2014: Associate Professor at Poznan University of Economics, Poland",
-                    "2008: Post-doctoral researcher at Biotec Innovation Centre, Dresden",
-                    "2007: Postdoctoral fellow at National Research Council (NRC), Canada",
-                    "2007: Doctorate in Information Systems, Technical University of Munich",
-                    "2003–2007: Research associate at Technical University of Munich",
-                    "2002: Master in Business Informatics, Friedrich-Alexander-University Erlangen/Nuremberg"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Bachelor of Science in Betriebswirtschaftslehre",
@@ -6771,6 +6727,12 @@
                         "zeitraum": "2003-2007",
                         "ort": "München",
                         "quelle": "https://www.digital-future.berlin/en/about-us/professors/prof-dr-adrian-paschke"
+                    },
+                    {
+                        "position": "Doctorate in Information Systems",
+                        "institution": "Technical University of Munich",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-csw/Members/members/paschke.html",
+                        "zeitraum": "2007"
                     }
                 ]
             },
@@ -6810,7 +6772,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "goehring-daniel",
@@ -6909,17 +6871,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit 2015: Juniorprofessor, Mobile Robotics and Autonomous Vehicles at Freie Universität Berlin",
-                    "2022: Habilitation in Informatik at Freie Universität Berlin",
-                    "2014–2015: Postdoctoral researcher and project leader for self-driving cars at Freie Universität Berlin",
-                    "2012–2014: Postdoctoral researcher at International Computer Science Institute, Berkeley, California",
-                    "2010–2011: Postdoctoral researcher at AutoNOMOS-Labs, Freie Universität Berlin",
-                    "2009–2010: Researcher, Transport Research division at German Aerospace Center (DLR), Berlin",
-                    "2009: Dissertation (Dr. rer. nat.) at Humboldt-Universität zu Berlin",
-                    "2005–2009: Researcher in Artificial Intelligence group at Humboldt-Universität zu Berlin",
-                    "1999–2004: Diplom in Informatik at Humboldt-Universität zu Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom-Informatiker",
@@ -7041,7 +6992,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T03:43:26+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "benzmueller-christoph",
@@ -7141,16 +7092,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit 2022: Full Professor (Chair for AI Systems Engineering) at Otto-Friedrich-Universität Bamberg",
-                    "seit 2021: apl. Professor at Freie Universität Berlin, Institut für Informatik",
-                    "2012-2021: DFG Heisenberg Fellow at Freie Universität Berlin",
-                    "2008-2009: Full Professor at International University in Germany, Bruchsal",
-                    "2006: Habilitation at Saarland University",
-                    "2001-2008: Akademischer Rat (Lecturer) at Saarland University",
-                    "1999: PhD (Dr. rer. nat.) at Saarland University",
-                    "1989-1995: Diploma, Computer Science at Saarland University"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Allgemeine Hochschulreife (Abitur)",
@@ -7313,7 +7254,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "rojas-raul",
@@ -7402,14 +7343,27 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "Fred D. Gibson Jr. Endowed Professor in Science, University of Nevada, Reno",
-                    "1997–2020: Professor of Artificial Intelligence, Freie Universität Berlin",
-                    "1994–1997: Professor of Artificial Intelligence, Martin-Luther-Universität Halle-Wittenberg",
-                    "1994: Habilitation in Computer Science, Freie Universität Berlin",
-                    "1988: Dissertation (Economics), Freie Universität Berlin"
-                ],
                 "ausbildung": [
+                    {
+                        "grad": "Promotion (Dr. phil.) in Wirtschaftswissenschaften",
+                        "institution": "Freie Universität Berlin",
+                        "jahr": "1988",
+                        "ort": "Berlin",
+                        "quelle": "https://www.mathgenealogy.org/id.php?id=166939"
+                    },
+                    {
+                        "grad": "Dissertation (Economics)",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ki/members/Professoren/rojas_raul.html",
+                        "jahr": "1988"
+                    },
+                    {
+                        "grad": "Habilitation in Informatik",
+                        "institution": "Freie Universität Berlin",
+                        "jahr": "1994",
+                        "ort": "Berlin",
+                        "quelle": "https://dcmlr.inf.fu-berlin.de/rojas/curriculum-vitae/"
+                    },
                     {
                         "grad": "Licenciatura en Física y Matemáticas",
                         "institution": "Escuela Superior de Física y Matemáticas, Instituto Politécnico Nacional",
@@ -7421,20 +7375,6 @@
                         "institution": "Universidad Nacional Autónoma de México (UNAM)",
                         "ort": "Mexico City",
                         "quelle": "https://es.wikipedia.org/wiki/Ra%C3%BAl_Rojas"
-                    },
-                    {
-                        "grad": "Promotion (Dr. phil.) in Wirtschaftswissenschaften",
-                        "institution": "Freie Universität Berlin",
-                        "jahr": "1988",
-                        "ort": "Berlin",
-                        "quelle": "https://www.mathgenealogy.org/id.php?id=166939"
-                    },
-                    {
-                        "grad": "Habilitation in Informatik",
-                        "institution": "Freie Universität Berlin",
-                        "jahr": "1994",
-                        "ort": "Berlin",
-                        "quelle": "https://dcmlr.inf.fu-berlin.de/rojas/curriculum-vitae/"
                     }
                 ],
                 "werdegang": [
@@ -7497,7 +7437,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "voisard-agnes",
@@ -7835,16 +7775,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit 2023: Assistant Professor at Free University Berlin",
-                    "seit 2023: Adjunct Assistant Professor at Mount Sinai (NYC)",
-                    "2021-2023: Group Leader at Hasso Plattner Institute",
-                    "2020-2021: PostDoc at Hasso Plattner Institute",
-                    "2017-2019: PostDoc at Luxembourg Institute of Health",
-                    "2014-2020: PostDoc at Max Delbrück Center",
-                    "2009-2014: PhD Theoretical Biophysics",
-                    "2003-2009: Mathematics Diploma studies"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom Mathematik",
@@ -7936,7 +7866,7 @@
                 ]
             },
             "profilbild": "research/images/baum-katharina.jpg",
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "jahn-katharina",
@@ -8026,11 +7956,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit Februar 2022: Professorin für Data Science for Health Informatics in Life Sciences, Institut für Informatik, Freie Universität Berlin",
-                    "Postdoc, Computational Biology Group (CBG), ETH Zürich / SIB Swiss Institute of Bioinformatics, Basel",
-                    "Researcher, Center for Biotechnology (CeBiTec), Bielefeld University"
-                ],
                 "ausbildung": [
                     {
                         "grad": "M.S. Bioinformatik",
@@ -8062,6 +7987,11 @@
                         "institution": "University of Ottawa, Department of Mathematics and Statistics (Prof. David Sankoff)",
                         "ort": "Ottawa, Kanada",
                         "quelle": "https://2018.isc-program.com/presenter/?uid=961343"
+                    },
+                    {
+                        "position": "Researcher",
+                        "institution": "Center for Biotechnology (CeBiTec), Bielefeld University",
+                        "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/ag-bds/staff/jahn.html"
                     }
                 ]
             },
@@ -8089,7 +8019,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "esponda-margarita",
@@ -8170,9 +8100,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "2004: Dissertation (Dr. rer. nat.), Freie Universität Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom in Mathematik und Physik",
@@ -8194,6 +8121,12 @@
                         "ort": "Berlin",
                         "jahr": "2004",
                         "quelle": "http://www.esponda.de/sites/index.php?p=cv"
+                    },
+                    {
+                        "grad": "Dissertation (Dr. rer. nat.)",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-pr/members/Professoren/Margarita_Esponda.html",
+                        "jahr": "2004"
                     }
                 ],
                 "werdegang": [
@@ -8271,7 +8204,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00",
+            "last_updated": "2026-06-18T08:57:38+00:00",
             "profilbild": "research/images/esponda-margarita.jpg"
         },
         {
@@ -8360,20 +8293,17 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "2015: Dissertation (Dr. rer. nat.) — Model-based Security Engineering of Electronic Business Processes, Technische Universität München"
-                ],
                 "ausbildung": [
-                    {
-                        "grad": "MSc Wirtschaftswissenschaften",
-                        "institution": "Freie Universität Berlin",
-                        "quelle": "https://sos.asrg.io/sos-2023/"
-                    },
                     {
                         "grad": "Promotion (Dr.) Informatik",
                         "institution": "Technische Universität München",
                         "jahr": "2015",
                         "quelle": "https://mediatum.ub.tum.de/1238308"
+                    },
+                    {
+                        "grad": "MSc Wirtschaftswissenschaften",
+                        "institution": "Freie Universität Berlin",
+                        "quelle": "https://sos.asrg.io/sos-2023/"
                     }
                 ],
                 "werdegang": [
@@ -8407,7 +8337,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "alt-helmut",
@@ -8497,10 +8427,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "1976: Promotion (Dr. rer. nat.), Universität des Saarlandes, Saarbrücken (Betreuer: Kurt Mehlhorn; Dissertation: algorithms for parsing context-free languages)",
-                    "Professor der Informatik, Freie Universität Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom Mathematik",
@@ -8522,6 +8448,11 @@
                         "institution": "Freie Universität Berlin",
                         "zeitraum": "1986 – ca. 2018",
                         "ort": "Berlin",
+                        "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Alt_Helmut.html"
+                    },
+                    {
+                        "position": "Professor der Informatik",
+                        "institution": "Freie Universität Berlin",
                         "quelle": "https://www.mi.fu-berlin.de/inf/groups/ag-ti/members/professoren/Alt_Helmut.html"
                     }
                 ]
@@ -8566,7 +8497,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "kozma-laszlo",
@@ -8662,11 +8593,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit Oktober 2025: Chair of Algorithmics, TU Dresden",
-                    "2018-2025: Juniorprofessor, Freie Universität Berlin",
-                    "2016: PhD, Saarland University"
-                ],
                 "ausbildung": [
                     {
                         "grad": "B.S. Computer Science",
@@ -8809,7 +8735,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "mulzer-wolfgang",
@@ -8891,12 +8817,6 @@
                 ]
             },
             "vita": {
-                "positionen": [
-                    "seit Oktober 2016: Professor at Freie Universität Berlin",
-                    "November 2010–September 2016: Assistant Professor at Freie Universität Berlin",
-                    "Oktober 2010: Visiting Professor at Freie Universität Berlin",
-                    "Mai 2010: PhD (Department of Computer Science, Princeton University, advisor: Bernard Chazelle)"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom, Computer Science",
@@ -8967,7 +8887,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T03:13:28+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "gerhold-lars",
@@ -9053,24 +8973,17 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit Oktober 2022: Universitätsprofessor für Psychologie soziotechnischer Systeme, TU Braunschweig",
-                    "2015-2022: Universitätsprofessor für Interdisziplinäre Sicherheitsforschung, FU Berlin",
-                    "2009-2015: Wissenschaftlicher Koordinator, Forschungsforum Öffentliche Sicherheit, Institut für Informatik, FU Berlin",
-                    "2005-2009: Wissenschaftlicher Mitarbeiter, Institut Futur, FU Berlin",
-                    "2008: Promotion (Umgang mit makrosozialer Unsicherheit), Universität Kassel"
-                ],
                 "ausbildung": [
-                    {
-                        "grad": "Studium Politikwissenschaft, Psychologie, Soziologie",
-                        "institution": "nicht spezifiziert",
-                        "quelle": "https://www.sicherheit-forschung.de/ueber_uns/mitarbeitende/gerhold/index.html"
-                    },
                     {
                         "grad": "Promotion (Dr.)",
                         "institution": "Institut für Psychologie, Universität Kassel",
                         "jahr": "2008",
                         "quelle": "https://www.ewi-psy.fu-berlin.de/v/master-zukunftsforschung/team/Lehrende/Lars-Gerhold/index.html"
+                    },
+                    {
+                        "grad": "Studium Politikwissenschaft, Psychologie, Soziologie",
+                        "institution": "nicht spezifiziert",
+                        "quelle": "https://www.sicherheit-forschung.de/ueber_uns/mitarbeitende/gerhold/index.html"
                     }
                 ],
                 "werdegang": [
@@ -9096,6 +9009,12 @@
                         "institution": "Institut Futur, Freie Universität Berlin",
                         "zeitraum": "2005–2009",
                         "quelle": "https://www.ewi-psy.fu-berlin.de/einrichtungen/weitere/institut-futur/ueber_uns/Ehemalige-MitarbeiterInnen/Lars-Gerhold/index.html"
+                    },
+                    {
+                        "position": "Universitätsprofessor für Interdisziplinäre Sicherheitsforschung",
+                        "institution": "FU Berlin",
+                        "quelle": "http://www.sicherheit-forschung.de/ueber_uns/mitarbeitende/gerhold/index.html",
+                        "zeitraum": "2015-2022"
                     }
                 ]
             },
@@ -9416,7 +9335,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         },
         {
             "id": "schwarz-heiko",
@@ -9508,13 +9427,6 @@
                 }
             },
             "vita": {
-                "positionen": [
-                    "seit Oktober 2017: Professor, Freie Universität Berlin",
-                    "seit 2010: Head of Image & Video Coding Group, Fraunhofer Heinrich Hertz Institute, Berlin",
-                    "seit 1999: Researcher, Fraunhofer Heinrich Hertz Institute, Berlin",
-                    "2000: Dr.-Ing., Universität Rostock",
-                    "1996: Dipl.-Ing. (Electrical Engineering), Universität Rostock"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Dipl.-Ing. Elektrotechnik",
@@ -9562,7 +9474,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:11:07+00:00"
+            "last_updated": "2026-06-18T08:57:38+00:00"
         }
     ],
     "verbindungen": [
