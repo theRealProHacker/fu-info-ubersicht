@@ -620,6 +620,36 @@
                         "jahr": "2024",
                         "quelle": "https://depositonce.tu-berlin.de/items/a1bd0a96-87af-4690-aa43-528f3bb21077"
                     }
+                ],
+                "werdegang": [
+                    {
+                        "position": "Wissenschaftlicher Mitarbeiter (Research Assistant)",
+                        "institution": "Freie Universität Berlin, Institut für Informatik, AG Software Engineering",
+                        "zeitraum": "2015–heute",
+                        "ort": "Berlin",
+                        "quelle": "https://www.jucs.org/jucs_articles_by_author/Linnert_Barry/BusinessCard.html"
+                    },
+                    {
+                        "position": "IT-Projekte",
+                        "institution": "Freie Universität Berlin",
+                        "zeitraum": "2012–2015",
+                        "ort": "Berlin",
+                        "quelle": "https://www.jucs.org/jucs_articles_by_author/Linnert_Barry/BusinessCard.html"
+                    },
+                    {
+                        "position": "Geschäftsführer des Zentralen IT-Servicezentrums",
+                        "institution": "Technische Universität Berlin",
+                        "zeitraum": "2007–2012",
+                        "ort": "Berlin",
+                        "quelle": "https://www.jucs.org/jucs_articles_by_author/Linnert_Barry/BusinessCard.html"
+                    },
+                    {
+                        "position": "Wissenschaftlicher Mitarbeiter, Fachgebiet Betriebs- und Kommunikationssysteme",
+                        "institution": "Technische Universität Berlin",
+                        "zeitraum": "2001–2007",
+                        "ort": "Berlin",
+                        "quelle": "https://www.jucs.org/jucs_articles_by_author/Linnert_Barry/BusinessCard.html"
+                    }
                 ]
             },
             "lehre": {
@@ -659,7 +689,7 @@
                 ]
             },
             "profilbild": "research/images/linnert-barry.jpg",
-            "last_updated": "2026-06-18T08:16:53+00:00"
+            "last_updated": "2026-06-18T08:26:40+00:00"
         },
         {
             "id": "ververs-linus",
@@ -1378,7 +1408,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:16:53+00:00"
+            "last_updated": "2026-06-18T08:26:40+00:00"
         },
         {
             "id": "leimstaedtner-david",
@@ -4382,6 +4412,26 @@
                         "zeitraum": "2017–2023",
                         "quelle": "https://stefanmpopp.github.io/cv/"
                     }
+                ],
+                "ausbildung": [
+                    {
+                        "grad": "BSc",
+                        "institution": "University of Wurzburg",
+                        "ort": "Wurzburg, Germany",
+                        "quelle": "https://stefanmpopp.github.io/cv/"
+                    },
+                    {
+                        "grad": "MSc",
+                        "institution": "University of Wurzburg",
+                        "ort": "Wurzburg, Germany",
+                        "quelle": "https://stefanmpopp.github.io/cv/"
+                    },
+                    {
+                        "grad": "PhD",
+                        "institution": "University of Arizona",
+                        "ort": "Tucson, AZ",
+                        "quelle": "https://stefanmpopp.github.io/cv/"
+                    }
                 ]
             },
             "profilbild": "research/images/popp-stefan.jpg",
@@ -4413,7 +4463,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:16:53+00:00"
+            "last_updated": "2026-06-18T08:26:40+00:00"
         },
         {
             "id": "shang-zhihao",
@@ -5873,7 +5923,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:16:53+00:00"
+            "last_updated": "2026-06-18T08:26:40+00:00"
         },
         {
             "id": "landgraf-tim",
@@ -7685,7 +7735,7 @@
                     }
                 ]
             },
-            "last_updated": "2026-06-18T08:16:53+00:00"
+            "last_updated": "2026-06-18T08:26:40+00:00"
         },
         {
             "id": "baum-katharina",
