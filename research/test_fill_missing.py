@@ -506,15 +506,36 @@ class StructuredFieldTests(unittest.TestCase):
         self.assertIn('vita.ausbildung', accepted)
         self.assertIsNone(accepted['vita.ausbildung']['source'])
 
-    def test_obj_array_missing_required_key_rejected(self):
-        # institution stays required; jahr/zeitraum do NOT.
+    def test_obj_array_all_invalid_rejected(self):
+        # every item fails a required key -> nothing valid survives -> rejected.
         _, rejected, _ = fm.validate(self.findings(
             {'vita': {'werdegang': [
                 {'position': 'Postdoc', 'zeitraum': '2011-2013',
                  'quelle': 'https://example.org/cv'}]}}),   # no institution
             self.person(), 'person')
         self.assertEqual(rejected[0]['path'], 'vita.werdegang')
-        self.assertIn('institution', rejected[0]['reason'])
+        self.assertIn('no valid items', rejected[0]['reason'])
+
+    def test_obj_array_drops_bad_items_keeps_good(self):
+        accepted, rejected, _ = fm.validate(self.findings(
+            {'vita': {'ausbildung': [
+                {'grad': 'B.Sc.', 'institution': 'TU', 'quelle': 'https://example.org/cv'},
+                {'grad': 'M.Sc.', 'institution': 'TU'},                        # no quelle
+                {'grad': 'Dr.', 'institution': 'FU', 'quelle': 'not-a-url'}]}}),  # bad quelle
+            self.person(), 'person')
+        self.assertEqual(rejected, [])
+        kept = accepted['vita.ausbildung']['value']
+        self.assertEqual([k['grad'] for k in kept], ['B.Sc.'])
+
+    def test_obj_array_preserves_order(self):
+        accepted, _, _ = fm.validate(self.findings(
+            {'vita': {'werdegang': [
+                {'position': 'A', 'institution': 'X', 'quelle': 'https://example.org/1'},
+                {'position': 'B', 'institution': 'Y', 'quelle': 'https://example.org/2'},
+                {'position': 'C', 'institution': 'Z', 'quelle': 'https://example.org/3'}]}}),
+            self.person(), 'person')
+        self.assertEqual([i['position'] for i in accepted['vita.werdegang']['value']],
+                         ['A', 'B', 'C'])
 
     def test_obj_array_coerces_numeric_year(self):
         accepted, rejected, _ = fm.validate(self.findings(
@@ -539,20 +560,30 @@ class StructuredFieldTests(unittest.TestCase):
         self.assertIn('vita.werdegang', accepted)
         self.assertIn('vita.ausbildung', accepted)
 
-    def test_obj_array_requires_quelle(self):
-        _, rejected, _ = fm.validate(self.findings(
-            {'vita': {'ausbildung': [
-                {'grad': 'B.Sc.', 'institution': 'X', 'jahr': '2005'}]}}),
+    def test_obj_array_drops_unknown_keys(self):
+        accepted, rejected, _ = fm.validate(self.findings(
+            {'vita': {'werdegang': [
+                {'position': 'Prof', 'institution': 'FU', 'zeitraum': 'seit 2020',
+                 'fach': 'CS', 'gehalt': '100k',          # unknown keys -> dropped
+                 'quelle': 'https://example.org/cv'}]}}),
             self.person(), 'person')
-        self.assertIn('quelle', rejected[0]['reason'])
+        self.assertEqual(rejected, [])
+        item = accepted['vita.werdegang']['value'][0]
+        self.assertNotIn('fach', item)
+        self.assertNotIn('gehalt', item)
+        self.assertEqual(item['position'], 'Prof')
 
-    def test_obj_array_quelle_must_be_url(self):
-        _, rejected, _ = fm.validate(self.findings(
+    def test_obj_array_drops_bad_optional_field_keeps_item(self):
+        accepted, rejected, _ = fm.validate(self.findings(
             {'vita': {'ausbildung': [
-                {'grad': 'B.Sc.', 'institution': 'X', 'jahr': '2005',
-                 'quelle': 'not-a-url'}]}}),
+                {'grad': 'Dr.', 'institution': 'FU', 'ort': '<b>x</b>',  # bad optional
+                 'jahr': 2011, 'quelle': 'https://example.org/cv'}]}}),
             self.person(), 'person')
-        self.assertIn('quelle', rejected[0]['reason'])
+        self.assertEqual(rejected, [])
+        item = accepted['vita.ausbildung']['value'][0]
+        self.assertNotIn('ort', item)              # bad optional dropped
+        self.assertEqual(item['jahr'], '2011')     # numeric coerced
+        self.assertEqual(item['grad'], 'Dr.')
 
     def test_obj_array_rejects_html_in_item(self):
         _, rejected, _ = fm.validate(self.findings(
@@ -563,13 +594,15 @@ class StructuredFieldTests(unittest.TestCase):
             self.person(), 'person')
         self.assertEqual(len(rejected), 1)
 
-    def test_obj_array_unexpected_key_rejected(self):
-        _, rejected, _ = fm.validate(self.findings(
+    def test_obj_array_skips_non_object_items(self):
+        accepted, rejected, _ = fm.validate(self.findings(
             {'vita': {'werdegang': [
-                {'position': 'Prof', 'institution': 'FU', 'zeitraum': 'seit 2020',
-                 'gehalt': '100k', 'quelle': 'https://example.org/cv'}]}}),
+                'just a string',                                  # not an object
+                {'position': 'Prof', 'institution': 'FU',
+                 'quelle': 'https://example.org/cv'}]}}),
             self.person(), 'person')
-        self.assertIn('unexpected', rejected[0]['reason'])
+        self.assertEqual(rejected, [])
+        self.assertEqual(len(accepted['vita.werdegang']['value']), 1)
 
     def test_veroeffentlichungen_truncated_to_cap(self):
         papers = [{'titel': f'Paper {n}', 'jahr': '2020',
@@ -581,13 +614,16 @@ class StructuredFieldTests(unittest.TestCase):
         self.assertEqual(
             len(accepted['forschung.veroeffentlichungen']['value']), 8)
 
-    def test_veroeffentlichungen_optional_url_validated(self):
-        _, rejected, _ = fm.validate(self.findings(
+    def test_veroeffentlichungen_bad_optional_url_dropped(self):
+        accepted, rejected, _ = fm.validate(self.findings(
             {'forschung': {'veroeffentlichungen': [
                 {'titel': 'P', 'jahr': '2020', 'url': 'javascript:evil',
                  'quelle': 'https://example.org/p'}]}}),
             self.person(), 'person')
-        self.assertIn('url', rejected[0]['reason'])
+        self.assertEqual(rejected, [])
+        item = accepted['forschung.veroeffentlichungen']['value'][0]
+        self.assertNotIn('url', item)
+        self.assertEqual(item['titel'], 'P')
 
     def test_scholar_object_stays_intact_and_accepted(self):
         accepted, rejected, _ = fm.validate(self.findings(

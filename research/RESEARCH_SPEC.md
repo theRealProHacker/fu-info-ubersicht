@@ -314,6 +314,11 @@ include fields you actually found; everything else goes in `not_found`.
   from fill-only.
 - **Quarantine:** any field whose value or source fails validation is rejected,
   not merged; valid siblings still merge.
+- **Lenient arrays:** within the structured arrays (`ausbildung` / `werdegang` /
+  `veroeffentlichungen`), unknown keys and invalid OPTIONAL fields are dropped,
+  and only items failing a REQUIRED key (grad/position/institution/titel +
+  quelle) are discarded. Order is preserved; the array is rejected only if no
+  valid item survives. A stray numeric `jahr` is coerced to a string.
 - **Provenance:** every merged fact is appended to `research/provenance.jsonl`
   with its source URL — for self-sourcing arrays (`ausbildung`, `werdegang`,
   `veroeffentlichungen`), one provenance row per item (keyed by its `quelle`).

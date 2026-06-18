@@ -565,45 +565,55 @@ def validate_field(path, value, source, entry, mode):
 
 def validate_obj_array(path, value, entry, mode):
     """Validate a self-sourcing object-array field (ausbildung / werdegang /
-    veroeffentlichungen). Each item carries its own `quelle`. Truncates to the
-    field's `cap` (newest-first) and rejects outright past MAX_ARRAY_ITEMS.
-    Returns an error string or None."""
+    veroeffentlichungen) AS LENIENTLY AS POSSIBLE while preserving order:
+      - unknown keys are dropped,
+      - an invalid OPTIONAL field is dropped but the item is kept,
+      - an item is dropped only if a REQUIRED key (grad/position/institution/
+        titel, plus quelle) is missing or invalid,
+      - the array is rejected only if NO valid item survives.
+    Numeric values (e.g. jahr) are coerced to strings. `value` is mutated in
+    place to the cleaned, order-preserved list. Returns an error string or None."""
     spec = OBJ_ARRAY_FIELDS[path]
     if not isinstance(value, list) or not value:
         return 'must be a non-empty array of objects'
     if len(value) > MAX_ARRAY_ITEMS:
-        return f'too many items (>{MAX_ARRAY_ITEMS})'
-    cap = spec['cap']
-    if cap is not None and len(value) > cap:
-        del value[cap:]   # keep the first `cap` items (the array is newest-first)
+        del value[MAX_ARRAY_ITEMS:]   # abuse guard; order preserved
 
     req_text = spec['required_text']
     url_keys = set(spec['optional_url']) | {'quelle'}
     allowed_keys = set(req_text) | set(spec['optional_text']) | url_keys
     required_keys = set(req_text) | {'quelle'}
     fu_only = mode == 'person' and entry.get('rolle') in RESTRICTED_ROLES
+
+    def field_ok(item, key):
+        # Coerce a stray numeric (jahr as 2011) to a string, then validate.
+        if key in url_keys:
+            return check_url(item[key]) is None
+        if isinstance(item[key], (int, float)) and not isinstance(item[key], bool):
+            item[key] = str(item[key])
+        return clean_string(item[key]) is None
+
+    kept = []
     for item in value:
         if not isinstance(item, dict):
-            return 'each item must be an object'
-        keys = set(item)
-        missing = required_keys - keys
-        if missing:
-            return f'item missing keys: {", ".join(sorted(missing))}'
-        extra = keys - allowed_keys
-        if extra:
-            return f'item has unexpected keys: {", ".join(sorted(extra))}'
-        for key in keys:
-            if key in url_keys:
-                err = check_url(item[key])
-            else:
-                # Agents routinely emit jahr as a number; coerce to string.
-                if isinstance(item[key], (int, float)) and not isinstance(item[key], bool):
-                    item[key] = str(item[key])
-                err = clean_string(item[key])
-            if err:
-                return f'{key}: {err}'
+            continue
+        for key in [k for k in item if k not in allowed_keys]:
+            del item[key]                                  # drop unknown keys
+        if any(k not in item or not field_ok(item, k) for k in required_keys):
+            continue                                       # a required key failed
+        for key in [k for k in item if k not in required_keys]:
+            if not field_ok(item, key):
+                del item[key]                              # drop a bad optional field
         if fu_only and not host_matches(host_of(item['quelle']), 'fu-berlin.de'):
-            return 'restricted subject: each quelle must be a fu-berlin.de page'
+            continue
+        kept.append(item)
+
+    if not kept:
+        return 'no valid items'
+    cap = spec['cap']
+    if cap is not None:
+        del kept[cap:]                                     # keep up to `cap`, order preserved
+    value[:] = kept
     return None
 
 
