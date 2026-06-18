@@ -569,13 +569,13 @@
                     {
                         "titel": "Impact of a dynamic Allocation Policy for Resource and Job Management Systems in deadline-oriented Scenarios",
                         "jahr": "2023",
-                        "venue": "24th Symposium on High Performance Computing Systems (WSCAD 2023)",
+                        "venue": "24th Symposium on High Performance Computing Systems (WSCAD)",
                         "quelle": "https://www.mi.fu-berlin.de/w/Main/BarryLinnert"
                     },
                     {
                         "titel": "Mapping Algorithms Optimizing the Overall Manhattan Distance for pre-occupied Cluster Computers in SLA-based Grid environments",
                         "jahr": "2014",
-                        "venue": "14th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid 2014)",
+                        "venue": "14th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid)",
                         "quelle": "https://www.mi.fu-berlin.de/w/Main/BarryLinnert"
                     },
                     {
@@ -599,15 +599,12 @@
                     {
                         "titel": "The Virtual Resource Manager: An Architecture for SLA-aware Resource Management",
                         "jahr": "2004",
-                        "venue": "4th International IEEE/ACM Symposium on Cluster Computing and the Grid (CCGrid 2004), Chicago",
+                        "venue": "4th International IEEE/ACM Symposium on Cluster Computing and the Grid (CCGrid), Chicago",
                         "quelle": "https://www.mi.fu-berlin.de/w/Main/BarryLinnert"
                     }
                 ]
             },
             "vita": {
-                "positionen": [
-                    "2024: Dissertation (Dr.-Ing.), Technische Universität Berlin"
-                ],
                 "ausbildung": [
                     {
                         "grad": "Diplom Informatik",
@@ -649,6 +646,12 @@
                         "zeitraum": "2001–2007",
                         "ort": "Berlin",
                         "quelle": "https://www.jucs.org/jucs_articles_by_author/Linnert_Barry/BusinessCard.html"
+                    },
+                    {
+                        "position": "IT-Berater",
+                        "institution": "freiberuflich",
+                        "zeitraum": "1997–2001",
+                        "quelle": "https://www.jucs.org/jucs_articles_by_author/Linnert_Barry/BusinessCard.html"
                     }
                 ]
             },
@@ -689,7 +692,7 @@
                 ]
             },
             "profilbild": "research/images/linnert-barry.jpg",
-            "last_updated": "2026-06-18T08:26:40+00:00"
+            "last_updated": "2026-06-18T08:41:37+00:00"
         },
         {
             "id": "ververs-linus",
@@ -721,7 +724,7 @@
                     {
                         "titel": "Managing Power Gaps as an Element of Pair Programming Skill: A Grounded Theory",
                         "jahr": "2026",
-                        "venue": "Proceedings of the 30th International Conference on Evaluation and Assessment in Software Engineering (EASE 2026)",
+                        "venue": "Proceedings of the 30th International Conference on Evaluation and Assessment in Software Engineering (EASE)",
                         "url": "https://arxiv.org/abs/2508.00462",
                         "quelle": "https://arxiv.org/abs/2508.00462"
                     },
@@ -1055,7 +1058,7 @@
                     {
                         "titel": "With, not For: Co-Designing a Patient-Facing AI Companion Concept for the Emergency Department Waiting Area",
                         "jahr": "2026",
-                        "venue": "CHI 2026",
+                        "venue": "CHI",
                         "quelle": "https://dblp.org/pid/05/1222.html"
                     },
                     {
@@ -1079,7 +1082,7 @@
                     {
                         "titel": "Investigating Responsible Nudge Design for Informed Decision-Making Enabling Transparent and Reflective Decision-Making",
                         "jahr": "2023",
-                        "venue": "MuC 2023",
+                        "venue": "MuC",
                         "quelle": "https://clmb.de"
                     },
                     {
@@ -1470,19 +1473,19 @@
                     {
                         "titel": "Investigating Responsible Nudge Design for Informed Decision-Making Enabling Transparent and Reflective Decision-Making",
                         "jahr": "2023",
-                        "venue": "Proceedings of Mensch und Computer 2023",
+                        "venue": "Proceedings of Mensch und Computer",
                         "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/research/publications?content_iframe=1&author=Leimstaedtner"
                     },
                     {
                         "titel": "Unfolding Values through Systematic Guidance: Conducting a Value-Centered Participatory Workshop for a Patient-Oriented Data Donation",
                         "jahr": "2022",
-                        "venue": "Proceedings of Mensch und Computer 2022",
+                        "venue": "Proceedings of Mensch und Computer",
                         "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/hcc/research/publications?content_iframe=1&author=Leimstaedtner"
                     },
                     {
                         "titel": "Taking a Value Perspective on Medical Data Donation Through Participatory Workshops",
                         "jahr": "2022",
-                        "venue": "Mensch und Computer 2022 Workshopband",
+                        "venue": "Mensch und Computer Workshopband",
                         "quelle": "https://scholar.google.com/citations?hl=en&user=xBQAZXkAAAAJ"
                     }
                 ],
@@ -1583,7 +1586,7 @@
                     {
                         "titel": "Identifying Characteristics of Reflection Triggers in Data Science Ethics Education",
                         "jahr": "2024",
-                        "venue": "MuC 2024",
+                        "venue": "MuC",
                         "url": "https://doi.org/10.1145/3670653.3677486",
                         "quelle": "https://dblp.org/pid/325/4057.html"
                     },
@@ -1685,7 +1688,7 @@
                     {
                         "titel": "Identifying Explanation Needs of End-users: Applying and Extending the XAI Question Bank",
                         "jahr": "2023",
-                        "venue": "MuC 2023: 492-497",
+                        "venue": "MuC: 492-497",
                         "url": "https://arxiv.org/abs/2307.09369",
                         "quelle": "https://dblp.org/pid/352/4620.html"
                     }
@@ -1802,13 +1805,13 @@
                     {
                         "titel": "Foregrounding values through public participation",
                         "jahr": "2023",
-                        "venue": "Mensch und Computer 2023",
+                        "venue": "Mensch und Computer",
                         "quelle": "https://scholar.google.com/citations?user=fbl2nlUAAAAJ&hl=de"
                     },
                     {
                         "titel": "Investigating responsible nudge design for informed decision-making enabling transparent and reflective decision-making",
                         "jahr": "2023",
-                        "venue": "Mensch und Computer 2023",
+                        "venue": "Mensch und Computer",
                         "quelle": "https://scholar.google.com/citations?user=fbl2nlUAAAAJ&hl=de"
                     },
                     {
@@ -1820,13 +1823,13 @@
                     {
                         "titel": "Unfolding values through systematic guidance: Conducting a value-centered participatory workshop for a patient-oriented data donation",
                         "jahr": "2022",
-                        "venue": "Mensch und Computer 2022",
+                        "venue": "Mensch und Computer",
                         "quelle": "https://scholar.google.com/citations?user=fbl2nlUAAAAJ&hl=de"
                     },
                     {
                         "titel": "Privacy Needs Reflection: Conceptional Design Rationales for Privacy-Preserving Explanation User Interfaces",
                         "jahr": "2021",
-                        "venue": "Mensch und Computer 2021",
+                        "venue": "Mensch und Computer",
                         "quelle": "https://scholar.google.com/citations?user=fbl2nlUAAAAJ&hl=de"
                     }
                 ],
@@ -2010,7 +2013,7 @@
                     {
                         "titel": "CuttleFlow: Infrastructure-Specific Workflow Adaption for Improved Reusability",
                         "jahr": "2024",
-                        "venue": "2024 IEEE 20th International Conference on e-Science",
+                        "venue": "IEEE 20th International Conference on e-Science",
                         "quelle": "http://publications.imp.fu-berlin.de/view/people/Reinert=3AKnut=3A=3A.html"
                     },
                     {
@@ -2174,25 +2177,25 @@
                     {
                         "titel": "Finding a Shortest Curve That Separates Few Objects from Many",
                         "jahr": "2025",
-                        "venue": "SoCG 2025",
+                        "venue": "SoCG",
                         "quelle": "https://dblp.org/pid/r/GunterRote.html"
                     },
                     {
                         "titel": "Probabilistic Finite Automaton Emptiness Is Undecidable for a Fixed Automaton",
                         "jahr": "2025",
-                        "venue": "MFCS 2025",
+                        "venue": "MFCS",
                         "quelle": "https://dblp.org/pid/r/GunterRote.html"
                     },
                     {
                         "titel": "On Solving Simple Curved Nonograms",
                         "jahr": "2025",
-                        "venue": "IWOCA 2025",
+                        "venue": "IWOCA",
                         "quelle": "https://dblp.org/pid/r/GunterRote.html"
                     },
                     {
                         "titel": "Sweeping x-monotone pseudolines",
                         "jahr": "2025",
-                        "venue": "CCCG 2025",
+                        "venue": "CCCG",
                         "quelle": "https://dblp.org/pid/r/GunterRote.html"
                     },
                     {
@@ -2216,7 +2219,7 @@
                     {
                         "titel": "Grid Peeling of Parabolas",
                         "jahr": "2024",
-                        "venue": "SoCG 2024",
+                        "venue": "SoCG",
                         "quelle": "https://dblp.org/pid/r/GunterRote.html"
                     }
                 ]
@@ -2376,7 +2379,7 @@
                     {
                         "titel": "Public safety campus networks: Towards a reference architecture for post-disaster edge-computing and crisis-communication",
                         "jahr": "2024",
-                        "venue": "2024 IEEE World Forum on Public Safety Technology (WFPST)",
+                        "venue": "IEEE World Forum on Public Safety Technology (WFPST)",
                         "quelle": "https://scholar.google.com/citations?user=bmbitrMAAAAJ&hl=en&sortby=pubdate"
                     },
                     {
@@ -2388,7 +2391,7 @@
                     {
                         "titel": "Security of alerting authorities in the WWW: Measuring namespaces, DNSSEC, and Web PKI",
                         "jahr": "2021",
-                        "venue": "Proceedings of the Web Conference 2021",
+                        "venue": "Proceedings of the Web Conference",
                         "quelle": "https://scholar.google.com/citations?user=bmbitrMAAAAJ&hl=en&sortby=pubdate"
                     },
                     {
@@ -2400,7 +2403,7 @@
                     {
                         "titel": "MQTT-Based Surveillance System of IoT Using UWB Real Time Location System",
                         "jahr": "2020",
-                        "venue": "2020 International Conferences on Internet of Things (iThings/GreenCom/CPSCom/SmartData/Cybermatics)",
+                        "venue": "International Conferences on Internet of Things (iThings/GreenCom/CPSCom/SmartData/Cybermatics)",
                         "quelle": "https://scholar.google.com/citations?user=bmbitrMAAAAJ&hl=en&sortby=pubdate"
                     },
                     {
@@ -2572,19 +2575,19 @@
                     {
                         "titel": "TinyContainer: Container Runtime Middleware Enabling Multi-tenant Microcontrollers with Built-in Security",
                         "jahr": "2026",
-                        "venue": "WISEC 2026",
+                        "venue": "WISEC",
                         "quelle": "https://dblp.org/pid/07/2121.html"
                     },
                     {
                         "titel": "TinyDéjaVu: Smaller RAM and Faster Inference with Neural Networks on MCUs for Sensor Data Streams",
                         "jahr": "2026",
-                        "venue": "ISIoT 2026 – 8th International Workshop on Intelligent Systems",
+                        "venue": "ISIoT – 8th International Workshop on Intelligent Systems",
                         "quelle": "https://scholar.google.com/citations?user=L4uE45oAAAAJ&hl=en&sortby=pubdate"
                     },
                     {
                         "titel": "Ariel-ML: Embedded Rust Leveraging Multicore for Neural Networks on Heterogeneous Microcontrollers",
                         "jahr": "2026",
-                        "venue": "ISIoT 2026 – 8th International Workshop on Intelligent Systems",
+                        "venue": "ISIoT – 8th International Workshop on Intelligent Systems",
                         "quelle": "https://scholar.google.com/citations?user=L4uE45oAAAAJ&hl=en&sortby=pubdate"
                     },
                     {
@@ -3186,7 +3189,7 @@
                     {
                         "titel": "Mind the Machines: Applying Implicit Measures of Mind Perception in Social Robotics",
                         "jahr": "2022",
-                        "venue": "ACM/IEEE International Conference on Human-Robot Interaction (HRI 2022)",
+                        "venue": "ACM/IEEE International Conference on Human-Robot Interaction (HRI)",
                         "url": "https://doi.org/10.1109/HRI53351.2022.9889356",
                         "quelle": "https://dblp.org/pid/316/5930"
                     }
@@ -3265,7 +3268,7 @@
                     {
                         "titel": "A Comprehensive Taxonomy of Bias Mitigation Methods for Hate Speech Detection",
                         "jahr": "2025",
-                        "venue": "Proceedings of the 9th Workshop on Online Abuse and Harms (WOAH), ACL 2025",
+                        "venue": "Proceedings of the 9th Workshop on Online Abuse and Harms (WOAH), ACL",
                         "url": "https://aclanthology.org/2025.woah-1.1/",
                         "quelle": "https://aclanthology.org/2025.woah-1.1/"
                     }
@@ -3411,28 +3414,28 @@
                     {
                         "titel": "Optimal Antimatroid Sorting",
                         "jahr": "2025",
-                        "venue": "ESA 2025",
+                        "venue": "ESA",
                         "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2025.104",
                         "quelle": "https://page.mi.fu-berlin.de/beab/"
                     },
                     {
                         "titel": "Fast and simple unrooted dynamic forests",
                         "jahr": "2024",
-                        "venue": "ALENEX 2024",
+                        "venue": "ALENEX",
                         "url": "https://epubs.siam.org/doi/10.1137/1.9781611977929.4",
                         "quelle": "https://page.mi.fu-berlin.de/beab/"
                     },
                     {
                         "titel": "Optimization with Pattern-Avoiding Input",
                         "jahr": "2024",
-                        "venue": "STOC 2024",
+                        "venue": "STOC",
                         "url": "https://doi.org/10.1145/3618260.3649631",
                         "quelle": "https://page.mi.fu-berlin.de/beab/"
                     },
                     {
                         "titel": "Fast Approximation of Search Trees on Trees with Centroid Trees",
                         "jahr": "2023",
-                        "venue": "ICALP 2023",
+                        "venue": "ICALP",
                         "url": "https://doi.org/10.4230/LIPIcs.ICALP.2023.19",
                         "quelle": "https://page.mi.fu-berlin.de/beab/"
                     },
@@ -3446,14 +3449,14 @@
                     {
                         "titel": "Fixed-Point Cycles and Approximate EFX Allocations",
                         "jahr": "2022",
-                        "venue": "MFCS 2022",
+                        "venue": "MFCS",
                         "url": "https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=16815",
                         "quelle": "https://page.mi.fu-berlin.de/beab/"
                     },
                     {
                         "titel": "Splay trees on trees",
                         "jahr": "2022",
-                        "venue": "SODA 2022",
+                        "venue": "SODA",
                         "url": "https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.75",
                         "quelle": "https://page.mi.fu-berlin.de/beab/"
                     },
@@ -3568,7 +3571,7 @@
                     {
                         "titel": "A Graph Width Perspective on Partially Ordered Hamiltonian Paths and Cycles II: Vertex and Edge Deletion Numbers",
                         "jahr": "2025",
-                        "venue": "IPEC 2025",
+                        "venue": "IPEC",
                         "quelle": "https://drops.dagstuhl.de/search/documents?author=Klost,+Katharina"
                     },
                     {
@@ -3580,7 +3583,7 @@
                     {
                         "titel": "Insertion-Only Dynamic Connectivity in General Disk Graphs",
                         "jahr": "2024",
-                        "venue": "SOSA 2024",
+                        "venue": "SOSA",
                         "quelle": "https://dblp.org/pid/211/8025.html"
                     },
                     {
@@ -3592,19 +3595,19 @@
                     {
                         "titel": "Long Plane Trees",
                         "jahr": "2022",
-                        "venue": "SoCG 2022",
+                        "venue": "SoCG",
                         "quelle": "https://drops.dagstuhl.de/search/documents?author=Klost,+Katharina"
                     },
                     {
                         "titel": "Dynamic Connectivity in Disk Graphs",
                         "jahr": "2022",
-                        "venue": "SoCG 2022",
+                        "venue": "SoCG",
                         "quelle": "https://drops.dagstuhl.de/search/documents?author=Klost,+Katharina"
                     },
                     {
                         "titel": "Triangles and Girth in Disk Graphs and Transmission Graphs",
                         "jahr": "2019",
-                        "venue": "ESA 2019",
+                        "venue": "ESA",
                         "quelle": "https://drops.dagstuhl.de/search/documents?author=Klost,+Katharina"
                     }
                 ]
@@ -3719,13 +3722,13 @@
                     {
                         "titel": "Compact Routing in Unit Disk Graphs",
                         "jahr": "2020",
-                        "venue": "ISAAC 2020",
+                        "venue": "ISAAC",
                         "quelle": "http://page.mi.fu-berlin.de/willerma/"
                     },
                     {
                         "titel": "Routing in Histograms",
                         "jahr": "2020",
-                        "venue": "WALCOM 2020",
+                        "venue": "WALCOM",
                         "quelle": "http://page.mi.fu-berlin.de/willerma/"
                     },
                     {
@@ -3737,13 +3740,13 @@
                     {
                         "titel": "Routing in Polygonal Domains",
                         "jahr": "2017",
-                        "venue": "ISAAC 2017",
+                        "venue": "ISAAC",
                         "quelle": "http://page.mi.fu-berlin.de/willerma/"
                     },
                     {
                         "titel": "Tight Bounds for Conflict-Free Chromatic Guarding of Orthogonal Art Galleries",
                         "jahr": "2015",
-                        "venue": "SoCG 2015",
+                        "venue": "SoCG",
                         "quelle": "http://page.mi.fu-berlin.de/willerma/"
                     }
                 ]
@@ -4014,21 +4017,21 @@
                     {
                         "titel": "LLM Self-Recognition: Steering and Retrieving Activation Signatures",
                         "jahr": "2026",
-                        "venue": "ICML 2026",
+                        "venue": "ICML",
                         "url": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate",
                         "quelle": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate"
                     },
                     {
                         "titel": "Bilinear Compressive Security",
                         "jahr": "2026",
-                        "venue": "IEEE International Conference on Communications (ICC 2026)",
+                        "venue": "IEEE International Conference on Communications (ICC)",
                         "url": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate",
                         "quelle": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate"
                     },
                     {
                         "titel": "Where Confabulation Lives: Latent Feature Discovery in LLMs",
                         "jahr": "2025",
-                        "venue": "Empirical Methods in Natural Language Processing (EMNLP 2025)",
+                        "venue": "Empirical Methods in Natural Language Processing (EMNLP)",
                         "url": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate",
                         "quelle": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate"
                     },
@@ -4042,28 +4045,28 @@
                     {
                         "titel": "GEFA: A General Feature Attribution Framework Using Proxy Gradient Estimation",
                         "jahr": "2025",
-                        "venue": "International Conference on Machine Learning (ICML 2025)",
+                        "venue": "International Conference on Machine Learning (ICML)",
                         "url": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate",
                         "quelle": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate"
                     },
                     {
                         "titel": "On Gradient-like Explanation Under a Black-box Setting",
                         "jahr": "2025",
-                        "venue": "International Conference on Machine Learning (ICML 2025)",
+                        "venue": "International Conference on Machine Learning (ICML)",
                         "url": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate",
                         "quelle": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate"
                     },
                     {
                         "titel": "Tracking UWB Devices Through Radio Frequency Fingerprinting is Possible",
                         "jahr": "2025",
-                        "venue": "IEEE International Conference on Computing, Networking and Communications (ICNC 2025)",
+                        "venue": "IEEE International Conference on Computing, Networking and Communications (ICNC)",
                         "url": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate",
                         "quelle": "https://scholar.google.de/citations?user=I9ifRZEAAAAJ&hl=en&sortby=pubdate"
                     },
                     {
                         "titel": "Rethinking Explanation Evaluation under the Retraining Scheme",
                         "jahr": "2025",
-                        "venue": "AAAI 2025",
+                        "venue": "AAAI",
                         "url": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/publications2/index.html",
                         "quelle": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/publications2/index.html"
                     }
@@ -4514,31 +4517,31 @@
                     {
                         "titel": "Collaborative Path Planning of Multiple Carrier-based Aircraft Based on Multi-agent Reinforcement Learning",
                         "jahr": "2022",
-                        "venue": "MDM 2022",
+                        "venue": "MDM",
                         "quelle": "https://dblp.org/pid/146/4881.html"
                     },
                     {
                         "titel": "A Reactive Batching Strategy of Apache Kafka for Reliable Stream Processing in Real-time",
                         "jahr": "2020",
-                        "venue": "ISSRE 2020",
+                        "venue": "ISSRE",
                         "quelle": "https://dblp.org/pid/146/4881.html"
                     },
                     {
                         "titel": "Learning to Reliably Deliver Streaming Data with Apache Kafka",
                         "jahr": "2020",
-                        "venue": "DSN 2020",
+                        "venue": "DSN",
                         "quelle": "https://dblp.org/pid/146/4881.html"
                     },
                     {
                         "titel": "Performance Prediction for the Apache Kafka Messaging System",
                         "jahr": "2019",
-                        "venue": "HPCC/SmartCity/DSS 2019",
+                        "venue": "HPCC/SmartCity/DSS",
                         "quelle": "https://dblp.org/pid/146/4881.html"
                     },
                     {
                         "titel": "Dynamic Load Balancing in the Control Plane of Software-Defined Networks",
                         "jahr": "2019",
-                        "venue": "ICCT 2019",
+                        "venue": "ICCT",
                         "quelle": "https://dblp.org/pid/146/4881.html"
                     }
                 ],
@@ -4780,31 +4783,31 @@
                     {
                         "titel": "A Novel Archive Maintenance for Adapting Weight Vectors in Decomposition-based Multi-objective Evolutionary Algorithms",
                         "jahr": "2020",
-                        "venue": "CEC 2020",
+                        "venue": "CEC",
                         "quelle": "https://dblp.org/pid/140/1723.html"
                     },
                     {
                         "titel": "A Decomposition-Based Evolutionary Algorithm with Adaptive Weight Vectors for Multi- and Many-objective Optimization",
                         "jahr": "2020",
-                        "venue": "EvoApplications 2020: 149-164",
+                        "venue": "EvoApplications: 149-164",
                         "quelle": "https://dblp.org/pid/140/1723.html"
                     },
                     {
                         "titel": "Evolutionary Large-scale Sparse Multi-objective Optimization for Collaborative Edge-cloud Computation Offloading",
                         "jahr": "2020",
-                        "venue": "IJCCI 2020: 100-111",
+                        "venue": "IJCCI: 100-111",
                         "quelle": "https://dblp.org/pid/140/1723.html"
                     },
                     {
                         "titel": "A Reactive Batching Strategy of Apache Kafka for Reliable Stream Processing in Real-time",
                         "jahr": "2020",
-                        "venue": "ISSRE 2020: 207-217",
+                        "venue": "ISSRE: 207-217",
                         "quelle": "https://dblp.org/pid/140/1723.html"
                     },
                     {
                         "titel": "Efficient Task Scheduling in Cloud Computing using an Improved Particle Swarm Optimization Algorithm",
                         "jahr": "2019",
-                        "venue": "CLOSER 2019: 58-67",
+                        "venue": "CLOSER: 58-67",
                         "quelle": "https://dblp.org/pid/140/1723.html"
                     }
                 ]
@@ -4869,7 +4872,7 @@
                     {
                         "titel": "DBNode: A Decentralized Storage System for Big Data Storage in Consortium Blockchains",
                         "jahr": "2024",
-                        "venue": "2024 9th International Conference on Big Data Analytics (ICBDA)",
+                        "venue": "9th International Conference on Big Data Analytics (ICBDA)",
                         "url": "https://scholar.google.de/citations?user=3SHkwz0AAAAJ",
                         "quelle": "https://scholar.google.de/citations?user=3SHkwz0AAAAJ"
                     },
@@ -4883,7 +4886,7 @@
                     {
                         "titel": "Exploring randomness in blockchains",
                         "jahr": "2023",
-                        "venue": "2023 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)",
+                        "venue": "IEEE International Conference on Blockchain and Cryptocurrency (ICBC)",
                         "url": "https://scholar.google.de/citations?user=3SHkwz0AAAAJ",
                         "quelle": "https://scholar.google.de/citations?user=3SHkwz0AAAAJ"
                     },
@@ -4897,14 +4900,14 @@
                     {
                         "titel": "CBlockSim: A modular high-performance blockchain simulator",
                         "jahr": "2022",
-                        "venue": "2022 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)",
+                        "venue": "IEEE International Conference on Blockchain and Cryptocurrency (ICBC)",
                         "url": "https://scholar.google.de/citations?user=3SHkwz0AAAAJ",
                         "quelle": "https://scholar.google.de/citations?user=3SHkwz0AAAAJ"
                     },
                     {
                         "titel": "BGP-LSChain: an inter-domain link state sharing framework based on blockchain",
                         "jahr": "2019",
-                        "venue": "Proceedings of the 2019 International Conference on Blockchain Technology (ICBCT)",
+                        "venue": "Proceedings of the International Conference on Blockchain Technology (ICBCT)",
                         "url": "https://scholar.google.de/citations?user=3SHkwz0AAAAJ",
                         "quelle": "https://scholar.google.de/citations?user=3SHkwz0AAAAJ"
                     }
@@ -5199,28 +5202,28 @@
                     {
                         "titel": "Towards Webcam-based Eye Tracking in the Eclipse IDE",
                         "jahr": "2017",
-                        "venue": "PPIG 2017",
+                        "venue": "PPIG",
                         "url": "https://ppig.org/papers/2017-ppig-28th-lohmeier/",
                         "quelle": "https://dblp.uni-trier.de/pers/hd/l/Lohmeier:Sebastian"
                     },
                     {
                         "titel": "A Formal and a Cognitive Model of Anaphors in Java",
                         "jahr": "2016",
-                        "venue": "PPIG 2016",
+                        "venue": "PPIG",
                         "url": "https://ppig.org/papers/2016-ppig-27th-lohmeier/",
                         "quelle": "https://dblp.uni-trier.de/pers/hd/l/Lohmeier:Sebastian"
                     },
                     {
                         "titel": "Activation and the Comprehension of Indirect Anaphors in Source Code",
                         "jahr": "2014",
-                        "venue": "PPIG 2014",
+                        "venue": "PPIG",
                         "url": "https://ppig.org/papers/2014-ppig-25th-lohmeier/",
                         "quelle": "https://dblp.uni-trier.de/pers/hd/l/Lohmeier:Sebastian"
                     },
                     {
                         "titel": "Self-collision avoidance and angular momentum compensation for a biped humanoid robot",
                         "jahr": "2011",
-                        "venue": "ICRA 2011",
+                        "venue": "ICRA",
                         "url": "https://doi.org/10.1109/ICRA.2011.5980350",
                         "quelle": "https://dblp.uni-trier.de/pers/hd/l/Lohmeier:Sebastian"
                     },
@@ -5234,21 +5237,21 @@
                     {
                         "titel": "Walking in unknown environments - A step towards more autonomy",
                         "jahr": "2010",
-                        "venue": "Humanoids 2010",
+                        "venue": "Humanoids",
                         "url": "https://doi.org/10.1109/ICHR.2010.5686338",
                         "quelle": "https://dblp.uni-trier.de/pers/hd/l/Lohmeier:Sebastian"
                     },
                     {
                         "titel": "Humanoid robot LOLA",
                         "jahr": "2009",
-                        "venue": "ICRA 2009",
+                        "venue": "ICRA",
                         "url": "https://doi.org/10.1109/ROBOT.2009.5152578",
                         "quelle": "https://dblp.uni-trier.de/pers/hd/l/Lohmeier:Sebastian"
                     },
                     {
                         "titel": "Modular Joint Design for Performance Enhanced Humanoid Robot LOLA",
                         "jahr": "2006",
-                        "venue": "ICRA 2006",
+                        "venue": "ICRA",
                         "url": "https://doi.org/10.1109/ROBOT.2006.1641166",
                         "quelle": "https://dblp.uni-trier.de/pers/hd/l/Lohmeier:Sebastian"
                     }
@@ -5449,31 +5452,31 @@
                     {
                         "titel": "POSTER: Re-Thinking Risks and Rewards for Trusted Third Parties",
                         "jahr": "2016",
-                        "venue": "ACM CCS 2016, pp. 1796-1798",
+                        "venue": "ACM CCS, pp. 1796-1798",
                         "quelle": "https://dblp.org/pid/84/8930.html"
                     },
                     {
                         "titel": "Knock Yourself Out: Secure Authentication with Short Re-Usable Passwords",
                         "jahr": "2015",
-                        "venue": "Network and Distributed System Security Symposium (NDSS 2015)",
+                        "venue": "Network and Distributed System Security Symposium (NDSS)",
                         "quelle": "https://dblp.org/pid/84/8930.html"
                     },
                     {
                         "titel": "A Secure Submission System for Online Whistleblowing Platforms",
                         "jahr": "2013",
-                        "venue": "Financial Cryptography and Data Security 2013, pp. 354-361",
+                        "venue": "Financial Cryptography and Data Security, pp. 354-361",
                         "quelle": "https://dblp.org/pid/84/8930.html"
                     },
                     {
                         "titel": "POSTER: TouchCtrl: fine-grained access control for collaborative environments",
                         "jahr": "2013",
-                        "venue": "ACM CCS 2013, pp. 1453-1456",
+                        "venue": "ACM CCS, pp. 1453-1456",
                         "quelle": "https://dblp.org/pid/84/8930.html"
                     },
                     {
                         "titel": "The IR ring: authenticating users' touches on a multi-touch display",
                         "jahr": "2010",
-                        "venue": "ACM UIST 2010, pp. 259-262",
+                        "venue": "ACM UIST, pp. 259-262",
                         "quelle": "https://dblp.org/pid/84/8930.html"
                     }
                 ],
@@ -5546,31 +5549,31 @@
                     {
                         "titel": "Epidemic? The Attack Surface of German Hospitals during the COVID-19 Pandemic",
                         "jahr": "2021",
-                        "venue": "CyCon 2021",
+                        "venue": "CyCon",
                         "quelle": "https://dblp.org/pers/k/Klick:Johannes"
                     },
                     {
                         "titel": "POSTER: Towards Highly Interactive Honeypots for Industrial Control Systems",
                         "jahr": "2016",
-                        "venue": "CCS 2016",
+                        "venue": "CCS",
                         "quelle": "https://dblp.org/pers/k/Klick:Johannes"
                     },
                     {
                         "titel": "Towards Better Internet Citizenship: Reducing the Footprint of Internet-wide Scans by Topology Aware Prefix Selection",
                         "jahr": "2016",
-                        "venue": "Internet Measurement Conference 2016",
+                        "venue": "Internet Measurement Conference",
                         "quelle": "https://dblp.org/pers/k/Klick:Johannes"
                     },
                     {
                         "titel": "PLC Guard: A practical defense against attacks on cyber-physical systems",
                         "jahr": "2015",
-                        "venue": "IEEE CNS 2015",
+                        "venue": "IEEE CNS",
                         "quelle": "https://dblp.org/pers/k/Klick:Johannes"
                     },
                     {
                         "titel": "Internet-facing PLCs as a network backdoor",
                         "jahr": "2015",
-                        "venue": "IEEE CNS 2015",
+                        "venue": "IEEE CNS",
                         "quelle": "https://dblp.org/pers/k/Klick:Johannes"
                     }
                 ],
@@ -5643,7 +5646,7 @@
                     {
                         "titel": "AirForce: Personal Fabrication of Large-Scale, Load-Bearing Animatronics Structures from a Single Tube",
                         "jahr": "2026",
-                        "venue": "Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems",
+                        "venue": "Proceedings of the CHI Conference on Human Factors in Computing Systems",
                         "quelle": "https://dblp.org/pid/161/3377.html"
                     },
                     {
@@ -5655,7 +5658,7 @@
                     {
                         "titel": "Kerfmeter: Automatic Kerf Calibration for Laser Cutting",
                         "jahr": "2023",
-                        "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
+                        "venue": "Proceedings of the CHI Conference on Human Factors in Computing Systems",
                         "quelle": "https://dblp.org/pid/161/3377.html"
                     },
                     {
@@ -5667,7 +5670,7 @@
                     {
                         "titel": "FastForce: Real-Time Reinforcement of Laser-Cut Structures",
                         "jahr": "2021",
-                        "venue": "Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems",
+                        "venue": "Proceedings of the CHI Conference on Human Factors in Computing Systems",
                         "quelle": "https://dblp.org/pid/161/3377.html"
                     },
                     {
@@ -5679,7 +5682,7 @@
                     {
                         "titel": "Virtual Reality Without Vision: A Haptic and Auditory White Cane to Navigate Complex Virtual Worlds",
                         "jahr": "2020",
-                        "venue": "Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems",
+                        "venue": "Proceedings of the CHI Conference on Human Factors in Computing Systems",
                         "quelle": "https://dblp.org/pid/161/3377.html"
                     },
                     {
@@ -5780,7 +5783,7 @@
                     {
                         "titel": "Introduction to the Minitrack on Advancing Software Resilience in the Age of LLM",
                         "jahr": "2026",
-                        "venue": "HICSS 2026",
+                        "venue": "HICSS",
                         "quelle": "https://dblp.org/pid/10/5050.html"
                     },
                     {
@@ -5792,7 +5795,7 @@
                     {
                         "titel": "Slurm plugin for HPC operation with time-dependent cluster-wide power capping",
                         "jahr": "2025",
-                        "venue": "FedCSIS 2025",
+                        "venue": "FedCSIS",
                         "quelle": "https://dblp.org/pid/10/5050.html"
                     },
                     {
@@ -6207,7 +6210,7 @@
                     {
                         "titel": "Achieving Third-party Deniability in Signature-based Credential Systems",
                         "jahr": "2024",
-                        "venue": "COMPSAC 2024",
+                        "venue": "COMPSAC",
                         "quelle": "https://dblp.org/pid/14/4256.html"
                     },
                     {
@@ -6219,13 +6222,13 @@
                     {
                         "titel": "Cryptographic Requirements of Verifiable Credentials for Digital Identification Documents",
                         "jahr": "2023",
-                        "venue": "COMPSAC 2023",
+                        "venue": "COMPSAC",
                         "quelle": "https://dblp.org/pid/14/4256.html"
                     },
                     {
                         "titel": "Post-quantum Security for the Extended Access Control Protocol",
                         "jahr": "2023",
-                        "venue": "SecSR 2023",
+                        "venue": "SecSR",
                         "quelle": "https://dblp.org/pid/14/4256.html"
                     }
                 ]
@@ -6296,43 +6299,43 @@
                     {
                         "titel": "Teaching Data Concepts and Practices in Secondary School Education on Artificial Intelligence",
                         "jahr": "2025",
-                        "venue": "Koli Calling 2025",
+                        "venue": "Koli Calling",
                         "quelle": "https://dblp.org/pid/02/4919.html"
                     },
                     {
                         "titel": "Die Datenfallstudie - eine Lehr-Lern-Methode für den Informatikunterricht",
                         "jahr": "2025",
-                        "venue": "INFOS 2025",
+                        "venue": "INFOS",
                         "quelle": "https://dblp.org/pid/02/4919.html"
                     },
                     {
                         "titel": "TINAs Lernreise: Zentrale Konzepte Großer Sprachmodelle",
                         "jahr": "2025",
-                        "venue": "INFOS 2025",
+                        "venue": "INFOS",
                         "quelle": "https://dblp.org/pid/02/4919.html"
                     },
                     {
                         "titel": "Professional Development for Teachers in Artificial Intelligence and Data Literacy",
                         "jahr": "2024",
-                        "venue": "OCCE 2024",
+                        "venue": "OCCE",
                         "quelle": "https://dblp.org/pid/02/4919.html"
                     },
                     {
                         "titel": "Lecturers' Perspectives Regarding AI Competencies for Non-computer Science Students in Undergraduate Education",
                         "jahr": "2024",
-                        "venue": "OCCE 2024",
+                        "venue": "OCCE",
                         "quelle": "https://dblp.org/pid/02/4919.html"
                     },
                     {
                         "titel": "Computer Science for All: Teacher Training for In-Service Teachers",
                         "jahr": "2024",
-                        "venue": "OCCE 2024",
+                        "venue": "OCCE",
                         "quelle": "https://dblp.org/pid/02/4919.html"
                     },
                     {
                         "titel": "Data-related practices for creating Artificial Intelligence systems in K-12",
                         "jahr": "2024",
-                        "venue": "WiPSCE 2024",
+                        "venue": "WiPSCE",
                         "quelle": "https://dblp.org/pid/02/4919.html"
                     }
                 ],
@@ -7392,7 +7395,7 @@
                     {
                         "titel": "Path Following with Deep Reinforcement Learning for Autonomous Cars",
                         "jahr": "2021",
-                        "venue": "ROBOVIS 2021: 173-181",
+                        "venue": "ROBOVIS: 173-181",
                         "url": "https://dblp.org/pid/r/RaulRojas.html",
                         "quelle": "https://dblp.org/pid/r/RaulRojas.html"
                     }
@@ -7528,49 +7531,49 @@
                     {
                         "titel": "Strategic Anticipation in Crisis Management Through the Lens of Societal Values - The SANCTUM Project",
                         "jahr": "2022",
-                        "venue": "CRITIS 2022",
+                        "venue": "CRITIS",
                         "quelle": "https://dblp.org/pid/v/AVoisard.html"
                     },
                     {
                         "titel": "How to turn the Fast-Track into a Fast-Track: Process integration for evaluation of the quality of Digital Health Applications (DiGAs)",
                         "jahr": "2022",
-                        "venue": "HICSS 2022",
+                        "venue": "HICSS",
                         "quelle": "https://dblp.org/pid/v/AVoisard.html"
                     },
                     {
                         "titel": "Designing AINA - Intercultural Human-Centered Design of an AI-based Application for Supporting the Diagnosis of Female Genital Schistosomiasis",
                         "jahr": "2022",
-                        "venue": "ICHI 2022",
+                        "venue": "ICHI",
                         "quelle": "https://dblp.org/pid/v/AVoisard.html"
                     },
                     {
                         "titel": "HaLowNet - A WiFi HaLow network-based information system for the provision of multi-sided applications for medical emergency scenarios",
                         "jahr": "2022",
-                        "venue": "ICHI 2022",
+                        "venue": "ICHI",
                         "quelle": "https://dblp.org/pid/v/AVoisard.html"
                     },
                     {
                         "titel": "SurgeRate - An approach to the evaluation of the performance of veterinary surgeons",
                         "jahr": "2022",
-                        "venue": "ICHI 2022",
+                        "venue": "ICHI",
                         "quelle": "https://dblp.org/pid/v/AVoisard.html"
                     },
                     {
                         "titel": "mHealthAtlas - An expert-based multi-sided platform for the evaluation of mHealth applications",
                         "jahr": "2021",
-                        "venue": "ICHI 2021",
+                        "venue": "ICHI",
                         "quelle": "https://dblp.org/pid/v/AVoisard.html"
                     },
                     {
                         "titel": "PRECOSE - An Approach for Preserving Color Semantics in the Conversion of Colors to Grayscale in the Context of Medical Scoring Boards",
                         "jahr": "2020",
-                        "venue": "HealthCom 2020",
+                        "venue": "HealthCom",
                         "quelle": "https://dblp.org/pid/v/AVoisard.html"
                     },
                     {
                         "titel": "mHealthAtlas - An Approach for the Multidisciplinary Evaluation of mHealth Applications",
                         "jahr": "2020",
-                        "venue": "HealthCom 2020",
+                        "venue": "HealthCom",
                         "quelle": "https://dblp.org/pid/v/AVoisard.html"
                     }
                 ]
@@ -8143,7 +8146,7 @@
                     {
                         "titel": "Interactive Computer Animation of Sketches of Data Structures",
                         "jahr": "2008",
-                        "venue": "Human Computer Interaction 2008, Innsbruck",
+                        "venue": "Human Computer Interaction, Innsbruck",
                         "quelle": "http://www.esponda.de/sites/index.php?p=publications"
                     },
                     {
@@ -8611,42 +8614,42 @@
                     {
                         "titel": "Faster exponential algorithms for cut problems via geometric data structures",
                         "jahr": "2025",
-                        "venue": "ESA 2025",
+                        "venue": "ESA",
                         "url": "https://arxiv.org/abs/2506.22281",
                         "quelle": "http://www.lkozma.net/research.html"
                     },
                     {
                         "titel": "Online sorting and online TSP: randomized, stochastic, and high-dimensional",
                         "jahr": "2024",
-                        "venue": "ESA 2024",
+                        "venue": "ESA",
                         "url": "https://arxiv.org/abs/2406.19257",
                         "quelle": "http://www.lkozma.net/research.html"
                     },
                     {
                         "titel": "Optimization with pattern-avoiding input",
                         "jahr": "2024",
-                        "venue": "STOC 2024",
+                        "venue": "STOC",
                         "url": "https://arxiv.org/abs/2310.04236",
                         "quelle": "http://www.lkozma.net/research.html"
                     },
                     {
                         "titel": "Fast approximation of search trees on trees with centroid trees",
                         "jahr": "2023",
-                        "venue": "ICALP 2023",
+                        "venue": "ICALP",
                         "url": "https://arxiv.org/abs/2209.08024",
                         "quelle": "http://www.lkozma.net/research.html"
                     },
                     {
                         "titel": "Splay trees on trees",
                         "jahr": "2022",
-                        "venue": "SODA 2022",
+                        "venue": "SODA",
                         "url": "https://arxiv.org/abs/2010.00931",
                         "quelle": "http://www.lkozma.net/research.html"
                     },
                     {
                         "titel": "Smooth heaps and a dual view of self-adjusting data structures",
                         "jahr": "2018",
-                        "venue": "STOC 2018",
+                        "venue": "STOC",
                         "url": "https://arxiv.org/abs/1802.05471",
                         "quelle": "http://www.lkozma.net/research.html"
                     }
@@ -8846,7 +8849,7 @@
                     {
                         "titel": "Near-Linear and Parameterized Approximations for Maximum Cliques in Disk Graphs",
                         "jahr": "2026",
-                        "venue": "SWAT 2026",
+                        "venue": "SWAT",
                         "quelle": "https://dblp.org/pid/m/WolfgangMulzer.html"
                     },
                     {
@@ -8858,7 +8861,7 @@
                     {
                         "titel": "Insertion-Only Dynamic Connectivity in General Disk Graphs",
                         "jahr": "2024",
-                        "venue": "SOSA 2024",
+                        "venue": "SOSA",
                         "quelle": "https://dblp.org/pid/m/WolfgangMulzer.html"
                     },
                     {
@@ -9451,13 +9454,13 @@
                     {
                         "titel": "Lossless Coding of Multi-Resolution Hash Tables for Instant-NGP Representations of 3D Scenes",
                         "jahr": "2026",
-                        "venue": "DCC 2026",
+                        "venue": "DCC",
                         "quelle": "https://dblp.org/pid/91/3474.html"
                     },
                     {
                         "titel": "Digital signatures for trustworthy authentication of elementary video streams",
                         "jahr": "2025",
-                        "venue": "VCIP 2025",
+                        "venue": "VCIP",
                         "quelle": "https://dblp.org/pid/91/3474.html"
                     },
                     {
@@ -9481,7 +9484,7 @@
                     {
                         "titel": "Fast Dependent Quantization Using Trellis Pruning, Forward Context Adaptation and Vectorization",
                         "jahr": "2024",
-                        "venue": "EUSIPCO 2024",
+                        "venue": "EUSIPCO",
                         "quelle": "https://dblp.org/pid/91/3474.html"
                     },
                     {

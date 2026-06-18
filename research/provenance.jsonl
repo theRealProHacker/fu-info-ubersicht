@@ -1977,3 +1977,5 @@
 {"ts": "2026-06-18T08:26:40+00:00", "id": "voisard-agnes", "mode": "person", "action": "conflict", "field": "vita.ausbildung"}
 {"ts": "2026-06-18T08:26:40+00:00", "id": "voisard-agnes", "mode": "person", "action": "conflict", "field": "forschung.veroeffentlichungen"}
 {"ts": "2026-06-18T08:26:40+00:00", "id": "wolter-katinka", "mode": "person", "action": "conflict", "field": "vita.ausbildung"}
+{"ts": "2026-06-18T08:41:37+00:00", "id": "linnert-barry", "mode": "person", "action": "merged", "field": "vita.werdegang[normalized]", "value": {"position": "IT-Berater", "institution": "freiberuflich", "zeitraum": "1997–2001", "quelle": "https://www.jucs.org/jucs_articles_by_author/Linnert_Barry/BusinessCard.html"}, "source": "https://www.jucs.org/jucs_articles_by_author/Linnert_Barry/BusinessCard.html", "note": "manual: freelance role, institution set to freiberuflich"}
+{"ts": "2026-06-18T08:41:37+00:00", "id": "linnert-barry", "mode": "person", "action": "normalized", "field": "vita.positionen", "note": "removed legacy flat positionen (superseded by structured CV)"}
