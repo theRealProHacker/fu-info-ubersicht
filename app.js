@@ -91,13 +91,13 @@ class InstitutDiagram {
     // namespace with no collisions, so a single resolver covers both.
     resolveEntity(id) {
         if (!id) return null;
-        // Hidden (departed) entities are treated as nonexistent — a shared link
-        // to a person/group that no longer exists resolves to nothing, so
-        // handleInitialRoute strips the stale ?id and shows the chart.
+        // Dissolved groups stay gone (no modal, no ?id). Departed people remain
+        // viewable: they're surfaced as "Ehemalige Mitglieder" in their group
+        // and their researched profile is still worth opening.
         const group = this.data.gruppen.find(g => g.id === id);
         if (group && group.sichtbar !== false) return { kind: 'group', entity: group };
         const person = this.data.personen.find(p => p.id === id);
-        if (person && person.sichtbar !== false) return { kind: 'person', entity: person };
+        if (person) return { kind: 'person', entity: person };
         return null;
     }
 
@@ -280,6 +280,16 @@ class InstitutDiagram {
 
         const members = this.data.personen.filter(p => p.gruppen?.includes(groupId) && p.sichtbar !== false);
 
+        // Departed people who belonged to this group (shown in a separate
+        // "Ehemalige Mitglieder" section at the bottom). Professors first.
+        const formerMembers = this.data.personen
+            .filter(p => p.gruppen?.includes(groupId) && p.sichtbar === false)
+            .sort((a, b) => {
+                const ap = a.rolle?.toLowerCase().includes('professor') ? 0 : 1;
+                const bp = b.rolle?.toLowerCase().includes('professor') ? 0 : 1;
+                return ap - bp || a.name.localeCompare(b.name);
+            });
+
         // Categorize members
         const professors = members.filter(m => m.rolle?.toLowerCase().includes('professor'));
         const sekretariat = members.filter(m =>
@@ -391,6 +401,26 @@ class InstitutDiagram {
             html += '</div>';
         }
 
+        // Ehemalige Mitglieder (former members) — departed people, clickable
+        // through to their (still researched) profile.
+        if (formerMembers.length > 0) {
+            html += '<h4 class="ehemalige-heading">Ehemalige Mitglieder</h4>';
+            html += '<div class="ehemalige-grid">';
+            formerMembers.forEach(fm => {
+                const pic = fm.profilbild;
+                html += `
+                    <a class="member-card entity-link ehemalig" href="${this.linkFor(fm.id)}" data-id="${fm.id}">
+                        ${pic ? `<img class="member-avatar" src="${pic}" alt="${fm.name}">` : `<div class="member-avatar placeholder">${fm.name.charAt(0)}</div>`}
+                        <div class="member-info">
+                            <div class="member-name">${fm.titel || ''} ${fm.name}</div>
+                            <div class="member-role">${fm.rolle || ''}</div>
+                        </div>
+                    </a>
+                `;
+            });
+            html += '</div>';
+        }
+
         modalBody.innerHTML = html;
         this.openModal();
     }
@@ -459,6 +489,11 @@ class InstitutDiagram {
         modalGroups.innerHTML = '';
 
         let html = '';
+
+        // Departed person — context badge so it's clear they're no longer active.
+        if (person.sichtbar === false) {
+            html += '<p class="ehemalig-badge">Ehemaliges Mitglied</p>';
+        }
 
         // Contact
         // Contact
