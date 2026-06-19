@@ -2812,34 +2812,22 @@
                         "lv_nr": "19334412"
                     },
                     {
-                        "name": "ProInformatik IVa: Rechnerarchitektur",
-                        "semester": "SS 2024",
-                        "typ": "V",
-                        "lv_nr": "19307801"
-                    },
-                    {
-                        "name": "ProInformatik IVb: Betriebs- u. Kommunikationssysteme",
-                        "semester": "SS 2024",
-                        "typ": "V",
-                        "lv_nr": "19327601"
-                    },
-                    {
                         "name": "Betriebs- und Kommunikationssysteme",
                         "semester": "SS 2024",
                         "typ": "V+Ü",
                         "lv_nr": "19300701"
                     },
                     {
+                        "name": "ProInformatik IV: Rechnerarchitektur und Betriebs- u. Kommunikationssysteme",
+                        "semester": "SS 2024",
+                        "typ": "V+Ü",
+                        "lv_nr": "19307801"
+                    },
+                    {
                         "name": "ProInformatik IVb: Einführung in die Programmierung",
                         "semester": "SS 2024",
                         "typ": "Ü",
                         "lv_nr": "19327602"
-                    },
-                    {
-                        "name": "Übung zu ProInformatik IV: Rechnerarchitektur und Betriebs- u. Kommunikationssysteme",
-                        "semester": "SS 2024",
-                        "typ": "Ü",
-                        "lv_nr": "19307802"
                     },
                     {
                         "name": "Seminar/Proseminar: IoT im Smart Home",
@@ -3104,12 +3092,6 @@
                         "semester": "SS 2025",
                         "typ": "V+Ü",
                         "lv_nr": "19307601"
-                    },
-                    {
-                        "name": "Übung zu ProInformatik II: Konzepte der Programmierung",
-                        "semester": "SS 2025",
-                        "typ": "Ü",
-                        "lv_nr": "19307602"
                     },
                     {
                         "name": "Seminar/Proseminar: Smart Homes und die Welt der IoT",
@@ -3504,12 +3486,6 @@
                         "semester": "WS 24/25",
                         "typ": "V+Ü",
                         "lv_nr": "19301201"
-                    },
-                    {
-                        "name": "Übung zu Grundlagen der theoretischen Informatik",
-                        "semester": "WS 24/25",
-                        "typ": "Ü",
-                        "lv_nr": "19301202"
                     },
                     {
                         "name": "ProInformatik I: Diskrete Strukturen in der Informatik",
@@ -9104,12 +9080,6 @@
                         "semester": "WS 23/24",
                         "typ": "V+Ü",
                         "lv_nr": "19300201"
-                    },
-                    {
-                        "name": "Übung zu Algorithmen, Datenstrukturen und Datenabstraktion",
-                        "semester": "WS 23/24",
-                        "typ": "Ü",
-                        "lv_nr": "19300202"
                     },
                     {
                         "name": "Softwareprojekt: Anwendungen von Algorithmen",

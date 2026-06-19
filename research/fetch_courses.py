@@ -21,13 +21,22 @@ Normalization (confirmed mapping — keep CONSISTENT + repeatable):
   Seminar/Proseminar -> S/PS    Proseminar -> PS    Projektseminar -> SWP
   Forschungspraktikum/Berufspraktikum -> P
   DROPPED: Praktikum, Kolloquium, Begrüßungs- und Abschlussveranstaltung
-  Merge: a lecture + its "Übung zu <same title>" collapse to one V+Ü entry,
-         keeping the VORLESUNG title. Exact (title,type) duplicates deduped.
-  Unknown VV types are flagged loudly, never silently dropped.
+  Merge (3 tiers, see normalize()): a lecture + its Übung collapse to ONE V+Ü
+         entry — (1) exact "Übung zu <title>", (2) same VV module + word overlap,
+         (3) a combined "Übung zu <X und Y>" folds its sub-part lectures (e.g.
+         ProInformatik IVa + IVb) into one V+Ü titled <X und Y>. Exact
+         (title,type) duplicates deduped. Unknown VV types are flagged loudly.
+
+  Course NAMES are stored verbatim from the VV (e.g. "Softwareprojekt: …"), even
+  when the leading word restates `typ`. That redundancy is de-duplicated at
+  DISPLAY time in app.js (renders "{typ}: {name}"), keeping the data a faithful
+  VV mirror. The cross-semester collapse ("3× WS → WS") is likewise display-only.
 
 Modes:
   python3 fetch_courses.py            # REPORT: normalized courses per prof. No write.
   python3 fetch_courses.py --apply    # write lehre.kurse to the dataset + provenance.
+  python3 fetch_courses.py --renormalize          # REPORT re-merge of stored data (offline).
+  python3 fetch_courses.py --renormalize --apply  # re-merge already-fetched lehre.kurse.
 """
 import json
 import re
@@ -81,6 +90,10 @@ _STOP = {'und', 'and', 'der', 'die', 'das', 'den', 'dem', 'des', 'zu', 'zur',
 def content_tokens(s):
     return {w for w in re.findall(r'\w+', s.lower(), re.U)
             if len(w) >= 2 and w not in _STOP}
+# Course-level markers (ProInformatik IVa/IVb, Teil 1/2, …) — ignored when
+# deciding whether a sub-part lecture belongs under a combined Übung (tier 3).
+LEVEL_TOKENS = {'ia', 'ib', 'iia', 'iib', 'iiia', 'iiib', 'iva', 'ivb',
+                'va', 'vb', 'teil', 'a', 'b', 'c'}
 # Display/sort priority.
 TYPE_ORDER = {'V': 0, 'V+Ü': 1, 'Ü': 2, 'S': 3, 'S/PS': 4, 'PS': 5, 'SWP': 6, 'P': 7}
 
@@ -137,7 +150,17 @@ def parse_rows(html_text, query):
 
 
 def normalize(rows, semester):
-    """Drop None-coded, dedup, merge V+Ü -> one entry (lecture title)."""
+    """Drop None-coded, dedup, merge each Übung into a V+Ü lecture entry.
+
+    Three tiers, tried in order; each only considers Übungen/lectures not yet
+    consumed by an earlier tier:
+      1. exact   — "Übung zu <X>" + a lecture named exactly <X>.
+      2. fuzzy   — same VV module (lv_nr[:-2]) AND >2 shared content words.
+      3. combined— a leftover "Übung zu <X>" whose title names several sub-parts
+                   (e.g. "ProInformatik IV: Rechnerarchitektur und Betriebs- …")
+                   folds EVERY sub-part lecture whose words are a subset of <X>
+                   (ignoring level markers like IVa/IVb) into ONE V+Ü titled <X>.
+    """
     kept = [r for r in rows if r['code'] is not None]
     # dedup by (code, name): keep first lv_nr
     seen, deduped = set(), []
@@ -149,19 +172,29 @@ def normalize(rows, semester):
         deduped.append(r)
     lectures = [r for r in deduped if r['code'] == 'V']
     lec_by_name = {r['name']: r for r in lectures}
+    # A V+Ü already represents lecture+exercise, so a separate "Übung zu <that
+    # title>" is redundant (matched by TITLE only — a shared VV module can hold
+    # unrelated topics, e.g. Approximationsalgorithmen vs its module-mate).
+    vplus_by_name = {r['name'] for r in deduped if r['code'] == 'V+Ü'}
     consumed = set()
+    # Tiers 1 & 2: pair each Übung with ONE lecture (promote that lecture in place).
     for r in deduped:
         if r['code'] != 'Ü':
             continue
         m = MERGE_PREFIX.match(r['name'])
-        target = lec_by_name.get(m.group(1).strip()) if m else None
-        if target is None:
+        x = m.group(1).strip() if m else None
+        if x and x in vplus_by_name:        # redundant with an existing V+Ü -> drop
+            consumed.add(id(r))
+            continue
+        target = lec_by_name.get(x) if x else None
+        if target is None or id(target) in consumed:
+            target = None
             # Fuzzy fallback: only inside the SAME VV module (the LV-Nr minus
             # its 2-digit component, e.g. 193353|01 vs 193353|02) AND only when
             # more than two content words overlap.
             mod, ut, best = r['lv_nr'][:-2], content_tokens(r['name']), 2
             for lr in lectures:
-                if lr['lv_nr'][:-2] != mod:
+                if lr['lv_nr'][:-2] != mod or id(lr) in consumed:
                     continue
                 ov = len(ut & content_tokens(lr['name']))
                 if ov > best:
@@ -169,14 +202,63 @@ def normalize(rows, semester):
         if target is not None:
             target['code'] = 'V+Ü'
             consumed.add(id(r))
-    out = []
+    # Tier 3: a still-unpaired combined Übung absorbs its sub-part lectures into
+    # a NEW V+Ü carrying the combined (Übung) title.
+    merged_extra = []
     for r in deduped:
-        if id(r) in consumed:
+        if r['code'] != 'Ü' or id(r) in consumed:
             continue
-        out.append({'name': r['name'], 'semester': semester,
-                    'typ': r['code'], 'lv_nr': r['lv_nr']})
+        m = MERGE_PREFIX.match(r['name'])
+        if not m:
+            continue
+        title = m.group(1).strip()
+        xt = content_tokens(title)
+        subparts = [lr for lr in lectures
+                    if id(lr) not in consumed
+                    and len(content_tokens(lr['name']) & xt) >= 2
+                    and not (content_tokens(lr['name']) - xt - LEVEL_TOKENS)]
+        if not subparts:
+            continue
+        mod = r['lv_nr'][:-2]
+        primary = next((lr for lr in subparts if lr['lv_nr'][:-2] == mod), subparts[0])
+        merged_extra.append({'name': title, 'code': 'V+Ü', 'lv_nr': primary['lv_nr']})
+        consumed.add(id(r))
+        for lr in subparts:
+            consumed.add(id(lr))
+    out = [{'name': r['name'], 'semester': semester, 'typ': r['code'], 'lv_nr': r['lv_nr']}
+           for r in deduped if id(r) not in consumed]
+    out += [{'name': e['name'], 'semester': semester, 'typ': e['code'], 'lv_nr': e['lv_nr']}
+            for e in merged_extra]
     out.sort(key=lambda e: (TYPE_ORDER.get(e['typ'], 9), e['name']))
     return out
+
+
+def _sem_key(s):
+    """Recency sort key for a semester label (newest -> largest); mirrors the
+    parser in app.js. Bare/unknown labels sort oldest."""
+    season = 'WS' if re.match(r'^(WS|WiSe|Wi)', s or '', re.I) else 'SS'
+    m = re.search(r'(\d{4}|\d{2})', s or '')
+    if not m:
+        return -1
+    year = int(m.group(1)) + (2000 if len(m.group(1)) == 2 else 0)
+    return year * 2 + (1 if season == 'WS' else 0)
+
+
+def renormalize_person(kurse):
+    """Re-apply normalize() to a person's STRUCTURED courses (those carrying an
+    lv_nr + typ), per semester, leaving legacy {name, semester} entries as-is.
+    Pure/offline — lets --renormalize re-merge already-fetched data without
+    touching the VV. Returns the rebuilt kurse list (newest semester first)."""
+    structured = [k for k in kurse if k.get('lv_nr') and k.get('typ')]
+    legacy = [k for k in kurse if not (k.get('lv_nr') and k.get('typ'))]
+    by_sem = {}
+    for k in structured:
+        by_sem.setdefault(k['semester'], []).append(
+            {'name': k['name'], 'code': k['typ'], 'lv_nr': k['lv_nr']})
+    out = []
+    for sem in sorted(by_sem, key=_sem_key, reverse=True):
+        out += normalize(by_sem[sem], sem)
+    return out + legacy
 
 
 def courses_for(prof):
@@ -189,9 +271,48 @@ def courses_for(prof):
     return prof['id'], all_courses, unknowns
 
 
+def run_renormalize(data, apply):
+    """Re-merge already-fetched lehre.kurse offline (no VV) — applies the latest
+    normalize() tiers to stored data. Report-first; --apply writes + provenance."""
+    ts = datetime.now(timezone.utc).isoformat(timespec='seconds')
+    prov, changed = [], 0
+    for p in data['personen']:
+        kurse = (p.get('lehre') or {}).get('kurse') or []
+        if not any(k.get('lv_nr') and k.get('typ') for k in kurse):
+            continue
+        new = renormalize_person(kurse)
+        if new == kurse:
+            continue
+        changed += 1
+        before = {(k.get('typ'), k['name'], k['semester']) for k in kurse}
+        after = {(k.get('typ'), k['name'], k['semester']) for k in new}
+        print(f"### {p['name']}  ({len(kurse)} -> {len(new)} courses)")
+        for typ, nm, sem in sorted(before - after):
+            print(f"    -  [{typ}] {nm}  ({sem})")
+        for typ, nm, sem in sorted(after - before):
+            print(f"    +  [{typ}] {nm}  ({sem})")
+        print()
+        if apply:
+            p['lehre']['kurse'] = new
+            prov.append({'ts': ts, 'id': p['id'], 'mode': 'person', 'action': 'updated',
+                         'field': 'lehre.kurse', 'value': len(new),
+                         'note': 'Renormalized lehre.kurse (V+Ü family merge), offline',
+                         'source': 'https://www.fu-berlin.de/vv/'})
+    if not apply:
+        print(f"{changed} people would change — re-run with --apply to write.")
+        return
+    DATASET.write_text(json.dumps(data, ensure_ascii=False, indent=4), encoding='utf-8')
+    with PROV.open('a', encoding='utf-8') as f:
+        for r in prov:
+            f.write(json.dumps(r, ensure_ascii=False) + '\n')
+    print(f"WROTE renormalized lehre.kurse for {changed} people + {len(prov)} provenance records.")
+
+
 def main():
     apply = '--apply' in sys.argv
     data = json.loads(DATASET.read_text(encoding='utf-8'))
+    if '--renormalize' in sys.argv:
+        return run_renormalize(data, apply)
     profs = professors(data)
     name_by_id = {p['id']: p['name'] for p in profs}
 

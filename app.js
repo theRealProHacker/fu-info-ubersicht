@@ -665,14 +665,15 @@ class InstitutDiagram {
             html += '</ul>';
         }
 
-        // Teaching — full list, no cap (newest semester first).
+        // Teaching — each course collapsed across the semesters it recurred in
+        // (3+ same season → "WS"/"SS", both → "jedes Semester"), rendered as
+        // "{typ}: {name}". Display-only: the dataset keeps the faithful
+        // per-semester VV rows (see research/fetch_courses.py).
         if (person.lehre?.kurse?.length > 0) {
             html += '<h4>Lehrveranstaltungen</h4><ul style="color: var(--text-secondary); font-size: 0.875rem;">';
-            person.lehre.kurse.forEach(kurs => {
-                // typ (V / Ü / V+Ü / S / SWP …) is shown when present; older
-                // unrefreshed entries only carry {name, semester}.
-                const meta = [kurs.typ, kurs.semester].filter(Boolean).join(' · ');
-                html += `<li style="margin: 4px 0;">📚 ${kurs.name}${meta ? ` (${meta})` : ''}</li>`;
+            this.collapseKurse(person.lehre.kurse).forEach(kurs => {
+                const label = kurs.typ ? `${kurs.typ}: ${kurs.name}` : kurs.name;
+                html += `<li style="margin: 4px 0;">📚 ${label}${kurs.when ? ` (${kurs.when})` : ''}</li>`;
             });
             html += '</ul>';
         }
@@ -685,6 +686,75 @@ class InstitutDiagram {
 
         modalBody.innerHTML = html;
         this.openModal();
+    }
+
+    // Collapse a person's Lehrveranstaltungen for display: group the same course
+    // across the semesters it recurred in, de-duplicate the type word the VV
+    // bakes into the title, and label the recurrence compactly. Returns
+    // [{typ, name, when}], newest course first. Pure / no side effects.
+    collapseKurse(kurse) {
+        // "WS 25/26" / "WS 23/24" / "SoSe 2020" / "SS 2026" → {season, key}.
+        const parseSem = (s) => {
+            const t = s || '';
+            const season = /^(WS|WiSe|Wi)/i.test(t) ? 'WS'
+                : (/^(SS|SoSe|So)/i.test(t) ? 'SS' : null);
+            const m = t.match(/(\d{4}|\d{2})/);
+            let year = null;
+            if (m) { year = parseInt(m[1], 10); if (m[1].length === 2) year += 2000; }
+            return { season, key: year == null ? -1 : year * 2 + (season === 'WS' ? 1 : 0) };
+        };
+        // A lecture is a lecture whether or not its Übung is bundled in.
+        const typClass = (t) => (t === 'V' || t === 'V+Ü') ? 'V' : (t || '_');
+        // Leading words the VV repeats from `typ` — dropped so the type shows once.
+        const DESCR = { softwareprojekt: 'SWP', swp: 'SWP', projektseminar: 'SWP',
+            'seminar/proseminar': 'S/PS', 's/ps': 'S/PS', seminar: 'S',
+            forschungsseminar: 'S', proseminar: 'PS', vorlesung: 'V', kurs: 'V' };
+        const cleanName = (name, typ) => {
+            // Drop a trailing season the VV bakes into the title (e.g. "… (SoSe)")
+            // — the recurrence label below already carries the season.
+            let n = name.replace(/\s*\((?:SoSe|WiSe|SS|WS|Sommersemester|Wintersemester)\)\s*$/i, '').trim();
+            const ex = n.match(/^(?:Übung|Tutorium|Seminar am PC|Practice seminar)\s+(?:zu[rm]?|for)\s+(.+)$/is);
+            if (ex && (typ === 'Ü' || typ === 'V+Ü')) return ex[1].trim();
+            const m = n.match(/^([^:]{1,40}):\s*(.+)$/s);
+            if (m) {
+                const code = DESCR[m[1].trim().toLowerCase()];
+                if (code && typClass(code) === typClass(typ)) return m[2].trim();
+            }
+            return n;
+        };
+        // Grouping key: fold "&"→"und" and case/spacing so the same course
+        // counts as one across semesters even when the VV spelled it differently.
+        const groupKey = (name) => name.toLowerCase().replace(/&/g, 'und').replace(/\s+/g, ' ').trim();
+
+        const groups = new Map();
+        for (const k of kurse) {
+            const name = cleanName(k.name || '', k.typ);
+            const gk = `${typClass(k.typ)}|${groupKey(name)}`;
+            const sk = parseSem(k.semester).key;
+            let g = groups.get(gk);
+            if (!g) { g = { name, typ: k.typ || null, sems: [], nameKey: sk }; groups.set(gk, g); }
+            g.sems.push(k.semester);
+            if (sk > g.nameKey) { g.name = name; g.nameKey = sk; }  // show the newest spelling
+            if (k.typ === 'V+Ü') g.typ = 'V+Ü';   // prefer the fuller lecture type
+        }
+
+        const label = (sems) => {
+            const uniq = [...new Set(sems)].map(s => ({ raw: s, ...parseSem(s) }));
+            uniq.sort((a, b) => b.key - a.key);          // newest first
+            if (uniq.length === 1) return uniq[0].raw;
+            if (uniq.length === 2) return uniq.map(u => u.raw).join(', ');
+            const seasons = new Set(uniq.map(u => u.season));
+            if (seasons.size === 1 && seasons.has('WS')) return 'WS';
+            if (seasons.size === 1 && seasons.has('SS')) return 'SS';
+            return 'jedes Semester';
+        };
+
+        return [...groups.values()]
+            .map(g => ({
+                typ: g.typ, name: g.name, when: label(g.sems),
+                key: Math.max(...g.sems.map(s => parseSem(s).key)),
+            }))
+            .sort((a, b) => b.key - a.key || a.name.localeCompare(b.name, 'de'));
     }
 
     openModal() {
