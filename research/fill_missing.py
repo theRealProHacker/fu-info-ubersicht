@@ -54,7 +54,7 @@ RESTRICTED_ROLES = {'Sekretariat', 'Projektassistentin'}
 RESTRICTED_FIELDS = [
     'kontakt.email', 'kontakt.telefon', 'links.fu-berlin', 'profilbild',
 ]
-GROUP_FIELDS = ['beschreibung']
+GROUP_FIELDS = ['beschreibung', 'mitarbeiter_url']
 
 URL_FIELDS = {
     'links.fu-berlin', 'links.persoenlich', 'links.github', 'links.linkedin',
@@ -80,7 +80,10 @@ OBJ_ARRAY_FIELDS = {
     },
     'forschung.veroeffentlichungen': {
         'required_text': ('titel',),
-        'optional_text': ('jahr', 'venue'), 'optional_url': ('url',), 'cap': 8,
+        'optional_text': ('jahr', 'venue'), 'optional_url': ('url',),
+        # zitationen: per-paper citation count (fetched, e.g. Semantic Scholar);
+        # highlight: curator flag pinning a standout paper to the top.
+        'optional_int': ('zitationen',), 'optional_bool': ('highlight',), 'cap': 8,
     },
 }
 MAX_ARRAY_ITEMS = 40
@@ -547,6 +550,19 @@ def validate_field(path, value, source, entry, mode):
                 if err:
                     return f'course {key}: {err}'
         return None
+    if path == 'mitarbeiter_url':
+        err = check_url(value)
+        if err:
+            return err
+        # The group's live member roster: same host as the group website
+        # (covers external homepages like hhi.fraunhofer.de) or any fu-berlin.de.
+        site_host = host_of(entry.get('website', ''))
+        val_host = host_of(value)
+        if host_matches(val_host, 'fu-berlin.de'):
+            return None
+        if site_host and host_matches(val_host, site_host):
+            return None
+        return f'mitarbeiter_url host must be fu-berlin.de or the group site ({site_host})'
     if path == 'beschreibung':
         err = clean_string(value)
         if err:
@@ -581,7 +597,10 @@ def validate_obj_array(path, value, entry, mode):
 
     req_text = spec['required_text']
     url_keys = set(spec['optional_url']) | {'quelle'}
-    allowed_keys = set(req_text) | set(spec['optional_text']) | url_keys
+    int_keys = set(spec.get('optional_int', ()))
+    bool_keys = set(spec.get('optional_bool', ()))
+    allowed_keys = (set(req_text) | set(spec['optional_text']) | url_keys
+                    | int_keys | bool_keys)
     required_keys = set(req_text) | {'quelle'}
     fu_only = mode == 'person' and entry.get('rolle') in RESTRICTED_ROLES
 
@@ -589,6 +608,11 @@ def validate_obj_array(path, value, entry, mode):
         # Coerce a stray numeric (jahr as 2011) to a string, then validate.
         if key in url_keys:
             return check_url(item[key]) is None
+        if key in int_keys:
+            v = item[key]
+            return isinstance(v, int) and not isinstance(v, bool) and v >= 0
+        if key in bool_keys:
+            return isinstance(item[key], bool)
         if isinstance(item[key], (int, float)) and not isinstance(item[key], bool):
             item[key] = str(item[key])
         return clean_string(item[key]) is None
