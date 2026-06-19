@@ -71,8 +71,13 @@ Raise the detail bar on **all** person fields, not just the CV:
 
 (Plus a maintained — not researched — `last_updated` timestamp per entry; see §7.)
 
-For **groups**, the researched field is `beschreibung` (2–3 German sentences,
-sourced ONLY from the group's own website).
+For **groups**, the researched fields are `beschreibung` (2–3 German sentences,
+sourced ONLY from the group's own website) and `mitarbeiter_url` — the URL of the
+group's live current-members/staff page (the target of the site's "Weitere
+Mitarbeiter" link). The members-page URL is **not uniform** across AGs (it is *not*
+always `…/staff/0Current`), so it is researched per group; it must point at the
+group's own website host or any `fu-berlin.de` page. Usually set by
+`fetch_members.py`.
 
 **Restricted subjects.** For `Sekretariat` / `Projektassistentin` roles,
 research ONLY `kontakt.email`, `kontakt.telefon`, `links.fu-berlin`,
@@ -206,6 +211,8 @@ holds the URL to the *full* list.
 | `venue` | — | Conference/journal name, if stated — **WITHOUT the year** (the year lives in `jahr`): `"CCGrid"`, not `"CCGrid 2014"`. |
 | `url` | — | DOI or canonical paper URL, if available. |
 | `quelle` | ✅ | Page that lists this paper (self-sourcing — see §6). |
+| `zitationen` | — | Per-paper citation count (non-negative integer). NOT hand-researched — set by `fetch_citations.py` (Semantic Scholar). Powers the "Meistzitiert" badge + citation sort. |
+| `highlight` | — | Boolean curator flag. `true` pins a standout paper to the top of the list with a ★. Set manually, not by an agent. |
 
 ### 3.2 `forschung.scholar` — Google Scholar metrics
 

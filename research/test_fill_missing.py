@@ -179,7 +179,7 @@ class SelectTests(unittest.TestCase):
         queue, _ = fm.select(make_data(), empty_state(), empty_skip(), {},
                              make_args(groups=True))
         self.assertEqual(self.queue_ids(queue), ['ag-test'])
-        self.assertEqual(queue[0][1], ['beschreibung'])
+        self.assertEqual(queue[0][1], ['beschreibung', 'mitarbeiter_url'])
 
     def test_limit_truncates_queue(self):
         queue, _ = fm.select(make_data(), empty_state(), empty_skip(), {},
@@ -361,6 +361,65 @@ class ReviewRegressionTests(unittest.TestCase):
              'sources': {'beschreibung': 'https://notfu-berlin.de/x'},
              'not_found': []}, group, 'group')
         self.assertEqual(len(rejected), 1)
+
+
+class SchemaExtensionTests(unittest.TestCase):
+    """mitarbeiter_url group field + per-paper zitationen/highlight (2026-06)."""
+
+    def person(self):
+        return {'id': 'leer-lena', 'name': 'Lena Leer', 'rolle': 'Professorin'}
+
+    def _mitarbeiter(self, website, url):
+        group = {'id': 'ag-test', 'type': 'ag', 'website': website}
+        return fm.validate(
+            {'fields': {'mitarbeiter_url': url},
+             'sources': {'mitarbeiter_url': website}, 'not_found': []},
+            group, 'group')
+
+    def test_mitarbeiter_url_accepts_fu_berlin(self):
+        accepted, rejected, _ = self._mitarbeiter(
+            'https://www.mi.fu-berlin.de/inf/groups/ag-test/index.html',
+            'https://www.mi.fu-berlin.de/inf/groups/ag-test/staff/0Current')
+        self.assertIn('mitarbeiter_url', accepted)
+        self.assertEqual(rejected, [])
+
+    def test_mitarbeiter_url_accepts_group_own_host(self):
+        # ag-vct's roster lives on the group's own (non-FU) Fraunhofer site.
+        accepted, _, _ = self._mitarbeiter(
+            'https://www.hhi.fraunhofer.de/abteilungen/vca/x.html',
+            'https://www.hhi.fraunhofer.de/abteilungen/vca/x/team.html')
+        self.assertIn('mitarbeiter_url', accepted)
+
+    def test_mitarbeiter_url_rejects_unrelated_host(self):
+        accepted, rejected, _ = self._mitarbeiter(
+            'https://www.mi.fu-berlin.de/inf/groups/ag-test/index.html',
+            'https://evil.example.org/roster')
+        self.assertEqual(accepted, {})
+        self.assertIn('mitarbeiter_url host', rejected[0]['reason'])
+
+    def test_publication_accepts_zitationen_and_highlight(self):
+        accepted, rejected, _ = fm.validate(
+            {'fields': {'forschung': {'veroeffentlichungen': [
+                {'titel': 'A Paper', 'jahr': '2020', 'venue': 'ICSE',
+                 'url': 'https://doi.org/10.1/x', 'quelle': 'https://example.org/cv',
+                 'zitationen': 42, 'highlight': True}]}},
+             'sources': {}, 'not_found': []}, self.person(), 'person')
+        self.assertEqual(rejected, [])
+        paper = accepted['forschung.veroeffentlichungen']['value'][0]
+        self.assertEqual(paper['zitationen'], 42)
+        self.assertIs(paper['highlight'], True)
+
+    def test_publication_drops_bad_zitationen_keeps_item(self):
+        # An invalid optional field is dropped; the paper itself survives.
+        accepted, _, _ = fm.validate(
+            {'fields': {'forschung': {'veroeffentlichungen': [
+                {'titel': 'A Paper', 'quelle': 'https://example.org/cv',
+                 'zitationen': -5, 'highlight': 'yes'}]}},
+             'sources': {}, 'not_found': []}, self.person(), 'person')
+        paper = accepted['forschung.veroeffentlichungen']['value'][0]
+        self.assertEqual(paper['titel'], 'A Paper')
+        self.assertNotIn('zitationen', paper)   # negative → dropped
+        self.assertNotIn('highlight', paper)    # non-bool → dropped
 
     def test_link_host_allowlist(self):
         accepted, rejected, _ = fm.validate(
