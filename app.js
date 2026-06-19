@@ -68,6 +68,9 @@ class InstitutDiagram {
         this.modal = document.getElementById('detail-modal');
         // Currently open entity id (person or group), mirrored in the ?id= URL.
         this._currentId = null;
+        // Navigation stack of entity ids for the open modal (e.g. [group, person]).
+        // Closing pops one level instead of dismissing the whole modal.
+        this._navStack = [];
         this.init();
     }
 
@@ -118,7 +121,11 @@ class InstitutDiagram {
     navigateTo(id) {
         if (!this.resolveEntity(id)) return;
         if (id !== this._currentId) {
-            history.pushState({ id }, '', this.linkFor(id));
+            // Push onto the nav stack so the close button can step back through
+            // it (group -> person -> back to group). The stack rides along in
+            // history.state so back/forward and reloads stay in sync.
+            this._navStack = this._navStack.concat(id);
+            history.pushState({ id, stack: this._navStack }, '', this.linkFor(id));
         }
         this._currentId = id;
         this.renderById(id);
@@ -130,7 +137,8 @@ class InstitutDiagram {
         if (!id) return;
         if (this.resolveEntity(id)) {
             this._currentId = id;
-            history.replaceState({ id }, '', this.linkFor(id));
+            this._navStack = [id];
+            history.replaceState({ id, stack: this._navStack }, '', this.linkFor(id));
             this.renderById(id);
         } else {
             // Unknown id — strip it so the chart renders normally.
@@ -175,10 +183,13 @@ class InstitutDiagram {
 
         // Calculate professor count for each AG (departed professors hidden)
         const agsWithCount = ags.map(gruppe => {
+            // `startseite: false` hides an otherwise-active professor from the
+            // front-page grid only — they still appear inside the group detail.
             const professors = this.data.personen.filter(p =>
                 p.gruppen?.includes(gruppe.id) &&
                 p.rolle?.toLowerCase().includes('professor') &&
-                p.sichtbar !== false
+                p.sichtbar !== false &&
+                p.startseite !== false
             );
             return { gruppe, professorCount: professors.length, professors };
         });
@@ -245,28 +256,33 @@ class InstitutDiagram {
             this.navigateTo(link.dataset.id);
         });
 
+        // All dismiss gestures step back one level in the nav stack (and only
+        // fully close once we're at the root entry).
         this.modal.querySelector('.modal-close').addEventListener('click', () => {
-            this.closeModal();
+            this.modalBack();
         });
 
         this.modal.querySelector('.modal-backdrop').addEventListener('click', () => {
-            this.closeModal();
+            this.modalBack();
         });
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                this.closeModal();
+                this.modalBack();
             }
         });
 
         // Back / forward buttons sync the modal to the URL.
         window.addEventListener('popstate', (e) => {
-            const id = (e.state && e.state.id) ||
+            const state = e.state || {};
+            const id = state.id ||
                 new URLSearchParams(window.location.search).get('id');
             if (id && this.resolveEntity(id)) {
+                this._navStack = Array.isArray(state.stack) ? state.stack : [id];
                 this._currentId = id;
                 this.renderById(id);
             } else {
+                this._navStack = [];
                 this._currentId = null;
                 this.modal.classList.add('hidden');
                 document.body.style.overflow = '';
@@ -369,22 +385,32 @@ class InstitutDiagram {
         }
         html += '</div>';
 
-        // WiMis (bottom)
-        if (wimis.length > 0) {
-            html += '<div class="wimis"><h4>Wissenschaftliche Mitarbeiter</h4><div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">';
-            wimis.forEach(wimi => {
-                const pic = wimi.profilbild;
-                html += `
-                    <a class="member-card entity-link" href="${this.linkFor(wimi.id)}" data-id="${wimi.id}" style="flex: 1; min-width: 220px;">
-                        ${pic ? `<img class="member-avatar" src="${pic}" alt="${wimi.name}">` : `<div class="member-avatar placeholder">${wimi.name.charAt(0)}</div>`}
-                        <div class="member-info">
-                            <div class="member-name">${wimi.titel || ''} ${wimi.name}</div>
-                            <div class="member-role">${wimi.rolle || 'WiMi'}</div>
-                        </div>
-                    </a>
-                `;
-            });
-            html += '</div></div>';
+        // WiMis (bottom), with the "Weitere Mitarbeiter" text link underneath.
+        // The dataset is curated to teachers/secretaries, so this link is where
+        // visitors find everyone else (PhD students, postdocs, …) on the FU site.
+        const mitarbeiterUrl = gruppe.mitarbeiter_url || gruppe.website;
+        if (wimis.length > 0 || mitarbeiterUrl) {
+            html += '<div class="wimis">';
+            if (wimis.length > 0) {
+                html += '<h4>Wissenschaftliche Mitarbeiter</h4><div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">';
+                wimis.forEach(wimi => {
+                    const pic = wimi.profilbild;
+                    html += `
+                        <a class="member-card entity-link" href="${this.linkFor(wimi.id)}" data-id="${wimi.id}" style="flex: 1; min-width: 220px;">
+                            ${pic ? `<img class="member-avatar" src="${pic}" alt="${wimi.name}">` : `<div class="member-avatar placeholder">${wimi.name.charAt(0)}</div>`}
+                            <div class="member-info">
+                                <div class="member-name">${wimi.titel || ''} ${wimi.name}</div>
+                                <div class="member-role">${wimi.rolle || 'WiMi'}</div>
+                            </div>
+                        </a>
+                    `;
+                });
+                html += '</div>';
+            }
+            if (mitarbeiterUrl) {
+                html += `<a class="weitere-mitarbeiter" href="${mitarbeiterUrl}" target="_blank">Weitere Mitarbeiter auf der FU-Seite →</a>`;
+            }
+            html += '</div>';
         }
 
         html += '</div>'; // close ag-modal-grid
@@ -436,7 +462,7 @@ class InstitutDiagram {
         const modalGroups = this.modal.querySelector('.modal-groups');
         const modalBody = this.modal.querySelector('.modal-body');
 
-        modalTitle.textContent = `${person.titel} ${person.name}`;
+        modalTitle.textContent = `${person.titel ? person.titel + ' ' : ''}${person.name}`;
 
         // Build subtitle with clickable links (keeping text styling)
         modalSubtitle.innerHTML = '';
@@ -532,27 +558,68 @@ class InstitutDiagram {
             html += '</p>';
         }
 
-        // Selected publications
-        if (person.forschung?.veroeffentlichungen?.length > 0) {
-            html += '<h4>Veröffentlichungen</h4><ul style="color: var(--text-secondary); font-size: 0.875rem;">';
-            person.forschung.veroeffentlichungen.forEach(p => {
-                const titel = p.url ? `<a href="${p.url}" target="_blank">${p.titel}</a>` : p.titel;
-                const meta = [p.venue, p.jahr].filter(Boolean).join(', ');
-                html += `<li style="margin: 4px 0;">📄 ${titel}${meta ? ` — ${meta}` : ''}</li>`;
-            });
-            html += '</ul>';
-        }
-
-        // Google Scholar citation metrics
+        // Veröffentlichungen — Scholar stats band on top (replaces the old
+        // standalone "Google Scholar" section), then highlighted paper cards.
+        const pubs = person.forschung?.veroeffentlichungen;
         const scholar = person.forschung?.scholar;
-        if (scholar && (scholar.zitationen != null || scholar.h_index != null || scholar.i10_index != null)) {
-            const bits = [];
-            if (scholar.h_index != null) bits.push(`h-index ${scholar.h_index}`);
-            if (scholar.zitationen != null) bits.push(`${scholar.zitationen} Zitationen`);
-            if (scholar.i10_index != null) bits.push(`i10 ${scholar.i10_index}`);
-            let line = bits.join(' · ');
-            if (scholar.stand) line += ` (Stand ${scholar.stand})`;
-            html += `<h4>Google Scholar</h4><p style="color: var(--text-secondary); font-size: 0.875rem;">${line}</p>`;
+        const hasScholar = scholar && (scholar.zitationen != null || scholar.h_index != null || scholar.i10_index != null);
+        if (pubs?.length > 0 || hasScholar) {
+            html += '<h4>Veröffentlichungen</h4>';
+
+            if (hasScholar) {
+                const stat = (val, label) => val != null
+                    ? `<div class="pub-stat"><span class="pub-stat-val">${val.toLocaleString('de-DE')}</span><span class="pub-stat-label">${label}</span></div>`
+                    : '';
+                html += '<div class="pub-stats">'
+                    + stat(scholar.zitationen, 'Zitationen')
+                    + stat(scholar.h_index, 'h-index')
+                    + stat(scholar.i10_index, 'i10-index')
+                    + '</div>';
+                if (scholar.stand) {
+                    html += `<p class="pub-stats-note">Google Scholar · Stand ${scholar.stand}</p>`;
+                }
+            }
+
+            if (pubs?.length > 0) {
+                // Surface the standout / most-cited / newest papers.
+                const years = pubs.map(p => parseInt(p.jahr, 10)).filter(y => !isNaN(y));
+                const newestYear = years.length ? Math.max(...years) : null;
+                const maxCited = Math.max(-1, ...pubs.map(p => typeof p.zitationen === 'number' ? p.zitationen : -1));
+                // Order: ★ highlighted → citations desc → newest year → original.
+                const ordered = pubs.map((p, i) => ({ p, i })).sort((a, b) => {
+                    const ha = a.p.highlight ? 1 : 0, hb = b.p.highlight ? 1 : 0;
+                    if (ha !== hb) return hb - ha;
+                    const ca = typeof a.p.zitationen === 'number' ? a.p.zitationen : -1;
+                    const cb = typeof b.p.zitationen === 'number' ? b.p.zitationen : -1;
+                    if (ca !== cb) return cb - ca;
+                    const ya = parseInt(a.p.jahr, 10) || 0, yb = parseInt(b.p.jahr, 10) || 0;
+                    if (ya !== yb) return yb - ya;
+                    return a.i - b.i;
+                }).map(x => x.p);
+
+                html += '<div class="pub-list">';
+                ordered.forEach(p => {
+                    const titel = p.url ? `<a href="${p.url}" target="_blank">${p.titel}</a>` : p.titel;
+                    const badges = [];
+                    if (p.highlight) badges.push('<span class="pub-badge star">★ Standout</span>');
+                    if (typeof p.zitationen === 'number' && p.zitationen === maxCited && maxCited > 0) {
+                        badges.push('<span class="pub-badge cited">Meistzitiert</span>');
+                    }
+                    if (newestYear != null && parseInt(p.jahr, 10) === newestYear) {
+                        badges.push('<span class="pub-badge neu">Neu</span>');
+                    }
+                    const cites = typeof p.zitationen === 'number'
+                        ? `<span class="pub-cites">⬆ ${p.zitationen.toLocaleString('de-DE')} Zit.</span>` : '';
+                    const metaBits = [];
+                    if (p.venue) metaBits.push(`<span class="pub-venue">${p.venue}</span>`);
+                    if (p.jahr) metaBits.push(`<span class="pub-year">${p.jahr}</span>`);
+                    html += `<div class="pub-card${p.highlight ? ' is-star' : ''}">`
+                        + `<div class="pub-title">${titel}${badges.join('')}</div>`
+                        + `<div class="pub-meta">${metaBits.join('')}${cites}</div>`
+                        + `</div>`;
+                });
+                html += '</div>';
+            }
         }
 
         // CV: structured Ausbildung (oldest first) + Werdegang (newest first),
@@ -598,15 +665,15 @@ class InstitutDiagram {
             html += '</ul>';
         }
 
-        // Teaching
+        // Teaching — full list, no cap (newest semester first).
         if (person.lehre?.kurse?.length > 0) {
             html += '<h4>Lehrveranstaltungen</h4><ul style="color: var(--text-secondary); font-size: 0.875rem;">';
-            person.lehre.kurse.slice(0, 5).forEach(kurs => {
-                html += `<li style="margin: 4px 0;">📚 ${kurs.name} (${kurs.semester})</li>`;
+            person.lehre.kurse.forEach(kurs => {
+                // typ (V / Ü / V+Ü / S / SWP …) is shown when present; older
+                // unrefreshed entries only carry {name, semester}.
+                const meta = [kurs.typ, kurs.semester].filter(Boolean).join(' · ');
+                html += `<li style="margin: 4px 0;">📚 ${kurs.name}${meta ? ` (${meta})` : ''}</li>`;
             });
-            if (person.lehre.kurse.length > 5) {
-                html += `<li style="color: var(--text-muted);">... und ${person.lehre.kurse.length - 5} weitere</li>`;
-            }
             html += '</ul>';
         }
 
@@ -625,9 +692,22 @@ class InstitutDiagram {
         document.body.style.overflow = 'hidden';
     }
 
+    // Step back one level: if we navigated deeper (e.g. group -> person),
+    // return to the previous entity; otherwise dismiss the modal entirely.
+    modalBack() {
+        if (this._navStack.length > 1) {
+            // history.back() fires popstate, which restores the previous entity
+            // and its stack from history.state.
+            history.back();
+        } else {
+            this.closeModal();
+        }
+    }
+
     closeModal() {
         this.modal.classList.add('hidden');
         document.body.style.overflow = '';
+        this._navStack = [];
         // Drop ?id= from the URL so a refresh/share of a closed view shows the
         // chart. replaceState keeps the history stack clean (no empty entries).
         if (this._currentId !== null) {

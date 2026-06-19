@@ -710,6 +710,153 @@ a.member-card {
     flex-shrink: 0;
 }
 
+/* "Weitere Mitarbeiter" — plain text link to the group's full live FU roster,
+   sitting under the WiMi section. Quiet by default, accent + underline on hover. */
+.weitere-mitarbeiter {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    border-bottom: 1px solid transparent;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.weitere-mitarbeiter:hover {
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue);
+}
+
+/* =============================================
+   Publications — Scholar stats band + paper cards
+   ============================================= */
+.pub-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin: var(--spacing-sm) 0 var(--spacing-xs);
+}
+
+.pub-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 92px;
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.pub-stat-val {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--accent-blue);
+    line-height: 1.1;
+}
+
+.pub-stat-label {
+    margin-top: 2px;
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.pub-stats-note {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-sm);
+}
+
+.pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.pub-card {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(59, 130, 246, 0.06);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid rgba(59, 130, 246, 0.5);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.pub-card:hover {
+    background: rgba(59, 130, 246, 0.12);
+}
+
+.pub-card.is-star {
+    border-left-color: var(--accent-orange);
+    background: rgba(245, 158, 11, 0.08);
+}
+
+.pub-title {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+.pub-title a {
+    color: var(--text-primary);
+}
+
+.pub-title a:hover {
+    color: var(--accent-blue);
+}
+
+.pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+}
+
+.pub-venue {
+    padding: 1px 7px;
+    background: rgba(148, 163, 184, 0.15);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+}
+
+.pub-cites {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.pub-badge {
+    display: inline-block;
+    margin-left: var(--spacing-sm);
+    padding: 1px 7px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-radius: var(--radius-sm);
+    vertical-align: middle;
+}
+
+.pub-badge.star {
+    color: var(--accent-orange);
+    background: rgba(245, 158, 11, 0.18);
+}
+
+.pub-badge.cited {
+    color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.18);
+}
+
+.pub-badge.neu {
+    color: var(--accent-green);
+    background: rgba(16, 185, 129, 0.18);
+}
+
 /* Vita List */
 .vita-list {
     color: var(--text-secondary);
