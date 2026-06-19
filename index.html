@@ -56,6 +56,19 @@
                 Informatik</a></p>
     </footer>
     <script src="app.js"></script>
+    <!-- GoatCounter analytics: load ONLY on the production host(s). Skips
+         localhost dev and Netlify deploy previews so they don't pollute stats. -->
+    <script>
+        (function () {
+            var prodHosts = ['fu-info.netlify.app', 'therealprohacker.github.io'];
+            if (prodHosts.indexOf(location.hostname) === -1) return;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = '//gc.zgo.at/count.js';
+            s.setAttribute('data-goatcounter', 'https://fu-info.goatcounter.com/count');
+            document.body.appendChild(s);
+        })();
+    </script>
 </body>
 
 </html>
